@@ -42,7 +42,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'https://roots-test.herokuapp.com', :protocol => 'https'}
+  config.action_mailer.default_url_options = { :host => 'roots-test.herokuapp.com', :protocol => 'https'}
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil

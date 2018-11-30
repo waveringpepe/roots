@@ -10,6 +10,9 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'roots-test.herokuapp.com', :protocol => 'http'}
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -40,9 +43,6 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'roots-test.herokuapp.com', :protocol => 'https'}
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil

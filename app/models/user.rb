@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  belongs_to :plan
   ############################################################################################
   ## PeterGate Roles                                                                        ##
   ## The :user role is added by default and shouldn't be included in this list.             ##

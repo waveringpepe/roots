@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 	# GET request for / which is our home page
 
   def home
+  	@plan = Plan.all
   	@basic_plan = Plan.find(2)
   	@pro_plan = Plan.find(3)
   end

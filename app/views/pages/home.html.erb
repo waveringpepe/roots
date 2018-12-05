@@ -2,26 +2,6 @@
 
 <p><%= current_user.class %>
 
-	<div class= "container">
-		<div class= "row">
-			<div class=" card col-md-6">
-				<div class="card-body p-4 margin-top:"30px">
-					<h2 class="text-center">Basic Membership</h2>
-					<h4 class="text-center">Sign up for free and get access the community.</h4>
-					<br/>
-					<%= link_to "Sign up with basic", new_user_registration_path(plan: @basic_plan.id), class:'btn btn-primary btn-lg btn-block' %>
-				</div>
-			</div>
-			<div class="card col-md-6">
-				<div class="card-body p-4 margin-top:"30px"">
-					<h2 class="text-center">Pro Membership</h2>
-					<h4 class="text-center">Sign up for pro and get access to the community pro.</h4>
-					<br/>
-					<%= link_to "Sign up with pro", new_user_registration_path(plan: @pro_plan.id), class:'btn btn-success btn-lg btn-block' %>
-				</div>
-			</div>
-		</div>
-	</div>
-
+<%= render "shared/pricing" %>
 
 

@@ -1,26 +1,7 @@
-@import "bootstrap";
-
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.container {
-  max-width: 960px;
-}
-
-.pricing-header {
-  max-width: 700px;
-}
-
-.card-deck .card {
-  min-width: 220px;
-}
-
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
 .StripeElement {
   background-color: white;
   height: 40px;

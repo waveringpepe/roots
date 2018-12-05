@@ -1,10 +1,12 @@
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html:{id: 'pro_form'}) do |f| %>
   <%= devise_error_messages! %>
+
+  <%= hidden_field_tag 'plan', params[:plan] %>
 
     <div class="container mt-4">
       <h4 class="mb-3">Information</h4>
     </div>
-    <div class="card rounded d-flex p-2 bd-highlight">
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-group col-md-4">
           <%= f.label :email %><br />
@@ -79,7 +81,7 @@
     <div class="container mt-4">
       <h4 class="mb-3">Extra Information</h4>
     </div>
-    <div class="card rounded d-flex p-2 bd-highlight mt-4">
+    <div class="card rounded d-flex p-2 bd-highlight mt-4 bg-light">
       <div class="row">
         <div class="form-gropu col-md-12">
           <%= f.label :reason_id %><br />
@@ -98,7 +100,7 @@
       </div>
     </div>
 
-    <div class="container mt-4">
+    <div class="container mt-4 bg-light">
       <h4 class="mb-3">References?</h4>
     </div>
     <div class="container mt-4">
@@ -118,21 +120,21 @@
     <div class="container mt-4">
       <h4 class="mb-3">Payment</h4>
     </div>
-    <div class="container mt-4">
+    <div class="container mt-4 bg-light">
       <div class="row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-6 mt-4">
           <%= label_tag :card_number, "Credit Card Number" %>
-          <%= text_field_tag :card_number, nil , name: nil, class: "form-control" %>
+          <%= text_field_tag :card_number, nil , name: nil, class: "StripeElement StripeElement--focus" %>
         </div>
 
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-6 mt-4">
           <%= label_tag :card_code, "CVV" %>
-          <%= text_field_tag :card_code, nil , name: nil, class: "form-control" %>
+          <%= text_field_tag :card_code, nil , name: nil, class: "StripeElement StripeElement--focus" %>
         </div>
       </div>
 
       <div class="row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-6 mt-2">
           <%= label_tag :card_month, "Card Expiration" %>
           <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
           <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
@@ -143,7 +145,7 @@
     <div class="d-flex p-2 bd-highlight mt-4">
       <div class="row">
         <div class="actions col-md-">
-          <%= f.submit "Sign up", class:"btn btn-primary" %>
+          <%= f.submit "Sign up", class:"btn btn-primary", id: "form-signup-btn" %>
         </div>
       </div>
     </div>

@@ -16,6 +16,16 @@ class User < ApplicationRecord
 
   validates_presence_of :name
 
+
+  attr_accessor :stripe_card_token
+  def save_with_subscription  
+    if valid?
+      customer = Stripe::Customer.create(description: email, plan: plan_id, source: stripe_card_token)
+      self.stripe_customer_token = customer.id
+      save!
+    end
+  end
+
   def first_name
   	self.name.split.first
 

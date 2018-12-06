@@ -3,8 +3,8 @@ class PagesController < ApplicationController
 
   def home
   	@plan = Plan.all
-  	@basic_plan = Plan.find(2)
-  	@pro_plan = Plan.find(3)
+  	@basic_plan = Plan.find(1)
+  	@pro_plan = Plan.find(2)
   end
 
   def about

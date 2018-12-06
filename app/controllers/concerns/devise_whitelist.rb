@@ -1,16 +1,15 @@
 module DeviseWhitelist	
 	extend ActiveSupport::Concern
 
+	# Whitelist the following form fields so that we can process them, if coming from
+	# a Devise sign up form.
 	included do
 		before_action :configure_permitted_parameters, if: :devise_controller?
+
 	end
 
 	protected
 
-	def configure_permitted_parameters
-   	 	devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:stripe_card_token, :email, :password, :password_confirmation) }
-  	end
-  	
 	def configure_permitted_parameters
 	 	devise_parameter_sanitizer.permit(:sign_up, keys: [:name, 
 	 														:skype,

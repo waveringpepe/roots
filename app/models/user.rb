@@ -14,10 +14,16 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable
 
+
   validates_presence_of :name
 
 
   attr_accessor :stripe_card_token
+  # If pro user passes validations (email,password, etc..),
+  # then call Stripe and tell Stripe to set up a subscription
+  # upon charging the customer's card.
+  # Sripe responds back with customer data.
+  # Store customer.id as the customer token and save the user.
   def save_with_subscription  
     if valid?
       customer = Stripe::Customer.create(description: email, plan: plan_id, source: stripe_card_token)

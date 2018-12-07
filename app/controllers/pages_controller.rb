@@ -4,9 +4,9 @@ class PagesController < ApplicationController
   def home
   	@plan = Plan.all
   	@free_plan = Plan.find(1)
-  	@basic_plan = Plan.find(2)
-    @medium_plan = Plan.find(3)
-    @intensive_plan = Plan.find(4)
+  	@basic_plan = Plan.find(5)
+    @medium_plan = Plan.find(6)
+    @intensive_plan = Plan.find(7)
   end
 
   def about

@@ -1,15 +1,15 @@
 /* global $, Stripe */
 //Document ready.
 $(document).on('turbolinks:load', function(){
-  var theFormMedium = $('#intensive_form');
-  var submitBtnMedium = $('#form-signup-btn-intensive');
+  var theFormIntensive = $('#intensive_form');
+  var submitBtnIntensive = $('#form-signup-btn-intensive');
   //Set Stripe public key.
   Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
   //When user clicks form submit btn,
-  submitBtnMedium.click(function(event){
+  submitBtnIntensive.click(function(event){
     //prevent default submission behavior.
     event.preventDefault();
-    submitBtnMedium.val("Procesando").prop('disabled', true);
+    submitBtnIntensive.val("Procesando").prop('disabled', true);
     //Collect the credit card fields.
     var ccNum = $('#card_number').val(),
         cvcNum = $('#card_code').val(),
@@ -34,7 +34,7 @@ $(document).on('turbolinks:load', function(){
     }
     if (error) {
       //If there are card errors, don't send to Stripe.
-      submitBtnMedium.prop('disabled', false).val("Sign Up");
+      submitBtnIntensive.prop('disabled', false).val("Sign Up");
     } else {
       //Send the card info to Stripe.
       Stripe.createToken({
@@ -51,8 +51,8 @@ $(document).on('turbolinks:load', function(){
     //Get the token from the response.
     var token = response.id;
     //Inject the card token in a hidden field.
-    theFormMedium.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
+    theFormIntensive.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
     //Submit form to our Rails app.
-    theFormMedium.get(0).submit();
+    theFormIntensive.get(0).submit();
   }
 });

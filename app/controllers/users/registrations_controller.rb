@@ -10,6 +10,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
         resource.plan_id = params[:plan]
         if resource.plan_id == 2
           resource.save_with_subscription
+        elsif resource.plan_id == 3
+          resource.save_with_subscription
+        elsif resource.plan_id == 4
+          resource.save_with_subscription 
         else
           resource.save
         end

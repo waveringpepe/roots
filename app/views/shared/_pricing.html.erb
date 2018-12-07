@@ -7,47 +7,47 @@
   <div class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Free</h4>
+        <h4 class="my-0 font-weight-normal">Basic</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+        <h1 class="card-title pricing-card-title">$64 <small class="text-muted">/ month</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li>10 users included</li>
           <li>2 GB of storage</li>
           <li>Email support</li>
           <li>Help center access</li>
         </ul>
-        <%= link_to "Sign up with basic", new_user_registration_path(plan: @basic_plan.id), class:'btn btn-lg btn-block btn-outline-primary' %>
+        <%= link_to "Sign up with basic", new_user_registration_path(plan: @basic_plan.id), class:'btn btn-dark btn-lg btn-block' %>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Pro</h4>
+        <h4 class="my-0 font-weight-normal">Medium</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+        <h1 class="card-title pricing-card-title">$112 <small class="text-muted">/ month</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li>20 users included</li>
           <li>10 GB of storage</li>
           <li>Priority email support</li>
           <li>Help center access</li>
         </ul>
-        <%= link_to "Sign up with pro", new_user_registration_path(plan: @pro_plan.id), class:'btn btn-success btn-lg btn-block' %>
+        <%= link_to "Sign up with medium", new_user_registration_path(plan: @medium_plan.id), class:'btn btn-success btn-lg btn-block' %>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Enterprise</h4>
+        <h4 class="my-0 font-weight-normal">Intensive</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+        <h1 class="card-title pricing-card-title">$164 <small class="text-muted">/ month</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li>30 users included</li>
           <li>15 GB of storage</li>
           <li>Phone and email support</li>
           <li>Help center access</li>
         </ul>
-        <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+        <%= link_to "Sign up with intensive", new_user_registration_path(plan: @intensive_plan.id), class:'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
   </div>

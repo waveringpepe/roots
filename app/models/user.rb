@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   belongs_to :plan
+
   ############################################################################################
   ## PeterGate Roles                                                                        ##
   ## The :user role is added by default and shouldn't be included in this list.             ##
@@ -23,9 +24,10 @@ class User < ApplicationRecord
   # Sripe responds back with customer data.
   # Store customer.id as the customer token and save the user.
   attr_accessor :stripe_card_token
+
   def save_with_subscription
     if valid?
-      customer = Stripe::Customer.create(description: email, plan: plan_id, source: stripe_card_token)
+      customer = Stripe::Customer.create(description: email, card: stripe_card_token, plan: plan_id )
       self.stripe_customer_token = customer.id
       save!
     end

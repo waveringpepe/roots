@@ -1,6 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
-before_action :select_plan, only: :new
+
 
   # Extend default Devise gem behavior so that
   # users signing up with the Pro account (plan id 2)
@@ -12,10 +12,6 @@ before_action :select_plan, only: :new
         resource.plan_id = params[:plan]
         if resource.plan_id == 5
           resource.save_with_subscription
-        elsif resource.plan_id == 6
-          resource.save_with_subscription
-        elsif resource.plan_id == 7
-          resource.save_with_subscription 
         else
           resource.save
         end

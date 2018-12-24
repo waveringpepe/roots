@@ -3,10 +3,11 @@ class PagesController < ApplicationController
 
   def home
   	@plan = Plan.all
-  	@free_plan = Plan.find(1)
+  	@teacher_plan = Plan.find(1)
   	@basic_plan = Plan.find(5)
     @medium_plan = Plan.find(6)
     @intensive_plan = Plan.find(7)
+    @free_plan = Plan.find(8)
   end
 
   def about

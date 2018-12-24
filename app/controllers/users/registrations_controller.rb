@@ -19,7 +19,7 @@ before_action :select_plan, only: :new
         elsif resource.plan_id == 8
           resource.save_with_subscription            
         else
-          resource.save
+          resource.save_as_teacher
         end
       end
     end

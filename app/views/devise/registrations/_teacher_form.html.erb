@@ -88,10 +88,6 @@
                        }, 
                        {:class => "form-control mt-2"}  %>
 
-        <div class="col-md-4">                    
-          <%= f.label :roles %>
-          <%= f.select :roles, @user.available_roles, {}, {multiple: true} %>
-        </div>
         </div>
       </div>
     </div>
@@ -101,7 +97,7 @@
     <div class="d-flex p-2 bd-highlight mt-4">
       <div class="row">
         <div class="actions col-md-">
-          <%= f.submit "Sign up", class:"btn btn-primary", id: "form-signup-btn" %>
+          <%= f.submit "Sign up", class:"btn btn-primary", id: "signup-btn" %>
         </div>
       </div>
     </div>

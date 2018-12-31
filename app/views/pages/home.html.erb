@@ -1,9 +1,9 @@
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
       <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 font-weight-normal">Punny headline</h1>
+        <h1 class="display-4 font-weight-normal">Learn a language</h1>
         <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
         
-        <a> <%= link_to "Toma tu clase de prueba", new_user_registration_path(plan: @free_plan.id), class:'btn btn-outline-secondary' %></a>
+        <%= link_to "Toma tu clase de prueba", new_user_registration_path(plan: @free_plan.id), class:'btn btn-outline-secondary' %>
       </div>
       <div class="product-device shadow-sm d-none d-md-block"></div>
       <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
@@ -13,13 +13,11 @@
       <!-- Marketing messaging and featurettes
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
-      <%= render "shared/pricing" %>
-
 
         <!-- START THE FEATURETTES -->
 
         <hr class="featurette-divider">
-
+      <div>
         <div class="row featurette">
           <div class="col-md">
             <h2 class="featurette-heading">Habla como un <span class="text-muted">nativo.</span></h2>
@@ -53,12 +51,17 @@
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
           </div>
         </div>
+      </div>
 
         <hr class="featurette-divider">
 
         <!-- /END THE FEATURETTES -->
 
-      </div><!-- /.container -->
+      <!-- /.container -->
+
+      <div id="pricing">
+        <%= render "shared/pricing" %>
+      </div>
 
 
 

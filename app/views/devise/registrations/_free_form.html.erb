@@ -1,12 +1,12 @@
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: 'free_form'}) do |f| %>
   <%= devise_error_messages! %>
 
   <%= hidden_field_tag 'plan', params[:plan] %>
-  
-    <div class="container mt-4">
+
+ <div class="container mt-4">
       <h4 class="mb-3">Information</h4>
     </div>
-    <div class="card rounded d-flex p-2 bd-highlight">
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-group col-md-4">
           <%= f.label :email %><br />
@@ -34,12 +34,121 @@
           <%= f.text_field :name, class:"form-control", placeholder:"Write your name" %>
         </div>
 
+        <div class="form-group col-md-4">
+          <%= f.label :skype %><br />
+          <%= f.text_field :skype, class:"form-control", placeholder:"Write your skype id" %>
+        </div>
+
+        <div class="form-group col-md-4">
+          <%= f.label :phone_number %><br />
+          <%= f.text_field :phone_number, class:"form-control", placeholder:"Write your Whatsapp" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-4">
+            <%= f.label :language_id, "Select your language" %>
+            <%= f.select :language_id, options_for_select(Language.options, params[:language]),{}, required: true, class: "form-control" %>
+        </div>
+
+        <div class="form-group col-md-4">
+          <%= f.label :start_id , "Select when you would like to start" %>
+          <%= f.select(:start_id, options_for_select([['Today', 1], ['In a few days', 2]]), {}, {class: "form-control"}) %>
+        </div>
+
+        <div class="form-group col-md-4">
+            <%= f.label :time_zone, 'Time Zone:', :class => "col-xs-3" %>
+            <%= f.time_zone_select(:time_zone, nil, {}, {class: "form-control"})%>
+        </div>
+      </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+          <%= f.label :level , "Select your level" %> <br/>
+          <%= f.select(:level, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10]]), {}, {class: "form-control mt-2"}) %> 
+        </div>
+        <div class="col-md-6">
+          <%= f.label :birth_date, "Select your birthday" %>
+          <%= f.date_select :birth_date, 
+                       { 
+                        :order => [:day, :month, :year],
+                        :start_year => 1920, 
+                        :end_year => Time.now.year
+                       }, 
+                       {:class => "form-control mt-2"}  %>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-4">
+      <h4 class="mb-3">Extra Information</h4>
+    </div>
+    <div class="card rounded d-flex p-2 bd-highlight mt-4 bg-light">
+      <div class="row">
+        <div class="form-gropu col-md-12">
+          <%= f.label :reason_id %><br />
+          <%= f.text_field :reason_id, class:"form-control", placeholder:"Why do you want to learn the language?"%>
+        </div>
+
+        <div class="form-gropu col-md-12">
+          <%= f.label :experience %><br />
+          <%= f.text_field :experience, class:"form-control", placeholder:"Tell us about your experience"%>
+        </div>
+
+        <div class="form-gropu col-md-12">
+          <%= f.label :schedule %><br />
+          <%= f.text_field :schedule, class:"form-control", placeholder:"Select your schedule"%>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <h4 class="mb-3">References?</h4>
+    </div>
+    <div class="container mt-4 bg-light rounded">
+      <div class="row">
+       <div class="form-group col-md-6">
+          <%= f.label :reference %><br />
+          <%= f.text_field :reference, class:"form-control", placeholder:"Who told you about us"%>
+        </div>
+
+        <div class="form-group col-md-6">
+          <%= f.label :promo_code %><br />
+          <%= f.text_field :promo_code, class:"form-control", placeholder:"Do you have a promo code?"%>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <h4 class="mb-3">Payment</h4>
+    </div>
+    <div class="container mt-4 bg-light">
+      <div class="row">
+        <div class="form-group col-md-6 mt-4">
+          <%= label_tag :card_number, "Credit Card Number" %>
+          <%= text_field_tag :card_number, nil , name: nil, class: "form-control" %>
+        </div>
+
+        <div class="form-group col-md-6 mt-4">
+          <%= label_tag :card_code, "CVV" %>
+          <%= text_field_tag :card_code, nil , name: nil, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6 mt-2">
+          <%= label_tag :card_month, "Card Expiration" %>
+          <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+          <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+        </div>
+      </div>
+    </div>
 
     <div class="d-flex p-2 bd-highlight mt-4">
       <div class="row">
         <div class="actions col-md-">
-          <%= f.submit "Sign up", class:"btn btn-primary" %>
+          <%= f.submit "Sign up", class:"btn btn-primary", id: "signup-btn-free" %>
         </div>
       </div>
     </div>
 <% end %>
+
+

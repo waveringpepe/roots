@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_21_180311) do
+ActiveRecord::Schema.define(version: 2018_12_31_160138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,16 @@ ActiveRecord::Schema.define(version: 2018_12_21_180311) do
     t.string "card_exp_month"
     t.string "card_exp_year"
     t.string "country"
+    t.string "actual_country"
+    t.string "teach_language"
+    t.string "speak_language"
+    t.string "carrear_id"
+    t.string "university_id"
+    t.string "experience_teaching"
+    t.string "institutions_teach"
+    t.string "certificate_id"
+    t.string "type_student"
+    t.string "years_teaching"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

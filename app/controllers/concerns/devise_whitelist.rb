@@ -25,7 +25,15 @@ module DeviseWhitelist
 	 														:schedule,
 	 														:reference,
 	 														:promo_code,
-	 														:stripe_card_token
+	 														:stripe_card_token,
+															:speak_language,
+															:carrear_id,
+															:university_id,
+															:experience_teaching,
+															:institutions_teach,
+															:certificate_id,
+															:type_student,
+															:years_teaching
 	 														])
 	    devise_parameter_sanitizer.permit(:account_update, keys: [:name,
 	    													:skype,

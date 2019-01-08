@@ -1,67 +1,71 @@
 
       <section class="jumbotron text-center">
-        <div class="container" style= "width:1250px;height:600px;">
-          <h1 class="jumbotron-heading">Learn a lenguage</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-          <p>
-            <%= link_to "Toma tu clase de prueba", new_user_registration_path(plan: @free_plan.id), class:'btn btn-primary my-2' %>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-          </p>
-        </div>
-      </section><br/><br/><br/><br/>
+        <div class="container">
+            <h1 class="jumbotron-heading">Learn a lenguage</h1>
+            <p class="lead text-muted">Learn a language from the comfort of your home</p>
+            <p>
+              <%= link_to "Toma tu clase de prueba gratuita", new_user_registration_path(plan: @free_plan.id), class:'btn btn-primary my-2' %>
+            </p>
+          </div>
+      </section><br/><br/><br/>
+
+        <div class="container text-center card">
+          <br/><p> <i class="fa fa-certificate fa-2x text-danger aria-hidden="true"></i> 100% Satisfaction warranty <br/> If you don't like it, we'll give you another free class.</p><br/>
+          </div><br/><br/><br/>
 
       <div class="container text-center">
-        <h2> Languages availables</h2>
-        <button type="button" class="btn btn-outline-primary">Spanish</button>
-        <button type="button" class="btn btn-outline-secondary">English</button>
-        <button type="button" class="btn btn-outline-success">French</button>
-        <button type="button" class="btn btn-outline-danger">German</button>
-        <button type="button" class="btn btn-outline-warning">Italian</button>
-        <button type="button" class="btn btn-outline-info">Portuguesse</button>
-        <button type="button" class="btn btn-outline-dark">Russian</button>
-        <button type="button" class="btn btn-outline-primary">Chinesse</button>
-      </div><br/><br/><br/><br/>
+        <h2> Languages availables</h2><br/>
+        <%= link_to "Spanish", new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-primary" %>
+        <%= link_to "English", new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-secondary" %>
+        <%= link_to "French", new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-success" %>
+        <%= link_to "German", new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-danger" %>
+        <%= link_to "Italian", new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-warning" %>
+        <%= link_to "Portuguese", new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-info" %>
+        <%= link_to "Russian", new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-dark" %>
+        <%= link_to "Chinese", new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-primary" %>
+      </div><br/>
+
+        <hr class="featurette-divider">
 
       <!-- Marketing messaging and featurettes
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container marketing">
+      <div class="marketing">
+      <h1 class="text-center"> How it works?</h1><br/><br/>
 
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <i class="fa fa-id-card-o fa-3x" ></i>
+            <h2>Select your subscription</h2>
+            <p>Select the <%= link_to "membership", "#pricing" %> that is most convenient for you or <%= link_to "take a free trial class.", new_user_registration_path(plan: @free_plan.id) %></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">  
+            <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+            <h2>Sign up</h2>
+            <p>Sign up and fill out the profile form so we can find the best teacher for you.</p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <i class="fa fa-check-circle fa-3x" ></i>
+            <h2>Start learning</h2>
+            <p>Once you pay and sign up, then we'll give you all the information about your teacher so you can start learning asap.</p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
+      </div>
 
 
         <!-- START THE FEATURETTES -->
 
         <hr class="featurette-divider">
-
+      <div class="mr-5 ml-5">
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Speak as a <span class="text-muted">native</span></h2>
+            <p class="lead">All our teachers are native and they will help you to develop the skill for speaking a pronounicing as if you were a native.</p>
           </div>
           <div class="col-md-5">
-             <%= image_tag "native.jpg", width: 500, alt: "image2", class: "rounded" %>
+             <%= image_tag "native_people.jpg", width: "100%", alt: "image2", class: "rounded" %>
           </div>
         </div>
 
@@ -69,11 +73,12 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Learn from your  <span class="text-muted">favorite spot.</span></h2>
+            <p class="lead">All the classes are online, now you can take advantage of your free times. Take a class in the airport, from your house or in your favorite coffee shop.
+            </p>
           </div>
           <div class="col-md-5 order-md-1">
-           <%= image_tag "native.jpg", width: 400, alt: "image2", class: "rounded" %>
+           <%= image_tag "learn_bed2.jpg", width: "100%", alt: "image2", class: "rounded float-right" %>
           </div>
         </div>
 
@@ -81,27 +86,26 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Learn at your own <span class="text-muted">peace.</span></h2>
+            <p class="lead">Our teachers develop a special program focus in the goals and needs you have.</p>
           </div>
           <div class="col-md-5">
-            <%= image_tag "native.jpg", width: 500, alt: "image2", class: "rounded" %>
+            <%= image_tag "online_learning1.jpg", width: "100%", alt: "image2", class: "rounded" %>
           </div>
         </div>
+      </div>
 
         <hr class="featurette-divider">
 
-        <!-- /END THE FEATURETTES -->
-
-      </div><!-- /.container -->
+      <div id="pricing">
+        <%= render "shared/pricing" %>
+        <p class="float-right"><a href="#">Back to top</a></p>
+      </div>
 
 
       <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
-    </main>
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -113,15 +117,10 @@
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="../../assets/js/vendor/holder.min.js"></script>
 
-        <hr class="featurette-divider">
-
         <!-- /END THE FEATURETTES -->
 
       <!-- /.container -->
 
-      <div id="pricing">
-        <%= render "shared/pricing" %>
-      </div>
 
 
 

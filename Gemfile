@@ -65,3 +65,6 @@ gem 'stripe', '1.48.0'
 gem 'country_select', '~> 3.1', '>= 3.1.1'
 # Use Figaro for ENV variables
 gem 'figaro', '1.1.1'
+# User font awesome to get icons
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+

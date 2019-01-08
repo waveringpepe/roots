@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 /* Home page */
 
@@ -128,6 +129,7 @@ body {
 .marketing .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
+
 }
 
 
@@ -176,11 +178,17 @@ body {
 }
 
 .jumbotron {
+  width: 100%;
+  height: 800px;
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
   margin-bottom: 0;
   background-image: url("home_slider_1.jpg");
+
+
 }
+
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: calc(var(--jumbotron-padding-y) * 2);
@@ -208,4 +216,6 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
+
+
 

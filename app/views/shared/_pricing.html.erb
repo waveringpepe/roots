@@ -1,7 +1,7 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Pricing</h1>
-  <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
-  <%= link_to "Toma tu clase de prueba", new_user_registration_path(plan: @free_plan.id), class:'btn btn-outline-secondary' %>
+  <p class="lead"><b>Select the membership</b> that fits better for you.<br/> Once you make sign up and make the payment, a person from the team will contact you in a maximum time of 2 hours to give you all the information (schedules, teacher information, etc.) about your class.</p>
+  <%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan.id), class:'btn btn-outline-secondary' %>
 </div>
 
 <div class="container">
@@ -13,7 +13,7 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">$1120 MXN <small class="text-muted">/ month</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li>Incluye 4 horas de clases particulares</li>
+          <li><b>4</b> hours of one to one lessons included</li>
         </ul>
         <%= link_to "Sign up with basic", new_user_registration_path(plan: @basic_plan.id), class:'btn btn-dark btn-lg btn-block' %>
       </div>
@@ -25,7 +25,7 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">$2,080 MXN <small class="text-muted">/ month</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li>Incluye 8 horas de clases particulares</li>
+          <li><b>8</b> hours of one to one lessons included</li>
         </ul>
         <%= link_to "Sign up with medium", new_user_registration_path(plan: @medium_plan.id), class:'btn btn-success btn-lg btn-block' %>
       </div>
@@ -37,22 +37,87 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">$3,060 MXN <small class="text-muted">/ month</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li>Incluye 12 horas de clases particulares</li>
+          <li><b>12</b> hours of one to one lessons included</li>
         </ul>
         <%= link_to "Sign up with intensive", new_user_registration_path(plan: @intensive_plan.id), class:'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
   </div>
-  <div>
-    <p>
-      <dl>
-        <dd>Tus créditos de clases son válidos por 4 meses a partir del día de tu pago.</dd>
-        <dd>Todas las membresías se renuevan automáticamente cada mes.</dd>
-        <dd><b>Cancelar suscripción.</b> Si quieres cancelar tu suscripción envíanos un mail a hello@5roots.co y nosotros lo haremos por ti.</dd>
-      </dl>
-    </p>
-    <p>
-      <b>¿Quiéres un paquete a tu medida? </b><br/>
-      Escríbenos al correo <a><em>hello@5roots.co</em></a> o por Whats App al +52 1 (81) 2110 1145
-    </p>
-  </div>
+<div class="container">
+  <h3> Information </h3>
+
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collaspseOne">
+            <b>None of the membership packages suits you ? </b>
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          Write to us at <a><em>hello@5roots.co</em> or by Whats App at +52 1 (81) 2110 1145 </a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <b>Distribute your membership hours as you wish</b>
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          Example: <br/>30 minutes per day, 4 days a week,<br/> 
+                   1 hour per day, 2 days a week.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collaspseThree">
+            <b>Validation</b>
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+          Your class hours are valid for 4 months from the day of your payment.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <b>Membership renewal time</b>
+          </button>
+        </h2>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+        <div class="card-body">
+         All the memberships are <b>renewed</b> every month.</dd>
+        </div>
+      </div>
+    </div>
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <b>Cancel subscription</b>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+          <div class="card-body">
+           If you want to cancel your subscription send us an email to <b>hello@5roots.co</b> and we will do it for you.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br/>

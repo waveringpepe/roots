@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
 	# GET request for / which is our home page
+access all: [:home, :faq], user: {except: [:teachers]}, teacher: {except: [:students]}, site_admin: :all
+
+
 
   def home
   	@plan = Plan.all
@@ -15,4 +18,10 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def faq
+  end
+
+
 end
+

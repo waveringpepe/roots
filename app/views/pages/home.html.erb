@@ -1,16 +1,15 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="jumbotron-heading">Learn a lenguage</h1>
-            <p class="lead text-muted">Learn a language from the comfort of your home</p>
+            <h1 class="featurette-heading">Learn a new lenguage <span class="text-muted">from the comfort of your home</span></h2>
             <p>
-              <%= link_to "Toma tu clase de prueba gratuita", new_user_registration_path(plan: @free_plan.id), class:'btn btn-primary my-2' %>
+              <%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan.id), class:'btn btn-primary my-2' %>
             </p>
           </div>
       </section><br/><br/><br/>
 
         <div class="container text-center card">
-          <br/><p> <i class="fa fa-certificate fa-2x text-danger aria-hidden="true"></i> 100% Satisfaction warranty <br/> If you don't like it, we'll give you another free class.</p><br/>
+          <br/><p> <i class="fa fa-certificate fa-2x text-danger aria-hidden="true"></i> 100% Satisfaction warranty <br/> If you don't like it, we'll give you another class for free.</p><br/>
           </div><br/><br/><br/>
 
       <div class="container text-center">
@@ -25,7 +24,7 @@
         <%= link_to "Chinese", new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-primary" %>
       </div><br/>
 
-        <hr class="featurette-divider">
+        <hr class="featurette-divider" id="howitworks">
 
       <!-- Marketing messaging and featurettes
       ================================================== -->
@@ -95,9 +94,9 @@
         </div>
       </div>
 
-        <hr class="featurette-divider">
+        <hr class="featurette-divider" id="pricing">
 
-      <div id="pricing">
+      <div >
         <%= render "shared/pricing" %>
         <p class="float-right"><a href="#">Back to top</a></p>
       </div>

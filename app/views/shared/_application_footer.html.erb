@@ -2,35 +2,32 @@
   <div class="row">
     <div class="col-12 col-md">
       <img class="mb-2" src="../../assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-      <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+      <small class="d-block mb-3 text-muted">&copy; 2019-2020</small>
     </div>
     <div class="col-6 col-md">
-      <h5>Features</h5>
+      <h5>Teachers</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Cool stuff</a></li>
-        <li><a class="text-muted" href="#">Random feature</a></li>
-        <li><a class="text-muted" href="#">Team feature</a></li>
-        <li><a class="text-muted" href="#">Stuff for developers</a></li>
-        <li><a class="text-muted" href="#">Another one</a></li>
-        <li><a class="text-muted" href="#">Last time</a></li>
-      </ul>
-    </div>
-    <div class="col-6 col-md">
-      <h5>Resources</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Resource</a></li>
-        <li><a class="text-muted" href="#">Resource name</a></li>
-        <li><a class="text-muted" href="#">Another resource</a></li>
-        <li><a class="text-muted" href="#">Final resource</a></li>
+        
+        <li><%=link_to "Apply as teacher", "register?plan=1", class:"text-muted" %></li>
       </ul>
     </div>
     <div class="col-6 col-md">
       <h5>About</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Team</a></li>
-        <li><a class="text-muted" href="#">Locations</a></li>
-        <li><a class="text-muted" href="#">Privacy</a></li>
-        <li><a class="text-muted" href="#">Terms</a></li>
+        <li><a href="#howitworks", class="text-muted"> How it works? </a></li>
+        <li><a href="#pricing", class="text-muted">Pricing </a></li>
+        <li><%=link_to "FAQ", faq_path, class:"text-muted" %></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+      <% if current_user.is_a?(GuestUser) %>
+        <li><%=link_to "Login", new_user_session_path, class:"text-muted" %><li>
+      <% else %>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"text-muted" %>
+      <% end %>
+        <li><%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan), class:"text-muted" %></li>
       </ul>
     </div>
   </div>

@@ -137,6 +137,14 @@
           <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
           <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
         </div>
+
+      <span class="form-group col-md-6 mt-2">
+        <p>
+          <b>Total to pay:</b> 2080 MXN <br/>
+          <b>Note:</b> All payments are processed by <%=link_to "stripe","https://stripe.com/", target: :_blank %>.<br/><i class="fa fa-cc-stripe" aria-hidden="true" style="color:blue;"></i> <i class="fa fa-cc-visa" aria-hidden="true" style="color:##F7F7F7;"></i> <i class="fa fa-cc-mastercard" aria-hidden="true" style="color:#E45931;"></i> <i class="fa fa-cc-amex" aria-hidden="true" style="color:#156CC9;"></i>
+        </p>
+      </span>
+
       </div>
     </div>
 

@@ -1,8 +1,8 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">Pricing</h1>
-  <p class="lead"><b>Select the membership</b> that fits better for you.<br/> Once you make sign up and make the payment, a person from the team will contact you in a maximum time of 2 hours to give you all the information (schedules, teacher information, etc.) about your class.</p>
-  <%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan.id), class:'btn btn-outline-secondary' %>
-</div>
+  <h1 class="display-4"><b>Pricing</b></h1>
+  <p class="lead"><b style="color:#AD8C47;">Select the membership</b> that fits better for you.<br/> Once you make sign up and make the payment, a person from the team will contact you in a maximum time of 2 hours to give you all the information (schedules, teacher information, etc.) about your class.</p><br/>
+  <%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan.id), class:'btn btn-outline-info' %>
+</div><br/>
 
 <div class="container">
   <div class="card-deck mb-3 text-center">
@@ -55,7 +55,7 @@
           </button>
         </h2>
       </div>
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
           Write to us at <a><em>hello@5roots.co</em> or by Whats App at +52 1 (81) 2110 1145 </a>
         </div>

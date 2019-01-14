@@ -36,17 +36,17 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
-            <i class="fa fa-id-card-o fa-3x" ></i>
+            <i class="fa fa-id-card-o fa-3x" style="color:#AD8C47;" ></i>
             <h2>Select your subscription</h2>
             <p>Select the <%= link_to "membership", "#pricing" %> that is most convenient for you or <%= link_to "take a free trial class.", new_user_registration_path(plan: @free_plan.id) %></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">  
-            <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+            <i class="fa fa-user-circle-o fa-3x" aria-hidden="true" style="color:#EFB855;"></i>
             <h2>Sign up</h2>
             <p>Sign up and fill out the profile form so we can find the best teacher for you.</p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <i class="fa fa-check-circle fa-3x" ></i>
+            <i class="fa fa-check-circle fa-3x" style="color:lightgreen;"></i>
             <h2>Start learning</h2>
             <p>Once you pay and sign up, then we'll give you all the information about your teacher so you can start learning asap.</p>
           </div><!-- /.col-lg-4 -->
@@ -98,7 +98,7 @@
 
       <div >
         <%= render "shared/pricing" %>
-        <p class="float-right"><a href="#">Back to top</a></p>
+        <%=link_to "Back to top","#", class:"nav-link btn float-right" %><br/>
       </div>
 
 

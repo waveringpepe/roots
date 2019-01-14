@@ -5,7 +5,6 @@
 
  <div class="container mt-4">
       <h4 class="mb-3">Information</h4>
-    </div>
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-group col-md-4">
@@ -78,9 +77,10 @@
         </div>
       </div>
     </div>
+  </div>
     <div class="container mt-4">
       <h4 class="mb-3">Extra Information</h4>
-    </div>
+    
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-gropu col-md-12">
@@ -99,23 +99,24 @@
         </div>
       </div>
     </div>
+    </div>
 
     <div class="container mt-4">
       <h4 class="mb-3">References?</h4>
     </div>
-    <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="container mt-4">
-        <div class="row">
-         <div class="form-group col-md-6">
-            <%= f.label :reference %><br />
-            <%= f.text_field :reference, class:"form-control", placeholder:"Who told you about us"%>
-          </div>
+        <div class="card rounded d-flex p-2 bd-highlight bg-light">
+          <div class="row">
+           <div class="form-group col-md-6">
+              <%= f.label :reference %><br />
+              <%= f.text_field :reference, class:"form-control", placeholder:"Who told you about us"%>
+            </div>
 
-          <div class="form-group col-md-6">
-            <%= f.label :promo_code %><br />
-            <%= f.text_field :promo_code, class:"form-control", placeholder:"Do you have a promo code?"%>
+            <div class="form-group col-md-6">
+              <%= f.label :promo_code %><br />
+              <%= f.text_field :promo_code, class:"form-control", placeholder:"Do you have a promo code?"%>
+            </div>
           </div>
-        </div>
       </div>
     </div>
 
@@ -141,10 +142,11 @@
           <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
         </div>
 
-        <span class="form-group col-md-6 mt-2">
+        <span class="card-body form-group col-md-6 mt-2">
           <p>
             <b>Total:</b> 0 MXN <br/>
-            <b>Nota:</b> 5 roots te regala una clase de 30 minutos, en caso de que incumplas con la política de cancelación o dejes plantado a tu profesor te haremos un cargo de 250 MXN de otra manera tu clase va por nuestra cuenta.<br/></p>
+            <b>Note:</b> 5 roots gives you for free a 30 minutes trial class, <i><b>we'll never charge you anything</i></b> unless you break the <%=link_to "cancelation/change policy",faq_path + "#cancelationpolicy"%>. All payments are processed by <%=link_to "stripe","https://stripe.com/", target: :_blank %>.<br/> <i class="fa fa-cc-stripe" aria-hidden="true" style="color:blue;"></i> <i class="fa fa-cc-visa" aria-hidden="true" style="color:##F7F7F7;"></i> <i class="fa fa-cc-mastercard" aria-hidden="true" style="color:#E45931;"></i> <i class="fa fa-cc-amex" aria-hidden="true" style="color:#156CC9;"></i>
+          </p>
         </span>
       </div>
 

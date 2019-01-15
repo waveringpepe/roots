@@ -74,7 +74,7 @@
         </div> 
         <div class="form-group col-md-4">
           <%= f.label :actual_country , "Select your current country" %> <br/>
-          <%= country_select("user", "country", { include_blank: 'Select a country' }, { class: 'form-control' }) %>
+          <%= f.country_select :actual_country, ["Mexico", "United States"],options = {}, html_options = {:class => "form-control", :id => "payment_country"} %> 
 
         </div>
       </div>

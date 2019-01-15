@@ -33,7 +33,9 @@ module DeviseWhitelist
 															:institutions_teach,
 															:certificate_id,
 															:type_student,
-															:years_teaching
+															:years_teaching,
+															:country,
+															:actual_country
 	 														])
 	    devise_parameter_sanitizer.permit(:account_update, keys: [:name,
 	    													:skype,

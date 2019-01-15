@@ -53,7 +53,7 @@
 
         <div class="form-group col-md-4">
           <%= f.label :start_id , "Select when you would like to start" %>
-          <%= f.select(:start_id, options_for_select([['Today', 1], ['In a few days', 2],['In two weeks', 3],['In one month', 4]]), {}, {class: "form-control"}) %>
+          <%= f.select(:start_id, options_for_select([['Today', 1], ['In a few days', 2]]), {}, {class: "form-control"}) %>
         </div>
 
         <div class="form-group col-md-4">
@@ -62,11 +62,22 @@
         </div>
       </div>
     <div class="row">
-        <div class="form-group col-md-6">
-          <%= f.label :level , "In a scale of 1-10 which is your level of the language " %> <br/>
-          <%= f.select(:level, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10]]), {}, {class: "form-control mt-2"}) %> 
+        <div class="form-group col-md-4">
+          <%= f.label :country , "Select your country" %> <br/>
+          <%= f.country_select :country, ["Mexico", "United States"],options = {}, html_options = {:class => "form-control", :id => "payment_country"} %> 
         </div>
-        <div class="col-md-6">
+
+        <div class="form-group col-md-4">
+          <%= f.label :city_id, "City" %><br />
+          <%= f.text_field :city_id, class:"form-control", placeholder:"City" %>
+        </div>
+
+        <div class="form-group col-md-4">
+          <%= f.label :level , "Select your level" %> <br/>
+          <%= f.select(:level, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10]]), {}, {class: "form-control mt"}) %> 
+        </div>
+
+        <div class="col-md-4">
           <%= f.label :birth_date, "Select your birthday" %>
           <%= f.date_select :birth_date, 
                        { 
@@ -84,18 +95,18 @@
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-gropu col-md-12">
-          <%= f.label :reason_id, "Why do you want to learn the language?" %><br />
-          <%= f.text_field :reason_id, class:"form-control", placeholder:"Tell us if you are learnign for traveling, work or something else"%>
+          <%= f.label :reason_id %><br />
+          <%= f.text_field :reason_id, class:"form-control", placeholder:"Why do you want to learn the language?"%>
         </div>
 
         <div class="form-gropu col-md-12">
-          <%= f.label :experience, "Tell us about your experience of learning the language" %><br />
-          <%= f.text_field :experience, class:"form-control", placeholder:"I've taken for 2 year italian lessons at my university..."%>
+          <%= f.label :experience %><br />
+          <%= f.text_field :experience, class:"form-control", placeholder:"Tell us about your experience"%>
         </div>
 
         <div class="form-gropu col-md-12">
-          <%= f.label :schedule, "Tell us your preferred schedule for classes" %><br />
-          <%= f.text_field :schedule, class:"form-control", placeholder:"Monday and wednesday from 7 to 8pm or tuesday from 10 to 11am  "%>
+          <%= f.label :schedule %><br />
+          <%= f.text_field :schedule, class:"form-control", placeholder:"Select your schedule"%>
         </div>
       </div>
     </div>
@@ -105,10 +116,11 @@
     </div>
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
-        <div class="form-group col-md-6">
+       <div class="form-group col-md-6">
           <%= f.label :reference %><br />
           <%= f.text_field :reference, class:"form-control", placeholder:"Who told you about us"%>
         </div>
+
         <div class="form-group col-md-6">
           <%= f.label :promo_code %><br />
           <%= f.text_field :promo_code, class:"form-control", placeholder:"Do you have a promo code?"%>

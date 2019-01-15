@@ -91,7 +91,7 @@
     <div class="container mt-4">
       <h4 class="mb-3">Extra Information</h4>
     </div>
-    <div class="card rounded d-flex p-2 bd-highlight mt-4 bg-light">
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-gropu col-md-12">
           <%= f.label :reason_id %><br />
@@ -113,7 +113,7 @@
     <div class="container mt-4">
       <h4 class="mb-3">References?</h4>
     </div>
-    <div class="container mt-4 bg-light rounded">
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
        <div class="form-group col-md-6">
           <%= f.label :reference %><br />
@@ -130,7 +130,7 @@
     <div class="container mt-4">
       <h4 class="mb-3">Payment</h4>
     </div>
-    <div class="container mt-4 bg-light">
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-group col-md-6 mt-4">
           <%= label_tag :card_number, "Credit Card Number" %>
@@ -138,7 +138,7 @@
         </div>
 
         <div class="form-group col-md-6 mt-4">
-          <%= label_tag :card_code, "CVV" %>
+          <%= label_tag :card_code, "CCV" %>
           <%= text_field_tag :card_code, nil , name: nil, class: "form-control" %>
         </div>
       </div>
@@ -154,20 +154,14 @@
           <p>
             <b>Total to pay:</b> 1120 MXN <br/>
             <b>Note:</b> All payments are processed by <%=link_to "stripe","https://stripe.com/", target: :_blank %>.<br/><i class="fa fa-cc-stripe" aria-hidden="true" style="color:blue;"></i> <i class="fa fa-cc-visa" aria-hidden="true" style="color:##F7F7F7;"></i> <i class="fa fa-cc-mastercard" aria-hidden="true" style="color:#E45931;"></i> <i class="fa fa-cc-amex" aria-hidden="true" style="color:#156CC9;"></i>
-
           </p>
         </span>
-      </div>
-    </div>
-
-
-    <div class="d-flex p-2 bd-highlight mt-4">
-      <div class="row">
-        <div class="actions col-md-">
-          <%= f.submit "Sign up", class:"btn btn-primary", id: "form-signup-btn" %>
+        <div class="actions col-md-6">
+          <%= f.submit "Sign up and pay", class:"btn btn-primary", id: "form-signup-btn" %>
         </div>
       </div>
     </div>
+
 <% end %>
 
 

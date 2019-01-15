@@ -14,9 +14,13 @@
     <div class="col-6 col-md">
       <h5>About</h5>
       <ul class="list-unstyled text-small">
+        <% if current_user.is_a?(GuestUser) %>
+        <li><%=link_to "FAQ", faq_path, class:"text-muted" %></li>
         <li><a href="#howitworks", class="text-muted"> How it works? </a></li>
         <li><a href="#pricing", class="text-muted">Pricing </a></li>
+        <% else %>
         <li><%=link_to "FAQ", faq_path, class:"text-muted" %></li>
+        <% end %>
       </ul>
     </div>
     <div class="col-6 col-md">
@@ -24,10 +28,11 @@
       <ul class="list-unstyled text-small">
       <% if current_user.is_a?(GuestUser) %>
         <li><%=link_to "Login", new_user_session_path, class:"text-muted" %><li>
+        <li><%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan), class:"text-muted" %></li>  
       <% else %>
         <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"text-muted" %>
       <% end %>
-        <li><%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan), class:"text-muted" %></li>
+        
       </ul>
     </div>
   </div>

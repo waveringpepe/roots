@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
 
-access all: [:home], teacher: {except: [:home]}, site_admin: :all, message: "you shall not pass"
+access user: [:home], teacher: {except: [:home]}, site_admin: :all, message: "you shall not pass"
 
 	def home
 	

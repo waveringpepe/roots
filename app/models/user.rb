@@ -45,5 +45,9 @@ class User < ApplicationRecord
   def last_name
   	self.name.split.last
   end
+
+  def check_active_user
+    forbidden! unless current_user.active
+  end
   
 end

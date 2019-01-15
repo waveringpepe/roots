@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	# GET request for / which is our home page
-access all: [:home, :faq], user: {except: [:teachers]}, teacher: {except: [:students]}, site_admin: :all
+access all: [:home, :faq] , site_admin: :all
 
 
 
@@ -11,6 +11,7 @@ access all: [:home, :faq], user: {except: [:teachers]}, teacher: {except: [:stud
     @medium_plan = Plan.find(6)
     @intensive_plan = Plan.find(7)
     @free_plan = Plan.find(8)
+    
   end
 
   def about

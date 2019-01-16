@@ -1,6 +1,7 @@
 
       <section class="jumbotron text-center">
         <div class="container">
+          <%= image_tag "home_page_1.jpeg", width: "100%", alt: "image2", class: "rounded float-right" %>
             <h1 class="featurette-heading" style="background-color:rgba(235,236,241,0.7);">Learn a new lenguage <span style="color:#55A747">from the comfort of your home</span></h1>
             <p>
               <%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan.id), class:'btn btn-primary my-2' %>

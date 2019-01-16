@@ -7,18 +7,17 @@ Rails.application.routes.draw do
 	end
 
 	authenticated :user, ->(u) { u.has_role?(:teacher) } do
-	  root to: "teachers#home", as: :teacher_root
+	  root to: "pages#teachers_home", as: :teacher_root
 	end
 
 	authenticated :user, ->(u) { u.has_role?(:user) } do
-	  root to: "students#home", as: :students_root
+	  root to: "pages#students_home", as: :students_root
 	end
 
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'faq', to: 'pages#faq'
-  get 'home-students', to:'students#home'
-  get 'home-teachers', to:'teachers#home'
+
 
   
 

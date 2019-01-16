@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
+  before_action :set_locale
 	# GET request for / which is our home page
-access all: [:home, :faq] , site_admin: :all
+  access all: [:home, :faq] , site_admin: :all
 
 
 

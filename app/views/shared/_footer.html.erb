@@ -7,7 +7,7 @@
       <h5>Teachers</h5>
       <ul class="list-unstyled text-small">
         
-        <li><%=link_to "Apply as teacher", "register?plan=1", class:"text-muted" %></li>
+        <li><%=link_to "Apply as teacher", new_user_registration_path(plan: 1), class:"text-muted" %></li>
       </ul>
     </div>
     <div class="col-6 col-md">
@@ -15,8 +15,8 @@
       <ul class="list-unstyled text-small">
         <% if current_user.is_a?(GuestUser) %>
         <li><%=link_to "FAQ", faq_path, class:"text-muted" %></li>
-        <li><a href="#howitworks", class="text-muted"> How it works? </a></li>
-        <li><a href="#pricing", class="text-muted">Pricing </a></li>
+        <li><%=link_to "How it works?",root_path + "#howitworks", class:"text-muted" %></li>
+        <li><%=link_to "Pricing",root_path + "#pricing", class:"text-muted" %></li>
         <% else %>
         <li><%=link_to "FAQ", faq_path, class:"text-muted" %></li>
         <% end %>

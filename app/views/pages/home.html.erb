@@ -1,9 +1,9 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="featurette-heading" style="background-color:rgba(235,236,241,0.7);">Learn a new lenguage <span style="color:#55A747">from the comfort of your home</span></h1>
+            <h1 class="featurette-heading" style="background-color:rgba(235,236,241,0.7);"><%= t('Learn a new lenguage')%> <span style="color:#55A747">from the comfort of your home</span></h1>
             <p>
-              <%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan.id), class:'btn btn-primary my-2' %>
+              <%= link_to t('hello'), new_user_registration_path(plan: @free_plan.id), class:'btn btn-primary my-2' %>
             </p>
           </div>
       </section><br/><br/><br/>

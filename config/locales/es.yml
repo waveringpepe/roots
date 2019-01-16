@@ -1,4 +1,7 @@
 es:
+  
+  hello: "Hola Mundo"
+  Learn a new lenguage: "Aprende un idioma nuevo"
   date:
     abbr_day_names:
     - dom

@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'users/registrations' },  path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
   resources :blogs
 
+	
+	
 	unauthenticated do
 	   root :to => 'pages#home'
 	end
@@ -17,7 +19,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'faq', to: 'pages#faq'
-
+  filter :locale,    :exclude => /^\/admin/
 
   
 

@@ -69,4 +69,6 @@ gem 'country_select', '~> 4.0'
 gem 'figaro', '1.1.1'
 # User font awesome to get icons
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+# with simplify working with routes
+gem 'routing-filter', '~> 0.6.2'
 

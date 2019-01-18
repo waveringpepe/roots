@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'users/registrations' },  path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
   resources :blogs
-
-	scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-	
-	end
-	
+scope "(:locale)", locale: /en|es/ do
 	unauthenticated do
 	   root :to => 'pages#home'
 	end
@@ -21,6 +17,8 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'faq', to: 'pages#faq'
+
+end
  
 
   

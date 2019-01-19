@@ -4,32 +4,32 @@
       <small class="d-block mb-3 text-muted">&copy; 2019-2020</small>
     </div>
     <div class="col-6 col-md">
-      <h5>Teachers</h5>
+      <h5><%= t('teachers') %></h5>
       <ul class="list-unstyled text-small">
         
-        <li><%=link_to "Apply as teacher", new_user_registration_path(plan: 1), class:"text-muted" %></li>
+        <li><%=link_to t('apply_as_teacher'), new_user_registration_path(plan: 1), class:"text-muted" %></li>
       </ul>
     </div>
     <div class="col-6 col-md">
-      <h5>About</h5>
+      <h5><%= t('about_us') %></h5>
       <ul class="list-unstyled text-small">
         <% if current_user.is_a?(GuestUser) %>
-        <li><%=link_to "FAQ", faq_path, class:"text-muted" %></li>
-        <li><%=link_to "How it works?",root_path + "#howitworks", class:"text-muted" %></li>
-        <li><%=link_to "Pricing",root_path + "#pricing", class:"text-muted" %></li>
+        <li><%=link_to t('faq'), faq_path, class:"text-muted" %></li>
+        <li><%=link_to t('how_it_works'),root_path + "#howitworks", class:"text-muted" %></li>
+        <li><%=link_to t('pricing'),root_path + "#pricing", class:"text-muted" %></li>
         <% else %>
-        <li><%=link_to "FAQ", faq_path, class:"text-muted" %></li>
+        <li><%=link_to t('faq'), faq_path, class:"text-muted" %></li>
         <% end %>
       </ul>
     </div>
     <div class="col-6 col-md">
-      <h5>Resources</h5>
+      <h5><%= t('resources') %></h5>
       <ul class="list-unstyled text-small">
       <% if current_user.is_a?(GuestUser) %>
-        <li><%=link_to "Login", new_user_session_path, class:"text-muted" %><li>
-        <li><%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan), class:"text-muted" %></li>  
+        <li><%=link_to t('login'), new_user_session_path, class:"text-muted" %><li>
+        <li><%= link_to t('button_free_class'), new_user_registration_path(plan: @free_plan), class:"text-muted" %></li>  
       <% else %>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"text-muted" %>
+        <%= link_to t('logout'), destroy_user_session_path, method: :delete, class:"text-muted" %>
       <% end %>
         
       </ul>

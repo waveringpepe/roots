@@ -1,7 +1,114 @@
 es:
   
-  hello: "Hola Mundo"
-  Learn a new lenguage: "Aprende un idioma nuevo"
+  #pages/home
+  
+  slogan_1: "Aprende un idioma"
+  slogan_2: "desde la comodidad de tu casa"
+  button_free_class: "Toma una clase de 30min gratuita"
+  available_languages: "Idiomas disponibles"
+  warranty_title: "100% Garantía de satisfacción"
+  warranty_description: "Si no te gusta la clase, te damos otra con un profesor nuevo"
+  spanish: "Español"
+  english: "Inglés"
+  french: "Francés"
+  german: "Aleman"
+  italian: "Italiano"
+  russian: "Ruso"
+  chinese: "Chino"
+  portuguese: "Portugués"
+  how_it_works: "¿Cómo funciona?"
+  how_it_works_title_1: "Selecciona tu membresía"
+  how_it_works_title_2: "Regístrate"
+  how_it_works_title_3: "Aprende hoy"
+  how_it_works_description_1: "Selecciona la membresía que se acomoda a tus necesidades o toma una clase de prueba gratis."
+  how_it_works_description_2: "Llena la forma de registro para que podamos encontrar a un profesor que se acomode a tus necesidades de apredizaje y a tu horario."
+  how_it_works_description_3: "Ahora ya estas listo. Después de realizar el pago, vas a recibir vía e-mail y Whatsapp toda la información que necesitas de tu nuevo profesor y el horario para tu primer clase."
+  benefits_title_1_a: "Habla como un"
+  benefits_title_1_b: "nativo."
+  benefits_title_2_a: "Aprende desde tu"
+  benefits_title_2_b: "lugar favorito."
+  benefits_title_3_a: "Aprende a tu propio "
+  benefits_title_3_b: "ritmo."
+  benefits_description_1: "Todos nuestros profesores son nativos y te ayudarán a que desarrolles la habilidad para hablar y pronunciar como si fueras un nativo."
+  benefits_description_2: "Ya que todas las clases son en línea, ahora puedes aprovechar tus tiempos libres. Toma una clase en el aeropuerto, desde casa o en tu cafetería favorita."
+  benefits_description_3: "Nuestros profesores desarrollan un programa personalizado para que aprendas con base en tus necesidades y metas."
+  back_to_top: "Ir al inicio"
+  
+  #shared/pricing
+  
+  pricing: "Precios"
+  basic_membership_title: "Básica"
+  medium_membership_title: "Intermedia"
+  intensive_membership_title: "Intensiva"
+  basic_membership_description: "Incluye 4 horas de clases uno a uno"
+  medium_membership_description: "Incluye 8 horas de clases uno a uno"
+  intensive_membership_description: "Incluye 12 horas de clases uno a uno"
+  basic_membership_price: "$1120 MXN /"
+  medium_membership_price: "$2080 MXN /"
+  intensive_membership_price: "$3060 MXN /"
+  month: "Mes"
+  basic_membership_button: "Regístrate con básica"
+  medium_membership_button: "Regístrate con intermedia"
+  intensive_membership_button: "Regístrate con intensiva"
+  pricing_subtitle_1: "Selecciona la membresía"
+  pricing_subtitle_2: "que se acomode a tus necesidades."
+  pricing_subtitle_3: "Una vez que te registres y realices tu pago, una persona del equipo se pondrá en contacto contigo y te proporcionará toda la información que necesitas sobre tu profesor."
+  information: "Información"
+  pricing_question_1: "¿Ninguna membresía te acomoda?"
+  pricing_question_2: "Distribuye tus horas como quieras"
+  pricing_question_3: "Los créditos expiran?"
+  pricing_question_4: "Renovación de la membresía"
+  pricing_question_5: "Cancelar membresía"
+  pricing_answer_1: "Escríbenos a hola@5roots.co o por Whatsapp a +52 1 (81) 2110 1145"  
+  pricing_answer_2: "Ejemplo: 30min por día, 4 días por semana, 1 hora por día o 2 días a la semana. Como tu quieras!"
+  pricing_answer_3: "Los creditos de tus clases son validos por 4 meses después del día de tu pago. Recuerda que 1 crédito equivale a 1 hora de clase"
+  pricing_answer_4: "Todas las membresías se renuevan automaticamente cada mes"
+  pricing_answer_5: "Si quieres cancelar tu membresía, envíanos un e-mail a hello@5roots.co y lo haremos por ti."
+  
+  #shared/footer
+
+  teachers: "Profesores"
+  apply_as_teacher: "Aplicar como profesor"
+  about_us: "Sobre nosotros"
+  faq: "Preguntas frecuentes"
+  resources: "Recursos"
+  login: "Iniciar sesión"
+  logout: "Cerrar sesión"
+
+  #faq
+
+  faq_question_1: "¿Qué metodos de pagos aceptan y por qué medio se hace el pago?"
+  faq_answer_1: "El pago se hace por Stripe, un método de pago 100% seguro, puedes pagar con las tarjetas de crédito Visa, Mastercard y American Express cards."
+  faq_question_2: "¿Cómo agendo my primer clase?"
+  faq_answer_2: "Una vez que hayas hecho el pago de tu membresía, un miembro del equipo de 5 Roots se pondrá en contacto contigo para pasarte los datos del profesor que te atenderá y así ustedes puedan elegir el día para empezar con las clases."
+  faq_question_3: "Cómo defino mi horario de clases"
+  faq_answer_3: "Una de las grandes ventajas de 5 Roots Idiomas es que tú en conjunto con el profesor definen el horario que estarán tomando semana con semana. Una vez definido, el profesor nos enviará una copia del mismo para que podamos llevar un control."
+  faq_question_4: "¿Puedo modificar mi horario?"
+  faq_answer_4: "Claro que sí, siempre y cuando te pongas de acuerdo con tu profesor para cambiar una clase a la que no vas a poder asistir, para hacer este cambio debes cumplir con nuestra política de cancelación o cambio. Si hacen el cambio de una clase y ambos están de acuerdo no es necesario avisar a una persona del equipo de 5 Roots, si se te complica la negociación del cambio de horario ponte en contacto con nosotros para poder ayudarte."
+  faq_question_5: "¿Qué pasa si mi profesor no se presenta a una clase?"
+  faq_answer_5: "Si el profesor no se presenta, escríbenos directamente por Whatsapp y te reembolsaremos tu dinero de esa clase y te asignaremos un nuevo profesor si así lo deseas."
+  faq_question_6: "¿Cómo puedo cambiar de profesor?"
+  faq_answer_6: "Si no estás contento(a) con tu profesor, escríbenos a hello@5roots.co y te asignaremos otro profesor que se adapte a tus necesidades."
+  faq_question_7: "¿Por qué medio se llevan a cabo las clases?"
+  faq_answer_7: "Todas las clases son por Skype"
+  faq_question_8: "¿Cuál es la política de cancelación o cambio de una clase? "
+  faq_answer_8: "Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces la perderás. Para 5 Roots es muy importante el tiempo que el profesor dedica a preparar una clase por lo que te pedimos que si vas a hacer una cambio le avises con el tiempo debido."
+  faq_question_9: "¿Cómo cancelo mi mebresía?"
+  faq_answer_9: "Para cancelar tu membresía debes enviarnos un correo a hello@5roots.co y nosotros te ayudaremos a dar de baja tu cuenta"
+  faq_question_10: "¿A dónde puede escribir si tengo dudas?"
+  faq_answer_10: "Por mail a hello@5roots.co o por Whats app a +52 1 (81) 2075 151 o +52 1 (81) 2110 1145."
+
+  #sessions/new
+
+  remember_me: "Recuérdame"
+  password: "Contraseña"
+
+  #Shared/links
+  sign_up: "Regístrate"
+  forgot_your_password: "¿Olvidaste tu contraseña?"  
+  Didnt_receive_confirmation_instructions: "¿No recibiste las instrucciones de confirmación?"
+  Didnt_receive_unlock_instructions: "No recibiste las instrucciones para desbloquear?"
+
   date:
     abbr_day_names:
     - dom

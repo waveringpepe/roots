@@ -20,6 +20,9 @@ Bundler.require(*Rails.groups)
 module RootsApp
   class Application < Rails::Application
 
+  config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**' '*.{rb,yml}').to_s]
+
+
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'local_env.yml')
       YAML.load(File.open(env_file)).each do |key, value|
@@ -32,13 +35,13 @@ module RootsApp
     config.load_defaults 5.2
 
     # Where the I18n library should search for translation files
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
     
     # Whitelist locales available for the application
-    I18n.available_locales = [:en, :es]
+    config.i18n.available_locales = [:en, :es]
 
     # Set default locale to something other than :en
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :es
 
 
     # Settings in config/environments/* take precedence over those specified here.

@@ -1,27 +1,27 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="featurette-heading" style="background-color:rgba(235,236,241,0.7);"><%= t('Learn a new lenguage')%> <span style="color:#55A747">from the comfort of your home</span></h1>
+            <h1 class="featurette-heading" style="background-color:rgba(235,236,241,0.7);"><%= t('slogan_1')%> <span style="color:#55A747"><%= t('slogan_2')%></span></h1>
             <p>
-              <%= link_to t('hello'), new_user_registration_path(plan: @free_plan.id), class:'btn btn-primary my-2' %>
+              <%= link_to t('button_free_class'), new_user_registration_path(plan: @free_plan.id), class:'btn btn-primary my-2' %>
             </p>
           </div>
       </section><br/><br/><br/>
 
         <div class="container text-center card">
-          <br/><p> <i class="fa fa-certificate fa-2x text-danger aria-hidden="true"></i> 100% Satisfaction warranty <br/> If you don’t like the class, we’ll give you another one for free.</p><br/>
+          <br/><p> <i class="fa fa-certificate fa-2x text-danger aria-hidden="true"></i> <%= t('warranty_title') %><br/><%= t('warranty_description') %></p><br/>
           </div><br/><br/><br/>
 
       <div class="container text-center">
-        <h2> Available languages </h2><br/>
-        <%= link_to "Spanish", new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-primary" %>
-        <%= link_to "English", new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-secondary" %>
-        <%= link_to "French", new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-success" %>
-        <%= link_to "German", new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-danger" %>
-        <%= link_to "Italian", new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-warning" %>
-        <%= link_to "Portuguese", new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-info" %>
-        <%= link_to "Russian", new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-dark" %>
-        <%= link_to "Chinese", new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-primary" %>
+        <h2> <%= t('available_languages') %> </h2><br/>
+        <%= link_to t('spanish'), new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-primary" %>
+        <%= link_to t('english'), new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-secondary" %>
+        <%= link_to t('french'), new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-success" %>
+        <%= link_to t('german'), new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-danger" %>
+        <%= link_to t('italian'), new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-warning" %>
+        <%= link_to t('portuguese'), new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-info" %>
+        <%= link_to t('russian'), new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-dark" %>
+        <%= link_to t('chinese'), new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-primary" %>
       </div><br/>
 
         <hr class="featurette-divider" id="howitworks">
@@ -31,24 +31,37 @@
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
       <div class="marketing">
-      <h1 class="text-center"> How it works?</h1><br/><br/>
+      <h1 class="text-center"><%= t('how_it_works') %></h1><br/><br/>
 
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
-            <i class="fa fa-id-card-o fa-3x" style="color:#AD8C47;" ></i>
-            <h2>Choose your membership</h2>
-            <p>Choose the <%= link_to "membership", "#pricing" %> that fits your needs or <%= link_to "take a free trial class.", new_user_registration_path(plan: @free_plan.id) %></p>
+            <div>
+              <i class="fa fa-id-card-o fa-3x" style="color:#AD8C47;" ></i>
+            </div><br/>
+            <div>
+              <h2> <%= t('how_it_works_title_1') %> </h2>
+              <p><%= t('how_it_works_description_1') %></p>
+            </div>
+
           </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">  
-            <i class="fa fa-user-circle-o fa-3x" aria-hidden="true" style="color:#EFB855;"></i>
-            <h2>Sign up</h2>
-            <p>Fill out the form so we can match you with the teacher that best accommodates your schedule and learning needs.</p>
+          <div class="col-lg-4"> 
+            <div> 
+              <i class="fa fa-user-circle-o fa-3x" aria-hidden="true" style="color:#EFB855;"></i>
+            </div><br/>
+            <div>
+              <h2><%= t('how_it_works_title_2') %></h2>
+              <p><%= t('how_it_works_description_2') %></p>
+            </div>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <i class="fa fa-check-circle fa-3x" style="color:lightgreen;"></i>
-            <h2>Start learning</h2>
-            <p>Now you are all set. After the payment is done, you'll receive via e-mail and Whats app all the information about your new teacher and the schedule of your first class.</p>
+            <div>
+              <i class="fa fa-check-circle fa-3x" style="color:lightgreen;"></i><br/>
+            </div><br/>
+            <div>
+              <h2><%= t('how_it_works_title_3') %></h2>
+              <p><%= t('how_it_works_description_3') %></p>
+            </div>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
       </div>
@@ -60,8 +73,8 @@
       <div class="mr-5 ml-5">
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Speak as a <span class="text-muted">native</span></h2>
-            <p class="lead">All our teachers are native and they will help you to develop the skill for speaking a pronounicing as if you were a native.</p>
+            <h2 class="featurette-heading"><%= t('benefits_title_1_a') %> <span class="text-muted"><%= t('benefits_title_1_b') %></span></h2>
+            <p class="lead"><%= t('benefits_description_1') %></p>
           </div>
           <div class="col-md-5">
              <%= image_tag "native_people.jpg", width: "100%", alt: "image2", class: "rounded" %>
@@ -72,8 +85,8 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Learn from your  <span class="text-muted">favorite spot.</span></h2>
-            <p class="lead">Since all classes are taken via online now you can take advantage of your downtimes. You can take a lesson in the airport, in home or in your favorite coffee bar.
+            <h2 class="featurette-heading"><%= t('benefits_title_2_a' ) %> <span class="text-muted"> <%= t('benefits_title_2_b') %></span></h2>
+            <p class="lead"><%= t('benefits_description_2') %>
             </p>
           </div>
           <div class="col-md-5 order-md-1">
@@ -85,8 +98,8 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Learn at your own <span class="text-muted">pace.</span></h2>
-            <p class="lead">Our teachers develop a custom curriculum that fits your learning needs and goals.</p>
+            <h2 class="featurette-heading"><%= t('benefits_title_3_a') %><span class="text-muted"><%= t('benefits_title_3_b') %></span></h2>
+            <p class="lead"><%= t('benefits_description_3') %></p>
           </div>
           <div class="col-md-5">
             <%= image_tag "online_learning1.jpg", width: "100%", alt: "image2", class: "rounded" %>
@@ -98,7 +111,7 @@
 
       <div >
         <%= render "shared/pricing" %>
-        <%=link_to "Back to top","#", class:"nav-link btn float-right" %><br/>
+        <%=link_to t('back_to_top'),"#", class:"nav-link btn float-right" %><br/>
       </div>
 
 

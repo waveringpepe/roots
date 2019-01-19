@@ -1,63 +1,63 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4"><b>Pricing</b></h1>
-  <p class="lead"><b style="color:#AD8C47;">Choose the membership</b> that feeds your needs.<br/> Once you sign up and make the payment, a person from the team will get in touch with you and will provide you all the information of your teacher.</p><br/>
-  <%= link_to "Take a free 30min trial class", new_user_registration_path(plan: @free_plan.id), class:'btn btn-outline-info' %>
+  <h1 class="display-4"><b><%= t('pricing') %></b></h1>
+  <p class="lead"><b style="color:#AD8C47;"><%= t('pricing_subtitle_1') %></b> <%= t('pricing_subtitle_2') %><br/><%= t('pricing_subtitle_3') %> </p><br/>
+  <%= link_to t('button_free_class'), new_user_registration_path(plan: @free_plan.id), class:'btn btn-outline-info' %>
 </div><br/>
 
 <div class="container">
   <div class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Basic</h4>
+        <h4 class="my-0 font-weight-normal"><%= t('basic_membership_title') %></h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$1120 MXN <small class="text-muted">/ month</small></h1>
+        <h1 class="card-title pricing-card-title"><%= t('basic_membership_price') %> <small class="text-muted"><%= t('month') %></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><b>4</b> hours of one to one lessons included</li>
+          <li><%= t('basic_membership_description') %></li>
         </ul>
-        <%= link_to "Sign up with basic", new_user_registration_path(plan: @basic_plan.id), class:'btn btn-dark btn-lg btn-block' %>
+        <%= link_to t('basic_membership_button'), new_user_registration_path(plan: @basic_plan.id), class:'btn btn-dark btn-lg btn-block' %>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Medium</h4>
+        <h4 class="my-0 font-weight-normal"><%= t('medium_membership_title') %></h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$2,080 MXN <small class="text-muted">/ month</small></h1>
+        <h1 class="card-title pricing-card-title"><%= t('medium_membership_price') %> <small class="text-muted"><%= t('month') %></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><b>8</b> hours of one to one lessons included</li>
+          <li><%= t('medium_membership_description') %></li>
         </ul>
-        <%= link_to "Sign up with medium", new_user_registration_path(plan: @medium_plan.id), class:'btn btn-success btn-lg btn-block' %>
+        <%= link_to t('medium_membership_button'), new_user_registration_path(plan: @medium_plan.id), class:'btn btn-success btn-lg btn-block' %>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Intensive</h4>
+        <h4 class="my-0 font-weight-normal"><%= t('intensive_membership_title') %></h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$3,060 MXN <small class="text-muted">/ month</small></h1>
+        <h1 class="card-title pricing-card-title"><%= t('intensive_membership_price') %> <small class="text-muted"><%= t('month') %></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><b>12</b> hours of one to one lessons included</li>
+          <li> <%= t('intensive_membership_description') %></li>
         </ul>
-        <%= link_to "Sign up with intensive", new_user_registration_path(plan: @intensive_plan.id), class:'btn btn-primary btn-lg btn-block' %>
+        <%= link_to t('intensive_membership_button'), new_user_registration_path(plan: @intensive_plan.id), class:'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
   </div>
 <div class="container">
-  <h3> Information </h3><br/>
+  <h3> <%= t('information') %></h3><br/>
 
   <div class="accordion" id="accordionExample">
     <div class="card">
       <div class="card-body" id="headingOne">
         <h2 class="mb-0">
           <button style="color:#5A5A5A;" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collaspseOne">
-            <b>None of the packages suits you?</b>
+            <%= t('pricing_question_1') %>
           </button>
         </h2>
       </div>
       <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
-          Write to us at <a><em>hello@5roots.co</em> or by Whats App at +52 1 (81) 2110 1145 </a>
+          <%= t('pricing_answer_1') %>
         </div>
       </div>
     </div>
@@ -65,15 +65,14 @@
       <div class="card-body" id="headingTwo">
         <h2 class="mb-0">
           <button style="color:#5A5A5A;" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <b>Distribute your hours as you wish</b>
+            <%= t('pricing_question_2') %>
           </button>
         </h2>
       </div>
 
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
         <div class="card-body">
-          Example: <br/>30 minutes per day, 4 days a week,<br/> 
-                   1 hour per day, 2 days a week.
+          <%= t('pricing_asnwer_2') %>
         </div>
       </div>
     </div>
@@ -81,13 +80,13 @@
       <div class="card-body" id="headingThree">
         <h2 class="mb-0">
           <button style="color:#5A5A5A;" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collaspseThree">
-            <b>Do credits expire?</b>
+            <%= t('pricing_question_3') %>
           </button>
         </h2>
       </div>
       <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
         <div class="card-body">
-          Your class credits are valid for 4 months from the day of your payment is made.
+          <%= t('pricing_answer_3') %>
         </div>
       </div>
     </div>
@@ -95,13 +94,13 @@
       <div class="card-body" id="headingFour">
         <h2 class="mb-0">
           <button style="color:#5A5A5A;" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            <b>Membership renewal time</b>
+            <%= t('pricing_question_4') %>
           </button>
         </h2>
       </div>
       <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
         <div class="card-body">
-         All the memberships are <b>renewed</b> every month.</dd>
+         <%= t('pricing_answer_4') %>
         </div>
       </div>
     </div>
@@ -109,13 +108,13 @@
         <div class="card-body" id="headingFive">
           <h2 class="mb-0">
             <button style="color:#5A5A5A;" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              <b>Cancel subscription</b>
+              <%= t('pricing_question_5') %>
             </button>
           </h2>
         </div>
         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
           <div class="card-body">
-           If you want to cancel your subscription send us an email to <b>hello@5roots.co</b> and we will do it for you.
+           <%= t('pricing_answer_5') %>
           </div>
         </div>
       </div>

@@ -30,4 +30,126 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  #pages/home
+
+  slogan_1: "Learn a new language"
+  slogan_2: "from the comfort of your home"
+  button_free_class: "Take a 30min free trial class"
+  warranty_title: "100% Satisfaction warranty"
+  warranty_description: "If you don’t like the class, we’ll give you another one for free."
+  available_languages: "Available languages"
+  spanish: "Spanish"
+  english: "English"
+  french: "French"
+  german: "German"
+  italian: "Italian"
+  russian: "Russian"
+  chinese: "Chinese"
+  portuguese: "Portuguese"
+  how_it_works: "How it works?"
+  how_it_works_title_1: "Choose your membership"
+  how_it_works_title_2: "Sing up"
+  how_it_works_title_3: "Start learning"
+  how_it_works_description_1: "Choose the membership that fits your needs or take a free trial class."
+  how_it_works_description_2: "Fill out the form so we can match you with the teacher that best accommodates your schedule and learning needs."
+  how_it_works_description_3: "Now you are all set. After the payment is done, you'll receive via e-mail and Whatsapp all the information about your new teacher and the schedule of your first class."
+  benefits_title_1_a: "Speak as a"
+  benefits_title_1_b: "native."
+  benefits_title_2_a: "Learn from your"
+  benefits_title_2_b: "favorite spot."
+  benefits_title_3_a: "Learn at your"
+  benefits_title_3_b: "own pace."
+  benefits_description_1: "All our teachers are native and they will help you to develop the skill for speaking a pronounicing as if you were a native."
+  benefits_description_2: "Since all classes are taken via online now you can take advantage of your downtimes. You can take a lesson in the airport, in home or in your favorite coffee bar."
+  benefits_description_3: "Our teachers develop a custom curriculum that fits your learning needs and goals."
+  back_to_top: "Back to top"
+
+  #shared/pricing
+
+  pricing: "pricing"
+  basic_membership_title: "Basic"
+  medium_membership_title: "Medium"
+  intensive_membership_title: "Intensive"
+  basic_membership_description: "4 hours of one to one lessons included"
+  medium_membership_description: "8 hours of one to one lessons included"
+  intensive_membership_description: "12 hours of one to one lessons included"
+  basic_membership_price: "$1120 MXN /"
+  medium_membership_price: "$2080 MXN /"
+  intensive_membership_price: "$3060 MXN /"
+  month: "Month"
+  basic_membership_button: "Sign up with basic"
+  medium_membership_button: "Sign up with medium"
+  intensive_membership_button: "Sign up with intensive"
+  pricing_subtitle_1: "Choose the membership"
+  pricing_subtitle_2: "that_feeds your needs."
+  pricing_subtitle_3: "Once you sign up and make the payment, a person from the team will get in touch with you and will provide you all the information of your teacher."
+  information: "Information"
+  pricing_question_1: "None of the packages suits you?"
+  pricing_question_2: "Distribuite your hours as you wish"
+  pricing_question_3: "Do credits expire?"
+  pricing_question_4: "Membership renewal time"
+  pricing_question_5: "Cancel membership"
+  pricing_answer_1: "Write to us at hello@5roots.co or by Whats App at +52 1 (81) 2110 1145"
+  pricing_answer_2: "Example: 30 minutes per day, 4 days a week, 1 hour per day, 2 days a week."
+  pricing_answer_3: "Your class credits are valid for 4 months from the day of your payment is made."
+  pricing_answer_4: "All the memberships are renewed every month."
+  pricing_answer_5: "If you want to cancel your subscription send us an email to hello@5roots.co and we will do it for you."
+
+  #shared/footer and navbar
+
+  teachers: "Teachers"
+  teachers: "Profesores"
+  apply_as_teacher: "Aplicar como profesor"
+  about_us: "Sobre nosotros"
+  faq: "Preguntas frecuentes"
+  resources: "Recursos"
+  login: "Iniciar sesión"
+  logout: "Cerrar sesión"
+
+  #faq
+
+  faq_question_1: "What payment methods do you accept?"
+  faq_answer_1: "Payment is made through Stripe, a 100% secure payment method, you can pay with your Visa, Mastercard and American Express cards."
+  faq_question_2: "How do I schedule my first class?"
+  faq_answer_2: "Once you have made the payment of your subscription, a member of the team of 5 Roots will contact you to give you all the information of the teacher who will attend you and so you can choose the day to start with the classes."
+  faq_question_3: "How do I define my schedule"
+  faq_answer_3: "One of the great advantages of 5 Roots is that you, along with the teacher define the schedule for the classes. Once defined, the teacher will send us a copy of it so that we can keep track of it."
+  faq_question_4: "Can I modify my schedule"
+  faq_answer_4: "Of course, as long as you agree with your teacher to change a class that you do not have the power to attend, in order to make this change, you must comply with our cancellation or change policy. If you make the change of a class and both agree it is not necessary to notify a person of the team of 5 Roots, if you have any problem with changing your class then get in touch with us so we can help you."
+  faq_question_5: "What happens if the teacher does not show up for the class?"
+  faq_answer_5: "If the teacher does not show up, write us directly by WhatsApp and we will refund your money from that class and if you would like to change your teacher then we can do it."
+  faq_question_6: "How can I change my teacher?"
+  faq_answer_6: "If you are not happy with your teacher, write to us at hello@5roots.co and we will assign another teacher to suit your needs."
+  faq_question_7: "Where are the classes held?"
+  faq_answer_7: "All the classes are via Skype."
+  faq_question_8: "What is the cancellation or change policy of a class?"
+  faq_answer_8: "You can cancel or change a class at least 24 hours in advance, if you do not do it and you do not attend the class then you will lose it. Is very important for us the time that the teacher devotes to prepare a class so we ask that if you are going to make a change, you notify him in due time."
+  faq_question_9: "How can I cancel my membership?"
+  faq_answer_9: "To cancel your subscription you must send an email to hello@5roots.co and we will help you to cancel your account."
+  faq_question_10: "Do you need help?"
+  faq_answer_10: "If you have any question please send an e-mail to hello@5roots.co or send a Whatsapp message to +52 1 81-2110-1114"
+
+  #sessions/new
+
+  remember_me: "Remember me"
+  password: "Password"
+
+  #Shared/links
+
+  sign_up: "Sign up"
+  forgot_your_password: "Forgot your password?"
+  Didnt_receive_confirmation_instructions: "Didn't receive confirmation instructions?"
+  Didnt_receive_unlock_instructions: "Didn't receive unlock instructions?"
+
+  #unlocks
+  Resend_unlock_instructions: "Resend unlock instructions"
+
+
+
+
+
+
+
+
+

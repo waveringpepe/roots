@@ -145,6 +145,45 @@ en:
   #unlocks
   Resend_unlock_instructions: "Resend unlock instructions"
 
+  #devise/registrations/new
+  title_teacher_form: "Apply as teacher with 5 roots"
+  title_basic_form: "Register with a basic membership"
+  title_medium_form: "Register with a medium membership"
+  title_intensive_form: "Register with a intensive membership"
+  title_free_form: "Register with a free membership and receive a 30minutes free trial class"
+
+  #devise/registrations/students/forms
+  subtitle_1_form: "Information"
+  subtitle_2_form: "Extra information"
+  subtitle_3_form: "References?"
+  email_title_form: "Email"
+  email_description_form: "Write your email"
+  email_extratext_form: "We'll never share your email with anyone else"
+  password_title_form: "Password (6 characters minimum) "
+  password_descritpion:form: "Password"
+  password_confirmation_title_form: "Password confirmation"
+  password_confirmation_description_form: "Password confirmation"
+  name_title_form: "Name"
+  name_description_form: "Write your name"
+  skype_title_form: "Skype"
+  skype_description_form: "Write your Skype ID"
+  phonenumber_title_form: "Phone number"
+  phonenumber_description_form: "Write your WhatsApp"
+  language_title_form: "Language you want to learn"
+  start_title_form: "Select when you would like to start"
+  timezone_title_form: "Select your Time Zone"
+  country_title_form: "Select your country"
+  city_title_form: "Select your city"
+  level_title_form: "Select your language level"
+  level_extratext_form: "Consider that 0 = I am starting; 10 = Expert"
+  birthday_title_form: "Select your birthday"
+
+
+
+
+
+
+
 
 
 

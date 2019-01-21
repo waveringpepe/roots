@@ -106,8 +106,46 @@ es:
   #Shared/links
   sign_up: "Regístrate"
   forgot_your_password: "¿Olvidaste tu contraseña?"  
-  Didnt_receive_confirmation_instructions: "¿No recibiste las instrucciones de confirmación?"
-  Didnt_receive_unlock_instructions: "No recibiste las instrucciones para desbloquear?"
+  didnt_receive_confirmation_instructions: "¿No recibiste las instrucciones de confirmación?"
+  didnt_receive_unlock_instructions: "No recibiste las instrucciones para desbloquear?"
+
+  #unlocks/new
+  resend_unlock_instructions: "Reenviar instrucciones para desbloquear"
+
+  #devise/registrations/new
+  title_teacher_form: "Aplica como profesor en 5 Roots"
+  title_basic_form: "Registrate con una membresía básica"
+  title_medium_form: "Registrate con una membresía intermedia"
+  title_intensive_form: "Registrate con una membresía intensiva"
+  title_free_form: "Registrate con una membresía gratuita y recibe una clase 30 minutos de prueba"
+
+  #devise/registrations/students/forms
+  devise:
+    registrations:
+      subtitle_1_form: "Información"
+      subtitle_2_form: "Información extra"
+      subtitle_3_form: "Referencias"
+      email_title_form: "Email"
+      email_description_form: "Escribe tu email"
+      email_extratext_form: "Nunca compartiremos tu email con nadie"
+      password_title_form: "Contraseña (mínimo 6 caracteres)"
+      password_descritpion:form: "Contraseña"
+      password_confirmation_title_form: "Confirma tu contraseña"
+      password_confirmation_description_form: "Confirma tu contraseña"
+      name_title_form: "Nombre"
+      name_description_form: "Escribe tu nombre"
+      skype_title_form: "Skype"
+      skype_description_form: "Escribe tu Skype ID"
+      phonenumber_title_form: "Teléfono"
+      phonenumber_description_form: "Escribe tu WhatsApp"
+      language_title_form: "Idioma que quieres aprender"
+      start_title_form: "Selecciona cuando quieres empezar"
+      timezone_title_form: "Selecciona tu zona horaria"
+      country_title_form: "Selecciona tu país"
+      city_title_form: "Selecciona tu ciudad"
+      level_title_form: "Selecciona el nivel que tienes del idioma"
+      level_extratext_form: "Considera que 0 = Estoy empezando; 10 = Experto"
+      birthday_title_form: "Selecciona la fecha de nacimiento"
 
   date:
     abbr_day_names:

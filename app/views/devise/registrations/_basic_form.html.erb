@@ -3,81 +3,82 @@
   <%= hidden_field_tag 'plan', params[:plan] %>
 
     <div class="container mt-4">
-      <h4 class="mb-3">Information</h4>
+      <h4 class="mb-3"><%= t("subtitle_1_form") %> </h4>
     </div>
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-group col-md-4">
           <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"Write your e-mail" %>
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <%= f.email_field :email, autofocus: true, autocomplete: t("email_title_form"),class:"form-control", placeholder:t("email_description_form") %>
+          <small id="emailHelp" class="form-text text-muted"> <%= t("email_extratext_form") %> </small>
         </div>
 
         <div class="form-group col-md-4">
-          <%= f.label :password %>
+          <%= f.label :password, t("password_title_form") %>
           <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <em>(<%= @minimum_password_length %> <%= t("password_characteres_form") %>)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password",class:"form-control",placeholder:"Password" %>
+          <%= f.password_field :password, autocomplete: "new-password",class:"form-control",placeholder:t("password_title_form") %>
         </div>
 
         <div class="form-group col-md-4">
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", id:"exampleInputPassword1", placeholder:"Password confirmation" %>
+          <%= f.label :password_confirmation, t("password_confirmation_title_form") %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", id:"exampleInputPassword1", placeholder:t("password_confirmation_title_form") %>
         </div>  
       </div>
 
       <div class="row">
         <div class="form-group col-md-4">
-          <%= f.label :name %><br />
-          <%= f.text_field :name, class:"form-control", placeholder:"Write your name" %>
+          <%= f.label :name, t("name_title_form") %><br />
+          <%= f.text_field :name, class:"form-control", placeholder:t("name_description_form") %>
         </div>
 
         <div class="form-group col-md-4">
-          <%= f.label :skype %><br />
-          <%= f.text_field :skype, class:"form-control", placeholder:"Write your skype id" %>
+          <%= f.label :skype, t("skype_title_form") %><br />
+          <%= f.text_field :skype, class:"form-control", placeholder:t("skype_description_form") %>
         </div>
 
         <div class="form-group col-md-4">
-          <%= f.label :phone_number %><br />
-          <%= f.text_field :phone_number, class:"form-control", placeholder:"Write your Whatsapp" %>
+          <%= f.label :phone_number, t("phonenumber_title_form") %><br />
+          <%= f.text_field :phone_number, class:"form-control", placeholder:t("phonenumber_description_form") %>
         </div>
       </div>
 
       <div class="row">
         <div class="form-group col-md-4">
-            <%= f.label :language_id, "Select your language" %>
-            <%= f.select :language_id, options_for_select(Language.options, params[:language]),{}, required: true, class: "form-control" %>
+            <%= f.label :language_id, t("language_title_form") %>
+            <%= f.select(:language_id, options_for_select([[t("english"), 1], [t("spanish"), 2],[t("russian"), 3],[t("german"), 4],[t("portuguese"), 5],[t("chinese"), 6],[t("italian"), 7],[t("french"), 8]]), {}, {class: "form-control"}) %>
         </div>
 
         <div class="form-group col-md-4">
-          <%= f.label :start_id , "Select when you would like to start" %>
-          <%= f.select(:start_id, options_for_select([['Today', 1], ['In a few days', 2]]), {}, {class: "form-control"}) %>
+          <%= f.label :start_id , t("start_title_form") %>
+          <%= f.select(:start_id, options_for_select([[t("start_option1_form"), 1], [t("start_option2_form"), 2],[t("start_option3_form"), 3],[t("start_option4_form"), 4]]), {}, {class: "form-control"}) %>
         </div>
 
         <div class="form-group col-md-4">
-            <%= f.label :time_zone, 'Time Zone:', :class => "col-xs-3" %>
+            <%= f.label :time_zone, t("timezone_title_form"), :class => "col-xs-3" %>
             <%= f.time_zone_select(:time_zone, nil, {}, {class: "form-control"})%>
         </div>
       </div>
     <div class="row">
         <div class="form-group col-md-4">
-          <%= f.label :country , "Select your country" %> <br/>
+          <%= f.label :country , t("country_title_form") %> <br/>
           <%= f.country_select :country, ["Mexico", "United States"],options = {}, html_options = {:class => "form-control", :id => "payment_country"} %> 
         </div>
 
         <div class="form-group col-md-4">
-          <%= f.label :city_id, "City" %><br />
-          <%= f.text_field :city_id, class:"form-control", placeholder:"City" %>
+          <%= f.label :city_id, t("city_title_form") %><br />
+          <%= f.text_field :city_id, class:"form-control", placeholder:t("city_description_form") %>
         </div>
 
         <div class="form-group col-md-4">
-          <%= f.label :level , "Select your level" %> <br/>
-          <%= f.select(:level, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10]]), {}, {class: "form-control"}) %> 
+          <%= f.label :level , t("level_title_form") %> <br/>
+          <%= f.select(:level, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10]]), {}, {class: "form-control mt"}) %> 
+           <small id="levelHelp" class="form-text text-muted"> <%= t("level_extratext_form") %> </small>
         </div>
 
         <div class="col-md-4">
-          <%= f.label :birth_date, "Select your birthday" %>
+          <%= f.label :birth_date, t("birthday_title_form") %>
           <%= f.date_select :birth_date, 
                        { 
                         :order => [:day, :month, :year],
@@ -89,75 +90,75 @@
       </div>
     </div>
     <div class="container mt-4">
-      <h4 class="mb-3">Extra Information</h4>
+      <h4 class="mb-3"> <%= t("subtitle_2_form") %> </h4>
     </div>
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-gropu col-md-12">
-          <%= f.label :reason_id %><br />
-          <%= f.text_field :reason_id, class:"form-control", placeholder:"Why do you want to learn the language?"%>
+          <%= f.label :reason_id, t("reason_title_form") %><br />
+          <%= f.text_field :reason_id, class:"form-control", placeholder: t("reason_description_form") %>
         </div>
 
         <div class="form-gropu col-md-12">
-          <%= f.label :experience %><br />
-          <%= f.text_field :experience, class:"form-control", placeholder:"Tell us about your experience"%>
+          <%= f.label :experience, t("experience_title_form") %><br />
+          <%= f.text_field :experience, class:"form-control", placeholder: t("experience_description_form")%>
         </div>
 
         <div class="form-gropu col-md-12">
-          <%= f.label :schedule %><br />
-          <%= f.text_field :schedule, class:"form-control", placeholder:"Select your schedule"%>
+          <%= f.label :schedule, t("schedule_title_form") %><br />
+          <%= f.text_field :schedule, class:"form-control", placeholder: t("schedule_description_form") %>
         </div>
       </div>
     </div>
 
     <div class="container mt-4">
-      <h4 class="mb-3">References?</h4>
+      <h4 class="mb-3"><%= t("subtitle_3_form") %> </h4>
     </div>
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
        <div class="form-group col-md-6">
-          <%= f.label :reference %><br />
-          <%= f.text_field :reference, class:"form-control", placeholder:"Who told you about us"%>
+          <%= f.label :reference, t("reference_title_form") %><br />
+          <%= f.text_field :reference, class:"form-control", placeholder:t("reference_description_form") %>
         </div>
 
         <div class="form-group col-md-6">
-          <%= f.label :promo_code %><br />
-          <%= f.text_field :promo_code, class:"form-control", placeholder:"Do you have a promo code?"%>
+          <%= f.label :promo_code, t("promo_title_form") %><br />
+          <%= f.text_field :promo_code, class:"form-control", placeholder: t("promo_description_form")%>
         </div>
       </div>
     </div>
 
     <div class="container mt-4">
-      <h4 class="mb-3">Payment</h4>
+      <h4 class="mb-3"><%= t("subtitle_4_form") %></h4>
     </div>
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-group col-md-6 mt-4">
-          <%= label_tag :card_number, "Credit Card Number" %>
+          <%= label_tag :card_number, t("credit_cardnumber_form") %>
           <%= text_field_tag :card_number, nil , name: nil, class: "form-control" %>
         </div>
 
         <div class="form-group col-md-6 mt-4">
-          <%= label_tag :card_code, "CCV" %>
+          <%= label_tag :card_code, t("cvc_card_form") %>
           <%= text_field_tag :card_code, nil , name: nil, class: "form-control" %>
         </div>
       </div>
 
       <div class="row">
         <div class="form-group col-md-6 mt-2">
-          <%= label_tag :card_month, "Card Expiration" %>
+          <%= label_tag :card_month, t("card_expiration_form") %>
           <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
           <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
         </div>
 
-        <span class="form-group col-md-6 mt-2">
+        <span class="card-body form-group col-md-6 mt-2">
           <p>
-            <b>Total to pay:</b> 1120 MXN <br/>
-            <b>Note:</b> All payments are processed by <%=link_to "stripe","https://stripe.com/", target: :_blank %>.<br/><i class="fa fa-cc-stripe" aria-hidden="true" style="color:blue;"></i> <i class="fa fa-cc-visa" aria-hidden="true" style="color:##F7F7F7;"></i> <i class="fa fa-cc-mastercard" aria-hidden="true" style="color:#E45931;"></i> <i class="fa fa-cc-amex" aria-hidden="true" style="color:#156CC9;"></i>
+            <b><%= t("totaltext_card_form") %></b> <%= t("amount_card_basic_form") %> <br/>
+            <b><%= t("notetext_card_form") %></b> <%= t("note_card_regular_1_form") %> <%=link_to t("note_card_regular_2_form"),"https://stripe.com/", target: :_blank %>.<br/> <i class="fa fa-cc-stripe" aria-hidden="true" style="color:blue;"></i> <i class="fa fa-cc-visa" aria-hidden="true" style="color:##F7F7F7;"></i> <i class="fa fa-cc-mastercard" aria-hidden="true" style="color:#E45931;"></i> <i class="fa fa-cc-amex" aria-hidden="true" style="color:#156CC9;"></i>
           </p>
         </span>
         <div class="actions col-md-6">
-          <%= f.submit "Sign up and pay", class:"btn btn-primary", id: "form-signup-btn" %>
+          <%= f.submit t("signup_and_pay_button_form"), class:"btn btn-primary", id: "form-signup-btn" %>
         </div>
       </div>
     </div>

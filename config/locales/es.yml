@@ -132,7 +132,7 @@ es:
   password_descritpion:form: "Contraseña"
   password_confirmation_title_form: "Confirma tu contraseña"
   password_confirmation_description_form: "Confirma tu contraseña"
-  name_title_form: "Nombre"
+  name_title_form: "Nombre completo"
   name_description_form: "Escribe tu nombre"
   skype_title_form: "Skype"
   skype_description_form: "Escribe tu Skype ID"
@@ -254,6 +254,11 @@ es:
   #devise/registrations/passwords
   send_password_instructions: "Enviar instrucciones para cambiar mi contraseña"
   resend_confirmation_instructions: "Reenviar instrucciones de confirmación"
+
+  #navbar
+
+  language_site: "Idioma del sitio"
+
 
   date:
     abbr_day_names:

@@ -164,7 +164,7 @@ en:
   password_descritpion:form: "Password"
   password_confirmation_title_form: "Password confirmation"
   password_confirmation_description_form: "Password confirmation"
-  name_title_form: "Name"
+  name_title_form: "Full name"
   name_description_form: "Write your name"
   skype_title_form: "Skype"
   skype_description_form: "Write your Skype ID"
@@ -285,6 +285,10 @@ en:
   #devise/registrations/passwords
   send_password_instructions: "Send me reset password instructions"
   resend_confirmation_instructions: "Resend confirmation instructions"
+
+   #navbar
+
+  language_site: "Site language"
 
   
 

@@ -212,6 +212,32 @@ en:
 
   #devise/registrations/teacher/forms
 
+  subtitle_1_form_teacher: "Contact information"
+  subtitle_2_form_teacher: "Profile information"
+  subtitle_3_form_teacher: "Experience teaching"
+  subtitle_4_form_teacher: "Availability and preferences"
+  native_language_title_teacher: "Select your native language:"
+  teach_language_teacher: "Select the language you want to teach:" 
+  degree_title_teacher: "Degree"
+  degree_description_teacher: "Write your degree"
+  native_country_title_teacher: "Select your native country:"
+  native_city_title_teacher: "Native city"
+  native_city_description_teacher: "Write your native city"
+  current_country_title_teacher: "Select your current country:"
+  institution_title_teacher: "Institution where you studied"
+  institution_description_teacher: "E.g. Tec de Monterrey"
+  experience_teaching_title: "Experience teaching and why you like teaching?"
+  experience_teaching_description: "E.g. I started teaching because I moved to another country..."
+  certificates_title_teacher: "Certificates"
+  certificates_description_teacher: "E.g. Toefl expert"
+  years_teaching_title: "Years teaching"
+  years_teaching_description: "8 years"
+  institutions_teaching_title: "Institutions where you have teached"
+  institutions_teaching_description: "E.g. Alianza francesa, ITESM, UP"
+  schedule_title_teacher_form: "Write all the schedules where you can teach:"
+  schedule_description_teacher_form: "E.g. Monday to friday from 8am to 1pm. Saturdays and Sundays from 8am to 12pm."
+  sign_up_teacher: "Apply as teacher"
+  
   #pages/students_homepage
   welcome: "Welcome"
   student_hompage_title: "We are building a cool website for you!"

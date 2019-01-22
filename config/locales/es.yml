@@ -179,6 +179,32 @@ es:
 
   #devise/registrations/teacher/forms
 
+  subtitle_1_form_teacher: "Información del contacto"
+  subtitle_2_form_teacher: "Perfil"
+  subtitle_3_form_teacher: "Experiencia enseñando"
+  subtitle_4_form_teacher: "Preferencias y disponibilidad"
+  native_language_title_teacher: "Idioma natal:"
+  teach_language_teacher: "Idioma que quieres enseñar:" 
+  degree_title_teacher: "Carrera"
+  degree_description_teacher: "Escribe tu carrera"
+  native_country_title_teacher: "Selecciona tu país natal:"
+  native_city_title_teacher: "Ciudad natal"
+  native_city_description_teacher: "Escribe tu ciudad natal"
+  current_country_title_teacher: "Selecciona tu país actual:"
+  institution_title_teacher: "Institución donde estudiaste:"
+  institution_description_teacher: "E.g. Tec de Monterrey"
+  experience_teaching_title: "Cuéntanos de tu experiencia enseñando y por qué lo haces?"
+  experience_teaching_description: "E.g. Empecé a dar clases porque me mude de país y me ..."
+  certificates_title_teacher: "Certificados"
+  certificates_description_teacher: "E.g. Toefl"
+  years_teaching_title: "Años enseñando"
+  years_teaching_description: "8 años"
+  institutions_teaching_title: "Instituciones donde has dado clases"
+  institutions_teaching_description: "E.g. Alianza francesa, ITESM, UP"
+  schedule_title_teacher_form: "Escribe todos los horarios en los que puedes dar clases:"
+  schedule_description_teacher_form: "E.g. De lunes a viernes de 7am a 1pm. Sábados y domingos de 8am a 12pm"
+  sign_up_teacher: "Aplicar como profesor"
+
   #pages/students_homepage
 
   welcome: "Bienvenido"

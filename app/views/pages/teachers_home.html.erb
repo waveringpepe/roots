@@ -1,72 +1,75 @@
 <div class="container text-center">
 	<div>
-		<h1 style="color:#317A9F;">Welcome <%= current_user.name %> </h1>
+		<h1 style="color:#317A9F;"><%= t("welcome") %> <%= current_user.name %> </h1>
 	</div>
 	<div>
-		<h3>We are building a cool website for you!</h3><hr>
+		<h3><%= t("teachers_hompage_title") %></h3><hr>
 	</div>
 </div>
 <div class="container card-body text-center">
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">I've just applied as a teacher</a>
-  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">I am a 5 Roots teacher</button>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><%= t("teacher_button1_homepage") %></a>
+  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"><%= t("teacher_button2_homepage") %></button>
 </p>
 </div>
 
 <div class="container card-body">
-<div class="row">
-  <div>
-    <div class="collapse multi-collapse" id="multiCollapseExample1">
-    	<div>
-			<h2 class="pl-1" style="color:green;"> Have you just applied as a teacher?</h2><br/>
-		</div>
-		<div class="card-header rounded">
-			<ul style="list-style-type:none" class="pl-0">
-				<li>
-					<b>Step 1.</b> If you have just signed up wait for us to review your profile within 1 week.
-				</li><br/>
-				<li>
-					<b>Step 2.</b> Once we have reviewed your profile we'll get in touch with you.
-				</li><br/>
-				<li>
-					<b>Step 3.</b> If your profile has the requirements we are looking for, then we'll invite you to have a 30minutes online interview to get to know you better.
-				</li><br/>
-				<li>
-					<b>Step 4.</b> If we like you in the interview then we'll tell you via Whatsapp that you are now part of our teachers community.
-				</li><br/>
-			</ul>
-			<b style="color:red;">Note:</b> If you have any question send us an e-mail to <i><b>hello@5roots.co</b></i>
+	<div class="row">
+		<div>
+		    <div class="collapse multi-collapse" id="multiCollapseExample1">
+		    	<div>
+					<h2 class="pl-1" style="color:green;"> <%= t("teacher_applied_subtitle_homepage") %></h2><br/>
+				</div>
+				<div class="card-header rounded">
+					<ul style="list-style-type:none" class="pl-0">
+						<li>
+							<b><%= t("step_1") %></b> <%= t("step_1a_teacher_applied_homepage") %>
+						</li><br/>
+						<li>
+							<b><%= t("step_2") %></b> <%= t("step_2a_teacher_applied_homepage") %>
+						</li><br/>
+						<li>
+							<b><%= t("step_3") %></b> <%= t("step_3a_teacher_applied_homepage") %>
+						</li><br/>
+						<li>
+							<b><%= t("step_4") %></b> <%= t("step_4a_teacher_applied_homepage") %>
+						</li><br/>
+					</ul>
+					<p><b style="color:red;"><%= t("note_teacher_homepage") %></b> <%= t("note1_teacher_homepage") %>
+					</p>
+				</div>
+			</div>
 		</div><br/>
-    </div>
-  </div>
-<div>
-    <div class="collapse multi-collapse" id="multiCollapseExample2">
-	    <div>
-			<h2 class="pl-1" style="color:green;"> I'm part of the <b>5 roots</b> community, what's next?</h2><br/>
+		<div>
+		    <div class="collapse multi-collapse" id="multiCollapseExample2">
+			    <div>
+					<h2 class="pl-1" style="color:green;"> <%= t("teacher_subtitle_homepage") %></h2><br/>
+				</div>
+				<div class="card-header rounded">
+					<ul style="list-style-type:none" class="pl-0">
+						<li>
+							<b><%= t("step_1") %></b> <%= t("step_1a_teacher_homepage") %>
+						</li><br/>
+						<li>
+							<b><%= t("step_2") %></b> <%= t("step_2a_teacher_homepage") %>
+						</li><br/>
+						<li>
+							<b><%= t("step_3") %></b> <%= t("step_3a_teacher_homepage") %>
+						</li><br/>
+						<li>
+							<b><%= t("step_4") %></b> <%= t("step_4a_teacher_homepage") %>
+						</li><br/>
+						<li>
+							<b><%= t("step_5") %></b> <%= t("step_5a_teacher_homepage") %>
+						</li><br/>
+						<li>
+							<b><%= t("step_6") %></b> <%= t("step_6a_teacher_homepage") %> 
+						</li><br/>
+					</ul>
+					<p><b style="color:red;"><%= t("note_teacher_homepage") %></b> <%= t("note1_teacher_homepage") %>
+					</p>
+				</div>
+		  	</div>
 		</div>
-		<div class="card-header rounded">
-			<ul style="list-style-type:none" class="pl-0">
-				<li>
-					<b>Step 1.</b> Now you are in our list of teachers, we'll try to get you a student asap. 
-				</li><br/>
-				<li>
-					<b>Step 2.</b> Once we find a student that fits your profile we'll let you know and ask you if you are willing to teach the student. For this you'll receive a description of the student with information about why he/she would like to learn the language, which is his/her level and so on.
-				</li><br/>
-				<li>
-					<b>Step 3.</b> If you accept the student, then we'll give you his/her contact information so you can get in touch.
-				</li><br/>
-				<li>
-					<b>Step 4.</b> You can <b><i>copypaste</i></b> the following template to get in touch via Whatsapp: "message". 
-				</li><br/>
-				<li>
-					<b>Step 5.</b> Set the schedule with your students and let us know about it.
-				</li><br/>
-				<li>
-					<b>Step 6.</b> Start teaching, we'll take care of the rest. 
-				</li><br/>
-			</ul>
-			<b style="color:red;">Note:</b> If you have any question write us via Whatsapp <i><b> +521-812-110-1145</b></i> or send us an e-mail to <i><b>hello@5roots.co</b></i>
-		</div>
-  	</div>
-</div>
+	</div>
 </div>

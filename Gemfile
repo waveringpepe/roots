@@ -71,5 +71,7 @@ gem 'figaro', '1.1.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 # with simplify working with routes
 gem 'routing-filter', '~> 0.6.2'
+#provides flag-icon-css a collection of all country flags in SVG
+gem 'flag-icons-rails', '~> 3.1'
 
 

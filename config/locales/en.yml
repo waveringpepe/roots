@@ -36,7 +36,7 @@ en:
   slogan_1: "Learn a new language"
   slogan_2: "from the comfort of your home"
   button_free_class: "Take a 30min free trial class"
-  warranty_title: "100% Satisfaction warranty"
+  warranty_title: "100% Satisfaction Guaranteed"
   warranty_description: "If you don’t like the class, we’ll give you another one for free."
   available_languages: "Available languages"
   spanish: "Spanish"
@@ -53,15 +53,15 @@ en:
   how_it_works_title_3: "Start learning"
   how_it_works_description_1: "Choose the membership that fits your needs or take a free trial class."
   how_it_works_description_2: "Fill out the form so we can match you with the teacher that best accommodates your schedule and learning needs."
-  how_it_works_description_3: "Now you are all set. After the payment is done, you'll receive via e-mail and Whatsapp all the information about your new teacher and the schedule of your first class."
-  benefits_title_1_a: "Speak as a"
-  benefits_title_1_b: "native."
+  how_it_works_description_3: "Now you are all set. After the payment is done, you'll receive via e-mail and Whatsapp all the information about your new teacher and the schedule for your first class."
+  benefits_title_1_a: "Speak like a"
+  benefits_title_1_b: "local."
   benefits_title_2_a: "Learn from your"
   benefits_title_2_b: "favorite spot."
   benefits_title_3_a: "Learn at your"
   benefits_title_3_b: "own pace."
-  benefits_description_1: "All our teachers are native and they will help you to develop the skill for speaking a pronounicing as if you were a native."
-  benefits_description_2: "Since all classes are taken via online now you can take advantage of your downtimes. You can take a lesson in the airport, in home or in your favorite coffee bar."
+  benefits_description_1: "All of our teachers are native speakers who will help you to develop the skills for speaking and pronunciation the way you would in."
+  benefits_description_2: "Since all classes are online,  you can now take advantage of your downtime. You can learn from the comfort of your own home or at your favorite cafe. As long as you are connected, the choice is yours."
   benefits_description_3: "Our teachers develop a custom curriculum that fits your learning needs and goals."
   back_to_top: "Back to top"
 
@@ -82,8 +82,8 @@ en:
   medium_membership_button: "Sign up with medium"
   intensive_membership_button: "Sign up with intensive"
   pricing_subtitle_1: "Choose the membership"
-  pricing_subtitle_2: "that_feeds your needs."
-  pricing_subtitle_3: "Once you sign up and make the payment, a person from the team will get in touch with you and will provide you all the information of your teacher."
+  pricing_subtitle_2: "that fits your needs."
+  pricing_subtitle_3: "Once you sign up and make the payment, a person from the team will get in touch with you and will provide you all the information about your teacher."
   information: "Information"
   pricing_question_1: "None of the packages suits you?"
   pricing_question_2: "Distribuite your hours as you wish"
@@ -92,20 +92,19 @@ en:
   pricing_question_5: "Cancel membership"
   pricing_answer_1: "Write to us at hello@5roots.co or by Whats App at +52 1 (81) 2110 1145"
   pricing_answer_2: "Example: 30 minutes per day, 4 days a week, 1 hour per day, 2 days a week."
-  pricing_answer_3: "Your class credits are valid for 4 months from the day of your payment is made."
-  pricing_answer_4: "All the memberships are renewed every month."
+  pricing_answer_3: "Your class credits are valid for 4 months from the day your payment is made."
+  pricing_answer_4: "All memberships are renewed every month."
   pricing_answer_5: "If you want to cancel your subscription send us an email to hello@5roots.co and we will do it for you."
 
   #shared/footer and navbar
 
   teachers: "Teachers"
-  teachers: "Profesores"
-  apply_as_teacher: "Aplicar como profesor"
-  about_us: "Sobre nosotros"
-  faq: "Preguntas frecuentes"
-  resources: "Recursos"
-  login: "Iniciar sesión"
-  logout: "Cerrar sesión"
+  apply_as_teacher: "Apply to teach"
+  about_us: "About us"
+  faq: "FAQ"
+  resources: "Resources"
+  login: "Log in"
+  logout: "Log out"
 
   #faq
 
@@ -146,7 +145,7 @@ en:
   Resend_unlock_instructions: "Resend unlock instructions"
 
   #devise/registrations/new
-  title_teacher_form: "Apply as teacher with 5 roots"
+  title_teacher_form: "Apply to teach with 5 roots"
   title_basic_form: "Register with a basic membership"
   title_medium_form: "Register with a medium membership"
   title_intensive_form: "Register with a intensive membership"
@@ -236,29 +235,58 @@ en:
   institutions_teaching_description: "E.g. Alianza francesa, ITESM, UP"
   schedule_title_teacher_form: "Write all the schedules where you can teach:"
   schedule_description_teacher_form: "E.g. Monday to friday from 8am to 1pm. Saturdays and Sundays from 8am to 12pm."
-  sign_up_teacher: "Apply as teacher"
+  sign_up_teacher: "Apply to teach"
   
   #pages/students_homepage
   welcome: "Welcome"
   student_hompage_title: "We are building a cool website for you!"
   student_hompage_subtitle: "Did you sign up for a free class or with a membership?"
-  step_1_student_homepage: "Step 1."
+  step_1: "Step 1."
   step_1a_student_homepage: "If you have just signed up for a free class or with a membership wait for us to contact you, we'll do it asap.
                             If for any case you don't hear from us, write us via Whatsapp at this number +521-812-110-1145 and say that you've 
                             just sign up for a 30 minutes free trial class."
-  step_2_student_homepage: "Step 2."
+  step_2: "Step 2."
   step_2a_student_homepage: "Once we contact and review your profile we'll look for the best teacher for you."
-  step_3_student_homepage: "Step 3."
+  step_3: "Step 3."
   step_3a_student_homepage: "After we find you a teacher we'll send an e-mail and a Whatsapp to you with his/her information like: name, e-mail, Whatsapp and description."
-  step_4_student_homepage: "Step 4."
+  step_4: "Step 4."
   step_4a_student_homepage: "The teacher will get in touch with you through Whatsapp, so you can match the schedule for your first class."
-  step_5_student_homepage: "Step 5."
+  step_5: "Step 5."
   step_5a_student_homepage: "If you've already bought a membership and you liked your teacher then you can schedule your next classes with your teacher."
   step_5b_student_homepage: "If you took a free class then will get in touch with you to see if you would like to continue and buy a membership so you can schedule your next classes with your teacher."
   note_student_homepage: "Note:"
   note1_student_homepage: "All this steps happen in no more than one day."
 
+  #pages/teachers_homepage
+  teachers_hompage_title:  "We are bulding a cool website for you!"
+  teacher_button1_homepage: "I've just applied to teach"
+  teacher_button2_homepage: "I am a 5 Roots teacher"
+  teacher_applied_subtitle_homepage: "Have you just applied to teach?"
+  teacher_subtitle_homepage: "I'm part of the 5 roots community, what's next?"
 
+
+ 
+  step_1a_teacher_applied_homepage: "If you have just signed up wait for us to review your profile within 1 week."
+  step_2a_teacher_applied_homepage: "Once we have reviewed your profile we'll get in touch with you."
+  step_3a_teacher_applied_homepage: "If your profile has the requirements we are looking for, then we'll invite you to have a 30minutes online interview to get to know you better."
+  step_4a_teacher_applied_homepage: " If we like you in the interview then we'll tell you via Whatsapp that you are now part of our teachers community."
+
+  step_1a_teacher_homepage: "Now you are in our list of teachers, we'll try to get you a student asap."
+  step_2a_teacher_homepage: "Once we find a student that fits your profile we'll let you know and ask you if you are willing to teach the student. For this you'll receive a description of the student with information about why he/she would like to learn the language, which is his/her level and so on."
+  step_3a_teacher_homepage: "If you accept the student, then we'll give you his/her contact information so you can get in touch."
+  step_4a_teacher_homepage: "You can copypaste the following template to get in touch via Whatsapp: message."
+  step_5a_teacher_homepage: "Set the schedule with your students and let us know about it."
+  step_6: "Step 6."
+  step_6a_teacher_homepage: "Start teaching, we'll take care of the rest."
+
+  note_teacher_homepage: "Note:"
+  note1_teacher_homepage: "If you have any question write us via Whatsapp +521-812-110-1145 or send us an e-mail to hello@5roots.co"
+
+  #devise/registrations/passwords
+  send_password_instructions: "Send me reset password instructions"
+  resend_confirmation_instructions: "Resend confirmation instructions"
+
+  
 
 
 

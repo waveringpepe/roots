@@ -1,5 +1,11 @@
 RailsAdmin.config do |config|
 
+    config.main_app_name = ["5 Roots"]
+
+    config.authorize_with do
+      redirect_to main_app.root_path unless current_user.has_roles?(:admin)
+    end
+
   ### Popular gems integration
 
   ## == Devise ==

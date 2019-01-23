@@ -233,6 +233,8 @@ en:
   years_teaching_description: "8 years"
   institutions_teaching_title: "Institutions where you have teached"
   institutions_teaching_description: "E.g. Alianza francesa, ITESM, UP"
+  type_title_teacher_form: "Describe your ideal student profile"
+  type_description_teacher_form: "E.g. A dedicated student who likes to learn in a practical way"
   schedule_title_teacher_form: "Write all the schedules where you can teach:"
   schedule_description_teacher_form: "E.g. Monday to friday from 8am to 1pm. Saturdays and Sundays from 8am to 12pm."
   sign_up_teacher: "Apply to teach"

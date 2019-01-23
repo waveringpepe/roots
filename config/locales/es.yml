@@ -201,6 +201,8 @@ es:
   years_teaching_description: "8 años"
   institutions_teaching_title: "Instituciones donde has dado clases"
   institutions_teaching_description: "E.g. Alianza francesa, ITESM, UP"
+  type_title_teacher_form: "Describe el perfil ideal de estudiante que prefieres"
+  type_description_teacher_form: "E.g. Un estudiante dedicado y que le guste aprender de manera práctica"
   schedule_title_teacher_form: "Escribe todos los horarios en los que puedes dar clases:"
   schedule_description_teacher_form: "E.g. De lunes a viernes de 7am a 1pm. Sábados y domingos de 8am a 12pm"
   sign_up_teacher: "Aplicar como profesor"

@@ -129,8 +129,8 @@
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-group col-md-12">
-          <%= f.label :type_student, "Type of student" %><br />
-          <%= f.text_field :type_student, class:"form-control", placeholder:"Select the students you would like to teach" %>
+          <%= f.label :type_student, t("type_title_teacher_form") %><br />
+          <%= f.text_field :type_student, class:"form-control", placeholder:t("type_description_teacher_form") %>
         </div>
         <div class="form-group col-md-12">
           <%= f.label :schedule, t("schedule_title_teacher_form") %><br />

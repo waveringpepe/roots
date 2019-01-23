@@ -19,6 +19,7 @@ Bundler.require(*Rails.groups)
 
 module RootsApp
   class Application < Rails::Application
+    
   # Where the I18n library should search for translation files
   config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**' '*.{rb,yml}').to_s]
 

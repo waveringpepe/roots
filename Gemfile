@@ -73,5 +73,9 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'routing-filter', '~> 0.6.2'
 #provides flag-icon-css a collection of all country flags in SVG
 gem 'flag-icons-rails', '~> 3.1'
+#admin panel
+gem 'rails_admin', '~> 1.3'
+#translate admin panel
+gem 'rails_admin-i18n'
 
 

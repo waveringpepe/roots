@@ -8,6 +8,7 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'faq', to: 'pages#faq'
+  
 
   	unauthenticated do
 	   root :to => 'pages#home'

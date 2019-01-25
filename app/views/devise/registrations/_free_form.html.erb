@@ -29,15 +29,20 @@
       </div>
 
       <div class="row">
+        <% if current_user_role.is_a?(user) %>
         <div class="form-group col-md-4">
           <%= f.label :name, t("name_title_form") %><br />
           <%= f.text_field :name, class:"form-control", placeholder:t("name_description_form") %>
         </div>
 
+        <% else %>
+
         <div class="form-group col-md-4">
           <%= f.label :skype, t("skype_title_form") %><br />
           <%= f.text_field :skype, class:"form-control", placeholder:t("skype_description_form") %>
         </div>
+
+        <% end %>
 
         <div class="form-group col-md-4">
           <%= f.label :phone_number, t("phonenumber_title_form") %><br />

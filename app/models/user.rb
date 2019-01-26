@@ -31,7 +31,6 @@ class User < ApplicationRecord
     end
   end
 
-
   def save_as_teacher
     save!
     User.update(roles: "teacher")

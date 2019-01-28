@@ -215,6 +215,7 @@ en:
   subtitle_2_form_teacher: "Profile information"
   subtitle_3_form_teacher: "Experience teaching"
   subtitle_4_form_teacher: "Availability and preferences"
+  subtitle_5_form_teacher: "Confirm your password"
   native_language_title_teacher: "Select your native language:"
   teach_language_teacher: "Select the language you want to teach:" 
   degree_title_teacher: "Degree"
@@ -287,10 +288,16 @@ en:
   #devise/registrations/passwords
   send_password_instructions: "Send me reset password instructions"
   resend_confirmation_instructions: "Resend confirmation instructions"
+  edit_profile_title: "Edit my profile"
+  current_password: "Contraseña actual"
+  current_password_em: (we need your current password to confirm your changes)
+  update: "Update"
+  back: "Back"
 
    #navbar
 
   language_site: "Site language"
+  edit_profile: "Edir profile"
 
   
 

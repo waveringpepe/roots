@@ -1,120 +1,130 @@
 <div class="container">
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <h2><%= t('edit_profile_title') %> </h2>
 
 </div><br/>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="container">
-    <div class="card rounded d-flex p-2 bd-highlight bg-light">
+  <% if current_user.has_roles?(:teacher) %>
+
+     <%= render "edit_teacher" %>
+
+  <% elsif  %> 
+
+    <div class="container">
+      <div class="card rounded d-flex p-2 bd-highlight bg-light">
+        <div class="row">
+          <div class="form-group col-md-4">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: t("email_title_form"),class:"form-control", placeholder:t("email_description_form") %>
+            <small id="emailHelp" class="form-text text-muted"> <%= t("email_extratext_form") %> </small>
+          </div>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+
+          <div class="form-group col-md-4">
+            <%= f.label :password, t("password_title_form") %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> <%= t("password_characteres_form") %>)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "new-password",class:"form-control",placeholder:t("password_title_form") %>
+          </div>
+
+          <div class="form-group col-md-4">
+            <%= f.label :password_confirmation, t("password_confirmation_title_form") %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", id:"exampleInputPassword1", placeholder:t("password_confirmation_title_form") %>
+          </div>  
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-4">
+            <%= f.label :name, t("name_title_form") %><br />
+            <%= f.text_field :name, class:"form-control", placeholder:t("name_description_form") %>
+          </div>
+
+
+          <div class="form-group col-md-4">
+            <%= f.label :skype, t("skype_title_form") %><br />
+            <%= f.text_field :skype, class:"form-control", placeholder:t("skype_description_form") %>
+          </div>
+
+
+          <div class="form-group col-md-4">
+            <%= f.label :phone_number, t("phonenumber_title_form") %><br />
+            <%= f.text_field :phone_number, class:"form-control", placeholder:t("phonenumber_description_form") %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-4">
+              <%= f.label :language_id, t("language_title_form") %>
+              <%= f.select(:language_id, options_for_select([[t("english"), 1], [t("spanish"), 2],[t("russian"), 3],[t("german"), 4],[t("portuguese"), 5],[t("chinese"), 6],[t("italian"), 7],[t("french"), 8]]), {}, {class: "form-control"}) %>
+          </div>
+
+          <div class="form-group col-md-4">
+              <%= f.label :time_zone, t("timezone_title_form"), :class => "col-xs-3" %>
+              <%= f.time_zone_select(:time_zone, nil, {}, {class: "form-control"})%>
+          </div>
+          <div class="form-group col-md-4">
+            <%= f.label :country , t("country_title_form") %> <br/>
+            <%= f.country_select :country, ["Mexico", "United States"],options = {}, html_options = {:class => "form-control", :id => "payment_country"} %> 
+          </div>
+        </div>
       <div class="row">
-        <div class="form-group col-md-4">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: t("email_title_form"),class:"form-control", placeholder:t("email_description_form") %>
-          <small id="emailHelp" class="form-text text-muted"> <%= t("email_extratext_form") %> </small>
-        </div>
-
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-          <% end %>
-
-        <div class="form-group col-md-4">
-          <%= f.label :password, t("password_title_form") %>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> <%= t("password_characteres_form") %>)</em>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password",class:"form-control",placeholder:t("password_title_form") %>
-        </div>
-
-        <div class="form-group col-md-4">
-          <%= f.label :password_confirmation, t("password_confirmation_title_form") %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", id:"exampleInputPassword1", placeholder:t("password_confirmation_title_form") %>
-        </div>  
-      </div>
-
-      <div class="row">
-        <div class="form-group col-md-4">
-          <%= f.label :name, t("name_title_form") %><br />
-          <%= f.text_field :name, class:"form-control", placeholder:t("name_description_form") %>
-        </div>
 
 
-        <div class="form-group col-md-4">
-          <%= f.label :skype, t("skype_title_form") %><br />
-          <%= f.text_field :skype, class:"form-control", placeholder:t("skype_description_form") %>
-        </div>
+          <div class="form-group col-md-4">
+            <%= f.label :city_id, t("city_title_form") %><br />
+            <%= f.text_field :city_id, class:"form-control", placeholder:t("city_description_form") %>
+          </div>
 
 
-        <div class="form-group col-md-4">
-          <%= f.label :phone_number, t("phonenumber_title_form") %><br />
-          <%= f.text_field :phone_number, class:"form-control", placeholder:t("phonenumber_description_form") %>
+          <div class="col-md-4">
+            <%= f.label :birth_date, t("birthday_title_form") %>
+            <%= f.date_select :birth_date, 
+                         { 
+                          :order => [:day, :month, :year],
+                          :start_year => 1920, 
+                          :end_year => Time.now.year
+                         }, 
+                         {:class => "form-control mt-2"}  %>
+          </div>
+
+
         </div>
       </div>
-
-      <div class="row">
-        <div class="form-group col-md-4">
-            <%= f.label :language_id, t("language_title_form") %>
-            <%= f.select(:language_id, options_for_select([[t("english"), 1], [t("spanish"), 2],[t("russian"), 3],[t("german"), 4],[t("portuguese"), 5],[t("chinese"), 6],[t("italian"), 7],[t("french"), 8]]), {}, {class: "form-control"}) %>
-        </div>
-
-        <div class="form-group col-md-4">
-            <%= f.label :time_zone, t("timezone_title_form"), :class => "col-xs-3" %>
-            <%= f.time_zone_select(:time_zone, nil, {}, {class: "form-control"})%>
-        </div>
-        <div class="form-group col-md-4">
-          <%= f.label :country , t("country_title_form") %> <br/>
-          <%= f.country_select :country, ["Mexico", "United States"],options = {}, html_options = {:class => "form-control", :id => "payment_country"} %> 
-        </div>
+      <div class="container mt-4">
+        <h4 class="mb-3"> <%= t("subtitle_2_form") %> </h4>
       </div>
-    <div class="row">
-
-
-        <div class="form-group col-md-4">
-          <%= f.label :city_id, t("city_title_form") %><br />
-          <%= f.text_field :city_id, class:"form-control", placeholder:t("city_description_form") %>
+      <div class="card rounded d-flex p-2 bd-highlight bg-light">
+        <div class="row">
+          <div class="form-gropu col-md-12">
+            <%= f.label :schedule, t("schedule_title_form") %><br />
+            <%= f.text_area :schedule, class:"form-control",rows:"3", placeholder: t("schedule_description_form") %>
+          </div>
+          <div class="form-group col-md mt-3">
+            <%= f.label :current_password, t("current_password") %> <i><small><%= t('current_password_em') %></small></i><br />
+            <%= f.password_field :current_password, autocomplete: "current-password",class:"form-control" %>
+          </div>
         </div>
+      </div><br/>
+  <% end %>
+    <div class="container">
+      <div class="actions">
+        <%= f.submit t('update'), class:"btn btn-primary" %>
+      </div><br/>
 
-
-        <div class="col-md-4">
-          <%= f.label :birth_date, t("birthday_title_form") %>
-          <%= f.date_select :birth_date, 
-                       { 
-                        :order => [:day, :month, :year],
-                        :start_year => 1920, 
-                        :end_year => Time.now.year
-                       }, 
-                       {:class => "form-control mt-2"}  %>
-        </div>
-
-
-      </div>
-    </div>
-    <div class="container mt-4">
-      <h4 class="mb-3"> <%= t("subtitle_2_form") %> </h4>
-    </div>
-    <div class="card rounded d-flex p-2 bd-highlight bg-light">
-      <div class="row">
-        <div class="form-gropu col-md-12">
-          <%= f.label :schedule, t("schedule_title_form") %><br />
-          <%= f.text_field :schedule, class:"form-control", placeholder: t("schedule_description_form") %>
-        </div>
-        <div class="form-group col-md">
-          <%= f.label :current_password %> <i><small>(we need your current password to confirm your changes)</small></i><br />
-          <%= f.password_field :current_password, autocomplete: "current-password",class:"form-control" %>
-        </div>
-      </div>
-    </div><br/>
-
-  <div class="actions">
-    <%= f.submit "Update", class:"btn btn-primary" %>
-  </div><br/>
 <% end %>
 
-<h3>Cancel my account</h3>
+    <!--
+    <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-danger" %></p>
+    <p>Unhappy? <#%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-danger" %></p>-->
+      <div>
+        <%= link_to t('back'), :back %> 
+      </div>
+    </div>
 
-<%= link_to "Back", :back %>
-
-</div>

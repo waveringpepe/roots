@@ -29,20 +29,15 @@
       </div>
 
       <div class="row">
-        <% if current_user_role.is_a?(user) %>
         <div class="form-group col-md-4">
           <%= f.label :name, t("name_title_form") %><br />
           <%= f.text_field :name, class:"form-control", placeholder:t("name_description_form") %>
         </div>
 
-        <% else %>
-
         <div class="form-group col-md-4">
           <%= f.label :skype, t("skype_title_form") %><br />
           <%= f.text_field :skype, class:"form-control", placeholder:t("skype_description_form") %>
         </div>
-
-        <% end %>
 
         <div class="form-group col-md-4">
           <%= f.label :phone_number, t("phonenumber_title_form") %><br />
@@ -102,17 +97,17 @@
       <div class="row">
         <div class="form-gropu col-md-12">
           <%= f.label :reason_id, t("reason_title_form") %><br />
-          <%= f.text_field :reason_id, class:"form-control", placeholder: t("reason_description_form") %>
+          <%= f.text_area :reason_id, class:"form-control", rows:"3", placeholder: t("reason_description_form") %>
         </div>
 
         <div class="form-gropu col-md-12">
           <%= f.label :experience, t("experience_title_form") %><br />
-          <%= f.text_field :experience, class:"form-control", placeholder: t("experience_description_form")%>
+          <%= f.text_area :experience, class:"form-control",rows:"3", placeholder: t("experience_description_form")%>
         </div>
 
         <div class="form-gropu col-md-12">
           <%= f.label :schedule, t("schedule_title_form") %><br />
-          <%= f.text_field :schedule, class:"form-control", placeholder: t("schedule_description_form") %>
+          <%= f.text_area :schedule, class:"form-control",rows:"3", placeholder: t("schedule_description_form") %>
         </div>
       </div>
     </div>

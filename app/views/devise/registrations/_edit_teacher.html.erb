@@ -1,8 +1,6 @@
-
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: 'teacher_form'}) do |f| %>
-
-  <%= hidden_field_tag 'plan', params[:plan] %>
-
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+<div class="container">
     <div class="container mt-4">
       <h4 class="mb-3"><%= t("subtitle_1_form_teacher") %></h4>
     </div>
@@ -103,7 +101,7 @@
       <div class="row">
         <div class="form-group col-md-12">
           <%= f.label :experience_teaching, t("experience_teaching_title") %><br />
-          <%= f.text_area :experience_teaching, class:"form-control", rows:"3", placeholder:t("experience_teaching_description") %>
+          <%= f.text_field :experience_teaching, class:"form-control", placeholder:t("experience_teaching_description") %>
         </div>
         <div class="form-group col-md-12">
           <%= f.label :certificate_id, t("certificates_title_teacher") %><br />
@@ -130,11 +128,11 @@
       <div class="row">
         <div class="form-group col-md-12">
           <%= f.label :type_student, t("type_title_teacher_form") %><br />
-          <%= f.text_area :type_student, class:"form-control",rows:"3", placeholder:t("type_description_teacher_form") %>
+          <%= f.text_field :type_student, class:"form-control", placeholder:t("type_description_teacher_form") %>
         </div>
         <div class="form-group col-md-12">
           <%= f.label :schedule, t("schedule_title_teacher_form") %><br />
-          <%= f.text_area :schedule, class:"form-control",rows:"3", placeholder: t("schedule_description_teacher_form") %>
+          <%= f.text_field :schedule, class:"form-control", placeholder: t("schedule_description_teacher_form") %>
         </div>
         <div class="form-group col-md-4">
             <%= f.label :time_zone, t("timezone_title_form"), :class => "col-xs-3" %>
@@ -143,12 +141,16 @@
       </div>
     </div>
 
-  <div class="container mt-4">
-    <div class="d-flex p-2 bd-highlight mt-4">
+    <div class="container mt-4">
+      <h4 class="mb-3"><%= t("subtitle_5_form_teacher") %></h4>
+    </div>
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
-        <div class="actions col-md-">
-          <%= f.submit t("sign_up_teacher"), class:"btn btn-primary", id: "signup-btn" %>
+        <div class="form-group col-md mt-3">
+          <%= f.label :current_password, t("current_password") %> <i><small><%= t('current_password_em') %></small></i><br />
+          <%= f.password_field :current_password, autocomplete: "current-password",class:"form-control" %>
         </div>
       </div>
-    </div>
+    </div><br/>
 <% end %>
+</div>

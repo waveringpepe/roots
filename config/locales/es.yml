@@ -176,6 +176,7 @@ es:
   note_card_free_2_form: "Nunca te cobraremos nada a menos que incumplas con la "
   note_card_free_3_form: "política de cancelación/cambio."
   signup_and_pay_button_form: "Registrarme y hacer el pago"
+  sign_up: "Registrame"
 
   #devise/registrations/teacher/forms
 

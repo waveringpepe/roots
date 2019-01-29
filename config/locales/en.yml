@@ -208,6 +208,7 @@ en:
   note_card_free_2_form: "we'll never charge you anything unless you break the" 
   note_card_free_3_form: "cancelation/change policy."
   signup_and_pay_button_form: "Sign up and pay"
+  sign_up: "Sign up"
 
   #devise/registrations/teacher/forms
 

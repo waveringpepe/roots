@@ -103,7 +103,7 @@
       <div class="row">
         <div class="form-group col-md-12">
           <%= f.label :experience_teaching, t("experience_teaching_title") %><br />
-          <%= f.text_field :experience_teaching, class:"form-control", placeholder:t("experience_teaching_description") %>
+          <%= f.text_area :experience_teaching, class:"form-control", rows:"3", placeholder:t("experience_teaching_description") %>
         </div>
         <div class="form-group col-md-12">
           <%= f.label :certificate_id, t("certificates_title_teacher") %><br />
@@ -130,11 +130,11 @@
       <div class="row">
         <div class="form-group col-md-12">
           <%= f.label :type_student, t("type_title_teacher_form") %><br />
-          <%= f.text_field :type_student, class:"form-control", placeholder:t("type_description_teacher_form") %>
+          <%= f.text_area :type_student, class:"form-control",rows:"3", placeholder:t("type_description_teacher_form") %>
         </div>
         <div class="form-group col-md-12">
           <%= f.label :schedule, t("schedule_title_teacher_form") %><br />
-          <%= f.text_field :schedule, class:"form-control", placeholder: t("schedule_description_teacher_form") %>
+          <%= f.text_area :schedule, class:"form-control",rows:"3", placeholder: t("schedule_description_teacher_form") %>
         </div>
         <div class="form-group col-md-4">
             <%= f.label :time_zone, t("timezone_title_form"), :class => "col-xs-3" %>

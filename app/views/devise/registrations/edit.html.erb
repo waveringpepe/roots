@@ -45,7 +45,6 @@
             <%= f.text_field :name, class:"form-control", placeholder:t("name_description_form") %>
           </div>
 
-
           <div class="form-group col-md-4">
             <%= f.label :skype, t("skype_title_form") %><br />
             <%= f.text_field :skype, class:"form-control", placeholder:t("skype_description_form") %>
@@ -73,15 +72,12 @@
             <%= f.country_select :country, ["Mexico", "United States"],options = {}, html_options = {:class => "form-control", :id => "payment_country"} %> 
           </div>
         </div>
-      <div class="row">
 
-
+        <div class="row">
           <div class="form-group col-md-4">
             <%= f.label :city_id, t("city_title_form") %><br />
             <%= f.text_field :city_id, class:"form-control", placeholder:t("city_description_form") %>
           </div>
-
-
           <div class="col-md-4">
             <%= f.label :birth_date, t("birthday_title_form") %>
             <%= f.date_select :birth_date, 
@@ -92,8 +88,6 @@
                          }, 
                          {:class => "form-control mt-2"}  %>
           </div>
-
-
         </div>
       </div>
       <div class="container mt-4">
@@ -127,3 +121,7 @@
         <%= link_to t('back'), :back %> 
       </div>
     </div>
+  </div>
+
+
+

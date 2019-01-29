@@ -1,0 +1,156 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+<div class="container">
+    <div class="container mt-4">
+      <h4 class="mb-3"><%= t("subtitle_1_form_teacher") %></h4>
+    </div>
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
+      <div class="row">
+        <div class="form-group col-md-4">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: t("email_title_form"),class:"form-control", placeholder:t("email_description_form") %>
+          <small id="emailHelp" class="form-text text-muted"> <%= t("email_extratext_form") %> </small>
+        </div>
+
+        <div class="form-group col-md-4">
+          <%= f.label :password, t("password_title_form") %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> <%= t("password_characteres_form") %>)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password",class:"form-control",placeholder:t("password_title_form") %>
+        </div>
+
+        <div class="form-group col-md-4">
+          <%= f.label :password_confirmation, t("password_confirmation_title_form") %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", id:"exampleInputPassword1", placeholder:t("password_confirmation_title_form") %>
+        </div>  
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-4">
+          <%= f.label :name, t("name_title_form") %><br />
+          <%= f.text_field :name, class:"form-control", placeholder:t("name_description_form") %>
+        </div>
+
+        <div class="form-group col-md-4">
+          <%= f.label :skype, t("skype_title_form") %><br />
+          <%= f.text_field :skype, class:"form-control", placeholder:t("skype_description_form") %>
+        </div>
+
+        <div class="form-group col-md-4">
+          <%= f.label :phone_number, t("phonenumber_title_form") %><br />
+          <%= f.text_field :phone_number, class:"form-control", placeholder:t("phonenumber_description_form") %>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-4">
+      <h4 class="mb-3"><%= t("subtitle_2_form_teacher") %></h4>
+    </div>
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
+      <div class="row">
+        <div class="form-group col-md-4">
+            <%= f.label :speak_language, t("native_language_title_teacher") %>
+            <%= f.select(:speak_language, options_for_select([[t("english"), 1], [t("spanish"), 2],[t("russian"), 3],[t("german"), 4],[t("portuguese"), 5],[t("chinese"), 6],[t("italian"), 7],[t("french"), 8]]), {}, {class: "form-control"}) %>
+        </div>
+        <div class="form-group col-md-4">
+            <%= f.label :teach_language, t("teach_language_teacher") %>
+            <%= f.select(:teach_language, options_for_select([[t("english"), 1], [t("spanish"), 2],[t("russian"), 3],[t("german"), 4],[t("portuguese"), 5],[t("chinese"), 6],[t("italian"), 7],[t("french"), 8]]), {}, {class: "form-control"}) %>
+        </div>
+        <div class="form-group col-md-4">
+          <%= f.label :carrear_id, t("degree_title_teacher") %><br />
+          <%= f.text_field :carrear_id, class:"form-control", placeholder:t("degree_description_teacher") %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-4">
+          <%= f.label :country , t("native_country_title_teacher") %> <br/>
+          <%= f.country_select :country, ["Mexico", "United States"],options = {}, html_options = {:class => "form-control", :id => "payment_country"} %> 
+        </div>
+        <div class="form-group col-md-4">
+          <%= f.label :city_id, t("native_city_title_teacher") %><br />
+          <%= f.text_field :city_id, class:"form-control", placeholder:t("native_city_description_teacher") %>
+        </div> 
+        <div class="form-group col-md-4">
+          <%= f.label :actual_country ,  t("current_country_title_teacher") %> <br/>
+          <%= f.country_select :actual_country, ["Mexico", "United States"],options = {}, html_options = {:class => "form-control", :id => "payment_country"} %> 
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.label :birth_date, t("birthday_title_form") %>
+          <%= f.date_select :birth_date, 
+                       { 
+                        :order => [:day, :month, :year],
+                        :start_year => 1920, 
+                        :end_year => Time.now.year
+                       }, 
+                       {:class => "form-control mt-2"}  %>
+        </div>
+        <div class="form-group col-md-4">
+          <%= f.label :university_id, t("institution_title_teacher") %><br />
+          <%= f.text_field :university_id, class:"form-control", placeholder:t("institution_description_teacher") %>
+        </div>          
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <h4 class="mb-3"><%= t("subtitle_3_form_teacher") %></h4>
+    </div>
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
+      <div class="row">
+        <div class="form-group col-md-12">
+          <%= f.label :experience_teaching, t("experience_teaching_title") %><br />
+          <%= f.text_field :experience_teaching, class:"form-control", placeholder:t("experience_teaching_description") %>
+        </div>
+        <div class="form-group col-md-12">
+          <%= f.label :certificate_id, t("certificates_title_teacher") %><br />
+          <%= f.text_field :certificate_id, class:"form-control", placeholder:t("certificates_description_teacher") %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-4">
+          <%= f.label :years_teaching, t("years_teaching_title") %><br />
+          <%= f.text_field :years_teaching, class:"form-control", placeholder:t("years_teaching_description") %>
+        </div>
+        <div class="form-group col-md-8">
+          <%= f.label :institutions_teach, t("institutions_teaching_title") %><br />
+          <%= f.text_field :institutions_teach, class:"form-control", placeholder:t("institutions_teaching_description") %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container mt-4">
+      <h4 class="mb-3"><%= t("subtitle_4_form_teacher") %></h4>
+    </div>
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
+      <div class="row">
+        <div class="form-group col-md-12">
+          <%= f.label :type_student, t("type_title_teacher_form") %><br />
+          <%= f.text_field :type_student, class:"form-control", placeholder:t("type_description_teacher_form") %>
+        </div>
+        <div class="form-group col-md-12">
+          <%= f.label :schedule, t("schedule_title_teacher_form") %><br />
+          <%= f.text_field :schedule, class:"form-control", placeholder: t("schedule_description_teacher_form") %>
+        </div>
+        <div class="form-group col-md-4">
+            <%= f.label :time_zone, t("timezone_title_form"), :class => "col-xs-3" %>
+            <%= f.time_zone_select(:time_zone, nil, {}, {class: "form-control"})%>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <h4 class="mb-3"><%= t("subtitle_5_form_teacher") %></h4>
+    </div>
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
+      <div class="row">
+        <div class="form-group col-md mt-3">
+          <%= f.label :current_password, t("current_password") %> <i><small><%= t('current_password_em') %></small></i><br />
+          <%= f.password_field :current_password, autocomplete: "current-password",class:"form-control" %>
+        </div>
+      </div>
+    </div><br/>
+<% end %>
+</div>

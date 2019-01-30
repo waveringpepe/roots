@@ -37,8 +37,8 @@ module DeviseWhitelist
 															:country,
 															:actual_country
 	 														])
-	    devise_parameter_sanitizer.permit(:account_update, keys: [:name,
-	    													:skype,
+	    devise_parameter_sanitizer.permit(:account_update, keys: [:name, 
+	 														:skype,
 	 														:phone_number,
 	 														:city_id,
 	 														:time_zone,
@@ -50,6 +50,18 @@ module DeviseWhitelist
 	 														:experience,
 	 														:schedule,
 	 														:reference,
-	 														:promo_code])
+	 														:promo_code,
+	 														:stripe_card_token,
+															:speak_language,
+															:carrear_id,
+															:university_id,
+															:experience_teaching,
+															:institutions_teach,
+															:certificate_id,
+															:type_student,
+															:years_teaching,
+															:country,
+															:actual_country
+	 														])
  	end
 end

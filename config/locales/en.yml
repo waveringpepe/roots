@@ -300,6 +300,11 @@ en:
   language_site: "Site language"
   edit_profile: "Edir profile"
 
+  #devise/mails
+  welcome_mail: "Welcome to 5roots"
+  confirm_account_text1: 'You can confirm your account email through the link below:'
+  confirm_my_account: "Confirm my account"
+
   
 
 

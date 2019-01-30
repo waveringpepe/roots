@@ -269,6 +269,13 @@ es:
   language_site: "Idioma del sitio"
   edit_profile: "Editar perfil"
 
+  #devise/mails
+  welcome_mail: "Bienvenido(a) a 5roots"
+  confirm_account_text1: 'Puedes confirmar tu cuenta dando click en el siguiente link:'
+  confirm_my_account: "Confirmar mi cuenta"
+
+
+
 
 
   date:

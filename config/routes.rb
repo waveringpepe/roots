@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {registrations: 'users/registrations' },  path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
   resources :blogs
@@ -10,6 +11,9 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   get 'faq', to: 'pages#faq'
   get '/form', to: redirect("https://www.5roots.co/register?locale=es&plan=8")
   get '/apply', to: redirect("https://www.5roots.co/register?locale=es&plan=1")
+
+  resource :membership
+  resources :products
 
   	unauthenticated do
 	   root :to => 'pages#home'

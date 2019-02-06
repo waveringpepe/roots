@@ -1,0 +1,22 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Secret:</strong>
+  <%= @product.secret %>
+</p>
+
+<%= link_to 'Anual', new_membership_path(plan: "anual-1"), class:"btn btn-primary" %>
+<%= link_to 'Subscribe Monthly', new_membership_path(plan: "5"), class:"btn btn-primary" %> 
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

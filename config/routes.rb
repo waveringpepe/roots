@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  mount StripeEvent::Engine, at: '/webhooks/stripe'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {registrations: 'users/registrations' },  path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
   resources :blogs
@@ -14,6 +14,7 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
   resource :membership
   resources :products
+  resources :charges
 
   	unauthenticated do
 	   root :to => 'pages#home'

@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   belongs_to :plan
+  has_many :charges
   ############################################################################################
   ## PeterGate Roles                                                                        ##
   ## The :user role is added by default and shouldn't be included in this list.             ##
@@ -13,6 +14,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable
+
+
 
 
   validates_presence_of :name

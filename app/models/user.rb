@@ -25,15 +25,17 @@ class User < ApplicationRecord
   attr_accessor :stripe_card_token
   def save_with_subscription
     if valid?
-      customer = Stripe::Customer.create(description: email, plan: plan_id, source: stripe_card_token)
+      customer = Stripe::Customer.create(email: email, plan: plan_id, source: stripe_card_token, description: plan_id)
       self.stripe_customer_token = customer.id
       save!
     end
   end
 
   def save_as_teacher
-    save!
-    User.update(roles: "teacher")
+    if valid?
+      save!
+      User.last.update(roles: "teacher")
+    end
   end
 
   def first_name

@@ -2,6 +2,8 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: 'teacher_form'}) do |f| %>
 
   <%= hidden_field_tag 'plan', params[:plan] %>
+  
+  <%= f.hidden_field :roles, value: "teacher" %>
 
     <div class="container mt-4">
       <h4 class="mb-3"><%= t("subtitle_1_form_teacher") %></h4>

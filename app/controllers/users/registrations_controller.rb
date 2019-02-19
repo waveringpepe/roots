@@ -23,6 +23,9 @@ before_action :select_plan, only: :new
         end
       end
     end
+    rescue Stripe::CardError => e
+      flash.alert = e.message
+      render action: :new
   end
 end
 

@@ -23,12 +23,33 @@ class User < ApplicationRecord
   # Sripe responds back with customer data.
   # Store customer.id as the customer token and save the user.
   attr_accessor :stripe_card_token
+
   def save_with_subscription
     if valid?
       customer = Stripe::Customer.create(email: email, source: stripe_card_token)
       self.stripe_customer_token = customer.id
+      self.assign_attributes(
+        card_brand: card_brand,
+        card_last4: card_last4,
+        card_exp_month: card_exp_month,
+        card_exp_year: card_exp_year
+      )
       save!
     end
+  end
+
+  def stripe_customer
+    if stripe_customer_token?
+      Stripe::Customer.retrieve(stripe_customer_token)
+    else
+      stripe_customer = Stripe::Customer.create(email: email, source: stripe_card_token)
+      update(stripe_customer_token: stripe_customer.id)
+      stripe_customer
+    end
+  end
+
+  def subscribed?
+    stripe_subscription_id? || (expires_at? && Time.zone.now < expires_at)
   end
 
   def save_as_teacher

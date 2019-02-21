@@ -1,7 +1,7 @@
 /* global $, Stripe */
 //Document ready.
 $(document).on('turbolinks:load', function(){
-  var theForm = $('#basic_form');
+  var theForm = $('#register_form');
   var submitBtn = $('#form-signup-btn');
   //Set Stripe public key.
   Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
@@ -51,7 +51,11 @@ $(document).on('turbolinks:load', function(){
     //Get the token from the response.
     var token = response.id;
     //Inject the card token in a hidden field.
-    theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token) );
+    theForm.append($('<input type="hidden" name="user[stripe_card_token]">').val(token) );
+    theForm.append($('<input type="hidden" name="user[card_brand]">').val(response.card.brand));
+    theForm.append($('<input type="hidden" name="user[card_last4]">').val(response.card.last4));
+    theForm.append($('<input type="hidden" name="user[card_exp_month]">').val(response.card.exp_month));
+    theForm.append($('<input type="hidden" name="user[card_exp_year]">').val(response.card.exp_year));
     //Submit form to our Rails app.
     theForm.get(0).submit();
   }

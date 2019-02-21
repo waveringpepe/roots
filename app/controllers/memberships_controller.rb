@@ -13,8 +13,8 @@ class MembershipsController < ApplicationController
 
     begin
       subscription = customer.subscriptions.create(
-        source: params[:stripeToken],
-        plan: params[:plan]
+        plan: params[:plan],
+        card: params[:stripe_card_token]
       )
 
       current_user.assign_attributes(stripe_subscription_id: subscription.id, expires_at: nil)

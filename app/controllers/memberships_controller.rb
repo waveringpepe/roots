@@ -42,7 +42,7 @@ class MembershipsController < ApplicationController
     customer = current_user.stripe_customer
 
     begin
-      source = customer.sources.create(source: params[:stripeToken])
+      source = customer.sources.create(source: stripe_card_token)
 
       customer.default_source = source.id
       customer.save

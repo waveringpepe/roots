@@ -15,6 +15,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
 
+
   validates_presence_of :name
 
   # If pro user passes validations (email,password, etc..),
@@ -28,7 +29,7 @@ class User < ApplicationRecord
     if valid?
       customer = Stripe::Customer.create(email: email, source: stripe_card_token)
       self.stripe_customer_token = customer.id
-      self.assign_attributes(
+      update(
         card_brand: card_brand,
         card_last4: card_last4,
         card_exp_month: card_exp_month,
@@ -54,8 +55,8 @@ class User < ApplicationRecord
 
   def save_as_teacher
     if valid?
+      self.assign_attributes(roles: "teacher")
       save!
-      User.last.update(roles: "teacher")
     end
   end
 

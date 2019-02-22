@@ -1,48 +1,55 @@
 <div class="container">
 <h1>Subscribe</h1>
-
 <% if current_user.card_last4? %>
-  <%= form_tag memberships_path, id: "existing-card" do %>
+  <%= form_tag memberships_path, id: "register_form" do %>
     <p>Pay with existing card:</p>
     <div><strong>Card on file:</strong> <%= current_user.card_brand %> (**** **** **** <%= current_user.card_last4 %>)</div>
     <div><strong>Expiration:</strong> <%= current_user.card_exp_month %> / <%= current_user.card_exp_year %></div>
-    <p>or <%= link_to "add a new card", "#", class: "show-card-form" %></p>
+    <p> <!--or  link_to "add a new card", "#", class: "show-card-form" %></p> -->
 
     <%= hidden_field_tag :plan, params[:plan] %>
 
-    <input type="submit" class="submit" value="Submit Payment">
+    <input type="submit" class="btn btn-primary" value="Submit Payment">
   <% end %>
 <% end%>
 
-<%= form_tag memberships_path, id: "payment-form", style: (current_user.card_last4? ? "display:none" : nil) do %>
-  <span class="payment-errors"></span>
+<%= form_tag memberships_path, id: "register_form", style: (current_user.card_last4? ? "display:none" : nil) do %>
+    
+    <div class="container mt-4">
+      <h4 class="mb-3"><%= t("subtitle_4_form") %></h4>
+    </div>
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
+      <div class="row">
+        <div class="form-group col-md-6 mt-4">
+          <%= label_tag :card_number, t("credit_cardnumber_form") %>
+          <%= text_field_tag :card_number, nil , name: nil, class: "form-control" %>
+        </div>
 
-  <div class="form-row">
-    <label>
-      <span>Card Number</span>
-      <input type="text" size="20" data-stripe="number" value="4242 4242 4242 4242">
-    </label>
-  </div>
+        <div class="form-group col-md-6 mt-4">
+          <%= label_tag :card_code, t("cvc_card_form") %>
+          <%= text_field_tag :card_code, nil , name: nil, class: "form-control" %>
+        </div>
+      </div>
 
-  <div class="form-row">
-    <label>
-      <span>Expiration (MM/YY)</span>
-      <input type="text" size="2" data-stripe="exp_month" value="12">
-    </label>
-    <span> / </span>
-    <input type="text" size="2" data-stripe="exp_year" value="20">
-  </div>
+      <div class="row">
+        <div class="form-group col-md-6 mt-2">
+          <%= label_tag :card_month, t("card_expiration_form") %>
+          <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+          <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+        </div>
 
-  <div class="form-row">
-    <label>
-      <span>CVC</span>
-      <input type="text" size="4" data-stripe="cvc" value="123">
-    </label>
-  </div>
+        <span class="card-body form-group col-md-6 mt-2">
+          <p>
+            <b><%= t("totaltext_card_form") %></b> <%= t("amount_card_basic_form") %> <br/>
+            <b><%= t("notetext_card_form") %></b> <%= t("note_card_regular_1_form") %> <%=link_to t("note_card_regular_2_form"),"https://stripe.com/", target: :_blank %>.<br/> <i class="fa fa-cc-stripe" aria-hidden="true" style="color:blue;"></i> <i class="fa fa-cc-visa" aria-hidden="true" style="color:##F7F7F7;"></i> <i class="fa fa-cc-mastercard" aria-hidden="true" style="color:#E45931;"></i> <i class="fa fa-cc-amex" aria-hidden="true" style="color:#156CC9;"></i>
+          </p>
+        </span>
+        <div class="actions col-md-6">
+        	 <input type="submit" class="btn btn-primary" value="Submit Payment">
+        </div>
 
-  <%= hidden_field_tag :plan, params[:plan] %>
+  		<%= hidden_field_tag :plan, params[:plan] %>
 
-  <input type="submit" class="submit" value="Submit Payment">
 <% end %>
 
 

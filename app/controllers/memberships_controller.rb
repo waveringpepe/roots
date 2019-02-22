@@ -14,6 +14,7 @@ class MembershipsController < ApplicationController
     customer = current_user.stripe_customer
 
     begin
+
       subscription = customer.subscriptions.create(
         plan: params[:plan]
       )

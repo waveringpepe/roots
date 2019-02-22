@@ -17,8 +17,7 @@ $(document).on("turbolinks:load", function() {
   $(".show-card-form").on("click", function(e) {
     e.preventDefault();
 
-    $("#existing-card").hide();
-    $form.show();
+
   });
 });
 

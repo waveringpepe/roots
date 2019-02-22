@@ -59,5 +59,14 @@ $(document).on('turbolinks:load', function(){
     //Submit form to our Rails app.
     theForm.get(0).submit();
   }
+
+  $(".show-card-form").on("click", function(e) {
+    e.preventDefault();
+
+    $("#existing-card").hide();
+    theForm.show();
+  });
+
+
 });
 

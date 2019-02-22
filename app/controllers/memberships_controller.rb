@@ -19,12 +19,6 @@ class MembershipsController < ApplicationController
       )
 
       current_user.assign_attributes(stripe_subscription_id: subscription.id, expires_at: nil)
-      current_user.assign_attributes(
-        card_brand: params[:card_brand],
-        card_last4: params[:card_last4],
-        card_exp_month: params[:card_exp_month],
-        card_exp_year: params[:card_exp_year]
-      ) if params[:card_last4]
       current_user.save
 
       flash.notice = "Thanks for subscribing!"
@@ -42,16 +36,16 @@ class MembershipsController < ApplicationController
     customer = current_user.stripe_customer
 
     begin
-      source = customer.sources.create(source: stripe_card_token)
+      source = customer.sources.create(source: params[:user][:stripe_card_token])
 
       customer.default_source = source.id
       customer.save
 
       current_user.assign_attributes(
-        card_brand: params[:card_brand],
-        card_last4: params[:card_last4],
-        card_exp_month: params[:card_exp_month],
-        card_exp_year: params[:card_exp_year]
+        card_brand: params[:user][:card_brand],
+        card_last4: params[:user][:card_last4],
+        card_exp_month: params[:user][:card_exp_month],
+        card_exp_year: params[:user][:card_exp_year]
       )
       current_user.save
 

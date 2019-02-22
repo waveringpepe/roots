@@ -1,11 +1,13 @@
-<div class="container">
+
 <h1>Update your card</h1>
 
-<%= form_tag new_membership_path, method: :put, id: "register_form" do %>
-    
+<%= form_tag membership_path, method: :put, id: "register_form" do %>
+
     <div class="container mt-4">
       <h4 class="mb-3"><%= t("subtitle_4_form") %></h4>
     </div>
+
+    <div class="container">
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
         <div class="form-group col-md-6 mt-4">
@@ -26,16 +28,13 @@
           <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
         </div>
 
-        <span class="card-body form-group col-md-6 mt-2">
-          <p>
-            <b><%= t("totaltext_card_form") %></b> <%= t("amount_card_basic_form") %> <br/>
-            <b><%= t("notetext_card_form") %></b> <%= t("note_card_regular_1_form") %> <%=link_to t("note_card_regular_2_form"),"https://stripe.com/", target: :_blank %>.<br/> <i class="fa fa-cc-stripe" aria-hidden="true" style="color:blue;"></i> <i class="fa fa-cc-visa" aria-hidden="true" style="color:##F7F7F7;"></i> <i class="fa fa-cc-mastercard" aria-hidden="true" style="color:#E45931;"></i> <i class="fa fa-cc-amex" aria-hidden="true" style="color:#156CC9;"></i>
-          </p>
-        </span>
         <div class="actions col-md-6">
-          <%= submit_tag t("signup_and_pay_button_form"), class:"btn btn-primary", id: "form-signup-btn" %>
+           <input type="submit" class="btn btn-primary" value="Submit Payment">
         </div>
 
-
+          <div class="actions col-md-6">
+          <%= submit_tag t("signup_and_pay_button_form"), class:"btn btn-primary", id: "form-signup-btn" %>
+        </div>
+      </div>
 <% end %>
-</div>
+

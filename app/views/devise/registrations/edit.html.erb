@@ -122,10 +122,10 @@
       <p>Your access expires in <%= distance_of_time_in_words current_user.expires_at - Time.zone.now %>.</p>
     <% else %>
       <div>
-        <p>You are currently subscribed. <%= link_to "Cancel your subscription", memberships_path, method: :delete, data: {confirm: "Are you sure you want to cancel your subscription?"} %></p>
+        <p>You are currently subscribed. <%= link_to "Cancel your subscription", membership_path, method: :delete, data: {confirm: "Are you sure you want to cancel your subscription?"} %></p>
         <div><strong>Card on file:</strong> <%= current_user.card_brand %> (**** **** **** <%= current_user.card_last4 %>)</div>
         <div><strong>Expiration:</strong> <%= current_user.card_exp_month %> / <%= current_user.card_exp_year %></div>
-        <p><%= link_to "Update your card", "#" %></p>
+        <p><%= link_to "Update your card", membership_path %></p>
       </div>
       <div>
         <%= link_to t('back'), :back %> 

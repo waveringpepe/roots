@@ -6,8 +6,10 @@ Rails.application.routes.draw do
 
 scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
-  resources :memberships
-  
+  resource :membership
+
+
+  get 'memberships', to: 'pages#subscriptions'
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'faq', to: 'pages#faq'

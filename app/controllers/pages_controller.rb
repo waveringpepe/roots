@@ -15,6 +15,10 @@ class PagesController < ApplicationController
     
   end
 
+  def subscriptions
+
+  end
+
   def about
   end
 

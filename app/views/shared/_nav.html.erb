@@ -45,19 +45,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to t('edit_profile'), edit_user_registration_path(current_user), class: "dropdown-item" %> 
-              <% if current_user.subscribed? %>
-
-                <% if current_user.expires_at? %>
-
-                <%= link_to "Subscribe before", 'memberships', class: "dropdown-item" %>
-
-                <% else %> 
-                <% end %>
-              <% else %>
-
-              <%= link_to "Subscribe", 'memberships', class: "dropdown-item" %>
-
-              <% end %> 
+              <%= link_to 'Mi membresía', edit_membership_path , class: "dropdown-item" %>
             <div class="dropdown-divider"></div>
               <%= link_to t('logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>

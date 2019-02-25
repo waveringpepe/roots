@@ -33,6 +33,10 @@ class MembershipsController < ApplicationController
   def show
   end
 
+  def edit
+
+  end
+
   def update
     customer = current_user.stripe_customer
 

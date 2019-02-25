@@ -1,37 +1,39 @@
 
-<h1>Update your card</h1>
+  <div class="container">
+    <h1>Update your card</h1>
 
 <%= form_tag membership_path, method: :put, id: "register_form" do %>
 
     <div class="container mt-4">
-      <h4 class="mb-3"><%= t("subtitle_4_form") %></h4>
+      <h4 class="mb-3">Add your payment method credit / debit card</h4>
     </div>
 
     <div class="container">
-    <div class="card rounded d-flex p-2 bd-highlight bg-light">
-      <div class="row">
-        <div class="form-group col-md-6 mt-4">
-          <%= label_tag :card_number, t("credit_cardnumber_form") %>
-          <%= text_field_tag :card_number, nil , name: nil, class: "form-control" %>
+      <div class="card rounded d-flex p-2 bd-highlight bg-light">
+        <div class="row">
+          <div class="form-group col-md-6 mt-4">
+            <%= label_tag :card_number, t("credit_cardnumber_form") %>
+            <%= text_field_tag :card_number, nil , name: nil, class: "form-control" %>
+          </div>
+
+          <div class="form-group col-md-6 mt-4">
+            <%= label_tag :card_code, t("cvc_card_form") %>
+            <%= text_field_tag :card_code, nil , name: nil, class: "form-control" %>
+          </div>
         </div>
 
-        <div class="form-group col-md-6 mt-4">
-          <%= label_tag :card_code, t("cvc_card_form") %>
-          <%= text_field_tag :card_code, nil , name: nil, class: "form-control" %>
+        <div class="row">
+          <div class="form-group col-md-6 mt-2">
+            <%= label_tag :card_month, t("card_expiration_form") %>
+            <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+            <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+          </div>
+
+          <div class="actions col-md-6">
+            <%= submit_tag 'Update my card', class:"btn btn-primary", id: "form-signup-btn" %>
+          </div>
         </div>
       </div>
-
-      <div class="row">
-        <div class="form-group col-md-6 mt-2">
-          <%= label_tag :card_month, t("card_expiration_form") %>
-          <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
-          <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
-        </div>
-
-        <div class="actions col-md-6">
-          <%= submit_tag t("signup_and_pay_button_form"), class:"btn btn-primary", id: "form-signup-btn" %>
-        </div>
-        
-      </div>
+  </div>
 <% end %>
 

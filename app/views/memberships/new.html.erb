@@ -3,13 +3,20 @@
 <% if current_user.card_last4? %>
   <%= form_tag membership_path, id: "register_form" do %>
     <p>Pay with existing card:</p>
-    <div><strong>Card on file:</strong> <%= current_user.card_brand %> (**** **** **** <%= current_user.card_last4 %>)</div>
-    <div><strong>Expiration:</strong> <%= current_user.card_exp_month %> / <%= current_user.card_exp_year %></div>
-    <p> <%= link_to "Update your card", membership_path %></p>
+    <div>
+    	<strong>Card on file:</strong> <%= current_user.card_brand %> (**** **** **** <%= current_user.card_last4 %>)
+    </div>
+    <div>
+    	<strong>Expiration:</strong> <%= current_user.card_exp_month %> / <%= current_user.card_exp_year %>
+    </div>
+    <p>
+    	<%= link_to "Update your card", membership_path %>
+    </p>
 
     <%= hidden_field_tag :plan, params[:plan] %>
 
     <input type="submit" class="btn btn-primary" value="Submit Payment">
+</div>
   <% end %>
 <% end%>
 

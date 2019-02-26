@@ -296,6 +296,11 @@ es:
   update_card_title: "Cambiar mi tarjeta"
   update_card_description: "Agregar un método de pago (tarjeta débito o crédito)."
 
+  #memberships_controller
+  card_updated_message: "Tu tarjeta ha sido actualizada de manera correcta."
+  message_subscribed: "¡Gracias por suscribirte!"
+  cancel_message: "Haz cancelado tu membresía. Tendrás acceso a tu cuenta hasta "
+
   #pages/subscriptions
   amount_card_basic_form: "Básica $1,120 MXN"
   amount_card_medium_form: "Intermedia $2,080 MXN"

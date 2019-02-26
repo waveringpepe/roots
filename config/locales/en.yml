@@ -330,6 +330,11 @@ en:
   update_card_title: "Update my card"
   update_card_description: "Add your payment method (credit or debit card)."
 
+  #memberships_controller
+  card_updated_message: "Your card was updated successfully"
+  message_subscribed: "Thanks for subscribing!"
+  cancel_message: "You have cancelled your subscription. You will have access until "
+
   #pages/subscriptions
   amount_card_basic_form: "Basic $1120 MXN"
   amount_card_medium_form: "Medium $2080 MXN"

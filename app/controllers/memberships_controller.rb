@@ -22,7 +22,7 @@ class MembershipsController < ApplicationController
       current_user.assign_attributes(stripe_subscription_id: subscription.id, expires_at: nil)
       current_user.save
 
-      flash.notice = "Thanks for subscribing!"
+      flash.notice = t('message_subscribed')
       redirect_to root_path
     rescue Stripe::CardError => e
       flash.alert = e.message
@@ -54,7 +54,7 @@ class MembershipsController < ApplicationController
       )
       current_user.save
 
-      flash.notice = "Your card was updated successfully"
+      flash.notice = t('card_updated_message')
       redirect_to root_path
 
     rescue Stripe::CardError => e
@@ -70,6 +70,6 @@ class MembershipsController < ApplicationController
     expires_at = (Time.zone.at(subscription.current_period_end) + 7776000)
     current_user.update(expires_at: expires_at, stripe_subscription_id: nil)
 
-    redirect_to root_path, notice: "You have cancelled your subscription. You will have access until #{current_user.expires_at.to_date}."
+    redirect_to root_path, notice: t('cancel_message') + "#{current_user.expires_at.to_date}."
   end
 end

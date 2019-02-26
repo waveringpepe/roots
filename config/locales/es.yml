@@ -17,12 +17,12 @@ es:
   chinese: "Chino"
   portuguese: "Portugués"
   how_it_works: "¿Cómo funciona?"
-  how_it_works_title_1: "Selecciona tu membresía"
-  how_it_works_title_2: "Regístrate"
-  how_it_works_title_3: "Aprende hoy"
-  how_it_works_description_1: "Selecciona la membresía que se acomoda a tus necesidades o toma una clase de prueba gratis."
-  how_it_works_description_2: "Llena la forma de registro para que podamos encontrar a un profesor que se acomode a tus necesidades de apredizaje y a tu horario."
-  how_it_works_description_3: "Ahora ya estás listo. Después de realizar el pago, vas a recibir vía e-mail y Whatsapp toda la información que necesitas de tu nuevo profesor y el horario para tu primer clase."
+  how_it_works_title_1: "Regístrate"
+  how_it_works_title_2: "Toma tu clase de muestra"
+  how_it_works_title_3: "Selecciona tu membresía"
+  how_it_works_description_1: "Llena la forma de registro para que podamos encontrar a un profesor que se acomode a tus necesidades de apredizaje y horario."
+  how_it_works_description_2: "Una vez que tengamos información sobre tu perfil, lo revisaremos y te asignaremos un profesor para que puedan tomar la clase de muestra."
+  how_it_works_description_3: "Selecciona y suscríbete a la membresía que se acomoda a tus necesidades y comienza a aprender desde hoy."
   benefits_title_1_a: "Habla como un"
   benefits_title_1_b: "nativo."
   benefits_title_2_a: "Aprende desde tu"
@@ -60,7 +60,7 @@ es:
   pricing_answer_2: "Ejemplo: 30min por día, 4 días por semana, 1 hora por día o 2 días a la semana. Como tu quieras!"
   pricing_answer_3: "Los creditos de tus clases son validos por 4 meses después del día de tu pago. Recuerda que 1 crédito equivale a 1 hora de clase."
   pricing_answer_4: "Todas las membresías se renuevan automáticamente cada mes."
-  pricing_answer_5: "Si quieres cancelar tu membresía, envíanos un e-mail a hello@5roots.co y lo haremos por ti."
+  pricing_answer_5: "Para cancelar tu membresía puedes hacerlo tu mismo dando click en mi membresía que se encuentra en el menú y luego en el botón cancelar membresía y se hará automáticamente, si necesitas ayuda puedes enviar un correo a hello@5roots.co y nosotros te ayudaremos a dar de baja tu cuenta."
   
   #shared/footer
 
@@ -91,7 +91,7 @@ es:
   faq_question_8: "¿Cuál es la política de cancelación o cambio de una clase? "
   faq_answer_8: "Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces la perderás. Para 5 Roots es muy importante el tiempo que el profesor dedica a preparar una clase por lo que te pedimos que si vas a hacer una cambio le avises con el tiempo debido."
   faq_question_9: "¿Cómo cancelo mi mebresía?"
-  faq_answer_9: "Para cancelar tu membresía debes enviarnos un correo a hello@5roots.co y nosotros te ayudaremos a dar de baja tu cuenta"
+  faq_answer_9: "Para cancelar tu membresía puedes hacerlo tu mismo dando click en mi membresía que se encuentra en el menú y luego en el botón cancelar membresía y se hará automáticamente, si necesitas ayuda puedes enviar un correo a hello@5roots.co y nosotros te ayudaremos a dar de baja tu cuenta."
   faq_question_10: "¿A dónde puede escribir si tengo dudas?"
   faq_answer_10: "Por mail a hello@5roots.co o por Whats app a +52 1 (81) 2075 151 o +52 1 (81) 2110 1145."
   faq_question_11: "Política de cancelación para clase de muestra"
@@ -209,27 +209,29 @@ es:
 
   welcome: "Bienvenido"
   student_hompage_title: "¡Estamos construyendo un increíble sitio para ti!"
-  student_hompage_subtitle: "Sigue los siguientes pasos si te acabas de registrar para una clase gratuita o con una membresía"
+  student_hompage_subtitle: "Para reclamar tu clase gratuita sigue estos pasos:"
   step_1: "Paso 1."
-  step_1a_student_homepage: "Si te acabas de registrar para una clase gratuita o con una membresía espera a que te contactemos, lo haremos lo más pronto posible.
-                            En caso de que no lo hagamos en un tiempo razonable, escríbenos directamente por Whatsapp al número +521-812-110-1145 y dinos cual es tu caso."
-  sstep_2: "Paso 2."
+  step_1a_student_homepage: "Espera a que te contactemos, lo haremos lo más pronto posible."                       
+  step_2: "Paso 2."
   step_2a_student_homepage: "Una vez que te contactemos y revisemos tu perfil, buscaremos al mejor profesor para ti."
   step_3: "Paso 3."
-  step_3a_student_homepage: "Cuando encontremos a tu profesor, te enviaremos un e-mail y un Whatsapp con toda la información necesaria de tu profesor."
+  step_3a_student_homepage: "Cuando encontremos a tu profesor, te enviaremos un e-mail y un Whatsapp con toda la información necesaria sobre tu profesor."
   step_4: "Paso 4."
-  step_4a_student_homepage: "El profesor se pondra en contacto contigo por medio de Whatsapp, para que pueddan acordar el horario de su primer clase."
+  step_4a_student_homepage: "El profesor se pondrá en contacto contigo por medio de Whatsapp, para que puedan acordar el horario de su primer clase."
   step_5: "Paso 5."
-  step_5a_student_homepage: "Si ya compraste una membresía y te gustó el profesor entonces ya puedes ponerte de acuerdo directamente con el para agendar las siguientes clases."
-  step_5b_student_homepage: "Si tomaste una clase de prueba, nosotros nos pondremos en contacto contigo para ver si deseas continuar y comprar una membresía para que ya puedas empezar con las siguientes clases con tu profesor."
+  step_5a_student_homepage: "Si te gustaría continuar con las clases, suscríbete a una de nuestras"
+  step_5b_student_homepage: "membresías."
   note_student_homepage: "Nota:"
-  note1_student_homepage: "Todo esto sucede en promedio en 1 día"
+  note1_student_homepage: "Todo esto sucede en promedio en 1 día." 
+  note2_student_homepage: "¿Dudas? Escríbenos por Whatsapp al número +521-812-110-1145"
+  subscribe_again: "Suscríbete nuevamente"
+  choose_membership: "Da click aquí para ver nuestras membresías"
 
   #pages/teachers_homepage
   teachers_hompage_title:  "¡Estamos construyendo un increíble sitio para ti!"
   teacher_button1_homepage: "Acabo de aplicar para ser un profesor"
   teacher_button2_homepage: "Ya soy un profesor de 5 Roots"
-  teacher_applied_subtitle_homepage: "¿Acabas de aplicar para ser un profesor? Sigue los siguientes pasos:"
+  teacher_applied_subtitle_homepage: "¿Acabas de aplicar para ser un profesor? Sigue estos pasos:"
   teacher_subtitle_homepage: "Soy parte de la comunidad de profesores de 5 Roots, ¿qué sigue?"
   
 
@@ -264,6 +266,7 @@ es:
 
   language_site: "Idioma del sitio"
   edit_profile: "Editar perfil"
+  my_membership: "Mi membresía"
 
   #devise/mails
   welcome_mail: "Bienvenido(a) a 5roots"

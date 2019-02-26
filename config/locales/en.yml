@@ -255,10 +255,13 @@ en:
   step_4: "Step 4."
   step_4a_student_homepage: "The teacher will get in touch with you through Whatsapp, so you can match the schedule for your first class."
   step_5: "Step 5."
-  step_5a_student_homepage: "If you've already bought a membership and you liked your teacher then you can schedule your next classes with your teacher."
-  step_5b_student_homepage: "If you took a free class then will get in touch with you to see if you would like to continue and buy a membership so you can schedule your next classes with your teacher."
+  step_5a_student_homepage: "If you would like to continue with the classes, subscribe to one of our"
+  step_5b_student_homepage: "memberships."
   note_student_homepage: "Note:"
   note1_student_homepage: "All this steps happen in no more than one day."
+  note2_student_homepage: "Doubts? Write us by Whatsapp to the number + 521-812-110-1145"
+  subscribe_again: "Subscribe again"
+  choose_membership: "Click here to check out our memberships"
 
   #pages/teachers_homepage
   teachers_hompage_title:  "We are bulding a cool website for you!"
@@ -298,6 +301,7 @@ en:
 
   language_site: "Site language"
   edit_profile: "Edir profile"
+  my_membership: "My membership"
 
   #devise/mails
   welcome_mail: "Welcome to 5roots"

@@ -1,37 +1,26 @@
-<div class="container text-center">
-	<div>
-		<h1 style="color:#317A9F;"><%= t("welcome") %> <%= current_user.name.titleize %> <%= @card_brand %></h1>
-	</div>
-	<div>
-		<h3><%= t("student_hompage_title") %></h3><hr><br/>
-	</div>
-</div>
+<% if current_user.subscribed? %>
 
-<div class="container card-body">
-	<div>
-		<h2 class="pl-1" style="color:green;"> <%= t("student_hompage_subtitle") %></h2><br/>
-	</div>
-	<div class="card-header rounded">
-		<ul style="list-style-type:none" class="pl-0">
-			<li>
-				<b><%= t("step_1") %></b> <%= t("step_1a_student_homepage") %>
-			</li><br/>
-			<li>
-				<b><%= t("step_2") %></b> <%= t("step_2a_student_homepage") %>
-			</li><br/>
-			<li>
-				<b><%= t("step_3") %></b> <%= t("step_3a_student_homepage") %>
-			</li><br/>
-			<li>
-				<b><%= t("step_4") %></b> <%= t("step_4a_student_homepage") %>
-			</li><br/>
-			<li><b><%= t("step_5") %></b>
-				<ul style="list-style-type:none">
-					<li><b>a)</b> <%= t("step_5a_student_homepage") %></li>
-					<li><b>b)</b> <%= t("step_5b_student_homepage") %></li>
-				</ul>
-			</li><br/>
-		</ul>
+	<% if current_user.expires_at? %>
 
-		<b style="color:red;"><%= t("note_student_homepage") %></b> <%= t("note1_student_homepage") %>
-	</div>
+		<div class="container">
+			<%=link_to t('subscribe_again'), memberships_path, class:"btn btn-warning btn-lg btn-block" %>
+		</div><br/>
+
+		<%= render "faq" %>
+
+	<% else %>
+
+	<%= render "faq" %>
+
+	<% end %>
+
+<% else %>
+
+	<div class="container">
+		<%=link_to t('choose_membership'), memberships_path, class:"btn btn-warning btn-lg btn-block" %>
+	</div><br/>
+
+	<%= render "students_home_template" %> <br/>
+
+
+<% end %>

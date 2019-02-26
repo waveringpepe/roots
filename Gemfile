@@ -62,7 +62,7 @@ gem 'cocoon', '~> 1.2', '>= 1.2.12'
 #user hirb to change the view of data in the console
 gem 'hirb', '~> 0.7.3'
 # Use Stripe for payment processing
-gem 'stripe', '1.48.0'
+gem 'stripe', '~> 4.9'
 # Use country select to provide a list of countries
 gem 'country_select', '~> 4.0'
 # Use Figaro for ENV variables
@@ -77,5 +77,7 @@ gem 'flag-icons-rails', '~> 3.1'
 gem 'rails_admin', '~> 1.3'
 #translate admin panel
 gem 'rails_admin-i18n'
+#Stripe webhook integration
+gem 'stripe_event', '~> 2.2'
 
 

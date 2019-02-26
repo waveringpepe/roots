@@ -148,10 +148,7 @@ en:
 
   #devise/registrations/new
   title_teacher_form: "Apply to teach with 5 roots"
-  title_basic_form: "Register with a basic membership"
-  title_medium_form: "Register with a medium membership"
-  title_intensive_form: "Register with a intensive membership"
-  title_free_form: "Register with a free membership and receive a 30minutes free trial class"
+  title_free_form: "Sign up and receive a 30minutes free trial class"
 
   #devise/registrations/students/forms
   subtitle_1_form: "Information"

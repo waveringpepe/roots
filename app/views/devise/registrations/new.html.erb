@@ -1,22 +1,13 @@
 <br/><%= devise_error_messages! %>
 <div class="container mt-5">
 	<div class="form-group">
-		<% if params[:plan] == '5' %>
-			<h2> <%= t("title_basic_form") %> </h2>
-			<%= render "basic_form" %>
-		<% elsif params[:plan] == '6' %>
-			<h2> <%= t("title_medium_form") %> </h2>
-			<%= render "medium_form" %>
-		<% elsif params[:plan] == '7' %>
-			<h2> <%= t("title_intensive_form") %> </h2>
-			<%= render "intensive_form" %>
-		<% elsif params[:plan] == '8' %>
-			<h2> <%= t("title_free_form") %></h2>
+		<% if params[:plan] == '8' %>
+			<h2> <%= t("title_free_form") %> </h2>
 			<%= render "free_form" %>
 		<% else %>
 			<h2> <%= t("title_teacher_form") %></h2>
 			<%= render "teacher_form" %>
-		<% end %> <br/>
+		<% end %><br/>
 	</div>
 </div>
 

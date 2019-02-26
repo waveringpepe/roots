@@ -113,9 +113,6 @@ es:
 
   #devise/registrations/new
   title_teacher_form: "Aplica como profesor en 5 Roots"
-  title_basic_form: "Regístrate con una membresía básica"
-  title_medium_form: "Regístrate con una membresía intermedia"
-  title_intensive_form: "Regístrate con una membresía intensiva"
   title_free_form: "Regístrate y recibe una clase de muestra gratuita de 30 minutos."
 
   #devise/registrations/students/forms

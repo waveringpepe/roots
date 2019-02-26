@@ -94,17 +94,17 @@
     </div>
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
-        <div class="form-gropu col-md-12">
+        <div class="form-group col-md-12">
           <%= f.label :reason_id, t("reason_title_form") %><br />
           <%= f.text_area :reason_id, class:"form-control", rows:"3", placeholder: t("reason_description_form") %>
         </div>
 
-        <div class="form-gropu col-md-12">
+        <div class="form-group col-md-12">
           <%= f.label :experience, t("experience_title_form") %><br />
           <%= f.text_area :experience, class:"form-control",rows:"3", placeholder: t("experience_description_form")%>
         </div>
 
-        <div class="form-gropu col-md-12">
+        <div class="form-group col-md-12">
           <%= f.label :schedule, t("schedule_title_form") %><br />
           <%= f.text_area :schedule, class:"form-control",rows:"3", placeholder: t("schedule_description_form") %>
         </div>
@@ -112,7 +112,24 @@
     </div>
 
     <div class="container mt-4">
-      <h4 class="mb-3"><%= t("subtitle_4_form") %></h4>
+      <h4 class="mb-3"> <%= t("subtitle_3_form") %> </h4>
+    </div>
+    <div class="card rounded d-flex p-2 bd-highlight bg-light">
+      <div class="row">
+        <div class="form-group col-md-6">
+          <%= f.label :reference, t("reference_title_form") %><br />
+          <%= f.text_field :reference, class:"form-control", placeholder: t("reference_description_form") %>
+        </div>
+
+        <div class="form-group col-md-6">
+          <%= f.label :promo_code, t("promo_title_form") %><br />
+          <%= f.text_field :promo_code, class:"form-control", placeholder: t("promo_description_form") %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <h4 class="mb-3"><%= t("payment_method") %></h4>
     </div>
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
@@ -136,12 +153,16 @@
 
         <span class="card-body form-group col-md-6 mt-2">
           <p>
-            <b><%= t("totaltext_card_form") %></b> <%= t("amount_card_basic_form") %> <br/>
-            <b><%= t("notetext_card_form") %></b> <%= t("note_card_regular_1_form") %> <%=link_to t("note_card_regular_2_form"),"https://stripe.com/", target: :_blank %>.<br/> <i class="fa fa-cc-stripe" aria-hidden="true" style="color:blue;"></i> <i class="fa fa-cc-visa" aria-hidden="true" style="color:##F7F7F7;"></i> <i class="fa fa-cc-mastercard" aria-hidden="true" style="color:#E45931;"></i> <i class="fa fa-cc-amex" aria-hidden="true" style="color:#156CC9;"></i>
+            <b><%= t("notetext_card_form") %></b> <%= t("note_card_free_1_form") %> <b><%= t("note_card_free_2_form") %></b> <%= t("note_card_free_3_form") %><%=link_to t("note_card_free_4_form"), faq_path + "#collapseExample10" %><br/>
+
+            <small>
+              <%= t("note_card_regular_1_form") %> <%=link_to t("note_card_regular_2_form"),"https://stripe.com/", target: :_blank %>.
+            </small><br/> 
+            <i class="fa fa-cc-stripe" aria-hidden="true" style="color:blue;"></i> <i class="fa fa-cc-visa" aria-hidden="true" style="color:##F7F7F7;"></i> <i class="fa fa-cc-mastercard" aria-hidden="true" style="color:#E45931;"></i> <i class="fa fa-cc-amex" aria-hidden="true" style="color:#156CC9;"></i>
           </p>
         </span>
         <div class="actions col-md-6">
-          <%= f.submit t("signup_and_pay_button_form"), class:"btn btn-primary", id: "form-signup-btn" %>
+          <%= f.submit t("sign_up"), class:"btn btn-primary", id: "form-signup-btn" %>
         </div>
       
 <% end %>

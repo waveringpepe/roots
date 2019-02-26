@@ -15,7 +15,6 @@
         <ul class="list-unstyled mt-3 mb-4">
           <li><%= t('basic_membership_description') %></li>
         </ul>
-        <%= link_to t('basic_membership_button'), new_user_registration_path(plan: @basic_plan.id), class:'btn btn-dark btn-lg btn-block' %>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
@@ -27,7 +26,6 @@
         <ul class="list-unstyled mt-3 mb-4">
           <li><%= t('medium_membership_description') %></li>
         </ul>
-        <%= link_to t('medium_membership_button'), new_user_registration_path(plan: @medium_plan.id), class:'btn btn-success btn-lg btn-block' %>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
@@ -39,7 +37,6 @@
         <ul class="list-unstyled mt-3 mb-4">
           <li> <%= t('intensive_membership_description') %></li>
         </ul>
-        <%= link_to t('intensive_membership_button'), new_user_registration_path(plan: @intensive_plan.id), class:'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
   </div>

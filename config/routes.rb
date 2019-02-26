@@ -10,8 +10,6 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
 
   get 'memberships', to: 'pages#subscriptions'
-  get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
   get 'faq', to: 'pages#faq'
   get '/form', to: redirect("https://www.5roots.co/register?locale=es&plan=8")
   get '/apply', to: redirect("https://www.5roots.co/register?locale=es&plan=1")

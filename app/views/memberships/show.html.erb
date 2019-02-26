@@ -1,11 +1,11 @@
 
   <div class="container">
-    <h1>Update your card</h1>
+    <h1><%= t('update_card_title') %></h1>
 
 <%= form_tag membership_path, method: :put, id: "register_form" do %>
 
     <div class="container mt-4">
-      <h4 class="mb-3">Add your payment method credit / debit card</h4>
+      <h4 class="mb-3"><%= t('update_card_description') %></h4>
     </div>
 
     <div class="container">
@@ -30,7 +30,7 @@
           </div>
 
           <div class="actions col-md-6">
-            <%= submit_tag 'Update my card', class:"btn btn-primary", id: "form-signup-btn" %>
+            <%= submit_tag t('btn_update_card'), class:"btn btn-primary", id: "form-signup-btn" %>
           </div>
         </div>
       </div>

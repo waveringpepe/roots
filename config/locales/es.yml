@@ -22,7 +22,7 @@ es:
   how_it_works_title_3: "Aprende hoy"
   how_it_works_description_1: "Selecciona la membresía que se acomoda a tus necesidades o toma una clase de prueba gratis."
   how_it_works_description_2: "Llena la forma de registro para que podamos encontrar a un profesor que se acomode a tus necesidades de apredizaje y a tu horario."
-  how_it_works_description_3: "Ahora ya estas listo. Después de realizar el pago, vas a recibir vía e-mail y Whatsapp toda la información que necesitas de tu nuevo profesor y el horario para tu primer clase."
+  how_it_works_description_3: "Ahora ya estás listo. Después de realizar el pago, vas a recibir vía e-mail y Whatsapp toda la información que necesitas de tu nuevo profesor y el horario para tu primer clase."
   benefits_title_1_a: "Habla como un"
   benefits_title_1_b: "nativo."
   benefits_title_2_a: "Aprende desde tu"
@@ -47,9 +47,6 @@ es:
   medium_membership_price: "$2080 MXN /"
   intensive_membership_price: "$3060 MXN /"
   month: "Mes"
-  basic_membership_button: "Regístrate con básica"
-  medium_membership_button: "Regístrate con intermedia"
-  intensive_membership_button: "Regístrate con intensiva"
   pricing_subtitle_1: "Selecciona la membresía"
   pricing_subtitle_2: "que se acomode a tus necesidades."
   pricing_subtitle_3: "Una vez que te registres y realices tu pago, una persona del equipo se pondrá en contacto contigo y te proporcionará toda la información que necesitas sobre tu profesor."
@@ -59,10 +56,10 @@ es:
   pricing_question_3: "¿Los créditos expiran?"
   pricing_question_4: "Renovación de la membresía"
   pricing_question_5: "Cancelar membresía"
-  pricing_answer_1: "Escríbenos a hola@5roots.co o por Whatsapp a +52 1 (81) 2110 1145"  
+  pricing_answer_1: "Escríbenos a hello@5roots.co o por Whatsapp a +52 1 (81) 2110 1145."  
   pricing_answer_2: "Ejemplo: 30min por día, 4 días por semana, 1 hora por día o 2 días a la semana. Como tu quieras!"
-  pricing_answer_3: "Los creditos de tus clases son validos por 4 meses después del día de tu pago. Recuerda que 1 crédito equivale a 1 hora de clase"
-  pricing_answer_4: "Todas las membresías se renuevan automaticamente cada mes"
+  pricing_answer_3: "Los creditos de tus clases son validos por 4 meses después del día de tu pago. Recuerda que 1 crédito equivale a 1 hora de clase."
+  pricing_answer_4: "Todas las membresías se renuevan automáticamente cada mes."
   pricing_answer_5: "Si quieres cancelar tu membresía, envíanos un e-mail a hello@5roots.co y lo haremos por ti."
   
   #shared/footer
@@ -97,6 +94,8 @@ es:
   faq_answer_9: "Para cancelar tu membresía debes enviarnos un correo a hello@5roots.co y nosotros te ayudaremos a dar de baja tu cuenta"
   faq_question_10: "¿A dónde puede escribir si tengo dudas?"
   faq_answer_10: "Por mail a hello@5roots.co o por Whats app a +52 1 (81) 2075 151 o +52 1 (81) 2110 1145."
+  faq_question_11: "Política de cancelación para clase de muestra"
+  faq_answer_11: "Una vez pactada la clase de muestra, tienes 24 horas previas a dicha clase para solicitar un cambio de horario o cancelar. En caso de infringir la política, se te hará un cargo a tu método de pago de $100 MXN."
 
   #sessions/new
 
@@ -117,13 +116,12 @@ es:
   title_basic_form: "Regístrate con una membresía básica"
   title_medium_form: "Regístrate con una membresía intermedia"
   title_intensive_form: "Regístrate con una membresía intensiva"
-  title_free_form: "Regístrate con una membresía gratuita y recibe una clase 30 minutos de prueba"
+  title_free_form: "Regístrate y recibe una clase de muestra gratuita de 30 minutos."
 
   #devise/registrations/students/forms
   subtitle_1_form: "Información"
   subtitle_2_form: "Información extra"
   subtitle_3_form: "¿Referencias?"
-  subtitle_4_form: "Pago"
   email_title_form: "Email"
   email_description_form: "Escribe tu email"
   email_extratext_form: "Nunca compartiremos tu email con nadie"
@@ -165,18 +163,16 @@ es:
   cvc_card_form: "CVC"
   card_expiration_form: "Fecha de expiración"
   totaltext_card_form: "Total a pagar:"
-  amount_card_free_form: "0 MXN"
-  amount_card_basic_form: "1120 MXN"
-  amount_card_medium_form: "2080 MXN"
-  amount_card_intensive_form: "3060 MXN"
   notetext_card_form: "Nota:"
   note_card_regular_1_form: "Todos los pagos son procesados por"
   note_card_regular_2_form: "stripe"
-  note_card_free_1_form: "5 roots te regala una clase de 30minutos de prueba," 
-  note_card_free_2_form: "Nunca te cobraremos nada a menos que incumplas con la "
-  note_card_free_3_form: "política de cancelación/cambio."
-  signup_and_pay_button_form: "Registrarme y hacer el pago"
+  note_card_free_1_form: "La clase de muestra es" 
+  note_card_free_2_form: "GRATUITA"
+  note_card_free_3_form: "por lo cual NO se te hará ningún cargo. Es importante tomar en cuenta nuestra "
+  note_card_free_4_form: "política de cancelación/cambio de clase de muestra."
   sign_up: "Registrame"
+  payment_method: "Método de pago"
+
 
   #devise/registrations/teacher/forms
 
@@ -273,6 +269,48 @@ es:
   welcome_mail: "Bienvenido(a) a 5roots"
   confirm_account_text1: 'Puedes confirmar tu cuenta dando click en el siguiente link:'
   confirm_my_account: "Confirmar mi cuenta"
+
+  #memberships/edit
+  billing: "Mi cuenta"
+  access_subscription_user_1: "El acceso a tu cuenta expira en"
+  access_subscription_user_2: "Suscríbete a una membresía"
+  btn_to_memberships: "Da click aquí para ver nuestras membresías"
+  not_subscribed: "Actualmente no estás suscrito a ninguna membresía."
+  yes_subscribed: "Actualmente estas suscrito a una membresía."
+  btn_cancel_subscription: "Cancelar membresía"
+  confirmation_cancel_subscription: "¿Estás seguro que quieres cancelar tu membresía?"
+  card_on_file: "Tarjeta:"
+  expiration_card: "Fecha de expiración:"
+  update_card: "Cambiar de tarjeta"
+
+  #memberships/new
+  pay_with_existing_card: "Pagar con tarjeta existente:"
+  subscribe_title: "Suscribirse a"
+  subscribe_t_basic: "membresía básica"
+  subscribe_t_medium: "membresía intermedia"
+  subscribe_t_intensive: "membresía intensiva"
+  btn_pay: "Realizar pago"
+
+  #memberships/show
+  btn_update_card: "Actualizar tarjeta"
+  update_card_title: "Cambiar mi tarjeta"
+  update_card_description: "Agregar un método de pago (tarjeta débito o crédito)."
+
+  #pages/subscriptions
+  amount_card_basic_form: "Básica $1,120 MXN"
+  amount_card_medium_form: "Intermedia $2,080 MXN"
+  amount_card_intensive_form: "Intensiva $3,060 MXN"
+  btn_subscribe: "Suscribirse"
+  title_memberships: "Membresías"
+  basic_m_title: "La membresía básica"
+  basic_m_description: "incluye 4 horas de clases uno a uno."
+  medium_m_title: "La membresía intermedia"
+  medium_m_description: "incluye 8 horas de clases uno a uno."
+  intensive_m_title: "La membresía intensiva"
+  intensive_m_description: "incluye 12 horas de clases uno a uno."
+  extra_subscription: "¿Quiéres una subscripción con más horas? Envíanos un e-mail a hello@5roots.co"
+
+
 
 
 

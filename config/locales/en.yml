@@ -128,6 +128,8 @@ en:
   faq_answer_9: "To cancel your subscription you must send an email to hello@5roots.co and we will help you to cancel your account."
   faq_question_10: "Do you need help?"
   faq_answer_10: "If you have any question please send an e-mail to hello@5roots.co or send a Whatsapp message to +52 1 81-2110-1114"
+  faq_question_11: "What is the cancellation or change policy of a trial class?"
+  faq_answer_11: "Once the sample class has been agreed, you have 24 hours prior to the class to request a change of schedule or cancel. In case of violating the policy, you will be charged to your payment method of $ 100 MXN."
 
   #sessions/new
 
@@ -197,18 +199,15 @@ en:
   cvc_card_form: "CVC"
   card_expiration_form: "Card Expiration"
   totaltext_card_form: "Total to pay:"
-  amount_card_free_form: "0 MXN"
-  amount_card_basic_form: "1120 MXN"
-  amount_card_medium_form: "2080 MXN"
-  amount_card_intensive_form: "3060 MXN"
   notetext_card_form: "Note:"
   note_card_regular_1_form: "All payments are processed by"
   note_card_regular_2_form: "stripe"
-  note_card_free_1_form: "5 roots gives you for free a 30 minutes trial class,"
-  note_card_free_2_form: "we'll never charge you anything unless you break the" 
-  note_card_free_3_form: "cancelation/change policy."
-  signup_and_pay_button_form: "Sign up and pay"
+  note_card_free_1_form: "La clase de muestra es" 
+  note_card_free_2_form: "GRATUITA"
+  note_card_free_3_form: "por lo cual NO se te hará ningún cargo. Es importante tomar en cuenta nuestra"
+  note_card_free_4_form: "política de cancelación/cambio de clase de muestra."
   sign_up: "Sign up"
+  payment_method: "Payment method"
 
   #devise/registrations/teacher/forms
 
@@ -304,6 +303,46 @@ en:
   welcome_mail: "Welcome to 5roots"
   confirm_account_text1: 'You can confirm your account email through the link below:'
   confirm_my_account: "Confirm my account"
+
+  #memberships/edit
+  billing: "Billing"
+  access_subscription_user_1: "Your access expires in"
+  access_subscription_user_2: "Subscribe to a membership"
+  btn_to_memberships: "Click here to check out our memberships"
+  not_subscribed: "Currently you are not subscribed to any of our memberships"
+  yes_subscribed: "You are currently subscribed."
+  btn_cancel_subscription: "Cancel your subscription"
+  confirmation_cancel_subscription: "Are you sure you want to cancel your membership?"
+  card_on_file: "Card on file"
+  expiration_card: "Expiration:"
+  update_card: "Update your card"
+
+  #memberships/new
+  pay_with_existing_card: "Pay with existing card"
+  subscribe_title: "Subscribe to"
+  subscribe_t_basic: "basic membership"
+  subscribe_t_medium: "medium membership"
+  subscribe_t_intensive: "intensive membership"
+  btn_pay: "Submit payment"
+
+  #memberships/show
+  btn_update_card: "Update my card"
+  update_card_title: "Update my card"
+  update_card_description: "Add your payment method (credit or debit card)."
+
+  #pages/subscriptions
+  amount_card_basic_form: "Basic $1120 MXN"
+  amount_card_medium_form: "Medium $2080 MXN"
+  amount_card_intensive_form: "Intensive $3060 MXN"
+  btn_subscribe: "Subscribe"
+  title_memberships: "Memberships"
+  basic_m_title: "The basic membership"
+  basic_m_description: "includes 4 hours of one to one lessons."
+  medium_m_title: "The medium membership"
+  medium_m_description: "includes 8 hours of one to one lessons."
+  intensive_m_title: "The intensive membership"
+  intensive_m_description: "includes 12 hours of one to one lessons."
+  extra_subscription: "Do you want a subscription with more hours? Send us an e-mail to hello@5roots.co"
 
   
 

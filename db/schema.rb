@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_21_004713) do
+ActiveRecord::Schema.define(version: 2019_02_27_021027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,13 +70,6 @@ ActiveRecord::Schema.define(version: 2019_02_21_004713) do
     t.datetime "confirmation_sent_at"
     t.integer "plan_id"
     t.string "stripe_customer_token"
-    t.string "processor"
-    t.string "processor_id"
-    t.string "card_token"
-    t.string "card_brand"
-    t.string "card_last4"
-    t.string "card_exp_month"
-    t.string "card_exp_year"
     t.string "country"
     t.string "actual_country"
     t.string "teach_language"
@@ -88,6 +81,10 @@ ActiveRecord::Schema.define(version: 2019_02_21_004713) do
     t.string "certificate_id"
     t.string "type_student"
     t.string "years_teaching"
+    t.string "card_brand"
+    t.string "card_last4"
+    t.string "card_exp_month"
+    t.string "card_exp_year"
     t.string "stripe_subscription_id"
     t.datetime "expires_at"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

@@ -51,7 +51,8 @@
         <% current_user.charges.each do |charge| %>
           <tr>
             <td><%= charge.created_at.to_date %></td>
-            <td><%= number_to_currency charge.amount / 100 %></
+            <td><%= number_to_currency charge.amount / 100 %></td>
+            <td><%= link_to "Download", charge_path(charge, format: :pdf) %></td>
           </tr>
         <% end %>
       </tbody>

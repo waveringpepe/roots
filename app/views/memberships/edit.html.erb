@@ -33,26 +33,26 @@
       <%= link_to t('btn_to_memberships'), memberships_path, class: "btn btn-success" %>
 
   <% end %>
-</div>
+</div><br/><br/>
 
 <div class="container">
   <% if current_user.charges.any? %>
-    <h3>Charges</h3>
+    <h3><%= t("charges") %></h3>
 
     <table class="table">
       <thead>
         <tr>
-          <th>Date</th>
-          <th>Amount</th>
-          <th>Download</th>
+          <th><%= t("date_id") %></th>
+          <th><%= t("amount") %></th>
+          <th><%= t("download") %></th>
         </tr>
       </thead>
       <tbody>
         <% current_user.charges.each do |charge| %>
           <tr>
             <td><%= charge.created_at.to_date %></td>
-            <td><%= number_to_currency charge.amount / 100 %></td>
-            <td><%= link_to "Download", charge_path(charge, format: :pdf) %></td>
+            <td>$<%= number_to_currency(charge.amount / 100, :unit => "MXN", :separator => ".", :delimiter => ",") %></td>
+            <td><%= link_to t("download"), charge_path(charge, format: :pdf) %></td>
           </tr>
         <% end %>
       </tbody>

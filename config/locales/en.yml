@@ -317,6 +317,10 @@ en:
   card_on_file: "Card on file"
   expiration_card: "Expiration:"
   update_card: "Update your card"
+  charges: "Charges"
+  amount: "Amount"
+  download: "Download"
+  date_id: "Date"
 
   #memberships/new
   pay_with_existing_card: "Pay with existing card"
@@ -325,6 +329,7 @@ en:
   subscribe_t_medium: "medium membership"
   subscribe_t_intensive: "intensive membership"
   btn_pay: "Submit payment"
+
 
   #memberships/show
   btn_update_card: "Update my card"

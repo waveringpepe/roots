@@ -282,6 +282,10 @@ es:
   card_on_file: "Tarjeta:"
   expiration_card: "Fecha de expiración:"
   update_card: "Cambiar de tarjeta"
+  charges: "Pagos"
+  amount: "Cantidad"
+  download: "Descargar"
+  date_id: "Fecha"
 
   #memberships/new
   pay_with_existing_card: "Pagar con tarjeta existente:"

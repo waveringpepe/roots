@@ -1,30 +1,22 @@
-class Charge < ActiveRecord::Base
+class Charge < ApplicationRecord
   belongs_to :user
-  validates :stripe_customer_token, uniqueness: true
 
   def receipt
     Receipts::Receipt.new(
       id: id,
-      subheading: "RECEIPT FOR CHARGE #%{id}",
-      product: "GoRails",
+      product: "5 Roots Membership",
       company: {
-        name: "One Month, Inc.",
-        address: "37 Great Jones\nFloor 2\nNew York City, NY 10012",
-        email: "teachers@onemonth.com",
-        logo: Rails.root.join("app/assets/images/one-month-dark.png")
+        name: "5 Roots",
+        address: "Ciudad de México",
+        email: "hello@5roots.co"
       },
       line_items: [
-        ["Date",           created_at.to_s],
-        ["Account Billed", "#{user.name} (#{user.email})"],
-        ["Product",        "GoRails"],
-        ["Amount",         "$#{amount / 100}.00"],
-        ["Charged to",     "#{card_type} (**** **** **** #{card_last4})"],
-        ["Transaction ID", uuid]
-      ],
-      font: {
-        bold: Rails.root.join('app/assets/fonts/tradegothic/TradeGothic-Bold.ttf'),
-        normal: Rails.root.join('app/assets/fonts/tradegothic/TradeGothic.ttf'),
-      }
+        ["Date", created_at.to_s],
+        ["Account Billed", user.email],
+        ["Product", "5 Roots Membership"],
+        ["Amount", '$' + ActionController::Base.helpers.number_to_currency( amount / 100, :unit => "MXN", :separator => ".", :delimiter => ",")],
+        ["Card Charged", "#{card_brand} (**** **** **** #{card_last4})"]
+      ]
     )
   end
 end

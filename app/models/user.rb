@@ -45,7 +45,7 @@ class User < ApplicationRecord
     if stripe_customer_token?
       Stripe::Customer.retrieve(stripe_customer_token)
     else
-      stripe_customer = Stripe::Customer.create(email: email, source: stripe_card_token)
+      stripe_customer = Stripe::Customer.create(email: email)
       update(stripe_customer_token: stripe_customer.id)
       stripe_customer
     end

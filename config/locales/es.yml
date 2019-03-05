@@ -167,7 +167,7 @@ es:
   note_card_free_2_form: "GRATUITA"
   note_card_free_3_form: "por lo cual NO se te hará ningún cargo. Es importante tomar en cuenta nuestra "
   note_card_free_4_form: "política de cancelación/cambio de clase de muestra."
-  sign_up: "Registrame"
+  sign_up: "Registrarme"
   payment_method: "Método de pago"
 
 
@@ -296,7 +296,7 @@ es:
   btn_pay: "Realizar pago"
   btn_subscribe1: "Suscribirse"
   add_card: "Agregar una tarjeta"
-  no_currently_card: "Actualmente no tinenes una tarjeta registrada"
+  no_currently_card: "Actualmente no tienes una tarjeta registrada"
 
   #memberships/show
   btn_update_card: "Actualizar tarjeta"

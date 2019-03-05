@@ -329,6 +329,9 @@ en:
   subscribe_t_medium: "medium membership"
   subscribe_t_intensive: "intensive membership"
   btn_pay: "Submit payment"
+  btn_subscribe1: "Subscribe"
+  add_card: "Add a card"
+  no_currently_card: "Currently you don't have a card registered"
 
 
   #memberships/show

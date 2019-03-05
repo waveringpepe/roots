@@ -294,10 +294,13 @@ es:
   subscribe_t_medium: "membresía intermedia"
   subscribe_t_intensive: "membresía intensiva"
   btn_pay: "Realizar pago"
+  btn_subscribe1: "Suscribirse"
+  add_card: "Agregar una tarjeta"
+  no_currently_card: "Actualmente no tinenes una tarjeta registrada"
 
   #memberships/show
   btn_update_card: "Actualizar tarjeta"
-  update_card_title: "Cambiar mi tarjeta"
+  update_card_title: "Actualizar tarjeta"
   update_card_description: "Agregar un método de pago (tarjeta débito o crédito)."
 
   #memberships_controller

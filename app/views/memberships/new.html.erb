@@ -1,85 +1,93 @@
-<div class="container">
-<h1><%= t('subscribe_title') %>     
-    <% if params[:plan] == '5' %>
-        <%= t('subscribe_t_basic') %>
-    <% elsif params[:plan] == '6' %>
-        <%= t('subscribe_t_medium') %>
-    <% elsif params[:plan] == '7' %>
-        <%= t('subscribe_t_intensive') %>
-    <% end %>
+  <% if current_user.card_last4? %>
+    <div class="container">
+      <h1><%= t('subscribe_title') %>     
+          <% if params[:plan] == '5' %>
+              <%= t('subscribe_t_basic') %>
+          <% elsif params[:plan] == '6' %>
+              <%= t('subscribe_t_medium') %>
+          <% elsif params[:plan] == '7' %>
+              <%= t('subscribe_t_intensive') %>
+          <% end %>  
+      </h1>
     
-</h1>
-<% if current_user.card_last4? %>
-  <%= form_tag membership_path, id: "register_form" do %>
-    <p><%= t('pay_with_existing_card') %></p>
-    <div>
-    	<strong><%= t('card_on_file') %></strong> <%= current_user.card_brand %> (**** **** **** <%= current_user.card_last4 %>)
+      <%= form_tag membership_path, id: "register_form" do %>
+        <p><%= t('pay_with_existing_card') %></p>
+        <div>
+        	<strong><%= t('card_on_file') %></strong> <%= current_user.card_brand %> (**** **** **** <%= current_user.card_last4 %>)
+        </div>
+        <div>
+        	<strong><%= t('expiration_card') %></strong> <%= current_user.card_exp_month %> / <%= current_user.card_exp_year %>
+        </div>
+        <p>
+        	o <%= link_to t('update_card'), membership_path %>
+        </p>
+
+        <%= hidden_field_tag :plan, params[:plan] %>
+
+        <% if params[:plan] == '5' %>
+        	<h5> <b> Total:</b> $1,120 MXN </h5>
+      	<% elsif params[:plan] == '6' %>
+      		<h5> <b> Total:</b> $2,080 MXN </h5>
+      	<% elsif params[:plan] == '7' %>
+      		<h5> <b> Total:</b> $3,060 MXN </h5>
+        <% end %>
+
+        <%= submit_tag  t('btn_pay'), class:"btn btn-primary" %>
+      <% end %>
     </div>
-    <div>
-    	<strong><%= t('expiration_card') %></strong> <%= current_user.card_exp_month %> / <%= current_user.card_exp_year %>
+
+    <% else %>
+    <div class="container">
+      <h4> <%= t('no_currently_card') %>.</h4><br/>
+        <p> <%= link_to t('add_card'), membership_path, class: "btn btn-outline-success" %> </p>
     </div>
-    <p>
-    	or <%= link_to "add a new card", "#", class: "show-card-form" %>
-    </p>
-
-    <%= hidden_field_tag :plan, params[:plan] %>
-
-    <% if params[:plan] == '5' %>
-    	<h5> <b> Total:</b> $1,120 MXN </h5>
-	<% elsif params[:plan] == '6' %>
-		<h5> <b> Total:</b> $2,080 MXN </h5>
-	<% elsif params[:plan] == '7' %>
-		<h5> <b> Total:</b> $3,060 MXN </h5>
-    <% end %>
-
-    <%= submit_tag  t('btn_pay'), class:"btn btn-primary" %>
-</div>
   <% end %>
-<% end%>
+    
 
-<%= form_tag membership_path, id: "register_form", style: (current_user.card_last4? ? "display:none" : nil) do %>
+
+
+<!-- Forma para pagar con una tarjeta nueva 
+ form_tag membership_path, id: "register_form", style: (current_user.card_last4? ? "display:none" : nil) do %>
     
         <div class="container mt-4">
-          <h4 class="mb-3"><%= t("payment_method") %></h4>
+          <h4 class="mb-3">= t("payment_method") %></h4>
         </div>
         <div class="card rounded d-flex p-2 bd-highlight bg-light">
           <div class="row">
             <div class="form-group col-md-6 mt-4">
-              <%= label_tag :card_number, t("credit_cardnumber_form") %>
-              <%= text_field_tag :card_number, nil , name: nil, class: "form-control" %>
+              %= label_tag :card_number, t("credit_cardnumber_form") %>
+              %= text_field_tag :card_number, nil , name: nil, class: "form-control" %>
             </div>
 
             <div class="form-group col-md-6 mt-4">
-              <%= label_tag :card_code, t("cvc_card_form") %>
-              <%= text_field_tag :card_code, nil , name: nil, class: "form-control" %>
+              %= label_tag :card_code, t("cvc_card_form") %>
+              %= text_field_tag :card_code, nil , name: nil, class: "form-control" %>
             </div>
           </div>
 
           <div class="row">
             <div class="form-group col-md-6 mt-2">
-              <%= label_tag :card_month, t("card_expiration_form") %>
-              <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
-              <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+              %= label_tag :card_month, t("card_expiration_form") %>
+              %= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+              %= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
             </div>
 
             <span class="card-body form-group col-md-6 mt-2">
               <p>
-                <b><%= t("notetext_card_form") %></b> <%= t("note_card_free_1_form") %> <b><%= t("note_card_free_2_form") %></b> <%= t("note_card_free_3_form") %><%=link_to t("note_card_free_4_form"), faq_path + "#collapseExample10" %><br/>
-
                 <small>
-                  <%= t("note_card_regular_1_form") %> <%=link_to t("note_card_regular_2_form"),"https://stripe.com/", target: :_blank %>.
+                  %= t("note_card_regular_1_form") %> %=link_to t("note_card_regular_2_form"),"https://stripe.com/", target: :_blank %>.
                 </small><br/> 
                 <i class="fa fa-cc-stripe" aria-hidden="true" style="color:blue;"></i> <i class="fa fa-cc-visa" aria-hidden="true" style="color:##F7F7F7;"></i> <i class="fa fa-cc-mastercard" aria-hidden="true" style="color:#E45931;"></i> <i class="fa fa-cc-amex" aria-hidden="true" style="color:#156CC9;"></i>
               </p>
             </span>
             <div class="actions col-md-6">
-              <%= submit_tag "subscribe", class:"btn btn-primary", id: "form-signup-btn" %>
+              %= submit_tag t('btn_subscribe1'), class:"btn btn-primary", id: "form-signup-btn" %>
             </div>
           </div>
         </div>
       
 
-      <%= hidden_field_tag :plan, params[:plan] %>
+      %= hidden_field_tag :plan, params[:plan] %>
 
-<% end %>
+% end %> -->
 

@@ -39,7 +39,7 @@ module RootsApp
     config.load_defaults 5.2
     
     # Whitelist locales available for the application
-    config.i18n.available_locales = [:en, :es]
+    config.i18n.available_locales = [:es, :en]
 
     # Set default locale to something other than :en
     config.i18n.default_locale = :es

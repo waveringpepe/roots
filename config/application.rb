@@ -19,7 +19,10 @@ Bundler.require(*Rails.groups)
 
 module RootsApp
   class Application < Rails::Application
-    
+  
+
+  I18n.config.enforce_available_locales = true
+
   # Where the I18n library should search for translation files
   config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**' '*.{rb,yml}').to_s]
 
@@ -39,7 +42,7 @@ module RootsApp
     config.i18n.available_locales = [:en, :es]
 
     # Set default locale to something other than :en
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :es
 
 
     # Settings in config/environments/* take precedence over those specified here.

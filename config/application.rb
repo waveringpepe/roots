@@ -39,7 +39,7 @@ module RootsApp
     config.i18n.available_locales = [:en, :es]
 
     # Set default locale to something other than :en
-    config.i18n.default_locale = :es
+    config.i18n.default_locale = :en
 
 
     # Settings in config/environments/* take precedence over those specified here.

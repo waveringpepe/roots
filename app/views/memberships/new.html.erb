@@ -25,11 +25,11 @@
         <%= hidden_field_tag :plan, params[:plan] %>
 
         <% if params[:plan] == '5' %>
-        	<h5> <b> Total:</b> $1,120 MXN </h5>
+        	<h5> <b> Total:</b> <%= t('basic_membership_price') %></h5>
       	<% elsif params[:plan] == '6' %>
-      		<h5> <b> Total:</b> $2,080 MXN </h5>
+      		<h5> <b> Total:</b> <%= t('medium_membership_price') %></h5>
       	<% elsif params[:plan] == '7' %>
-      		<h5> <b> Total:</b> $3,060 MXN </h5>
+      		<h5> <b> Total:</b> <%= t('intensive_membership_price') %> </h5>
         <% end %>
 
         <%= submit_tag  t('btn_pay'), class:"btn btn-primary" %>

@@ -7,6 +7,8 @@
               <%= t('subscribe_t_medium') %>
           <% elsif params[:plan] == '7' %>
               <%= t('subscribe_t_intensive') %>
+          <% elsif params[:plan] == 'promobasico' %>
+              <%= t('subscribe_t_promo') %>
           <% end %>  
       </h1>
     
@@ -30,6 +32,9 @@
       		<h5> <b> Total:</b> <%= t('medium_membership_price') %></h5>
       	<% elsif params[:plan] == '7' %>
       		<h5> <b> Total:</b> <%= t('intensive_membership_price') %> </h5>
+        <% elsif params[:plan] == 'promobasico' %>
+          <h5> <b> Total:</b> <%= t('promo_membership_price') %> </h5>
+          <small><%= t('note_subscribe_promo') %> </small><br/><br/>
         <% end %>
 
         <%= submit_tag  t('btn_pay'), class:"btn btn-primary" %>

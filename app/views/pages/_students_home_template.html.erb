@@ -14,7 +14,7 @@
 		<div class="card-header rounded">
 			<ul style="list-style-type:none" class="pl-0">
 				<li>
-					<b><%= t("step_1") %></b> <%= t("step_1a_student_homepage") %>
+					<b><%= t("step_1") %></b> <%= t("step_1a_student_homepage") %><%=link_to t("step_5b_student_homepage"),memberships_path, class:"text-primary"%>
 				</li><br/>
 				<li>
 					<b><%= t("step_2") %></b> <%= t("step_2a_student_homepage") %>
@@ -25,7 +25,7 @@
 				<li>
 					<b><%= t("step_4") %></b> <%= t("step_4a_student_homepage") %>
 				</li><br/>
-				<li><b><%= t("step_5") %></b> <%= t("step_5a_student_homepage") %> <%=link_to t("step_5b_student_homepage"),memberships_path, class:"text-primary"%>
+				<li><b><%= t("step_5") %></b> <%= t("step_5a_student_homepage") %> 
 				</li>
 			</ul>
 

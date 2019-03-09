@@ -1,7 +1,8 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4"><b><%= t('pricing') %></b></h1>
   <p class="lead"><b style="color:#AD8C47;"><%= t('pricing_subtitle_1') %></b> <%= t('pricing_subtitle_2') %><br/><%= t('pricing_subtitle_3') %> </p><br/>
-  <%= link_to t('button_free_class'), new_user_registration_path(plan: @free_plan.id), class:'btn btn-outline-info' %>
+  <!--= link_to t('button_free_class'), new_user_registration_path(plan: @free_plan.id), class:'btn btn-outline-info' %> -->
+  <%= link_to t('button_register'), new_user_registration_path(plan: @free_plan.id), class:'btn btn-primary my-2' %>
 </div><br/>
 
 <div class="container">

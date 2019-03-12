@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  before_action :set_locale, :authenticate_user!, except: [:faq, :home]
+  before_action :set_locale
+  before_action :authenticate_user!, except: [:faq, :home]
 	# GET request for / which is our home page
   access all: [:home, :faq], teacher: {except: [:students_home]}, user: {except: [:teacher_home]}, admin: :all, message: "you shall not pass"
   

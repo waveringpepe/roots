@@ -9,12 +9,14 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   resource :membership
   resources :charges
 
+  get 'home', to: 'pages#home'
   get 'memberships', to: 'pages#subscriptions'
   get 'faq', to: 'pages#faq'
   get '/form', to: redirect("https://www.5roots.co/register?locale=es&plan=8")
   get '/apply', to: redirect("https://www.5roots.co/register?locale=es&plan=1")
 
-  	unauthenticated do
+
+	unauthenticated do
 	   root :to => 'pages#home'
 	end
 

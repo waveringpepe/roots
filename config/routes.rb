@@ -10,11 +10,28 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   resources :charges
 
   get 'home', to: 'pages#home'
+  get 'ingles', to: 'pages#home_ingles'
+  get 'frances', to: 'pages#home_frances'
+  get 'italiano', to: 'pages#home_italiano'
+  get 'español', to: 'pages#home_español'
+  get 'portugues', to: 'pages#home_portugues'
+  get 'aleman', to: 'pages#home_aleman'
+  get 'ruso', to: 'pages#home_ruso'
+  get 'chino', to: 'pages#home_chino'
+  get 'english', to: redirect("https://www.5roots.co/en/ingles")
+  get 'french', to: redirect("https://www.5roots.co/en/frances")
+  get 'italian', to: redirect("https://www.5roots.co/en/italiano")
+  get 'spanish', to: redirect("https://www.5roots.co/en/español")
+  get 'portuguese', to: redirect("https://www.5roots.co/en/portugues")
+  get 'german', to: redirect("https://www.5roots.co/en/aleman")
+  get 'russian', to: redirect("https://www.5roots.co/en/ruso")
+  get 'chinese', to: redirect("https://www.5roots.co/en/chino")
   get 'memberships', to: 'pages#subscriptions'
   get 'faq', to: 'pages#faq'
   get '/form', to: redirect("https://www.5roots.co/register?locale=es&plan=8")
   get '/aplica', to: redirect("https://www.5roots.co/register?locale=es&plan=1")
   get '/apply', to: redirect("https://www.5roots.co/register?locale=en&plan=1")
+
 
 
 	unauthenticated do

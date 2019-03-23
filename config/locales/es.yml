@@ -3,6 +3,14 @@ es:
   #pages/home
   
   slogan_1: "Aprende un idioma"
+  slogan_1_english: "Aprende inglés"
+  slogan_1_german: "Aprende alemán"
+  slogan_1_french: "Aprende francés"
+  slogan_1_spanish: "Aprende español"
+  slogan_1_italian: "Aprende italiano"
+  slogan_1_portuguese: "Aprende portugués"
+  slogan_1_russian: "Aprende ruso"
+  slogan_1_chinese: "Aprende chino"
   slogan_2: "desde la comodidad de tu casa"
   button_free_class: "Toma una clase de 30min gratuita"
   button_register: "Regístrate y recibe una membresía básica gratuita"

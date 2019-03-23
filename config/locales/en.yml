@@ -34,6 +34,14 @@ en:
   #pages/home
 
   slogan_1: "Learn a new language"
+  slogan_1_english: "Learn english"
+  slogan_1_german: "Learn german"
+  slogan_1_french: "Learn french"
+  slogan_1_spanish: "Learn spanish"
+  slogan_1_italian: "Learn italian"
+  slogan_1_portuguese: "Learn portuguese"
+  slogan_1_russian: "Learn russian"
+  slogan_1_chinese: "Learn chinese"
   slogan_2: "from the comfort of your home"
   button_free_class: "Take a 30min free trial class"
   button_register: "Sign up"

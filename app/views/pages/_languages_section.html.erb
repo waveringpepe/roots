@@ -1,0 +1,15 @@
+<div class="container text-center card">
+  <br/><p> <i class="fa fa-certificate fa-2x text-danger aria-hidden="true"></i> <%= t('warranty_title') %><br/><%= t('warranty_description') %></p><br/>
+  </div><br/><br/><br/>
+
+<div class="container text-center">
+  <h2> <%= t('available_languages') %> </h2><br/>
+  <%= link_to t('spanish'), new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-primary" %>
+  <%= link_to t('english'), new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-secondary" %>
+  <%= link_to t('french'), new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-success" %>
+  <%= link_to t('german'), new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-danger" %>
+  <%= link_to t('italian'), new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-warning" %>
+  <%= link_to t('portuguese'), new_user_registration_path(plan: @free_plan.id),class:"btn btn-outline-info" %>
+  <%= link_to t('russian'), new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-dark" %>
+  <%= link_to t('chinese'), new_user_registration_path(plan: @free_plan.id), class:"btn btn-outline-primary" %>
+</div><br/>

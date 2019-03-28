@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount StripeEvent::Engine, at: '/webhooks/stripe'
 
@@ -8,6 +10,7 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
   resource :membership
   resources :charges
+  resources :languages
 
   get 'home', to: 'pages#home'
   get 'ingles', to: 'pages#home_ingles'

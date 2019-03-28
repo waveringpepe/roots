@@ -1,6 +1,6 @@
 class LanguagesController < ApplicationController
   before_action :set_language, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  access all: [:index, :show], user: {except: [:new,:destroy, :edit, :create, :update]}, teacher: {except: [:new,:destroy, :edit, :create, :update]}, admin: :all
 
   # GET /languages
   def index

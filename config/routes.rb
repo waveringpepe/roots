@@ -11,6 +11,7 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   resource :membership
   resources :charges
   resources :languages
+  resources :users, only: [:show, :index]
 
   get 'home', to: 'pages#home'
   get 'ingles', to: 'pages#home_ingles'

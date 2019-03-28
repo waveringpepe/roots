@@ -1,0 +1,73 @@
+<h1 class="text-center"> My profile </h1><br/>
+
+
+<div class= "container">
+	<div class= "card">
+		<div class="card-body">
+			<div class= "text-center">
+				<p><b>Name:</b> <%= @user.name %></p>
+			</div>
+			<div class= "text-center">
+				<p><b>Email:</b> <%= current_user.email %></p>
+			</div>
+			<div class= "text-center">
+				<p><b>Skype</b> <%= current_user.skype %></p>
+			</div>
+			<div class= "text-center">
+				<p><b>City</b> <%= current_user.city_id %></p>
+			</div>
+			<div class= "text-center">
+				<p><b>Birth day</b> <%= current_user.birth_date %></p>
+			</div>	
+			<div class= "text-center">
+				<p><b>Why do I want to leanrn <%= current_user.language_id %> </b> <%= current_user.reason_id%></p>
+			</div>
+			<div class= "text-center">
+				<p><b>Language</b> <%= current_user.language_id %></p> 
+			</div>
+
+			<div class= "text-center">
+				<p><b>reason_id</b> <%= current_user.reason_id %></p> 
+			</div>
+			<div class= "text-center">
+				<p><b>Level</b> <%= current_user.level %></p> 
+			</div>
+			<div class= "text-center">
+				<p><b>Experience</b> <%= current_user.experience %></p> 
+			</div>
+			<div class= "text-center">
+				<p><b>Schedulel</b> <%= current_user.schedule %></p> 
+			</div>
+			<div class= "text-center">
+				<p><b>Reference</b> <%= current_user.reference %></p> 
+			</div>
+			<div class= "text-center">
+				<p><b>Promo Code</b> <%= current_user.promo_code %></p> 
+			</div>
+			<div class= "text-center">
+				<p><b>Whats app</b> <%= current_user.phone_number%></p> 
+			</div>
+			<div class= "text-center">
+				<p><b>Time Zone</b> <%= current_user.time_zone %></p> 
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    t.integer "plan_id"
+    t.string "country"
+    t.string "actual_country"
+    t.string "teach_language"
+    t.string "speak_language"
+    t.string "carrear_id"
+    t.string "university_id"
+    t.string "experience_teaching"
+    t.string "institutions_teach"
+    t.string "certificate_id"
+    t.string "type_student"
+    t.string "years_teaching"
+
+
+
+

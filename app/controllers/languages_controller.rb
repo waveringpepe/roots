@@ -9,6 +9,12 @@ class LanguagesController < ApplicationController
 
   # GET /languages/1
   def show
+    @plan = Plan.all
+    @teacher_plan = Plan.find(1)
+    @basic_plan = Plan.find(5)
+    @medium_plan = Plan.find(6)
+    @intensive_plan = Plan.find(7)
+    @free_plan = Plan.find(8)
   end
 
   # GET /languages/new

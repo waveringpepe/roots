@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-  access all: [:index, :show ]
+  before_action :authenticate_user!
+  access user: {except: [:index]}, teacher: {except: [:index]}, admin: :all
+
+
 
   # GET /User
   def index

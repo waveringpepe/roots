@@ -72,6 +72,10 @@ class User < ApplicationRecord
   	self.name.split.last
   end
 
+  def age
+    age = Date.today.year - birth_date.year
+  end
+
   def check_active_user
     forbidden! unless current_user.active
   end

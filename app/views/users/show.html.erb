@@ -1,75 +1,70 @@
-<h1 class="text-center"> My profile </h1><br/>
+	<div class= "container ">
+		<h1 class="text-center display-3 col 8"> <%= @user.name %> </h1><br/>
+	</div>
 
 
-<div class= "container">
-	<div class= "card">
-		<div class="card-body">
-			<div class= "text-center">
-				<p><b>Name:</b> <%= @user.name %></p>
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-skype fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Skype id:</b> <%= @user.skype %></p></span>
+				</div>
 			</div>
-			<div class= "text-center">
-				<p><b>Role:</b> <%= @user.roles %></p>
-			</div>
-			<div class= "text-center">
-				<p><b>Email:</b> <%= @user.email %></p>
-			</div>
-			<div class= "text-center">
-				<p><b>Skype</b> @useruser.skype %></p>
-			</div>
-			<div class= "text-center">
-				<p><b>City</b> @useruser.city_id %></p>
-			</div>
-			<div class= "text-center">
-				<p><b>Birth day</b> <%= @user.birth_date %></p>
+		</div>
+		<div class="row justify-content-md-center ">
+			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-location-arrow fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b>Vive en </b> <%= @user.city_id %></p></span>
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-birthday-cake fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b> Tiene </b> <%= @user.age %> years old</p></span>
+				</div>
 			</div>	
-			<div class= "text-center">
-				<p><b>Why do I want to leanrn <%= @user.language_id %> </b> <%= @user.reason_id%></p>
-			</div>
-			<div class= "text-center">
-				<p><b>Language</b> <%= @user.language_id %></p> 
-			</div>
+			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Esta aprendiendo: </b> <%= @user.language_id %></p></span> 
+				</div>
 
-			<div class= "text-center">
-				<p><b>reason_id</b> <%= @user.reason_id %></p> 
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-clock-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Zona horaria: </b> <%= @user.time_zone %></p></span> 
+				</div>
 			</div>
-			<div class= "text-center">
-				<p><b>Level</b> <%= @user.level %></p> 
-			</div>
-			<div class= "text-center">
-				<p><b>Experience</b> <%= @user.experience %></p> 
-			</div>
-			<div class= "text-center">
-				<p><b>Schedulel</b> <%= @user.schedule %></p> 
-			</div>
-			<div class= "text-center">
-				<p><b>Reference</b> <%= @user.reference %></p> 
-			</div>
-			<div class= "text-center">
-				<p><b>Promo Code</b> <%= @user.promo_code %></p> 
-			</div>
-			<div class= "text-center">
-				<p><b>Whats app</b> <%= @user.phone_number%></p> 
-			</div>
-			<div class= "text-center">
-				<p><b>Time Zone</b> <%= @user.time_zone %></p> 
+		</div>
+		<div class="row justify-content-md-center ">
+			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-battery fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Nivel del usuario: </b><%= @user.level %> <br/><small>Escala de 0 a 10 siendo 10 el máximo.</small> </p></span> 
+				</div>
+
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-calendar fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>¿Por qué quiero aprender <%= @user.language_id %>?</b> <%= @user.reason_id %></p></span>
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-calendar fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Experiencia previa de aprendizaje: </b> <%= @user.experience %></p></span>  
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-calendar fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Horario preferido para tomar las clases: </b> <%= @user.schedule %></p></span> 
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-
-    t.integer "plan_id"
-    t.string "country"
-    t.string "actual_country"
-    t.string "teach_language"
-    t.string "speak_language"
-    t.string "carrear_id"
-    t.string "university_id"
-    t.string "experience_teaching"
-    t.string "institutions_teach"
-    t.string "certificate_id"
-    t.string "type_student"
-    t.string "years_teaching"
+<!--<div class="container">
+	<div class="p-3 mb-2 bg-light text-dark">
+	    <%= @user.plan_id %>
+	    <%= @user.country %>
+	    <%= @user.actual_country %>
+	    <%= @user.teach_language %>
+	    <%= @user.speak_language %>
+	    <%= @user.carrear_id %>
+	    <%= @user.university_id %>
+	    <%= @user.experience_teaching %>
+	    <%= @user.institutions_teach %>
+	    <%= @user.certificate_id %>
+	    <%= @user.type_student %>
+	    <%= @user.years_teaching %>
+	</div>
+</div> -->
 
 
 

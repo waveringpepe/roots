@@ -14,36 +14,36 @@
 		<div class="row justify-content-md-center ">
 			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-location-arrow fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b>Vive en </b> <%= @user.city_id %></p></span>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-location-arrow fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b><%= t('city_id_title') %> </b> <%= @user.city_id %></p></span>
 				</div>
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-birthday-cake fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b> Tiene </b> <%= @user.age %> years old</p></span>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-birthday-cake fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b> <%= t('age_title') %> </b> <%= @user.age %> <%= t('age_description') %></p></span>
 				</div>
 			</div>	
 			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Esta aprendiendo: </b> <%= @user.language_id %></p></span> 
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('language_title') %> </b> <%= @user.language_id %></p></span> 
 				</div>
 
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-clock-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Zona horaria: </b> <%= @user.time_zone %></p></span> 
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-clock-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('time_zone_title') %></b> <%= @user.time_zone %></p></span> 
 				</div>
 			</div>
 		</div>
 		<div class="row justify-content-md-center ">
 			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-battery fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Nivel del usuario: </b><%= @user.level %> <br/><small>Escala de 0 a 10 siendo 10 el máximo.</small> </p></span> 
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-battery fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('level_id_title') %> </b><%= @user.level %> <br/><small><%= t('level_small') %></small> </p></span> 
 				</div>
 
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-calendar fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>¿Por qué quiero aprender <%= @user.language_id %>?</b> <%= @user.reason_id %></p></span>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-lightbulb-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('reason_id_title') %>  <%= @user.language_id %>?</b> <%= @user.reason_id %></p></span>
 				</div>
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-calendar fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Experiencia previa de aprendizaje: </b> <%= @user.experience %></p></span>  
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-mortar-board fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('experience_id_title') %>  </b> <%= @user.experience %></p></span>  
 				</div>
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-calendar fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Horario preferido para tomar las clases: </b> <%= @user.schedule %></p></span> 
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-calendar fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('schedule_id_title') %> </b> <%= @user.schedule %></p></span> 
 				</div>
 			</div>
 		</div>

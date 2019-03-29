@@ -388,6 +388,18 @@ en:
   #languages#new
   create_language: "Creaate language"
 
+  #users#show
+  city_id_title: "Lives in"
+  age_title: "Is"
+  age_description: "years old"
+  language_title: "Is learning"
+  time_zone_title: "Time zone:"
+  level_id_title: "Language level:"
+  level_small: "Scale from 0 to 10, 10 is the maximum."
+  reason_id_title: "Why do I want to learn"
+  experience_id_title: "Previous experience of learning:"
+  schedule_id_title: "Preferred schedule to take classes:"
+
   
 
 

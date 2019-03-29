@@ -359,6 +359,18 @@ es:
   #languages#new
   create_language: "Crear idioma"
 
+  #users#show
+  city_id_title: "Vive en"
+  age_title: "Tiene"
+  age_description: "años."
+  language_title: "Esta aprendiendo:"
+  time_zone_title: "Zona horaria:"
+  level_id_title: "Nivel del idioma"
+  level_small: "Escala de 0 a 10 siendo 10 el máximo"
+  reason_id_title: "¿Por qué quiero aprender"
+  experience_id_title: "Experiencia previa de aprendizaje:"
+  schedule_id_title: "Horario preferido para tomar las clases:"
+
 
 
 

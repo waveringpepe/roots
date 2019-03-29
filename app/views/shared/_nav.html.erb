@@ -36,12 +36,19 @@
              <%= current_user.first_name.capitalize %>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <% if logged_in?(:teacher) %>
+              <%= link_to t('edit_profile'), edit_user_registration_path(current_user), class: "dropdown-item" %> 
+            <div class="dropdown-divider"></div>
+              <%= link_to t('logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          <% else %>
               <%= link_to t('my_profile'), current_user, class: "dropdown-item" %>
               <%= link_to t('edit_profile'), edit_user_registration_path(current_user), class: "dropdown-item" %> 
               <%= link_to t('my_membership'), edit_membership_path , class: "dropdown-item" %>
             <div class="dropdown-divider"></div>
               <%= link_to t('logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
+          <% end %>
           </li>
 
           <li><%= link_to flag_icon(:mx, id: 'flag-icon', class: 'strong'),root_path(locale: :es),class: "nav-link"%></li>

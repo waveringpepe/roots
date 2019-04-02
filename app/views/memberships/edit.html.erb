@@ -10,6 +10,16 @@
       <div>
         <p>
           <%= t('yes_subscribed') %>
+          <% if current_user.plan_id == 5 %>
+            <%= t('basic_membership_name') %>.
+          <% elsif current_user.plan_id == 6 %>
+            <%= t('medium_membership_name') %>.
+          <% elsif current_user.plan_id == 7 %>
+            <%= t('intensive_membership_name') %>.
+          <% elsif current_user.plan_id == 8 %>
+            <%= t('membership_name') %>.
+          <% end %>
+
           <%= link_to t('btn_cancel_subscription'), membership_path, method: :delete, data: {confirm: t('confirmation_cancel_subscription')}, class:"text-danger" %>
         </p>
           <div>

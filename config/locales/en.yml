@@ -321,7 +321,7 @@ en:
   access_subscription_user_2: "Subscribe to a membership"
   btn_to_memberships: "Click here to check out our memberships"
   not_subscribed: "Currently you are not subscribed to any of our memberships"
-  yes_subscribed: "You are currently subscribed."
+  yes_subscribed: "You are currently subscribed to"
   btn_cancel_subscription: "Cancel your subscription"
   confirmation_cancel_subscription: "Are you sure you want to cancel your membership?"
   card_on_file: "Card on file"
@@ -331,6 +331,11 @@ en:
   amount: "Amount"
   download: "Download"
   date_id: "Date"
+  basic_membership_name: "basic membership"
+  medium_membership_name: "medium membership"
+  intensive_membership_name: "intensive membership"
+  membership_name: "a membership"
+
 
   #memberships/new
   pay_with_existing_card: "Pay with existing card"

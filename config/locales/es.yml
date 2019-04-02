@@ -288,7 +288,7 @@ es:
   access_subscription_user_2: "Suscríbete a una membresía"
   btn_to_memberships: "Da click aquí para ver nuestras membresías"
   not_subscribed: "Actualmente no estás suscrito a ninguna membresía."
-  yes_subscribed: "Actualmente estas suscrito a una membresía."
+  yes_subscribed: "Actualmente estas suscrito a una"
   btn_cancel_subscription: "Cancelar membresía"
   confirmation_cancel_subscription: "¿Estás seguro que quieres cancelar tu membresía?"
   card_on_file: "Tarjeta:"
@@ -298,6 +298,10 @@ es:
   amount: "Cantidad"
   download: "Descargar"
   date_id: "Fecha"
+  basic_membership_name: "membresía básica"
+  medium_membership_name: "membresía intermedia"
+  intensive_membership_name: "membresía intensiva"
+  membership_name: "membresía"
 
   #memberships/new
   pay_with_existing_card: "Pagar con tarjeta existente:"

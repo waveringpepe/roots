@@ -7,6 +7,20 @@
 		<div class="row justify-content-md-center">
 			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
 				<div>
+					<span class="align-middle">
+						<p class="font-weight-light"><i class="fa fa-address-card fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b><%= t('membership_title') %> </b> 
+				          <% if @user.plan_id == 5 %>
+				            <%= t('basic_membership_name') %>
+				          <% elsif @user.plan_id == 6 %>
+				            <%= t('medium_membership_name') %>
+				          <% elsif @user.plan_id == 7 %>
+				            <%= t('intensive_membership_name') %>
+				          <% elsif @user.plan_id == 8 %>
+				            <%= t('membership_name') %>
+				          <% end %>
+						</p></span>
+				</div>
+				<div>
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-skype fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Skype id:</b> <%= @user.skype %></p></span>
 				</div>
 			</div>
@@ -22,7 +36,28 @@
 			</div>	
 			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('language_title') %> </b> <%= @user.language_id %></p></span> 
+					<span class="align-middle">
+						<p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('language_title') %> </b>
+				          <% if @user.language_id == "1" %>
+				            <%= t("english") %>
+				          <% elsif @user.language_id == '2' %>
+				            <%= t('spanish') %>
+				          <% elsif @user.language_id == '3' %>
+				            <%= t('russian') %>
+				          <% elsif @user.language_id == '4' %>
+				            <%= t('german') %>
+				          <% elsif @user.language_id == '5' %>
+				            <%= t('portuguese') %>
+				          <% elsif @user.language_id == '6' %>
+				            <%= t('chinese') %>
+				          <% elsif @user.language_id == '7' %>
+				            <%= t('italian') %>
+				          <% elsif @user.language_id == '8' %>
+				            <%= t('french') %>
+				          <% else %>
+				          	<%= current_user.language_id %>				   	            				            
+				          <% end %>
+						</p></span> 
 				</div>
 
 				<div>
@@ -33,11 +68,34 @@
 		<div class="row justify-content-md-center ">
 			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-battery fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('level_id_title') %> </b><%= @user.level %> <br/><small><%= t('level_small') %></small> </p></span> 
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-battery fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('level_id_title') %>: </b><%= @user.level %> <br/><small><%= t('level_small') %></small> </p></span> 
 				</div>
 
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-lightbulb-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('reason_id_title') %>  <%= @user.language_id %>?</b> <%= @user.reason_id %></p></span>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-lightbulb-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('reason_id_title') %> 
+				          <% if @user.language_id == "1" %>
+				            <%= t("english") %>
+				          <% elsif @user.language_id == '2' %>
+				            <%= t('spanish') %>
+				          <% elsif @user.language_id == '3' %>
+				            <%= t('russian') %>
+				          <% elsif @user.language_id == '4' %>
+				            <%= t('german') %>
+				          <% elsif @user.language_id == '5' %>
+				            <%= t('portuguese') %>
+				          <% elsif @user.language_id == '6' %>
+				            <%= t('chinese') %>
+				          <% elsif @user.language_id == '7' %>
+				            <%= t('italian') %>
+				          <% elsif @user.language_id == '8' %>
+				            <%= t('french') %>
+				          <% else %>
+				          	<%= current_user.language_id %>					   	            				            
+				          <% end %>
+
+
+
+					?</b> <%= @user.reason_id %></p></span>
 				</div>
 				<div>
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-mortar-board fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('experience_id_title') %>  </b> <%= @user.experience %></p></span>  

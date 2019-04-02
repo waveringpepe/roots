@@ -3,7 +3,7 @@
       <h1><%= t('subscribe_title') %>     
           <% if params[:plan] == '5' %>
               <%= t('subscribe_t_basic') %>
-          <% elsif params[:plan] == 'medium' %>
+          <% elsif params[:plan] == '6' %>
               <%= t('subscribe_t_medium') %>
           <% elsif params[:plan] == '7' %>
               <%= t('subscribe_t_intensive') %>
@@ -14,7 +14,7 @@
     
       <%= form_tag membership_path, id: "register_form" do %>
 
-      <%= hidden_field_tag :plan_id, params[:plan] %>
+      
 
         <p><%= t('pay_with_existing_card') %></p>
         <div>
@@ -31,7 +31,7 @@
 
         <% if params[:plan] == '5' %>
         	<h5> <b> Total:</b> <%= t('basic_membership_price') %></h5>
-      	<% elsif params[:plan] == 'medium' %>
+      	<% elsif params[:plan] == '6' %>
       		<h5> <b> Total:</b> <%= t('medium_membership_price') %></h5>
       	<% elsif params[:plan] == '7' %>
       		<h5> <b> Total:</b> <%= t('intensive_membership_price') %> </h5>

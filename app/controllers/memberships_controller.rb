@@ -19,7 +19,6 @@ class MembershipsController < ApplicationController
         source: params[:stripe_card_token],
         plan: params[:plan]
       )
-
       current_user.assign_attributes(stripe_subscription_id: subscription.id, expires_at: nil)
       current_user.assign_attributes(
         card_brand: params[:user][:card_brand],
@@ -27,6 +26,7 @@ class MembershipsController < ApplicationController
         card_exp_month: params[:user][:card_exp_month],
         card_exp_year: params[:user][:card_exp_year]
       ) if params[:card_last4]
+      current_user.update(plan_id: params[:plan])
       current_user.save
 
       flash.notice = t('message_subscribed')

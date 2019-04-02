@@ -19,7 +19,7 @@ class User < ApplicationRecord
 
 
 
-  validates_presence_of :name
+  validates_presence_of :name, :skype, :email, :language_id, :schedule, :phone_number
 
   # If pro user passes validations (email,password, etc..),
   # then call Stripe and tell Stripe to set up a subscription

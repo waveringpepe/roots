@@ -393,7 +393,7 @@ en:
   #languages#new
   create_language: "Creaate language"
 
-  #users#show
+  #users#show#and#students_profile#and#teachersprofile
   city_id_title: "Lives in"
   age_title: "Is"
   age_description: "years old"
@@ -405,6 +405,22 @@ en:
   experience_id_title: "Previous experience of learning:"
   schedule_id_title: "Preferred schedule to take classes:"
   membership_title: "Membership:"
+  student_role: "Student"
+  teacher_role: "Teacher"
+  information_title: "Information"
+  native_language_title: "My native language is"
+  country_born_title: "I was borned in"
+  languages_teach_title: "I can teach"
+  carrear_title: "I studied"
+  university_title: "I studied in"
+  schedule_title_1: "Schedule"
+  schedule_teacher_title: "Preferred schedule to teach:"
+  experience_title: "Experience"
+  experience_title_teacher: "Teacher experience:"
+  years_experience: "Years teaching:"
+  institutions_experience: "Institutions where I have teached:"
+  certificates_experience: "Certificates"
+  type_student_title: "I love teaching the following profile:"
 
   
 

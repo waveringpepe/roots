@@ -1,0 +1,87 @@
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="mb-2 text-dark col-8 rounded">
+				<h4> <%= t('information_title') %> </h4>
+			</div>
+		</div>
+		<div class="row justify-content-md-center">
+			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-skype fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Skype id:</b> <%= @user.skype %></p></span>
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('native_language_title') %> </b><%= @user.speak_language %> </p></span> 
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-flag fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('country_born_title') %> </b><%= @user.country %> </p></span> 
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-birthday-cake fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b> <%= t('age_title') %> </b> <%= @user.age %> <%= t('age_description') %></p></span>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-md-center ">
+			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-location-arrow fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;&nbsp;<b><%= t('city_id_title') %> </b> <%= @user.country %></p></span>
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('languages_teach_title') %> </b><%= @user.teach_language %> </p></span> 
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-graduation-cap fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp; <b><%= t('carrear_title') %> </b><%= @user.carrear_id %> </p></span> 
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-institution fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('university_title') %> </b><%= @user.university_id %> </p></span> 
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-md-center">
+			<div class="mb-2 text-dark col-8 rounded">
+				<h4> <%= t('schedule_title_1') %></h4>
+			</div>
+		</div>
+		<div class="row justify-content-md-center ">
+			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-clock-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('time_zone_title') %></b> <%= @user.time_zone %></p></span> 
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-calendar fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('schedule_teacher_title') %> </b> <%= @user.schedule %></p></span> 
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-md-center">
+			<div class="mb-2 text-dark col-8 rounded">
+				<h4><%= t('experience_title') %></h4>
+			</div>
+		</div>
+		<div class="row justify-content-md-center ">
+			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-check-square-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('experience_title_teacher') %></b> <%= @user.experience_teaching %> <br/> </p></span> 
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-clock-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('years_experience') %></b> <%= @user.years_teaching %><br/> </p></span> 
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-institution fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('institutions_experience') %></b> <%= @user.institutions_teach %><br/> </p></span> 
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div class="container">
+		<div class="row justify-content-md-center ">
+			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa  fa-certificate fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('certificates_experience') %>:</b> <%= @user.certificate_id %><br/> </p></span> 
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-user fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('type_student_title') %></b> <%= @user.type_student %> <br/> </p></span> 
+				</div>
+			</div>
+		</div>
+	</div>

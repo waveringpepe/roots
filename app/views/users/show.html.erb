@@ -1,125 +1,39 @@
-	<div class= "container ">
-		<h1 class="text-center display-3 col 8"> <%= @user.name %> </h1><br/>
-	</div>
+	
+	<% if @user.role == :teacher %>
 
-
-	<div class="container">
-		<div class="row justify-content-md-center">
-			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
-				<div>
-					<span class="align-middle">
-						<p class="font-weight-light"><i class="fa fa-address-card fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b><%= t('membership_title') %> </b> 
-				          <% if @user.plan_id == 5 %>
-				            <%= t('basic_membership_name') %>
-				          <% elsif @user.plan_id == 6 %>
-				            <%= t('medium_membership_name') %>
-				          <% elsif @user.plan_id == 7 %>
-				            <%= t('intensive_membership_name') %>
-				          <% elsif @user.plan_id == 8 %>
-				            <%= t('membership_name') %>
-				          <% end %>
-						</p></span>
-				</div>
-				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-skype fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Skype id:</b> <%= @user.skype %></p></span>
-				</div>
+		<div class= "container ">
+			<div class="text-center">
+				<h1 class="display-3 col 8"> <%= @user.name %> </h1>
+				<h5> <%= t('teacher_role') %> </h5>
 			</div>
-		</div>
-		<div class="row justify-content-md-center ">
-			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
-				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-location-arrow fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b><%= t('city_id_title') %> </b> <%= @user.city_id %></p></span>
-				</div>
-				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-birthday-cake fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b> <%= t('age_title') %> </b> <%= @user.age %> <%= t('age_description') %></p></span>
-				</div>
-			</div>	
-			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
-				<div>
-					<span class="align-middle">
-						<p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('language_title') %> </b>
-				          <% if @user.language_id == "1" %>
-				            <%= t("english") %>
-				          <% elsif @user.language_id == '2' %>
-				            <%= t('spanish') %>
-				          <% elsif @user.language_id == '3' %>
-				            <%= t('russian') %>
-				          <% elsif @user.language_id == '4' %>
-				            <%= t('german') %>
-				          <% elsif @user.language_id == '5' %>
-				            <%= t('portuguese') %>
-				          <% elsif @user.language_id == '6' %>
-				            <%= t('chinese') %>
-				          <% elsif @user.language_id == '7' %>
-				            <%= t('italian') %>
-				          <% elsif @user.language_id == '8' %>
-				            <%= t('french') %>
-				          <% else %>
-				          	<%= current_user.language_id %>				   	            				            
-				          <% end %>
-						</p></span> 
-				</div>
+		</div><br/>	
 
-				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-clock-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('time_zone_title') %></b> <%= @user.time_zone %></p></span> 
-				</div>
+		<%= render 'teacher_profile' %>
+
+	<% elsif @user.role == :user %>
+
+		<div class= "container ">
+			<div class="text-center">
+				<h1 class="display-3 col 8"> <%= @user.name %> </h1>
+				<h5> <%= t('student_role') %> </h5>
 			</div>
-		</div>
-		<div class="row justify-content-md-center ">
-			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
-				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-battery fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('level_id_title') %>: </b><%= @user.level %> <br/><small><%= t('level_small') %></small> </p></span> 
-				</div>
+		</div><br/>
 
-				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-lightbulb-o fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('reason_id_title') %> 
-				          <% if @user.language_id == "1" %>
-				            <%= t("english") %>
-				          <% elsif @user.language_id == '2' %>
-				            <%= t('spanish') %>
-				          <% elsif @user.language_id == '3' %>
-				            <%= t('russian') %>
-				          <% elsif @user.language_id == '4' %>
-				            <%= t('german') %>
-				          <% elsif @user.language_id == '5' %>
-				            <%= t('portuguese') %>
-				          <% elsif @user.language_id == '6' %>
-				            <%= t('chinese') %>
-				          <% elsif @user.language_id == '7' %>
-				            <%= t('italian') %>
-				          <% elsif @user.language_id == '8' %>
-				            <%= t('french') %>
-				          <% else %>
-				          	<%= current_user.language_id %>					   	            				            
-				          <% end %>
-					?</b> <%= @user.reason_id %></p></span>
-				</div>
-				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-mortar-board fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('experience_id_title') %>  </b> <%= @user.experience %></p></span>  
-				</div>
-				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-calendar fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('schedule_id_title') %> </b> <%= @user.schedule %></p></span> 
-				</div>
+		<%= render 'student_profile' %>
+
+
+	<% elsif @user.role == :admin %>
+
+		<div class= "container ">
+			<div class="text-center">
+				<h1 class="display-3 col 8"> <%= @user.name %> </h1>
 			</div>
-		</div>
-	</div>
+		</div><br/>
 
-<!--<div class="container">
-	<div class="p-3 mb-2 bg-light text-dark">
-	    <%= @user.plan_id %>
-	    <%= @user.country %>
-	    <%= @user.actual_country %>
-	    <%= @user.teach_language %>
-	    <%= @user.speak_language %>
-	    <%= @user.carrear_id %>
-	    <%= @user.university_id %>
-	    <%= @user.experience_teaching %>
-	    <%= @user.institutions_teach %>
-	    <%= @user.certificate_id %>
-	    <%= @user.type_student %>
-	    <%= @user.years_teaching %>
-	</div>
-</div> -->
+		<%= render 'student_profile' %>
+
+	<% end %>
+
 
 
 

@@ -363,7 +363,7 @@ es:
   #languages#new
   create_language: "Crear idioma"
 
-  #users#show
+  #users#show#and#students_profile#and#teachersprofile
   city_id_title: "Vive en"
   age_title: "Tiene"
   age_description: "años."
@@ -375,6 +375,26 @@ es:
   experience_id_title: "Experiencia previa de aprendizaje:"
   schedule_id_title: "Horario preferido para tomar las clases:"
   membership_title: "Membresía:"
+  student_role: "Estudiante"
+  teacher_role: "Profesor"
+  information_title: "Información"
+  native_language_title: "Mi idioma natal es"
+  country_born_title: "Nací en"
+  languages_teach_title: "Puedo dar clases de"
+  carrear_title: "Estudié"
+  university_title: "Estudié en"
+  schedule_title_1: "Horario"
+  schedule_teacher_title: "Horario preferido para dar clases:"
+  experience_title: "Experiencia"
+  experience_title_teacher: "Experiencia del profesor:"
+  years_experience: "Años dando clases:"
+  institutions_experience: "Instituciones donde he dado clases:"
+  certificates_experience: "Certificados"
+  type_student_title: "Le gusta dar clases a"
+
+
+
+
 
 
 

@@ -60,7 +60,7 @@
         <div class="row">
           <div class="form-group col-md-4">
               <%= f.label :language_id, t("language_title_form") %>
-              <%= f.select(:language_id, options_for_select([[t("english"), 1], [t("spanish"), 2],[t("russian"), 3],[t("german"), 4],[t("portuguese"), 5],[t("chinese"), 6],[t("italian"), 7],[t("french"), 8]]), {}, {class: "form-control"}) %>
+              <%= f.select(:language_id, options_for_select([[t("english"), t("english")], [t("spanish"),t("spanish")],[t("russian"), t("russian")],[t("german"), t("german")],[t("portuguese"),t("portuguese") ],[t("chinese"), t("chinese")],[t("italian"), t("italian")],[t("french"), t("french")]]), {}, {class: "form-control"}) %>
           </div>
 
           <div class="form-group col-md-4">

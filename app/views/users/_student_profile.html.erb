@@ -36,21 +36,21 @@
 				<div>
 					<span class="align-middle">
 						<p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('language_title') %> </b>
-				          <% if @user.language_id = 1 %>
+				          <% if @user.language_id == '1' %>
 				            <%= t("english") %>
-				          <% elsif @user.language_id = 2 %>
+				          <% elsif @user.language_id == '2' %>
 				            <%= t('spanish') %>
-				          <% elsif @user.language_id = 3 %>
+				          <% elsif @user.language_id == '3' %>
 				            <%= t('russian') %>
-				          <% elsif @user.language_id = 4 %>
+				          <% elsif @user.language_id == '4' %>
 				            <%= t('german') %>
-				          <% elsif @user.language_id = 5 %>
+				          <% elsif @user.language_id == '5' %>
 				            <%= t('portuguese') %>
-				          <% elsif @user.language_id = 6 %>
+				          <% elsif @user.language_id == '6' %>
 				            <%= t('chinese') %>
-				          <% elsif @user.language_id = 7 %>
+				          <% elsif @user.language_id == '7' %>
 				            <%= t('italian') %>
-				          <% elsif @user.language_id = 8 %>
+				          <% elsif @user.language_id == '8' %>
 				            <%= t('french') %>
 				          <% else %>
 				          	<%= @user.language_id %>				   	            				            

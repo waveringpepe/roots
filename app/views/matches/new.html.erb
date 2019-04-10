@@ -1,5 +1,7 @@
-<h1>New Match</h1>
+<div class="container">
+	<h1><%= t('new_match') %></h1>
 
-<%= render 'form', match: @match %>
+	<%= render 'form', match: @match %><br/><br/>
 
-<%= link_to 'Back', matches_path %>
+	<%= link_to t('back'), matches_path %>
+</div>

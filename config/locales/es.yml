@@ -394,6 +394,14 @@ es:
   certificates_experience: "Certificados"
   type_student_title: "Le gusta dar clases a"
 
+  #match#new
+
+  create_match: "Crear match"
+  teacher: "Profesor"
+  student: "Estudiante"
+  new_match: "Nuevo match"
+
+
 
 
 

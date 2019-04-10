@@ -424,6 +424,12 @@ en:
   certificates_experience: "Certificates"
   type_student_title: "I love teaching the following profile:"
 
+  #match#new
+
+  create_match: "Create match"
+  teacher: "Teacher"
+  student: "Student"
+  new_match: "New match"
   
 
 

@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_with(model: match, local: true) do |form| %>
   <% if match.errors.any? %>
     <div id="error_explanation">
@@ -12,16 +13,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id, "Teacher" %>
-    <%= form.number_field :user_id %>
+    <%= form.label :user_id, t('teacher') %>
+    <%= form.number_field :user_id, class:"form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :student_id, "Student" %>
-    <%= form.number_field :student_id %>
-  </div>
+    <%= form.label :student_id, t('student') %>
+    <%= form.number_field :student_id, class:"form-control" %>
+  </div><br/><br/>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit t('create_match'), class:"btn btn-primary" %>
   </div>
 <% end %>
+</div>

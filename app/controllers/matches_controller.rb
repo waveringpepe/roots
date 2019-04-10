@@ -57,6 +57,6 @@ class MatchesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def match_params
-      params.require(:match).permit(:user_id, :student_id)
+      params.require(:match).permit(:user_id, :student_id, :language_id)
     end
 end

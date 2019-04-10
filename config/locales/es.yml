@@ -401,6 +401,10 @@ es:
   student: "Estudiante"
   new_match: "Nuevo match"
 
+  #match#index
+  language_teach: "Idioma que enseña"
+  language_learn: "Idioma que está aprendiendo"
+
 
 
 

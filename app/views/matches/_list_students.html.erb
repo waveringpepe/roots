@@ -9,6 +9,7 @@
         <th>Whatsapp</th>
         <th>E-mail</th>
         <th>Skype</th>
+        <th><%= t('language_learn') %></th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -20,8 +21,9 @@
           <td><%= user.phone_number %></td>
           <td><%= user.email %></td>
           <td><%= user.skype %></td>
-        </tr>
+          <td><%= user.language_id %></td>
       <% end %>
+        </tr>
     </tbody>
   </table>
 </div>

@@ -430,6 +430,11 @@ en:
   teacher: "Teacher"
   student: "Student"
   new_match: "New match"
+
+
+  #match#index
+  language_teach: "Language that teaches"
+  language_learn: "Language he/she is learning"
   
 
 

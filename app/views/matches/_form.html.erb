@@ -23,6 +23,11 @@
     <%= form.collection_select :student_id, User.where(roles:"user").order(:name),:id,:name, include_blank: true %>
   </div>
 
+    <div class="field">
+    <%= form.label :student_id, 'Admin' %>
+    <%= form.collection_select :student_id, User.where(roles:"admin").order(:name),:id,:name, include_blank: true %>
+  </div>
+
   <div class="field">
     <%= form.label :language_id %>
     <%= form.collection_select :language_id, Language.all.order(:name),:id,:name, include_blank: true %>

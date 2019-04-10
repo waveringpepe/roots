@@ -1,15 +1,21 @@
-<p id="notice"><%= notice %></p>
-<%= @match.id %>
-<p>
-  <strong>User:</strong>
-  <%= @match.user_id %>
-</p>
+<div class="container">
+	<p class="h4 font-weight-normal"> Match id: <strong> <%= @match.id %></strong></p>
+	<hr>
+	<p>
+	  <strong>Teacher name: </strong>
+	  <%= User.find_by(id: @match.user_id).name %> <br/>
+	  <strong> id: </strong>
+	  <%= @match.user_id %>
+	</p>
+	<hr>
+	<p>
+	  <strong>Student name:</strong>
+	  <%= User.find_by(id: @match.student_id).name %> <br/>
+	  <strong> id: </strong>
+	  <%= @match.student_id %>
+	</p>
 
-<p>
-  <strong>Student:</strong>
-  <%= @match.student_id %>
-</p>
 
-
-<%= link_to 'Edit', edit_match_path(@match) %> |
-<%= link_to 'Back', matches_path %>
+	<%= link_to 'Edit', edit_match_path(@match) %> |
+	<%= link_to 'Back', matches_path %>
+</div>

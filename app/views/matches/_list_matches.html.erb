@@ -20,13 +20,13 @@
           <td><%= match.student_id %></td>
           <td><%= User.find_by(id: "#{match.student_id}").name %></td>
           <td><%= Language.find_by(id: "#{match.language_id}").name %></td>
-          <td><%= link_to 'Show', match %></td>
-          <td><%= link_to 'Edit', edit_match_path(match) %></td>
-          <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Show', match, class:"btn btn-outline-primary" %></td>
+          <td><%= link_to 'Edit', edit_match_path(match), class:"btn btn-outline-success" %></td>
+          <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger" %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-<%= link_to 'New Match', new_match_path %>
+<%= link_to 'New Match', new_match_path, class:"btn btn-primary" %>
 <br>
 </div>

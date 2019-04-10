@@ -1,6 +1,7 @@
 class MatchesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_match, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  access all: [:index], user: {except: [:new, :destroy, :edit, :create, :update, :show]}, teacher: {except: [:new, :destroy, :edit, :create, :update, :show]}, admin: :all
 
 
   # GET /matches

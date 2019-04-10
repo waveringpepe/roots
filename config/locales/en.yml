@@ -309,6 +309,8 @@ en:
   edit_profile: "Edit profile"
   my_membership: "My membership"
   my_profile: "My profile"
+  my_teachers: "My teachers"
+  my_students: "My students"
 
   #devise/mails
   welcome_mail: "Welcome to 5roots"

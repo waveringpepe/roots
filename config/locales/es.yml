@@ -276,6 +276,8 @@ es:
   edit_profile: "Editar perfil"
   my_membership: "Mi membresía"
   my_profile: "Mi perfil"
+  my_teachers: "Mis profesores"
+  my_students: "Mis estudiantes"
 
   #devise/mails
   welcome_mail: "Bienvenido(a) a 5roots"

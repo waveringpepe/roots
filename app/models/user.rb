@@ -1,6 +1,13 @@
 class User < ApplicationRecord
   belongs_to :plan
   has_many :charges
+
+  has_many :matches
+  has_many :students, :through => :matches
+
+  has_many :inverse_matches, :class_name => "Match", :foreign_key => "student_id"
+  has_many :inverse_students, :through => :inverse_matches, :source => :user
+
   ############################################################################################
   ## PeterGate Roles                                                                        ##
   ## The :user role is added by default and shouldn't be included in this list.             ##

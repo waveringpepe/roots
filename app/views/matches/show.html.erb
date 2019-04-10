@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<%= @match.id %>
+<p>
+  <strong>User:</strong>
+  <%= @match.user_id %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @match.student_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>

@@ -1,0 +1,27 @@
+<div class="container">
+
+  <h1>My Students</h1><br/><br/>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Whatsapp</th>
+        <th>E-mail</th>
+        <th>Skype</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% for user in @users.students %>
+        <tr>
+          <td><%= link_to user.name, user  %></td>
+          <td><%= user.phone_number %></td>
+          <td><%= user.email %></td>
+          <td><%= user.skype %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

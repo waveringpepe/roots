@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+
+  <% if current_user.role == :teacher %>
+
+    <%= render 'list_students' %>
+
+  <% elsif current_user.role == :user %>
+
+    <%= render 'list_teachers' %>
+
+  <% elsif current_user.role == :admin %>
+
+    <%= render 'list_matches' %><br/><br/>
+    <div class="container">
+      <hr>
+    </div>
+    <%= render 'list_teachers' %>
+
+  <% end %>

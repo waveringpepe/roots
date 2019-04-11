@@ -49,6 +49,10 @@
     </div>
     <div class="card rounded d-flex p-2 bd-highlight bg-light">
       <div class="row">
+        <div class="form-group col-md-12">
+          <%= f.label :teacher_description, t('description_teacher1') %><br />
+          <%= f.text_area :teacher_description, class:"form-control", rows:"2", placeholder: t('description_teacher') %>
+        </div>
         <div class="form-group col-md-4">
             <%= f.label :speak_language, t("native_language_title_teacher") %>
             <%= f.select(:speak_language, options_for_select([[t("english"), t("english")], [t("spanish"),t("spanish")],[t("russian"), t("russian")],[t("german"), t("german")],[t("portuguese"),t("portuguese") ],[t("chinese"), t("chinese")],[t("italian"), t("italian")],[t("french"), t("french")]]), {}, {class: "form-control"}) %>
@@ -58,8 +62,8 @@
             <%= f.select(:teach_language, options_for_select([[t("english"), t("english")], [t("spanish"),t("spanish")],[t("russian"), t("russian")],[t("german"), t("german")],[t("portuguese"),t("portuguese") ],[t("chinese"), t("chinese")],[t("italian"), t("italian")],[t("french"), t("french")]]), {}, {class: "form-control"}) %>
         </div>
         <div class="form-group col-md-4">
-          <%= f.label :carrear_id, t("degree_title_teacher") %><br />
-          <%= f.text_field :carrear_id, class:"form-control", placeholder:t("degree_description_teacher") %>
+          <%= f.label :speak_language_2, t("languages_teacher_speak") %><br />
+          <%= f.text_field :speak_language_2, class:"form-control", placeholder: t("languages_teacher_speak1") %>
         </div>
       </div>
       <div class="row">
@@ -91,6 +95,10 @@
         <div class="form-group col-md-4">
           <%= f.label :university_id, t("institution_title_teacher") %><br />
           <%= f.text_field :university_id, class:"form-control", placeholder:t("institution_description_teacher") %>
+        </div>
+        <div class="form-group col-md-4">
+          <%= f.label :carrear_id, t("degree_title_teacher") %><br />
+          <%= f.text_field :carrear_id, class:"form-control", placeholder:t("degree_description_teacher") %>
         </div>          
       </div>
     </div>

@@ -34,6 +34,12 @@
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-birthday-cake fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b> <%= t('age_title') %> </b> <%= @user.age %> <%= t('age_description') %></p></span>
 				</div>
 				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('native_language_title') %> </b><%= @user.speak_language %> </p></span> 
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('languages_i_speak') %> </b><%= @user.speak_language_2 %> </p></span> 
+				</div>
+				<div>
 					<span class="align-middle">
 						<p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('language_title') %> </b>
 				          <% if @user.language_id == '1' %>

@@ -7,10 +7,18 @@
 		<div class="row justify-content-md-center">
 			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
 				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-skype fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('user_description') %></b> <%= @user.teacher_description %></p></span>
+				</div>
+			</div>
+			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
+				<div>
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-skype fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Skype id:</b> <%= @user.skype %></p></span>
 				</div>
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('native_language_title') %> </b><%= @user.speak_language %> </p></span> 
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('native_language_title') %> </b><%= @user.teach_language %> </p></span> 
+				</div>
+				<div>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('languages_i_speak') %> </b><%= @user.speak_language_2 %> </p></span> 
 				</div>
 				<div>
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-flag fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('country_born_title') %> </b><%= @user.country %> </p></span> 

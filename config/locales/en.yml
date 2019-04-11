@@ -422,11 +422,13 @@ en:
   schedule_title_1: "Schedule"
   schedule_teacher_title: "Preferred schedule to teach:"
   experience_title: "Experience"
-  experience_title_teacher: "Teacher experience:"
+  experience_title_teacher: "My experience as a teacher:"
   years_experience: "Years teaching:"
   institutions_experience: "Institutions where I have teached:"
   certificates_experience: "Certificates"
   type_student_title: "I love teaching the following profile:"
+  languages_i_speak: "Languages I speak:"
+  user_description: "Description:"
 
   #match#new
 

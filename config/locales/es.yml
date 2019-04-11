@@ -371,10 +371,10 @@ es:
   create_language: "Crear idioma"
 
   #users#show#and#students_profile#and#teachersprofile
-  city_id_title: "Vive en"
-  age_title: "Tiene"
+  city_id_title: "Vivo en"
+  age_title: "Tengo"
   age_description: "años."
-  language_title: "Esta aprendiendo:"
+  language_title: "Estoy aprendiendo:"
   time_zone_title: "Zona horaria:"
   level_id_title: "Nivel del idioma"
   level_small: "Escala de 0 a 10 siendo 10 el máximo"
@@ -393,11 +393,13 @@ es:
   schedule_title_1: "Horario"
   schedule_teacher_title: "Horario preferido para dar clases:"
   experience_title: "Experiencia"
-  experience_title_teacher: "Experiencia del profesor:"
+  experience_title_teacher: "Mi experienci como profesor:"
   years_experience: "Años dando clases:"
   institutions_experience: "Instituciones donde he dado clases:"
   certificates_experience: "Certificados"
-  type_student_title: "Le gusta dar clases a"
+  type_student_title: "Me gusta dar clases a"
+  languages_i_speak: "Idiomas que hablo:"
+  user_description: "Descripción:"
 
   #match#new
 

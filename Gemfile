@@ -81,5 +81,7 @@ gem 'rails_admin-i18n'
 gem 'stripe_event', '~> 2.2'
 #print pdf recipts
 gem 'receipts', '~> 0.2.2'
+#When mail is sent from your application, Letter Opener will open a preview in the browser instead of sending
+gem 'letter_opener', '~> 1.7'
 
 

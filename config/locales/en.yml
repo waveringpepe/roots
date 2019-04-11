@@ -247,6 +247,10 @@ en:
   schedule_title_teacher_form: "Write all the schedules where you can teach:"
   schedule_description_teacher_form: "E.g. Monday to friday from 8am to 1pm. Saturdays and Sundays from 8am to 12pm."
   sign_up_teacher: "Apply to teach"
+  description_teacher: "Hi, I'm Pepe, I was born in Florence, but now I live in Mexico City. I've been teaching Italian for 10 years. I love being able to transmit my culture through the language and I also love Italian cuisine."
+  description_teacher1: "Add a brief description about yourself"
+  languages_teacher_speak: "List all the languages that you speak fluently"
+  languages_teacher_speak1: "English, Spanish, Chinese"
   
   #pages/students_homepage
   welcome: "Welcome"

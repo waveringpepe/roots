@@ -40,7 +40,9 @@ module DeviseWhitelist
 															:card_brand,
 															:card_last4,
 															:card_exp_month,
-															:card_exp_year
+															:card_exp_year,
+															:speak_language_2,
+															:teacher_description
 	 														])
 	    devise_parameter_sanitizer.permit(:account_update, keys: [:name, 
 	 														:skype,
@@ -71,7 +73,9 @@ module DeviseWhitelist
 															:card_brand,
 															:card_last4,
 															:card_exp_month,
-															:card_exp_year
+															:card_exp_year,
+															:speak_language_2,
+															:teacher_description
 	 														])
  	end
 end

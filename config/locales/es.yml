@@ -212,6 +212,11 @@ es:
   schedule_title_teacher_form: "Escribe todos los horarios en los que puedes dar clases:"
   schedule_description_teacher_form: "E.g. De lunes a viernes de 7am a 1pm. Sábados y domingos de 8am a 12pm"
   sign_up_teacher: "Aplicar como profesor"
+  description_teacher: "Hola soy Pepe, nací en Florencia aunque ahora vivo en CDMX. Llevo 10 años dando clases de italiano tanto en instituciones como particulares. Me encanta poder transmitir mi cultura a través del idioma y además me encanta la gastronomía Italiana"
+  description_teacher1: "Agrega una breve descripción para que las personas sepan más sobre ti"
+  languages_teacher_speak: "Lista todos los idiomas que hablas de manera fluida"
+  languages_teacher_speak1: "Español, Inglés, Chino"
+
 
   #pages/students_homepage
 

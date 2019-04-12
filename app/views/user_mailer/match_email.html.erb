@@ -2,22 +2,32 @@
 
 <p>Queremos aprovechar para darte una buena noticia, ya tenemos listo a tu profesor! y te dejamos una breve información de él para que lo conozcas previo a tu clase:</p>
 
-<h3><b style="color:blue;">Información del profesor</b></h3>
-<b><%= t('name') %>:</b> <%= @teacher.name %><br/>
+<h3><b style="color:MediumSeaGreen;">Información del profesor</b></h3>
+<b><%= t('name') %>:</b> <%= @teacher.name %>, da click para <%= link_to "visitar su perfil", "http://localhost:3000/es/users/#{@teacher.id}"%>.<br/>
 <b>Descripción:</b> <%= @teacher.teacher_description %><br/>
 <b>Whatsapp:</b> <%= @teacher.phone_number %><br/>
 <b>E-mail:</b> <%= @teacher.email %><br/>
 <b>Skype:</b> <%= @teacher.skype %><br/>
-
-<p> El profesor se pondrá en contacto contigo cuanto antes para que se pongan de acuerdo para agendar la primer clase, si no te contacta pronto por favor escríbele directamente.</p>
-
-<p><b>Esperamos que tengas una experiencia increíble con 5roots.</b></p>
+<b>Horarios preferidos del profesor para dar clases:</b> <%= @teacher.schedule %><br/>
 
 <hr>
 
 <h3 style="color:Red;"><b>Política de cancelación o cambio de una clase</b></h3>
-<p>Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces la perderás. Para 5 Roots es muy importante el tiempo que el profesor dedica a preparar una clase por lo que te pedimos que si vas a hacer una cambio le avises con el tiempo debido.</p> <br/>
+<p>Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces la perderás. Para 5 Roots es muy importante el tiempo que el profesor dedica a preparar una clase por lo que te pedimos que si vas a hacer una cambio le avises con el tiempo debido.</p>
 
 <h3 style="color:Red;"><b>Política de cancelación para una clase de muestra</b></h3>
 
 <p>Una vez pactada la clase de muestra, tienes 24 horas previas a dicha clase para solicitar un cambio de horario o cancelar. En caso de infringir la política, se te hará un cargo a tu método de pago de $100 MXN.</p>
+
+<hr>
+
+<p> El profesor se pondrá en contacto contigo cuanto antes para que se pongan de acuerdo para agendar la primer clase, si no te contacta pronto por favor escríbele directamente.</p>
+
+<p>Cualquier duda que surja por favor no dejes de escribirnos por mail a <a href> hello@5roots.co</a></p>
+
+<p>Por Whats app a +52 1 (81) 2075 151 o +52 1 (81) 2110 1145 o <a href="https://www.5roots.co/es/faq"> visita nuestras preguntas frecuentes.</a> </p>
+
+<p><b>Esperamos que tengas una experiencia increíble con 5roots.</b></p>
+
+<p><b>Atentamente:
+El equipo de 5roots.</b></p>

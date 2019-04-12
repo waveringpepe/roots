@@ -1,21 +1,26 @@
 <div class="container">
 	<h3 style="color:MediumSeaGreen;"><b>Información del estudiante</b></h3>
-	<b><%= t('name') %>:</b> <%= @student.name %><br/>
+	<b><%= t('name') %>:</b> <%= @student.name %>, da click para <%= link_to "visitar su perfil", "http://localhost:3000/es/users/#{@student.id}"%>. <br/>
 	<b>Whatsapp:</b> <%= @student.phone_number %><br/>
 	<b>E-mail:</b> <%= @student.email %><br/>
 	<b>Skype:</b> <%= @student.skype %><br/>
-	<b><%= t('language_learn') %>:</b> <%= @student.language_id %><br/>
+	<b><%= t('language_learn') %>:</b> <%= @language.name%><br/>
 
 	<hr>
-
 
 	<h4 style="color:MediumSeaGreen;">Da la bienvenida a tu estudiante</h4>
 	<p>Nos encantaría que fueras tu quien da la bienvenida al estudiante y le escribas cuanto antes para que se pongan de acuerdo para la primer clase.</p>
 
 	<p><b style="color:MediumSeaGreen;">Puedes copiar el siguiente mensaje:</b></p>
-	<p>Hola <%= @student.first_name %> soy <%= @teacher.first_name %> tu nuevo/a profesor/a de <b><%= Match.last.language_id %></b> en 5roots, estoy muy emocionado/a por empezar con las clases, me encantaría tener la primera cuanto antes. Me dicen que estás disponible en <b><%= @student.schedule %></b><p></p>
+	<p>Hola <%= @student.first_name %> soy <%= @teacher.first_name %> tu nuevo/a profesor/a de <b><%= @language.name %></b> en 5roots, estoy muy emocionado/a por empezar con las clases, me encantaría tener la primera cuanto antes. Me dicen que estás disponible <b><%= @student.schedule %></b><p></p>
 	<p>Saludos y mucho gusto!</p>
 
+	<hr>
+
+	<h3 style="color:Red;"><b>Política de cancelación o cambio de una clase</b></h3>
+	<p>Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces se te penalizará con el costo de lo equivalente a la clase que no asististe, ese monto se utilizará para reponer la clase al estudiante.</p>
+
+	<hr>
 
 	<b><p style="color:MediumSeaGreen;">Aquí te dejamos algunas recomendaciones para que ya lo tengas listo para cuando vayas a tener tu primer clase.</p></b>
 
@@ -45,16 +50,11 @@
 
 	<p>Cualquier duda que surja por favor no dejes de escribirnos por mail a <a href> hello@5roots.co</a></p>
 
-	<p>Por Whats app a +52 1 (81) 2075 151 o +52 1 (81) 2110 1145</p> 
+	<p>Por Whats app a +52 1 (81) 2075 151 o +52 1 (81) 2110 1145 o <a href="https://www.5roots.co/es/faq"> visita nuestras preguntas frecuentes.</a> </p>
 
 
 
 	<p><b>Atentamente:
 	El equipo de 5roots.</b></p>
 
-	<hr>
-
-
-	<h3 style="color:Red;"><b>Política de cancelación o cambio de una clase</b></h3>
-	<p>Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces se te penalizará con el costo de lo equivalente a la clase que no asististe, ese monto se utilizará para reponer la clase al estudiante.</p>
 </div>

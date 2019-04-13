@@ -7,6 +7,6 @@ class UserMailer < ApplicationMailer
 		@language = Language.find_by(id: "#{Match.last.language_id}")
 
 
-		mail to: User.find_by(id: "#{Match.last.student_id}").email , subject: "¡#{User.find_by(id: "#{Match.last.student_id}").name} te hemos asignado a un profesor!" , field_name: '5roots'
+		mail to: User.find_by(id: "#{Match.last.student_id}").email , subject: "¡#{User.find_by(id: "#{Match.last.student_id}").name} te hemos asignado a un profesor!" , header: '5roots'
 	end
 end

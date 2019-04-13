@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-	default from: '5roots [hello@5roots.co]'
+	default from: 'hello@5roots.co'
 
 	def match_email
 		@teacher = User.find_by(id: "#{Match.last.user_id}")

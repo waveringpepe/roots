@@ -28,8 +28,8 @@ class MatchesController < ApplicationController
     @match = Match.new(match_params)
 
     if @match.save
-      UserMailer.match_email.deliver
-      TeacherMailer.match_email.deliver
+      MatchMailer.teacher_email.deliver
+      MatchMailer.student_email.deliver
       redirect_to @match, notice: 'Match was successfully created.'
     else
       render :new

@@ -28,6 +28,7 @@ class MembershipsController < ApplicationController
       ) if params[:card_last4]
       current_user.update(plan_id: params[:plan])
       current_user.save
+      MembershipMailer.subscribe_membership(current_user).deliver
 
       flash.notice = t('message_subscribed')
       redirect_to root_path
@@ -76,6 +77,7 @@ class MembershipsController < ApplicationController
 
     expires_at = (Time.zone.at(subscription.current_period_end) + 7776000)
     current_user.update(expires_at: expires_at, stripe_subscription_id: nil)
+    MembershipMailer.destroy_membership(current_user).deliver
 
     redirect_to root_path, notice: t('cancel_message') + "#{current_user.expires_at.to_date}."
   end

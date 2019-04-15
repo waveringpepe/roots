@@ -1,0 +1,5 @@
+	<h3 style="color:MediumSeaGreen;"><b>Información del estudiante</b></h3>
+	<b><%= t('name') %>:</b> <%= @student.name %>, da click para <%= link_to "visitar su perfil", "https://www.5roots.co/es/users/#{@student.id}"%>. <br/>
+	<b>Whatsapp:</b> <%= @student.phone_number %><br/>
+	<b>E-mail:</b> <%= @student.email %><br/>
+	<b><%= t('language_learn') %>:</b> <%= @student.language_id %><br/>

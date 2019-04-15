@@ -1,0 +1,10 @@
+<h3><b style="color:MediumSeaGreen;">Información del profesor</b></h3>
+<b><%= t('name') %>:</b> <%= @teacher.name %>, da click para <%= link_to "visitar su perfil", "https://www.5roots.co/es/users/#{@teacher.id}"%>.<br/>
+<b>Descripción:</b> <%= @teacher.teacher_description %><br/>
+<b>Whatsapp:</b> <%= @teacher.phone_number %><br/>
+<b>E-mail:</b> <%= @teacher.email %><br/>
+<b>Skype:</b> <%= @teacher.skype %><br/>
+<b>Idioma nativo:</b> <%= @teacher.speak_language %><br/>
+<b>Idioma que quiere enseñar:</b> <%= @teacher.teach_language %><br/>
+<b>Edad</b> <%= @teacher.age %><br/>
+<b>Horarios preferidos del profesor para dar clases:</b> <%= @teacher.schedule %><br/>

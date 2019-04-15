@@ -14,6 +14,7 @@ before_action :select_plan, only: :new
           resource.save_with_subscription            
         else
           resource.save_as_teacher
+          AdminMailer.teacher_signup.deliver
         end
       end
     end

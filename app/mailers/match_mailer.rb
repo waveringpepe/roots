@@ -2,6 +2,7 @@ class MatchMailer < ApplicationMailer
 	default from: 'hello@5roots.co'
 	default sender: '5roots'
 
+
 	def teacher_email
 		@teacher = User.find_by(id: "#{Match.last.user_id}")
 		@student = User.find_by(id: "#{Match.last.student_id}")

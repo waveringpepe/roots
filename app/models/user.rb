@@ -46,6 +46,7 @@ class User < ApplicationRecord
         card_exp_year: card_exp_year
       )
       save!
+      AdminMailer.student_signup.deliver
     end
   end
 

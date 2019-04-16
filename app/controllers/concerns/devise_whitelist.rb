@@ -42,7 +42,8 @@ module DeviseWhitelist
 															:card_exp_month,
 															:card_exp_year,
 															:speak_language_2,
-															:teacher_description
+															:teacher_description,
+															:stripe_subscription_id
 	 														])
 	    devise_parameter_sanitizer.permit(:account_update, keys: [:name, 
 	 														:skype,
@@ -75,7 +76,8 @@ module DeviseWhitelist
 															:card_exp_month,
 															:card_exp_year,
 															:speak_language_2,
-															:teacher_description
+															:teacher_description,
+															:stripe_subscription_id
 	 														])
  	end
 end

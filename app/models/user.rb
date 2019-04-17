@@ -80,7 +80,7 @@ class User < ApplicationRecord
   end
 
   def age
-    age = Date.today.year - birth_date.year
+    age = Date.today.year - birth_date.year - ((Date.today.month > birth_date.month || (Date.today.month == birth_date.month && Date.today.day >= birth_date.day)) ? 0 : 1)
   end
 
   def check_active_user

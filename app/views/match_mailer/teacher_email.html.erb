@@ -5,6 +5,16 @@
 	<b>E-mail:</b> <%= @student.email %><br/>
 	<b>Skype:</b> <%= @student.skype %><br/>
 	<b><%= t('language_learn') %>:</b> <%= @language.name %><br/>
+	<b><%= t('membership_title') %> :</b>       
+	<% if @student.plan_id == 5 %>
+        <%= t('basic_membership_hours') %>
+      <% elsif @student.plan_id == 6 %>
+        <%= t('medium_membership_hours') %>
+      <% elsif @student.plan_id == 7 %>
+        <%= t('intensive_membership_hours') %>
+      <% elsif @student.plan_id == 8 %>
+        <%= t('membership_free_hours') %>
+      <% end %><br/>
 
 	<hr>
 
@@ -12,7 +22,19 @@
 	<p>Nos encantaría que fueras tu quien da la bienvenida al estudiante y le escribas cuanto antes para que se pongan de acuerdo para la primer clase.</p>
 
 	<p><b style="color:MediumSeaGreen;">Puedes copiar el siguiente mensaje:</b></p>
-	<p>Hola <%= @student.first_name %> soy <%= @teacher.first_name %> tu nuevo/a profesor/a de <b><%= @language.name %></b> en 5roots, estoy muy emocionado/a por empezar con las clases, me encantaría tener la primera cuanto antes. Me dicen que estás disponible <b><%= @student.schedule %></b><p></p>
+	<p>Hola <%= @student.first_name %> soy <%= @teacher.first_name %> tu nuevo/a profesor/a de <b><%= @language.name %></b> en 5roots, estoy muy emocionado/a por empezar con las clases, me encantaría tener la primera cuanto antes. Me comentan que estás disponible en los siguientes horarios: <b><%= @student.schedule %></b> y que tienes una membresía con <b>	
+
+      <% if @student.plan_id == 5 %>
+        <%= t('basic_membership_hours') %>
+      <% elsif @student.plan_id == 6 %>
+        <%= t('medium_membership_hours') %>
+      <% elsif @student.plan_id == 7 %>
+        <%= t('intensive_membership_hours') %>
+      <% elsif @student.plan_id == 8 %>
+        <%= t('membership_free_hours') %>
+      <% end %></b>
+  </p>
+
 	<p>Saludos y mucho gusto!</p>
 
 	<hr>

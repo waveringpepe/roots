@@ -340,7 +340,11 @@ en:
   basic_membership_name: "basic membership"
   medium_membership_name: "medium membership"
   intensive_membership_name: "intensive membership"
-  membership_name: "a membership"
+  membership_free_name: "a free basic membership"
+  basic_membership_hours: "4 hours of classes per month"
+  medium_membership_hours: "8 hours of classes per month"
+  intensive_membership_hours: "12 hours of classes per month"
+  membership_free_hours: "4 hours of classes per month"
 
 
   #memberships/new

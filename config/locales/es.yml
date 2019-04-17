@@ -308,7 +308,11 @@ es:
   basic_membership_name: "membresía básica"
   medium_membership_name: "membresía intermedia"
   intensive_membership_name: "membresía intensiva"
-  membership_name: "membresía"
+  membership_free_name: "membresía básica gratuita"
+  basic_membership_hours: "4 horas de clases al mes"
+  medium_membership_hours: "8 horas de clases al mes"
+  intensive_membership_hours: "12 horas de clases al mes"
+  membership_free_hours: "4 horas de clases al mes"
 
   #memberships/new
   pay_with_existing_card: "Pagar con tarjeta existente:"

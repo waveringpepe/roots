@@ -10,13 +10,13 @@
 					<span class="align-middle">
 						<p class="font-weight-light"><i class="fa fa-address-card fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b><%= t('membership_title') %> </b> 
 				          <% if @user.plan_id == 5 %>
-				            <%= t('basic_membership_name') %>
+				            <%= t('basic_membership_hours') %>
 				          <% elsif @user.plan_id == 6 %>
-				            <%= t('medium_membership_name') %>
+				            <%= t('medium_membership_hours') %>
 				          <% elsif @user.plan_id == 7 %>
-				            <%= t('intensive_membership_name') %>
+				            <%= t('intensive_membership_hours') %>
 				          <% elsif @user.plan_id == 8 %>
-				            <%= t('membership_name') %>
+				            <%= t('membership_free_hours') %>
 				          <% end %>
 						</p></span>
 				</div>

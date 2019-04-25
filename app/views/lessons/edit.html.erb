@@ -1,0 +1,72 @@
+<div class="container">
+	<h1>Editar clase</h1>
+</div>
+
+<%= form_with(model: @lesson, local: true ) do |form| %>
+	<div class="container">
+	    <% if @lesson.errors.any? %>
+	      <div id="error_explanation">
+	        <h2><%= pluralize(@lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+
+	        <ul>
+	        <% @lesson.errors.full_messages.each do |message| %>
+	          <li><%= message %></li>
+	        <% end %>
+	        </ul>
+	      </div>
+	    <% end %>
+
+	    <div class="form-group col-md-4">
+	      <%= form.label :class_type_id, 'Tipo de clase' %>
+	      <%= form.select(:class_type_id, options_for_select([["Regular", "Regular",{class: "bold"}], ["Clase de prueba", "Clase de prueba"]],@lesson.class_type_id), {}, {class: "form-control"}) %>
+	    </div>
+	    
+	  <% if logged_in?(:admin) %>
+	    <div class="field">
+	      <%= form.label :user_id, t('teacher') %>
+	      <%= form.collection_select :user_id, User.where(roles:"teacher").order(:name),:id,:name, include_blank: true %>
+	    </div>
+	  <% end %>
+
+
+	    <div class="field">
+	    <%= form.label :student_id, t('student') %>
+	<% if logged_in?(:teacher) %>
+	     	<%= form.collection_select :student_id, @user.students.order(:name),:id,:name, include_blank: true %>
+	<% elsif logged_in?(:admin) %>
+			<%= form.collection_select :student_id, User.all.order(:name),:id,:name, include_blank: true %>
+	<% end %>
+	    </div>
+
+	    <div class="field">
+	      <%= form.label :language_id %>
+	      <%= form.collection_select :language_id, Language.all.order(:name),:id,:name %>
+	    </div>
+	    <div class="form-group col-md-4">
+	      <%= form.label :time_duration_id, 'Duración de la clase en horas:' %>
+	      <%= form.select(:time_duration_id, options_for_select([["30 min", "30"], ["45 min", "45"],["1 hora", "60"],["1 hora 15 min" ,"75"],["1 hora 30 min" , "90"],["1 hora 45 min" ,"105"], ["2 horas" ,"120"], ["2 horas 15 min", "135"],["2 horas 30 min","150"],["2 horas 45 min" , "165"],["3 horas","180"]],@lesson.time_duration_id.to_i),{}, {class: "form-control"}) %>
+	    </div>
+
+	    <div class="form-group col-md-4">
+	      <%= form.label :date_id %>
+	      <%= form.datetime_select :date_id, :ampm => true, :minute_step => 15 %>
+	    </div>
+
+
+	    <div class="form-group col-md-4">
+	      <%= form.label :status_id, 'Tipo de clase' %>
+	      <%= form.select(:status_id, options_for_select([["Próxima", "Próxima"], ["Completada", "Completada"],["Cancelada", "Cancelada"],["Perdida por el profesor", "Perdida por el profesor"],["Perdida por el estudiante", "Perdida por el estudiante"]],@lesson.status_id), {}, {class: "form-control"}) %>
+	    </div>
+
+    <% if logged_in?(:admin) %>
+        <div class="form-group col-md-4">
+	      <%= form.label :payment_id, '¿Clase pagada?' %>
+	      <%= form.select(:payment_id, options_for_select([["Si", "Si",{class: "bold"}], ["No", "No"]],@lesson.payment_id), {}, {class: "form-control"}) %>
+    	</div>
+    <% end %>
+
+	    <div class="actions">
+	      <%= form.submit "Actualizar", class:"btn btn-primary" %> 
+	    </div><br/>
+	</div>
+ <% end %>

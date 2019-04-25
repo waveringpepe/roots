@@ -1,0 +1,16 @@
+  
+<div class="container">
+  <% if current_user.role == :teacher %>
+
+    <%= render 'teachers_index' %>
+
+  <% elsif current_user.role == :user %>
+
+    <%= render 'students_index' %>
+
+  <% elsif current_user.role == :admin %>
+
+    <%= render 'admin_index' %><br/><br/>
+
+  <% end %>
+</div>

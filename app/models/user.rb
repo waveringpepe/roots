@@ -2,6 +2,8 @@ class User < ApplicationRecord
   belongs_to :plan
   has_many :charges
 
+  has_many :lessons
+
   has_many :matches
   has_many :students, :through => :matches
 

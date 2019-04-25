@@ -1,7 +1,55 @@
-<h1>Editing Session</h1>
+<div class="container">
+	<h1>Editar clase</h1>
+</div>
 
-<%= render 'form', session: @session %>
+<div class="container">
+	<div class="form-group">
+	 	<%= form_for(@session, url: session_path(@session), html: {method: "patch"}) do |form| %>
+
+	    <div class="form-group col-md-4">
+	      <%= form.label :class_type_id, 'Tipo de clase' %>
+	      <%= form.select(:class_type_id, options_for_select([["Regular", "Regular",{class: "bold"}], ["Clase de prueba", "Clase de prueba"]],@session.class_type_id), {}, {class: "form-control"}) %>
+	    </div>
+
+	    <div class="field">
+	      <%= form.label :student_id, t('student') %>
+	      <%= form.collection_select :student_id, @user.inverse_students.order(:name),:id,:name, include_blank: true %>
+	    </div>
+
+	    <div class="field">
+	      <%= form.label :language_id %>
+	      <%= form.collection_select :language_id, Language.all.order(:name),:id,:name %>
+	    </div>
+	    <div class="form-group col-md-4">
+	      <%= form.label :time_duration_id, 'Duración de la clase en horas:' %>
+	      <%= form.select(:time_duration_id, options_for_select([["30 min", "30"], ["45 min", "45"],["1 hora", "60"],["1 hora 15 min" ,"75"],["1 hora 30 min" , "90"],["1 hora 45 min" ,"105"], ["2 horas" ,"120"], ["2 horas 15 min", "135"],["2 horas 30 min","150"],["2 horas 45 min" , "165"],["3 horas","180"]],@session.time_duration_id.to_i),{}, {class: "form-control"}) %>
+	    </div>
+
+	    <div class="form-group col-md-4">
+	      <%= form.label :date_id %>
+	      <%= form.datetime_select :date_id, :ampm => true, :minute_step => 15 %>
+	    </div>
 
 
-<%= link_to 'Show', @session %> |
-<%= link_to 'Back', sessions_path %>
+	    <div class="form-group col-md-4">
+	      <%= form.label :status_id, 'Tipo de clase' %>
+	      <%= form.select(:status_id, options_for_select([["Completada", "Completada",{class: "bold"}], ["Cancelada", "Cancelada"]],@session.status_id), {}, {class: "form-control"}) %>
+	    </div>
+
+	    <% if logged_in?(:admin) %>
+	        <div class="form-group col-md-4">
+	      <%= form.label :payment_id, '¿Clase pagada?' %>
+	      <%= form.select(:payment_id, options_for_select([["Si", "Si",{class: "bold"}], ["No", "No"]],@session.payment_id), {}, {class: "form-control"}) %>
+	    </div>
+	    <% end %>
+	</div>
+
+
+    <div class="actions">
+      <%= form.submit "Actualizar", class:"btn btn-primary" %> 
+    </div><br/>
+  <% end %>
+</div>
+
+
+

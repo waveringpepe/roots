@@ -1,0 +1,48 @@
+<div class="container">
+
+<h1>Clases</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Tipo de clase</th>
+      <th>Estudiante</th>
+      <th>Profesor</th>
+      <th>Fecha</th>
+      <th>Duración</th>
+      <th>Idioma</th>
+      <th>Estatus</th>
+      <th>Pago al profesor</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sessions.each do |session| %>
+      <tr>
+        <td><%= session.class_type_id %></td>
+        <td> <%= User.find_by(id: "#{session.student_id}").name %></td>
+        <td> <%= User.find_by(id: "#{session.user_id}").name %></td>
+        <td><%= session.date_id %></td>
+        <td><%= session.time_duration_id/60 %><p>Horas</p></td>
+        <td> <%= Language.find_by(id: "#{session.language_id}").name %></td>
+        <td><%= session.status_id %></td>
+        <td><%= session.payment_id %></td>
+        <td><%= link_to 'Show', session %></td>
+        <td><%= link_to 'Edit', edit_session_path(session) %></td>
+        <td><%= link_to 'Destroy', session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<hr>
+<p>Total: <%= Session.sum(:time_duration_id)/60 %> Horas</p>
+<p>Total de clases: <%= Session.count(:time_duration_id) %> </p>
+<p>Total de clases próximas: <%= Session.where( status_id: "Próxima").count(:time_duration_id) %> </p>
+<p>Total de clases completadas: <%= Session.where( status_id: "Completada").count(:time_duration_id) %> </p>
+<p>Dinero en deuda: <%= Session.where( status_id: "Completada").sum(:time_duration_id)/60*200 %> MXN </p>
+<p>Dinero pagado: <%= Session.where( payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN </p>
+
+<br>
+
+<%= link_to 'New Session', new_session_path %>
+</div>

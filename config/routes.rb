@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  
+  resources :sessions
   
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
 scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
-  resources :sessions
+  
   resource :membership
   resources :matches
   resources :charges

@@ -21,6 +21,7 @@ class SessionsController < ApplicationController
   # GET /sessions/1/edit
   def edit
     @user = current_user
+    @session = Session.find(params[:id])
   end
 
   # POST /sessions

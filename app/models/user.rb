@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :charges
 
   has_many :lessons
+  has_many :inverse_lessons, :class_name => "Lesson", :foreign_key => "student_id"
 
   has_many :matches
   has_many :students, :through => :matches

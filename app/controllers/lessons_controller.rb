@@ -1,6 +1,8 @@
 class LessonsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  access all: [:index], user: {except: [:new, :destroy, :edit, :create, :update, :show]}, teacher: [:new, :destroy, :edit, :create, :update, :show], admin: :all
+
 
   # GET /lessons
   def index

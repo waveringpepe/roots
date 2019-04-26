@@ -12,18 +12,16 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
-    <% @lessons.each do |lesson| %>
+    <% for user in @user.inverse_lessons %>
       <tr>
-        <td><%= lesson.class_type_id %></td>
-        <%= lesson.user_id %>
-        <td> <%= User.find_by(id: "#{lesson.user_id}").name %></td>
-        <td><%= lesson.date_id %></td>
-        <td><%= lesson.time_duration_id/60 %><p>Horas</p></td>
-        <td> <%= Language.find_by(id: "#{lesson.language_id}").name %></td>
-        <td><%= lesson.status_id %></td>
-        <td><%= link_to 'Reportar', lesson %></td>
+        <td><%= user.class_type_id %></td>
+        <td> <%= User.find_by(id: "#{user.user_id}").name %></td>
+        <td><%= user.date_id.to_formatted_s(:long) %></td>
+        <td><%= user.time_duration_id/60 %><p>Horas</p></td>
+        <td> <%= Language.find_by(id: "#{user.language_id}").name %></td>
+        <td><%= user.status_id %></td>
+        <!--<td>%= link_to 'Reportar', lesson, class: "btn btn-outline-warning" %></td>-->
       </tr>
     <% end %>
   </tbody>
@@ -31,10 +29,3 @@
 
 <br>
 
-<hr>
-<p>Total: <%= Lesson.sum(:time_duration_id)/60 %> Horas</p>
-<p>Total de clases: <%= Lesson.count(:time_duration_id) %> </p>
-<p>Total de clases próximas: <%= Lesson.where( status_id: "Próxima").count(:time_duration_id) %> </p>
-<p>Total de clases completadas: <%= Lesson.where( status_id: "Completada").count(:time_duration_id) %> </p>
-<p>Dinero en deuda: <%= Lesson.where( status_id: "Completada").sum(:time_duration_id)/60*200 %> MXN </p>
-<p>Dinero pagado: <%= Lesson.where( payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN </p>

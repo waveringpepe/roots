@@ -7,39 +7,43 @@
 
 <div class="container">
   <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
+
+    <div class="card mb-4 shadow-sm" itemscope itemtype=http://schema.org/Offer>
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal"><%= t('basic_membership_title') %></h4>
+        <h4 class="my-0 font-weight-normal" itemprop="name"><%= t('basic_membership_title') %></h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title"><%= t('basic_membership_price') %>/ <small class="text-muted"><%= t('month') %></small></h1>
+        <h1 class="card-title pricing-card-title"  itemprop="price"><%= t('basic_membership_price') %>/ <small class="text-muted"><%= t('month') %></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li><%= t('basic_membership_description') %></li>
         </ul>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+
+    <div class="card mb-4 shadow-sm" itemscope itemtype=http://schema.org/Offer>
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal"><%= t('medium_membership_title') %></h4>
+        <h4 class="my-0 font-weight-normal" itemprop="name"><%= t('medium_membership_title') %></h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title"><%= t('medium_membership_price') %>/ <small class="text-muted"><%= t('month') %></small></h1>
+        <h1 class="card-title pricing-card-title"  itemprop="price"><%= t('medium_membership_price') %>/ <small class="text-muted"><%= t('month') %></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li><%= t('medium_membership_description') %></li>
         </ul>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
+
+    <div class="card mb-4 shadow-sm" itemscope itemtype=http://schema.org/Offer>
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal"><%= t('intensive_membership_title') %></h4>
+        <h4 class="my-0 font-weight-normal" itemprop="name"><%= t('intensive_membership_title') %></h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title"><%= t('intensive_membership_price') %>/ <small class="text-muted"><%= t('month') %></small></h1>
+        <h1 class="card-title pricing-card-title"  itemprop="price"><%= t('intensive_membership_price') %>/ <small class="text-muted"><%= t('month') %></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li> <%= t('intensive_membership_description') %></li>
         </ul>
       </div>
     </div>
+
   </div>
 <div class="container">
   <h3> <%= t('information') %></h3><br/>

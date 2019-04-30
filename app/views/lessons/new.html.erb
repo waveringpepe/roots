@@ -1,8 +1,13 @@
-
-<div class="container">
-	<h1>New Lesson</h1>
-
-	<%= render 'form', lesson: @lesson %>
-
-	<%= link_to 'Back', lessons_path %> 
-</div>
+<% if current_user.students.ids.empty? %>
+	<div class="container">
+		<h2>Aún no tienes estudiantes, espera a que se te asignen para que puedas añadir clases.</h2>
+	</div>  
+<% else %>
+	<div class="container">
+		<h1>New Lesson</h1>
+		<%= render 'form', lesson: @lesson %>
+	</div>
+<% end %>
+	<div class="container">
+		<%= link_to 'Back', lessons_path %>
+	</div>

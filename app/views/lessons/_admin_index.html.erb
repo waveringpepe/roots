@@ -4,6 +4,8 @@
 <table class="table">
   <thead>
     <tr>
+      <th>ID de la clase</th>
+      <th>Fecha de creación</th>
       <th>Tipo de clase</th>
       <th>Estudiante</th>
       <th>Profesor</th>
@@ -19,17 +21,18 @@
   <tbody>
     <% @lessons.each do |lesson| %>
       <tr>
+        <td><%= link_to lesson.id, lesson %></td>
+        <td><%= lesson.created_at %></td>
         <td><%= lesson.class_type_id %></td>
-        <td> <%= User.find_by(id: "#{lesson.student_id}").name %></td>
-        <td> <%= User.find_by(id: "#{lesson.user_id}").name %></td>
+        <td> <%= link_to User.find_by(id: "#{lesson.student_id}").name, "users/#{lesson.student_id}" %></td>
+        <td> <%= link_to User.find_by(id: "#{lesson.user_id}").name, "users/#{lesson.user_id}" %></td>
         <td><%= lesson.date_id.to_formatted_s(:long) %></td>
         <td><%= lesson.time_duration_id/60 %><p>Horas</p></td>
         <td> <%= Language.find_by(id: "#{lesson.language_id}").name %></td>
         <td><%= lesson.status_id %></td>
         <td><%= lesson.payment_id %></td>
-        <td><%= link_to 'Show', lesson %></td>
-        <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
-        <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '', edit_lesson_path(lesson), class:"fa fa-edit fa-x" %></td>
+        <td><%= link_to '', lesson, method: :delete, data: { confirm: 'Are you sure?' },class:"fa fa-close fa-x", style:"color:#DC3C45" %></td>
       </tr>
     <% end %>
   </tbody>

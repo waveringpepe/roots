@@ -34,7 +34,7 @@
     <% if logged_in?(:teacher) %>
 
       <%= form.collection_select :student_id, @user.students.order(:name),:id,:name, include_blank: true %>
-
+  
     <% elsif logged_in?(:admin) %>
 
       <%= form.collection_select :student_id, User.where(roles:"user").order(:name),:id,:name, include_blank: true %>

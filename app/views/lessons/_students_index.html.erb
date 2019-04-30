@@ -16,12 +16,12 @@
     <% for user in @user.inverse_lessons %>
       <tr>
         <td><%= user.class_type_id %></td>
-        <td> <%= User.find_by(id: "#{user.user_id}").name %></td>
+        <td> <%= link_to User.find_by(id: "#{user.user_id}").name, "users/#{user.user_id}" %></td>
         <td><%= user.date_id.to_formatted_s(:long) %></td>
         <td><%= user.time_duration_id/60 %><p>Horas</p></td>
         <td> <%= Language.find_by(id: "#{user.language_id}").name %></td>
         <td><%= user.status_id %></td>
-        <!--<td>%= link_to 'Reportar', lesson, class: "btn btn-outline-warning" %></td>-->
+        <td><%= mail_to "hello@5roots.co", "Reportar", subject: "Reporte de la clase con número de ID: #{user.id}", body: "Hello i'm #{User.find_by(id: "#{user.student_id}").name} and I would like to report the class with the ID: #{user.id} because", class: "btn btn-outline-danger" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,45 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+    <div>
+      <h1> Clase </h1>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Teacher:</strong>
-  <%= User.find_by(id: "#{@lesson.user_id}").name %>
-</p>
+  <p>
+    <strong>Teacher:</strong>
+    <%= User.find_by(id: "#{@lesson.user_id}").name %>
+  </p>
 
-<p>
-  <strong>Student:</strong>
-  <%= User.find_by(id: "#{@lesson.student_id}").name %>
+  <p>
+    <strong>Student:</strong>
+    <%= User.find_by(id: "#{@lesson.student_id}").name %>
 
-</p>
+  </p>
 
-<p>
-  <strong>Language:</strong>
-  <%= @lesson.language_id %>
-</p>
+  <p>
+    <strong>Language:</strong>
+    <%= Language.find_by(id: "#{@lesson.language_id}").name %>
+  </p>
 
-<p>
-  <strong>Class type:</strong>
-  <%= @lesson.class_type_id %>
-</p>
+  <p>
+    <strong>Class type:</strong>
+    <%= @lesson.class_type_id %>
+  </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @lesson.date_id %>
-</p>
+  <p>
+    <strong>Date:</strong>
+    <%= @lesson.date_id %>
+  </p>
 
-<p>
-  <strong>Time duration:</strong>
-  <%= @lesson.time_duration_id/60 %> Hr
-</p>
+  <p>
+    <strong>Time duration:</strong>
+    <%= @lesson.time_duration_id/60 %> Hr
+  </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @lesson.status_id %>
-</p>
+  <p>
+    <strong>Status:</strong>
+    <%= @lesson.status_id %>
+  </p>
 
-<p>
-  <strong>Payment:</strong>
-  <%= @lesson.payment_id %>
-</p>
+  <p>
+    <strong>Payment:</strong>
+    <%= @lesson.payment_id %>
+  </p>
 
-<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-<%= link_to 'Back', lessons_path %>
+  <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+  <%= link_to 'Back', lessons_path %>
+</div>

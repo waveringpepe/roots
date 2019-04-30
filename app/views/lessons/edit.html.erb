@@ -54,7 +54,7 @@
 
 
 	    <div class="form-group col-md-4">
-	      <%= form.label :status_id, 'Tipo de clase' %>
+	      <%= form.label :status_id, 'Estatus de la clase' %>
 	      <%= form.select(:status_id, options_for_select([["Próxima", "Próxima"], ["Completada", "Completada"],["Cancelada", "Cancelada"],["Perdida por el profesor", "Perdida por el profesor"],["Perdida por el estudiante", "Perdida por el estudiante"]],@lesson.status_id), {}, {class: "form-control"}) %>
 	    </div>
 

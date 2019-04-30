@@ -1,6 +1,6 @@
 
 <span><%= link_to 'New Lesson', new_lesson_path, class: "btn btn-primary float-right" %></span>
-<h1>Classes</h1><br>
+<h1>Clases</h1><br>
 <table class="table">
   <thead>
     <tr>
@@ -22,7 +22,7 @@
     <% @lessons.each do |lesson| %>
       <tr>
         <td><%= link_to lesson.id, lesson %></td>
-        <td><%= lesson.created_at %></td>
+        <td><%= lesson.created_at.to_formatted_s(:long) %></td>
         <td><%= lesson.class_type_id %></td>
         <td> <%= link_to User.find_by(id: "#{lesson.student_id}").name, "users/#{lesson.student_id}" %></td>
         <td> <%= link_to User.find_by(id: "#{lesson.user_id}").name, "users/#{lesson.user_id}" %></td>

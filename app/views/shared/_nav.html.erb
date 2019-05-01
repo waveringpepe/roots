@@ -40,7 +40,7 @@
               <%= link_to t('my_profile'), current_user, class: "dropdown-item" %>
               <%= link_to t('edit_profile'), edit_user_registration_path(current_user), class: "dropdown-item" %>
               <%= link_to t('my_students'), matches_path, class: "dropdown-item" %>
-              <!-- %= link_to t('my_lessons'), lessons_path, class: "dropdown-item" %> -->
+              <!-- %= link_to t('my_lessons_nav'), lessons_path, class: "dropdown-item" %> -->
             <div class="dropdown-divider"></div>
               <%= link_to t('logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
@@ -50,7 +50,7 @@
               <%= link_to t('my_membership'), edit_membership_path , class: "dropdown-item" %>
               <%= link_to t('matches_list'), matches_path, class: "dropdown-item" %>
               <%= link_to t('languages_list'), languages_path, class: "dropdown-item" %>
-              <!-- %= link_to t('my_lessons'), lessons_path, class: "dropdown-item" %> -->
+              <%= link_to t('my_lessons_nav'), lessons_path, class: "dropdown-item" %>
             <div class="dropdown-divider"></div>
               <%= link_to t('logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
@@ -59,7 +59,7 @@
               <%= link_to t('edit_profile'), edit_user_registration_path(current_user), class: "dropdown-item" %> 
               <%= link_to t('my_membership'), edit_membership_path , class: "dropdown-item" %>
               <%= link_to t('my_teachers'), matches_path, class: "dropdown-item" %>
-              <!-- %= link_to t('my_lessons'), lessons_path, class: "dropdown-item" %> -->
+              <!-- %= link_to t('my_lessons_nav'), lessons_path, class: "dropdown-item" %> -->
             <div class="dropdown-divider"></div>
               <%= link_to t('logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>

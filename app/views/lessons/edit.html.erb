@@ -1,5 +1,5 @@
 <div class="container">
-	<h1>Editar clase</h1>
+	<h1><%= t('edit_lesson') %></h1>
 </div>
 
 <%= form_with(model: @lesson, local: true ) do |form| %>
@@ -17,8 +17,8 @@
 	    <% end %>
 
 	    <div class="form-group col-md-4">
-	      <%= form.label :class_type_id, 'Tipo de clase' %>
-	      <%= form.select(:class_type_id, options_for_select([["Regular", "Regular",{class: "bold"}], ["Clase de prueba", "Clase de prueba"]],@lesson.class_type_id), {}, {class: "form-control"}) %>
+	      <%= form.label :class_type_id, t('type_of_class') %>
+	      <%= form.select(:class_type_id, options_for_select([[t('regular_class_type'), "Regular",{class: "bold"}], [t('trial_class_type'), "Clase de prueba"]],@lesson.class_type_id), {}, {class: "form-control"}) %>
 	    </div>
 	    
 	  <% if logged_in?(:admin) %>
@@ -39,34 +39,40 @@
 	    </div>
 
 	    <div class="field">
-	      <%= form.label :language_id %>
+	      <%= form.label :language_id, t('class_language') %>
 	      <%= form.collection_select :language_id, Language.all.order(:name),:id,:name %>
 	    </div>
 	    <div class="form-group col-md-4">
-	      <%= form.label :time_duration_id, 'Duración de la clase en horas:' %>
-	      <%= form.select(:time_duration_id, options_for_select([["30 min", "30"], ["45 min", "45"],["1 hora", "60"],["1 hora 15 min" ,"75"],["1 hora 30 min" , "90"],["1 hora 45 min" ,"105"], ["2 horas" ,"120"], ["2 horas 15 min", "135"],["2 horas 30 min","150"],["2 horas 45 min" , "165"],["3 horas","180"]],@lesson.time_duration_id.to_i),{}, {class: "form-control"}) %>
+	      <%= form.label :time_duration_id, t('class_duration') %>
+	      <%= form.select(:time_duration_id, options_for_select([["30 min", "30"], ["45 min", "45"],["1 hr", "60"],["1 hr 15 min" ,"75"],["1 hr 30 min" , "90"],["1 hr 45 min" ,"105"], ["2 hrs" ,"120"], ["2 hrs 15 min", "135"],["2 hrs 30 min","150"],["2 hrs 45 min" , "165"],["3 hrs","180"]],@lesson.time_duration_id.to_i),{}, {class: "form-control"}) %>
 	    </div>
 
-	    <div class="form-group col-md-4">
-	      <%= form.label :date_id %>
+	    <div class="field">
+	      <%= form.label :date_id, t('incoming_date_class') %>
 	      <%= form.datetime_select :date_id, :ampm => true, :minute_step => 15 %>
 	    </div>
 
 
 	    <div class="form-group col-md-4">
-	      <%= form.label :status_id, 'Estatus de la clase' %>
-	      <%= form.select(:status_id, options_for_select([["Próxima", "Próxima"], ["Completada", "Completada"],["Cancelada", "Cancelada"],["Perdida por el profesor", "Perdida por el profesor"],["Perdida por el estudiante", "Perdida por el estudiante"]],@lesson.status_id), {}, {class: "form-control"}) %>
+	      <%= form.label :status_id, t('status_class') %>
+	      <%= form.select(:status_id, options_for_select([[t('next_lesson'), "Próxima"], [t('completed_lesson'), "Completada"],[t('canceled_lesson'), "Cancelada"],[t('lost_lesson_teacher'), "Perdida por el profesor"],[t('lost_lesson_student'), "Perdida por el estudiante"]],@lesson.status_id), {}, {class: "form-control"}) %>
 	    </div>
 
     <% if logged_in?(:admin) %>
         <div class="form-group col-md-4">
-	      <%= form.label :payment_id, '¿Clase pagada?' %>
-	      <%= form.select(:payment_id, options_for_select([["Si", "Si",{class: "bold"}], ["No", "No"]],@lesson.payment_id), {}, {class: "form-control"}) %>
+	      <%= form.label :payment_id, t('paid_class') %>
+	      <%= form.select(:payment_id, options_for_select([[t('yes_lesson'), "Si",{class: "bold"}], [t('no_lesson'), "No"]],@lesson.payment_id), {}, {class: "form-control"}) %>
     	</div>
+
+    	<br>
+    	
     <% end %>
 
 	    <div class="actions">
-	      <%= form.submit "Actualizar", class:"btn btn-primary" %> 
-	    </div><br/>
+	      <%= form.submit t('edit_lesson_btn'), class:"btn btn-primary" %> 
+	    </div>
+
+	    <br/>
+
 	</div>
  <% end %>

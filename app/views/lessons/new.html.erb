@@ -1,4 +1,12 @@
-<% if current_user.students.ids.empty? %>
+
+<% if logged_in?(:admin) %>
+
+	<div class="container">
+		<h1><%= t('new_class') %></h1>
+		<%= render 'form', lesson: @lesson %>
+	</div>
+
+<% elsif current_user.students.ids.empty? %>
   <div class="container">
     <h2 class= "p-3 mb-2 bg-light text-dark"><%= t('no_students_message') %></h2>
   </div> 

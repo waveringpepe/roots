@@ -317,6 +317,7 @@ en:
   my_students: "My students"
   matches_list: "Matches"
   languages_list: "Languages"
+  my_lessons_nav: "My lessons"
 
   #devise/mails
   welcome_mail: "Welcome to 5roots"
@@ -370,7 +371,7 @@ en:
   #memberships_controller
   card_updated_message: "Your card was updated successfully"
   message_subscribed: "Thanks for subscribing!"
-  cancel_message: "You have cancelled your subscription. You will have access until "
+  cancel_message: "You have canceled your subscription. You will have access until "
 
   #pages/subscriptions
   amount_card_basic_form: "Basic $1120 MXN"
@@ -393,7 +394,7 @@ en:
   reviews_comment_3: "I have been taking English classes with Jack for 6 months, and I really noticed my progress. I've seen my improvement a lot even in grammar. In addition to that the classes accommodate my needs and schedules. The truth 5roots is a platform that has met all expectations of service. I recommend it a lot!"
 
   #languages#index
-  edit: "Editar"
+  edit: "Edit"
   destroy: "Eliminar"
   languages: "Idiomas"
   new_language_btn: "Nuevo idioma"
@@ -456,16 +457,34 @@ en:
   student_name_class: "Student"
   teacher_name_class: "Teacher"
   incoming_date_class: "Date"
-  class_duration: "Length of the class"
+  class_duration: "Duration of the class"
   class_language: "Language"
   status_class: "Status"
   paid_class: "Class paid?"
   delete_message: "Are you sure?"
   new_class: "New lesson"
   lessons_title: "Lessons"
+  lessons_title_1: "Lesson"
   hours: "Hours"
   no_students_message: "You currently have no students assigned, wait to be assigned a student in order to be able to add lessons."
+  report_class: "Report"
+  report_subject: "Report of the lesson with the ID:"
+  report_body_1: "Hello i'm"
+  report_body_2: " and I would like to report the lesson with the ID:"
+  report_body_3: "because"
 
+  #lessons#form#edit
+  regular_class_type: "Regular"
+  trial_class_type: "Trial class"
+  edit_lesson: "Edit lesson"
+  edit_lesson_btn: "Edit lesson"
+  next_lesson: "Next"
+  completed_lesson: "Completed"
+  canceled_lesson: "Canceled"
+  lost_lesson_teacher: "Lost by the teacher"
+  lost_lesson_student: "Lost by the student"
+  yes_lesson: "Yes"
+  no_lesson: "No"
   
 
 

@@ -15,10 +15,11 @@
     <%= form.hidden_field :user_id, value: @user.id %>
     <%= form.hidden_field :status_id, value: "Próxima" %>
     <%= form.hidden_field :payment_id, value: "No" %>
+
 <div class="form-group">
       <div class="form-group col-md-4">
         <%= form.label :class_type_id, t('type_of_class') %>
-        <%= form.select(:class_type_id, options_for_select([["Regular", "Regular",{class: "bold"}], ["Clase de prueba", "Clase de prueba"]]), {}, {class: "form-control"}) %>
+        <%= form.select(:class_type_id, options_for_select([[t('regular_class_type'), "Regular",{class: "bold"}], [t('trial_class_type'), "Clase de prueba"]]), {}, {class: "form-control"}) %>
       </div>
 
     <% if logged_in?(:admin) %>
@@ -47,20 +48,20 @@
         <%= form.label :language_id, t('class_language') %>
         <%= form.collection_select :language_id, Language.all.order(:name),:id,:name %>
       </div>
-      <div class="field">
+      <div class="form-group col-md-4">
         <%= form.label :time_duration_id, t('class_duration') %>
-        <%= form.select(:time_duration_id, options_for_select([["30 min", "30"], ["45 min", "45"],["1 hora", "60"],["1 hora 15 min" ,"75"],["1 hora 30 min" , "90"],["1 hora 45 min" ,"105"], ["2 horas" ,"120"], ["2 horas 15 min", "135"],["2 horas 30 min","150"],["2 horas 45 min" , "165"],["3 horas","180"]]),{required: 'true', autofocus: 'true', class: 'form-control'}) %>
+        <%= form.select(:time_duration_id, options_for_select([["30 min", "30"], ["45 min", "45"],["1 hr", "60"],["1 hr 15 min" ,"75"],["1 hr 30 min" , "90"],["1 hr 45 min" ,"105"], ["2 hrs" ,"120"], ["2 hrs 15 min", "135"],["2 hrs 30 min","150"],["2 hrs 45 min" , "165"],["3 hrs","180"]]),{required: 'true', autofocus: 'true'},{class: "form-control"}) %>
       </div>
 
       <div class="field">
-        <%= form.label :date_id %>
+        <%= form.label :date_id, t('incoming_date_class') %>
         <%= form.datetime_select :date_id, :ampm => true, :minute_step => 15 %>
       </div>
 
       <br>
 
       <div class="actions">
-        <%= form.submit "Crear clase", class:"btn btn-primary" %>
+        <%= form.submit t('new_class'), class:"btn btn-primary" %>
       </div><br>
     </div>
   <% end %>

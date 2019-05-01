@@ -285,6 +285,7 @@ es:
   my_students: "Mis estudiantes"
   matches_list: "Matches"
   languages_list: "Idiomas"
+  my_lessons_nav: "Mis clases"
 
   #devise/mails
   welcome_mail: "Bienvenido(a) a 5roots"
@@ -433,8 +434,29 @@ es:
   delete_message: "¿Estás seguro?"
   new_class: "Añadir clase"
   lessons_title: "Clases"
+  lessons_title_1: "Clase"
   hours: "Horas"
   no_students_message: "Aún no tienes estudiantes, espera a que se te asignen para que puedas añadir clases."
+  report_class: "Reportar"
+  report_subject: "Reporte de la clase con número de ID:"
+  report_body_1: "Hola soy"
+  report_body_2: " y me gustaría reportar la classe con el ID:"
+  report_body_3: "porque"
+
+  #lessons#form#edit
+  regular_class_type: "Regular"
+  trial_class_type: "Clase de prueba"
+  edit_lesson: "Editar clase"
+  edit_lesson_btn: "Actualizar clase"
+  next_lesson: "Próxima"
+  completed_lesson: "Completada"
+  canceled_lesson: "Cancelada"
+  lost_lesson_teacher: "Perdida por el profesor"
+  lost_lesson_student: "Perdida por el estudiante"
+  yes_lesson: "Si"
+  no_lesson: "No"
+
+
 
 
 

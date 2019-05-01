@@ -1,13 +1,16 @@
 <% if current_user.students.ids.empty? %>
-	<div class="container">
-		<h2>Aún no tienes estudiantes, espera a que se te asignen para que puedas añadir clases.</h2>
-	</div>  
+  <div class="container">
+    <h2 class= "p-3 mb-2 bg-light text-dark"><%= t('no_students_message') %></h2>
+  </div> 
+
+  <br> 
+
 <% else %>
 	<div class="container">
-		<h1>New Lesson</h1>
+		<h1><%= t('new_class') %></h1>
 		<%= render 'form', lesson: @lesson %>
 	</div>
 <% end %>
 	<div class="container">
-		<%= link_to 'Back', lessons_path %>
+		<%= link_to t('back'), lessons_path, class: "btn btn-link" %>
 	</div>

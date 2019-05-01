@@ -447,6 +447,25 @@ en:
   #match#index
   language_teach: "Language that teaches"
   language_learn: "Language he/she is learning"
+
+  #lessons#index#all
+
+  class_id: "ID of the class"
+  createad_date: "Creation date"
+  type_of_class: "Type of class"
+  student_name_class: "Student"
+  teacher_name_class: "Teacher"
+  incoming_date_class: "Date"
+  class_duration: "Length of the class"
+  class_language: "Language"
+  status_class: "Status"
+  paid_class: "Class paid?"
+  delete_message: "Are you sure?"
+  new_class: "New lesson"
+  lessons_title: "Lessons"
+  hours: "Hours"
+  no_students_message: "You currently have no students assigned, wait to be assigned a student in order to be able to add lessons."
+
   
 
 

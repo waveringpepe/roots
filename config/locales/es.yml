@@ -412,22 +412,29 @@ es:
   create_match: "Crear match"
   teacher: "Profesor"
   student: "Estudiante"
-  new_match: "Nuevo match"
+  new_match: "Crear Match"
 
   #match#index
   language_teach: "Idioma que enseña"
   language_learn: "Idioma que está aprendiendo"
 
-  #lessons#index
+  #lessons#index#all
 
-
-
-
-
-
-
-
-
+  class_id: "ID de la clase"
+  createad_date: "Fecha de creación"
+  type_of_class: "Tipo de clase"
+  student_name_class: "Estudiante"
+  teacher_name_class: "Profesor"
+  incoming_date_class: "Fecha"
+  class_duration: "Duración"
+  class_language: "Idioma"
+  status_class: "Estatus"
+  paid_class: "¿Clase pagada?"
+  delete_message: "¿Estás seguro?"
+  new_class: "Añadir clase"
+  lessons_title: "Clases"
+  hours: "Horas"
+  no_students_message: "Aún no tienes estudiantes, espera a que se te asignen para que puedas añadir clases."
 
 
 

@@ -315,6 +315,8 @@ en:
   my_profile: "My profile"
   my_teachers: "My teachers"
   my_students: "My students"
+  matches_list: "Matches"
+  languages_list: "Languages"
 
   #devise/mails
   welcome_mail: "Welcome to 5roots"

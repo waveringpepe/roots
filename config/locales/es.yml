@@ -283,6 +283,8 @@ es:
   my_profile: "Mi perfil"
   my_teachers: "Mis profesores"
   my_students: "Mis estudiantes"
+  matches_list: "Matches"
+  languages_list: "Idiomas"
 
   #devise/mails
   welcome_mail: "Bienvenido(a) a 5roots"
@@ -415,6 +417,8 @@ es:
   #match#index
   language_teach: "Idioma que enseña"
   language_learn: "Idioma que está aprendiendo"
+
+  #lessons#index
 
 
 

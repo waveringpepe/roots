@@ -16,8 +16,8 @@
         <tr>
           <th scope="col"><%= link_to language.name, language, class:"font-weight-normal"  %></th>
           <% if logged_in?(:admin) %>
-            <th scope="col"><%= link_to t('edit'), edit_language_path(language),class:"btn btn-outline-primary" %></th>
-            <th scope="col"><%= link_to t('destroy'), language, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger" %></th>
+            <th><%= link_to '', edit_language_path(language), class:"fa fa-edit fa-x" %></th>
+            <th><%= link_to '', language, method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-close fa-x",style:"color:#DC3C45" %></th>
           <% end %>  
         </tr>
       <% end %>

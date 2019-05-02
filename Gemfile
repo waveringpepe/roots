@@ -83,5 +83,9 @@ gem 'stripe_event', '~> 2.2'
 gem 'receipts', '~> 0.2.2'
 #When mail is sent from your application, Letter Opener will open a preview in the browser instead of sending
 gem 'letter_opener', '~> 1.7'
+#Add filters and pagination
+gem 'filterrific'
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 
 

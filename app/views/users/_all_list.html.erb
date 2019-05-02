@@ -1,0 +1,32 @@
+<div class="container" >
+  <h1>All users</h1> Total: <%= User.count %>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Created at</th>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Rol</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <th><%= user.created_at %></th>
+          <th><%= link_to user.name, user  %></th>
+          <th><%= user.country  %></th>
+          <th><%= user.role %></th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+ 

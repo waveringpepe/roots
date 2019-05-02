@@ -48,3 +48,5 @@
 <p>Total de clases completadas: <%= Lesson.where( status_id: "Completada").count(:time_duration_id) %> </p>
 <p>Dinero en deuda: <%= Lesson.where( status_id: "Completada").sum(:time_duration_id)/60*200 %> MXN </p>
 <p>Dinero pagado: <%= Lesson.where( payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN </p>
+
+

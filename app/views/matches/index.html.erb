@@ -2,13 +2,32 @@
 
     <%= render 'list_students' %>
 
+    <div class="container">
+      <div class="pagination">
+        <%= will_paginate @usersmatch, renderer: @renderer %>
+      </div>
+    </div>
+
   <% elsif current_user.role == :user %>
 
     <%= render 'list_teachers' %>
 
+    <div class="container">
+      <div class="pagination">
+        <%= will_paginate @studentsmatch, renderer: @renderer %>
+      </div>
+    </div>
+
   <% elsif current_user.role == :admin %>
 
     <%= render 'list_matches' %><br/><br/>
+
+    <div class="container">
+      <div class="pagination">
+        <%= will_paginate @matches, renderer: @renderer, class: "page-item" %>
+      </div>
+    </div>
+
     <div class="container">
       <hr>
     </div>

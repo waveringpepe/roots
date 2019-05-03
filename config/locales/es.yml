@@ -418,6 +418,8 @@ es:
   #match#index
   language_teach: "Idioma que enseña"
   language_learn: "Idioma que está aprendiendo"
+  total_students: "Actualmente tienes"
+  total_students_1: "estudiantes"
 
   #lessons#index#all
 

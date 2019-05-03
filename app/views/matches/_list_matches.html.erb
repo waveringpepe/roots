@@ -3,9 +3,14 @@
   <span><%= link_to t('new_match'), new_match_path, class:"btn btn-primary float-right" %></span>
 </div>
 
-
 <div class="container">
-  <h1>Matches</h1><br/><br/>
+  <h1>Matches</h1>
+
+  <div class="page_info">
+      <p><strong>Total: </strong><%= @matches.total_entries %></p>
+
+  </div>
+  <br>
   <table class="table">
     <thead>
       <tr>

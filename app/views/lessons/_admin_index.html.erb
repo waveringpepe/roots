@@ -1,7 +1,21 @@
 
 <span><%= link_to t('new_class'), new_lesson_path, class: "btn btn-primary float-right" %></span>
-<h1><%= t('lessons_title') %></h1>
+
+<div class="container">
+  <h1><%= t('lessons_title') %></h1>
+  <br>
+  <p>
+    <strong> Clases:</strong> <%= @lessons.total_entries %> &nbsp 
+    <strong> Clases próximas:</strong> <%= Lesson.where( status_id: "Próxima").count(:time_duration_id) %> &nbsp
+    <strong> Clases completadas:</strong> <%= Lesson.where( status_id: "Completada").count(:time_duration_id) %>&nbsp
+    <strong> Horas completadas:</strong> <%= Lesson.where( status_id: "Completada").sum(:time_duration_id)/60 %> hrs &nbsp
+    <strong> Dinero en deuda:</strong> <%= Lesson.where( status_id: "Completada").sum(:time_duration_id)/60*200 %>MXN &nbsp
+    <strong> Dinero pagado:</strong> <%= Lesson.where( payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN &nbsp
+  </p>
+</div>
+
 <br>
+
 <table class="table">
   <thead>
     <tr>
@@ -39,14 +53,5 @@
   </tbody>
 </table>
 
-<br>
-
-<hr>
-<p>Total: <%= Lesson.sum(:time_duration_id)/60 %> Horas</p>
-<p>Total de clases: <%= Lesson.count(:time_duration_id) %> </p>
-<p>Total de clases próximas: <%= Lesson.where( status_id: "Próxima").count(:time_duration_id) %> </p>
-<p>Total de clases completadas: <%= Lesson.where( status_id: "Completada").count(:time_duration_id) %> </p>
-<p>Dinero en deuda: <%= Lesson.where( status_id: "Completada").sum(:time_duration_id)/60*200 %> MXN </p>
-<p>Dinero pagado: <%= Lesson.where( payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN </p>
 
 

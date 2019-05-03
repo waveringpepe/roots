@@ -4,13 +4,31 @@
 
     <%= render 'teachers_index' %>
 
+    <div class="container">
+      <div class="pagination">
+        <%= will_paginate @lessons_teachers, renderer: @renderer %>
+      </div>
+    </div>
+
   <% elsif current_user.role == :user %>
 
     <%= render 'students_index' %>
 
+    <div class="container">
+      <div class="pagination">
+        <%= will_paginate @lessons_students, renderer: @renderer %>
+      </div>
+    </div>
+
   <% elsif current_user.role == :admin %>
 
     <%= render 'admin_index' %><br/><br/>
+
+    <div class="container">
+      <div class="pagination">
+        <%= will_paginate @lessons, renderer: @renderer %>
+      </div>
+    </div>
 
   <% end %>
 </div>

@@ -8,13 +8,22 @@
   
   <% else %>
 
-  <span><%= link_to t('new_class'), new_lesson_path, class: "btn btn-primary float-right" %></span>
-
+  <div class="container">
+    <p>
+      <strong> Clases próximas:</strong> <%= @user.lessons.where( status_id: "Próxima").count(:time_duration_id) %> &nbsp
+      <strong> Clases completadas:</strong> <%= @user.lessons.where( status_id: "Completada").count(:time_duration_id) %>&nbsp
+      <strong> Horas completadas:</strong> <%= @user.lessons.where( status_id: "Completada").sum(:time_duration_id)/60 %> hrs
+    </p>
+    <p>
+      <strong> Dinero por recibir:</strong> <%= @user.lessons.where( status_id: "Completada").sum(:time_duration_id)/60*200 %>MXN &nbsp
+      <strong> Dinero total ganado:</strong> <%= @user.lessons.where( payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN &nbsp
+    </p>
+    <span><%= link_to t('new_class'), new_lesson_path, class: "btn btn-primary float-right" %></span>
   <% end %>
+      <h1><%= t('lessons_title') %></h1>
+  </div>
+  <br>
 
-<div class="container">
-<h1><%= t('lessons_title') %></h1>
-<br>
   <table class="table">
     <thead>
       <tr>
@@ -29,7 +38,7 @@
       </tr>
     </thead>
     <tbody>
-      <% for user in @user.lessons %>
+      <% for user in @lessons_teachers %>
         <tr>
           <td><%= link_to user.class_type_id, user %></td>
           <td> <%= link_to User.find_by(id: "#{user.student_id}").name, "users/#{user.student_id}" %></td>          

@@ -1,6 +1,10 @@
 <div class="container">
 
-  <h1><%= t('my_students') %></h1><br/><br/>
+  <h1><%= t('my_students') %></h1>
+    <div class="page_info">
+      <p><%= t('total_students') %> <strong><%= @usersmatch.total_entries %></strong> <%= t('total_students_1') %>. </p>
+    </div>
+  <br/>
 
   <table class="table">
     <thead>
@@ -15,7 +19,7 @@
     </thead>
 
     <tbody>
-      <% for user in @users.students %>
+      <% for user in @usersmatch %>
         <tr>
           <td><%= link_to user.name, user  %></td>
           <td><%= user.phone_number %></td>

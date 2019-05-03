@@ -448,6 +448,8 @@ en:
   #match#index
   language_teach: "Language that teaches"
   language_learn: "Language he/she is learning"
+  total_students: "Currently you have"
+  total_students_1: "students"
 
   #lessons#index#all
 

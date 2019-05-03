@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <%= render 'all_list' %>
+
 <div class="container">
-  <div class="pagination">
-    <%= will_paginate @users, renderer: @renderer, class: "page-item" %>
-  </div>
-    <div class="page_info">
-     <%= @users.total_entries %>
-    </div>
+	<div class="pagination">
+		<%= will_paginate @users, renderer: @renderer, class: "page-item" %>
+	</div>
+	<div class="page_info">
+	 	<p><strong>Total:</strong><%= @users.total_entries %></p>
+	</div>
 </div>
 
 

@@ -1,10 +1,16 @@
   <div class="container">
-    <p>
-      <strong> Clases próximas:</strong> <%= @user.inverse_lessons.where( status_id: "Próxima").count(:time_duration_id) %> &nbsp
-      <strong> Clases completadas:</strong> <%= @user.inverse_lessons.where( status_id: "Completada").count(:time_duration_id) %>&nbsp
-      <strong> Horas completadas:</strong> <%= @user.inverse_lessons.where( status_id: "Completada").sum(:time_duration_id)/60 %> hrs
-    </p>
-      <h1><%= t('lessons_title') %></h1>
+
+    <div class="p-3 mb-2 bg-light text-dark text-center">
+      Clases próximas: <strong><%= @user.inverse_lessons.where( status_id: "Próxima").count(:time_duration_id) %></strong>  &nbsp &nbsp  &nbsp
+      Clases completadas: <strong><%= @user.inverse_lessons.where( status_id: "Completada").count(:time_duration_id) %></strong> &nbsp &nbsp &nbsp
+      Horas completadas: <strong><%= @user.inverse_lessons.where( status_id: "Completada").sum(:time_duration_id)/60 %></strong> hrs
+    </div>
+
+      <div class="p-3 mb-2 bg-light text-dark text-center">
+        <p><strong>Política de cancelación</strong></p>
+        Créditos ganados: <strong><%= @user.inverse_lessons.where( status_id: "Perdida por el profesor").count(:time_duration_id) %> </strong> &nbsp &nbsp
+        Créditos perdidos: <strong><%= @user.inverse_lessons.where( status_id: "Perdida por el estudiante").count(:time_duration_id) %> </strong> &nbsp &nbsp
+      </div>      <h1><%= t('lessons_title') %></h1>
   </div>
 
 <table class="table">

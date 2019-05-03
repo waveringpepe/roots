@@ -9,15 +9,23 @@
   <% else %>
 
   <div class="container">
-    <p>
-      <strong> Clases próximas:</strong> <%= @user.lessons.where( status_id: "Próxima").count(:time_duration_id) %> &nbsp
-      <strong> Clases completadas:</strong> <%= @user.lessons.where( status_id: "Completada").count(:time_duration_id) %>&nbsp
-      <strong> Horas completadas:</strong> <%= @user.lessons.where( status_id: "Completada").sum(:time_duration_id)/60 %> hrs
-    </p>
-    <p>
-      <strong> Dinero por recibir:</strong> <%= @user.lessons.where( status_id: "Completada").sum(:time_duration_id)/60*200 %>MXN &nbsp
-      <strong> Dinero total ganado:</strong> <%= @user.lessons.where( payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN &nbsp
-    </p>
+      <div class="p-3 mb-2 bg-light text-dark text-center">
+        Clases próximas: <strong> <%= @user.lessons.where( status_id: "Próxima").count(:time_duration_id) %></strong> &nbsp
+        Clases completadas: <strong> <%= @user.lessons.where( status_id: "Completada").count(:time_duration_id) %></strong>&nbsp
+        Horas completadas: <strong> <%= @user.lessons.where( status_id: "Completada").sum(:time_duration_id)/60 %></strong> hrs
+      </div>
+      <div class="p-3 mb-2 bg-light text-dark text-center">
+        Dinero por recibir: <strong> <%= @user.lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + @user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - @user.lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200%> </strong> MXN &nbsp
+        Dinero total ganado: <strong> <%= @user.lessons.where( status_id: "Completada", payment_id: "Si").sum(:time_duration_id)/60*200 + @user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "Si").sum(:time_duration_id)/60*200 - @user.lessons.where( status_id: "Perdida por el profesor", payment_id: "Si").sum(:time_duration_id)/60*200 %> </strong></MXN> MXN &nbsp
+      </div>
+      <div class="p-3 mb-2 bg-light text-dark text-center">
+        <p><strong>Política de cancelación</strong></p>
+        Clases ganadas: <strong><%= @user.lessons.where( status_id: "Perdida por el estudiante").count(:time_duration_id) %> </strong> / Dinero ganado: <strong><%= @user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN </strong> &nbsp &nbsp
+        Clases perdidas: <strong><%= @user.lessons.where( status_id: "Perdida por el profesor").count(:time_duration_id) %> </strong> / Dinero perdido: <strong><%= @user.lessons.where( status_id: "Perdida por el profesor", payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN </strong> &nbsp &nbsp
+      </div>
+
+      <br>
+
     <span><%= link_to t('new_class'), new_lesson_path, class: "btn btn-primary float-right" %></span>
   <% end %>
       <h1><%= t('lessons_title') %></h1>

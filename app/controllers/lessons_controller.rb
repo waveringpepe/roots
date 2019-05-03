@@ -7,9 +7,9 @@ class LessonsController < ApplicationController
   # GET /lessons
   def index
     @lessons = Lesson.all
-    @lessons = Lesson.paginate(:page => params[:page], :per_page => 5).order('date_id DESC')
-    @lessons_students = current_user.inverse_lessons.paginate(:page => params[:page], :per_page => 5).order('date_id DESC')
-    @lessons_teachers = current_user.lessons.paginate(:page => params[:page], :per_page => 5).order('date_id DESC')
+    @lessons = Lesson.paginate(:page => params[:page], :per_page => 10).order('date_id DESC')
+    @lessons_students = current_user.inverse_lessons.paginate(:page => params[:page], :per_page => 10).order('date_id DESC')
+    @lessons_teachers = current_user.lessons.paginate(:page => params[:page], :per_page => 10).order('date_id DESC')
     @user = current_user
     @renderer = custom_paginate_renderer
   end

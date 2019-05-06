@@ -318,6 +318,9 @@ en:
   matches_list: "Matches"
   languages_list: "Languages"
   my_lessons_nav: "My lessons"
+  my_lessons_nav_admin: "Lessons"
+  users_list: "Users"
+
 
   #devise/mails
   welcome_mail: "Welcome to 5roots"

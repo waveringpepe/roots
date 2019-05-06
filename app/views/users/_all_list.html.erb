@@ -1,33 +1,41 @@
-<div class="container" >
-  <h1>All users</h1>
-  <p><strong>Total:</strong><%= @users.total_entries %></p>
-  <input class="form-control" id="myInput" type="text" placeholder="Filtra..">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Created at</th>
-        <th>Name</th>
-        <th>Country</th>
-        <th>Rol</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+  <div class="container" >
+    <h1>All users</h1>
+    <p><strong>Total:</strong><%= @users.total_entries %></p>
 
-    <tbody id="filterTable">
-      <% @users.each do |user| %>
-        <tr>
-          <th><%= user.created_at.to_formatted_s(:long) %></th>
-          <th><%= link_to user.name, user  %></th>
-          <th><%= user.country  %></th>
-          <th><%= user.role %></th>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+    <br>
 
+    <input class="form-control" id="myInput" type="text" placeholder="Filtra..">
+  </div>
 
-<script src="assets/javascripts/filer_table.js"></script>
+  <br>
+  <div class="container">
+    <div class="table-responsive-sm">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Created at</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Rol</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody id="filterTable">
+          <% @users.each do |user| %>
+            <tr>
+              <th><%= user.created_at.to_formatted_s(:long) %></th>
+              <th><%= link_to user.name, user  %></th>
+              <th><%= user.country  %></th>
+              <th><%= user.role %></th>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="assets/javascripts/filer_table.js"></script>
 
 
 

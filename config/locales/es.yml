@@ -286,6 +286,9 @@ es:
   matches_list: "Matches"
   languages_list: "Idiomas"
   my_lessons_nav: "Mis clases"
+  my_lessons_nav_admin: "Clases"
+  users_list: "Usuarios"
+
 
   #devise/mails
   welcome_mail: "Bienvenido(a) a 5roots"

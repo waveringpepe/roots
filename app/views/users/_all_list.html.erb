@@ -1,6 +1,7 @@
 <div class="container" >
   <h1>All users</h1>
   <p><strong>Total:</strong><%= @users.total_entries %></p>
+  <input class="form-control" id="myInput" type="text" placeholder="Filtra..">
   <table class="table table-striped">
     <thead>
       <tr>
@@ -12,7 +13,7 @@
       </tr>
     </thead>
 
-    <tbody>
+    <tbody id="filterTable">
       <% @users.each do |user| %>
         <tr>
           <th><%= user.created_at.to_formatted_s(:long) %></th>
@@ -24,6 +25,9 @@
     </tbody>
   </table>
 </div>
+
+
+<script src="assets/javascripts/filer_table.js"></script>
 
 
 

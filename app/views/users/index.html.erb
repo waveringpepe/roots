@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<%= form_with url: users_path, method: :get, local: true do |f| %>
+  <%= f.label :q, "Search for:" %>
+  <%= f.text_field :q, id: :q %>
+  <%= f.submit "Search" %>
+<% end %>
+
 <%= render 'all_list' %>
+
+
 
 <div class="container">
 	<div class="pagination">

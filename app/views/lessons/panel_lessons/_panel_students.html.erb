@@ -6,6 +6,12 @@
 
 <div class="p-3 mb-2 bg-light text-dark text-center">
   <p><strong>Política de cancelación</strong></p>
-  Créditos ganados: <strong><%= @clases_ganadas_estudiantes %> </strong> &nbsp &nbsp
-  Créditos perdidos: <strong><%= @clases_perdidas_estudiantes %> </strong> &nbsp &nbsp
-</div>     
+  Créditos ganados: <a href="#" data-toggle="tooltip" title="Créditos ganados = Número de clases en las que aplique la política de cancelación de clases."><%= @clases_ganadas_estudiantes %> </a> &nbsp &nbsp
+  Créditos perdidos: <a href="#" data-toggle="tooltip" title="Creditos perdidos = Número de clases en las que me aplicaron la política de cancelación de clases."><%= @clases_perdidas_estudiantes %> </a> &nbsp &nbsp
+</div>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>     

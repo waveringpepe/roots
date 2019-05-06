@@ -1,0 +1,20 @@
+<div class="p-3 mb-2 bg-light text-dark text-center">
+  Clases próximas: <strong> <%= @clases_proximas_profesores %></strong> &nbsp
+  Clases completadas: <strong> <%= @clases_completadas_profesores %></strong>&nbsp
+  Horas completadas: <strong> <%= @horas_completadas_profesores %> </strong> hrs
+</div>
+<div class="p-3 mb-2 bg-light text-dark text-center">
+  Dinero por recibir: <a href="#" data-toggle="tooltip" title="Dinero por recibir = Horas completadas no pagadas al profesor * $200 MXN + Dinero ganado no pagado al profesor - Dinero perdido no cobrado por 5roots"><%= @monto_por_recibir_profesores %></a> MXN &nbsp
+  Dinero total ganado: <a href="#" data-toggle="tooltip" title="Dinero total ganado = Horas completadas pagadas al profesor + Dinero ganado pagado al profesor - Dinero perdido cobrado por 5roots "> <%= @monto_total_ganado_profesores %> </a></MXN> MXN &nbsp
+</div>
+<div class="p-3 mb-2 bg-light text-dark text-center">
+  <p><strong>Política de cancelación</strong></p>
+  Clases ganadas: <a href="#" data-toggle="tooltip" title="Clases ganadas = Número de clases en las que aplique la política de cancelación de clases."><%= @clases_ganadas_profesores %> </a> / Dinero ganado: <a href="#" data-toggle="tooltip" title="Dinero ganado = Número horas de las clases ganadas * $200 MXN"><%= @monto_ganado_profesores %> MXN </a> &nbsp &nbsp
+  Clases perdidas: <a href="#" data-toggle="tooltip" title="Clases perdidas = Número de clases en las que me aplicaron la política de cancelación de clases."><%= @clases_perdidas_profesores %> </a> / Dinero perdido: <a href="#" data-toggle="tooltip" title="Dinero perdido = Número de horas de las clases perdidas * 200 MXN "><%= @monto_perdido_profesores %> MXN </a> &nbsp &nbsp
+</div>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>

@@ -3,15 +3,49 @@ class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
   access all: [:index], user: {except: [:new, :destroy, :edit, :create, :update, :show]}, teacher: [:new, :destroy, :edit, :create, :update, :show], admin: :all
 
-
   # GET /lessons
   def index
     @lessons = Lesson.all
     @lessons = Lesson.paginate(:page => params[:page], :per_page => 100).order('date_id DESC')
-    @lessons_students = current_user.inverse_lessons.paginate(:page => params[:page], :per_page => 10).order('date_id DESC')
-    @lessons_teachers = current_user.lessons.paginate(:page => params[:page], :per_page => 10).order('date_id DESC')
+    @lessons_students = current_user.inverse_lessons.paginate(:page => params[:page], :per_page => 20).order('date_id DESC')
+    @lessons_teachers = current_user.lessons.paginate(:page => params[:page], :per_page => 20).order('date_id DESC')
     @user = current_user
     @renderer = custom_paginate_renderer
+
+    #adminpanel
+    @proximas_admin = Lesson.where( status_id: "Próxima").count(:time_duration_id)
+    @completadas_admin = Lesson.where( status_id: "Completada").count(:time_duration_id)
+    @horas_completadas_admin = Lesson.where( status_id: "Completada").sum(:time_duration_id)/60
+
+    @deuda_profesores_admin = Lesson.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + Lesson.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200
+    @monto_total_pagado_admin = Lesson.where( status_id: "Completada", payment_id: "Si").sum(:time_duration_id)/60*200 + Lesson.where( status_id: "Perdida por el estudiante", payment_id: "Si").sum(:time_duration_id)/60*200
+
+    @clases_perdidas_profesores_admin = Lesson.where( status_id: "Perdida por el profesor").count(:time_duration_id)
+    @monto_perdido_profesores_admin = Lesson.where( status_id: "Perdida por el profesor", payment_id: "Si").sum(:time_duration_id)/60*200
+    @clases_perdidas_estudiantes_admin = Lesson.where( status_id: "Perdida por el estudiante").count(:time_duration_id)
+    @monto_perdido_estudiantes_admin = Lesson.where( status_id: "Perdida por el estudiante", payment_id: "Si").sum(:time_duration_id)/60*200
+
+    #teacherspanel
+    @clases_proximas_profesores = @user.lessons.where( status_id: "Próxima").count(:time_duration_id)
+    @clases_completadas_profesores = @user.lessons.where( status_id: "Completada").count(:time_duration_id)
+    @horas_completadas_profesores = @user.lessons.where( status_id: "Completada").sum(:time_duration_id)/60
+
+    @monto_por_recibir_profesores = @user.lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + @user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - @user.lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200
+    @monto_total_ganado_profesores = @user.lessons.where( status_id: "Completada", payment_id: "Si").sum(:time_duration_id)/60*200 + @user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "Si").sum(:time_duration_id)/60*200 - @user.lessons.where( status_id: "Perdida por el profesor", payment_id: "Si").sum(:time_duration_id)/60*200
+
+    @clases_ganadas_profesores = @user.lessons.where( status_id: "Perdida por el estudiante").count(:time_duration_id)
+    @monto_ganado_profesores = @user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "Si").sum(:time_duration_id)/60*200
+    @clases_perdidas_profesores = @user.lessons.where( status_id: "Perdida por el profesor").count(:time_duration_id)
+    @monto_perdido_profesores = @user.lessons.where( status_id: "Perdida por el profesor", payment_id: "Si").sum(:time_duration_id)/60*200
+    
+    #studentspanel
+
+    @clases_proximas_estudiantes = @user.inverse_lessons.where( status_id: "Próxima").count(:time_duration_id)
+    @clases_completadas_estudiantes = @user.inverse_lessons.where( status_id: "Completada").count(:time_duration_id)
+    @horas_completadas_estudiantes = @user.inverse_lessons.where( status_id: "Completada").sum(:time_duration_id)/60
+
+    @clases_ganadas_estudiantes = @user.inverse_lessons.where( status_id: "Perdida por el profesor").count(:time_duration_id)
+    @clases_perdidas_estudiantes = @user.inverse_lessons.where( status_id: "Perdida por el estudiante").count(:time_duration_id)
   end
 
   # GET /lessons/1

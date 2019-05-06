@@ -1,17 +1,15 @@
-  <div class="container">
+<div class="container">
+  <%= render 'lessons/panel_lessons/panel_students' %>
+  <h1><%= t('lessons_title') %></h1>
 
-    <div class="p-3 mb-2 bg-light text-dark text-center">
-      Clases próximas: <strong><%= @user.inverse_lessons.where( status_id: "Próxima").count(:time_duration_id) %></strong>  &nbsp &nbsp  &nbsp
-      Clases completadas: <strong><%= @user.inverse_lessons.where( status_id: "Completada").count(:time_duration_id) %></strong> &nbsp &nbsp &nbsp
-      Horas completadas: <strong><%= @user.inverse_lessons.where( status_id: "Completada").sum(:time_duration_id)/60 %></strong> hrs
-    </div>
+  <br>
+</div>
 
-      <div class="p-3 mb-2 bg-light text-dark text-center">
-        <p><strong>Política de cancelación</strong></p>
-        Créditos ganados: <strong><%= @user.inverse_lessons.where( status_id: "Perdida por el profesor").count(:time_duration_id) %> </strong> &nbsp &nbsp
-        Créditos perdidos: <strong><%= @user.inverse_lessons.where( status_id: "Perdida por el estudiante").count(:time_duration_id) %> </strong> &nbsp &nbsp
-      </div>      <h1><%= t('lessons_title') %></h1>
-  </div>
+<div class="container">
+  <input class="form-control" id="myInput" type="text" placeholder="Filtra..">
+</div>
+
+<br>
 
 <table class="table">
   <thead>
@@ -25,7 +23,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="filterTable">
     <% for user in @lessons_students %>
       <tr>
         <td><%= user.class_type_id %></td>
@@ -40,5 +38,6 @@
   </tbody>
 </table>
 
-<br>
+
+<script src="assets/javascripts/filer_table.js"></script>
 

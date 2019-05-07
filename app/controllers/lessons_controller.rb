@@ -70,6 +70,8 @@ class LessonsController < ApplicationController
 
     if @lesson.save
       redirect_to @lesson, notice: 'Lesson was successfully created.'
+      LessonMailer.teacher_email(current_user).deliver
+      LessonMailer.student_email(current_user).deliver
     else
       render :new
     end

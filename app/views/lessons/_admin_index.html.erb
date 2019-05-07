@@ -37,11 +37,11 @@
       <% @lessons.each do |lesson| %>
         <tr>
           <td><%= link_to lesson.id, lesson %></td>
-          <td><%= lesson.created_at.to_formatted_s(:long) %></td>
+          <td><%= lesson.created_at.time %></td>
           <td><%= lesson.class_type_id %></td>
           <td> <%= link_to User.find_by(id: "#{lesson.student_id}").name, "users/#{lesson.student_id}" %></td>
           <td> <%= link_to User.find_by(id: "#{lesson.user_id}").name, "users/#{lesson.user_id}" %></td>
-          <td><%= lesson.date_id.to_formatted_s(:long) %></td>
+          <td><%= lesson.date_id.to_time %></td>
           <td><%= lesson.time_duration_id/60 %><p> <%= t('hours') %> </p></td>
           <td> <%= Language.find_by(id: "#{lesson.language_id}").name %></td>
           <td><%= lesson.status_id %></td>

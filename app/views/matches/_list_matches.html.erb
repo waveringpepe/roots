@@ -14,6 +14,7 @@
   <table class="table">
     <thead>
       <tr>
+        <th>Fecha de creación</th>
         <th>Match ID</th>
         <th>ID</th>
         <th><%= t('teacher_name_class') %></th>
@@ -27,6 +28,7 @@
     <tbody>
       <% @matches.each do |match| %>
         <tr>
+          <td><%= match.created_at.to_formatted_s(:short) %></td>
           <td><%= link_to match.id, match %></td>
           <td><%= match.user_id %></td>
           <td><%= User.find_by(id: "#{match.user_id}").name %></td>

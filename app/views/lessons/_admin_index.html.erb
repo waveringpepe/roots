@@ -15,10 +15,21 @@
 
 <br>
 
+<div class="container">
+  <div class="row text-center">
+    <div class="col-sm-4"><strong> Tu tiempo local:</strong> <%= Time.current.in_time_zone %> </div>
+    <div class="col-sm-4"><strong> Current usertime zone:</strong> <%= Time.zone %> </div>
+    <div class="col-sm-4"><strong> Current usertime zone:</strong> <%= Time.zone.now.to_formatted_s(:long) %> </div>
+  </div>
+</div> 
+
+<br>
+
 <div class="table-responsive-sm">
-  <table class="table">
+  <table class="table text-center">
     <thead>
       <tr>
+        <th>Teachers Time Zone</th>
         <th><%= t('class_id') %></th>
         <th><%= t('createad_date') %></th>
         <th><%= t('type_of_class') %></th>
@@ -36,12 +47,13 @@
     <tbody id="filterTable">
       <% @lessons.each do |lesson| %>
         <tr>
+          <td><%=  User.find_by(id: "#{lesson.user_id}").time_zone %></td>
           <td><%= link_to lesson.id, lesson %></td>
-          <td><%= lesson.created_at.time %></td>
+          <td><%= local_time(lesson.created_at) %></td>
           <td><%= lesson.class_type_id %></td>
-          <td> <%= link_to User.find_by(id: "#{lesson.student_id}").name, "users/#{lesson.student_id}" %></td>
-          <td> <%= link_to User.find_by(id: "#{lesson.user_id}").name, "users/#{lesson.user_id}" %></td>
-          <td><%= lesson.date_id.to_time %></td>
+          <td><%= link_to User.find_by(id: "#{lesson.student_id}").name, "users/#{lesson.student_id}" %></td>
+          <td><%= link_to User.find_by(id: "#{lesson.user_id}").name, "users/#{lesson.user_id}" %></td>
+          <td><%= local_time(lesson.date_id) %></td>
           <td><%= lesson.time_duration_id/60 %><p> <%= t('hours') %> </p></td>
           <td> <%= Language.find_by(id: "#{lesson.language_id}").name %></td>
           <td><%= lesson.status_id %></td>

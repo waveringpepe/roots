@@ -27,8 +27,8 @@
     <% for user in @lessons_students %>
       <tr>
         <td><%= user.class_type_id %></td>
-        <td> <%= link_to User.find_by(id: "#{user.user_id}").name, "users/#{user.user_id}" %></td>
-        <td><%= user.date_id.to_formatted_s(:long) %></td>
+        <td><%= link_to User.find_by(id: "#{user.user_id}").name, "users/#{user.user_id}" %></td>
+        <td><%= local_time(user.date_id) %></td>
         <td><%= user.time_duration_id/60 %><p><%= t('hours') %></p></td>
         <td> <%= Language.find_by(id: "#{user.language_id}").name %></td>
         <td><%= user.status_id %></td>

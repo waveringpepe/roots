@@ -30,7 +30,7 @@
         <td><%= link_to User.find_by(id: "#{user.user_id}").name, "users/#{user.user_id}" %></td>
         <td><%= local_time(user.date_id) %></td>
         <td><%= user.time_duration_id/60 %><p><%= t('hours') %></p></td>
-        <td> <%= Language.find_by(id: "#{user.language_id}").name %></td>
+        <td><%= Language.find_by(id: "#{user.language_id}").name %></td>
         <td><%= user.status_id %></td>
         <td><%= mail_to "hello@5roots.co", t('report_class'), subject: t('report_subject') + " #{user.id} ", body: t('report_body_1') + " #{User.find_by(id: "#{user.student_id}").name}" + t('report_body_2') + " #{user.id} " + t('report_body_3'), class: "btn btn-outline-danger" %></td>
       </tr>

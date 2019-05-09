@@ -444,8 +444,9 @@ es:
   no_students_message: "Aún no tienes estudiantes, espera a que se te asignen para que puedas añadir clases."
   report_class: "Reportar"
   report_subject: "Reporte de la clase con número de ID:"
-  report_body_1: "Hola soy"
-  report_body_2: " y me gustaría reportar la classe con el ID:"
+  report_body_1_student: "Hola soy el estudiante"
+  report_body_1_teacher: "Hola soy el profesor"
+  report_body_2: " y me gustaría reportar la clase con el ID:"
   report_body_3: "porque"
 
   #lessons#form#edit

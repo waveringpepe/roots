@@ -474,7 +474,8 @@ en:
   no_students_message: "You currently have no students assigned, wait to be assigned a student in order to be able to add lessons."
   report_class: "Report"
   report_subject: "Report of the lesson with the ID:"
-  report_body_1: "Hello i'm"
+  report_body_1_student: "Hello i'm the student"
+  report_body_1_teacher: "Hello i'm the teacher"
   report_body_2: " and I would like to report the lesson with the ID:"
   report_body_3: "because"
 

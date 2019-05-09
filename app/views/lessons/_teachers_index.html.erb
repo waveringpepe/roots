@@ -54,9 +54,7 @@
                 <td><%= link_to '', edit_lesson_path(user),class:"fa fa-edit fa-x" %></td>
                 <td><%= link_to '', user, method: :delete, data: { confirm: t('delete_message') }, class:"fa fa-close fa-x",style:"color:#DC3C45" %></td>
               <% else %>
-
-              <td><%= mail_to "hello@5roots.co", t('report_class'), subject: t('report_subject') + " #{user.id} ", body: t('report_body_1_teacher') + " #{User.find_by(id: "#{user.user_id}").name}" + t('report_body_2') + " #{user.id} " + t('report_body_3'), class: "btn btn-outline-danger" %></td>
-
+                <td><%= mail_to "hello@5roots.co", t('report_class'), subject: t('report_subject') + " #{user.id} ", body: t('report_body_1_teacher') + " #{User.find_by(id: "#{user.user_id}").name}" + t('report_body_2') + " #{user.id} " + t('report_body_3'), class: "btn btn-outline-danger" %></td>
               <% end %>
               </tr>
             <% end %>

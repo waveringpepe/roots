@@ -28,5 +28,31 @@ class LessonMailer < ApplicationMailer
 
 	end
 
+	def cancel_lesson_student(lesson)
+		@lesson = lesson
+		@teacher_name = User.find_by(id: "#{@lesson.user_id}").name
+		@student_name = User.find_by(id: "#{@lesson.student_id}").name
+		@teacher_email = User.find_by(id: "#{@lesson.user_id}").email
+		@lesson_language = Language.find_by(id: "#{@lesson.language_id}").name
+		@teacher_timezone = User.find_by(id: "#{@lesson.user_id}").time_zone
+		@lesson_date = @lesson.date_id.in_time_zone(@teacher_timezone).to_formatted_s(:long_ordinal)
+
+		mail to: @teacher_email, subject: "#{User.find_by(id: "#{@lesson.student_id}").name} canceló la clase de #{Language.find_by(id: "#{@lesson.language_id}").name}"
+
+	end
+
+	def cancel_lesson_teacher(lesson)
+		@lesson = lesson
+		@teacher_name = User.find_by(id: "#{@lesson.user_id}").name
+		@student_name = User.find_by(id: "#{@lesson.student_id}").name
+		@student_email = User.find_by(id: "#{@lesson.student_id}").email
+		@lesson_language = Language.find_by(id: "#{@lesson.language_id}").name
+		@student_timezone = User.find_by(id: "#{@lesson.student_id}").time_zone
+		@lesson_date = @lesson.date_id.in_time_zone(@student_timezone).to_formatted_s(:long_ordinal)
+
+		mail to: @student_email, subject: "#{User.find_by(id: "#{@lesson.user_id}").name} canceló la clase de #{Language.find_by(id: "#{@lesson.language_id}").name}"
+
+	end
+
 
 end

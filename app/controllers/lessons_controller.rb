@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
-  access all: [:index], user: {except: [:new, :destroy, :edit, :create, :update, :show]}, teacher: [:new, :destroy, :edit, :create, :update, :show], admin: :all
+  access all: [:index], user: {except: [:new, :edit, :create, :update, :show]}, teacher: [:new, :destroy, :edit, :create, :update, :show], admin: :all
 
   # GET /lessons
   def index
@@ -89,7 +89,12 @@ class LessonsController < ApplicationController
   # DELETE /lessons/1
   def destroy
     @lesson.destroy
-    redirect_to lessons_url, notice: 'Lesson was successfully destroyed.'
+    redirect_to lessons_url, notice: "Lesson with id: #{@lesson.id} was successfully destroyed."
+    if current_user.has_roles?(:teacher)
+      LessonMailer.cancel_lesson_teacher(@lesson).deliver
+    elsif current_user.has_roles?(:user)
+      LessonMailer.cancel_lesson_student(@lesson).deliver
+    end
   end
 
   private

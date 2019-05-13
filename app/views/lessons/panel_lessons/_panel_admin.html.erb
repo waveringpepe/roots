@@ -1,15 +1,15 @@
   <div class="p-3 mb-2 bg-light text-dark text-center">
-    Clases registradas:<strong> <%= @lessons.total_entries %></strong> &nbsp &nbsp
-    Clases próximas: <strong><%= @proximas_admin %></strong> &nbsp &nbsp
-    Clases completadas: <strong><%= @completadas_admin %></strong> &nbsp &nbsp
-    Horas completadas: <strong><%= @horas_completadas_admin %></strong> hrs &nbsp &nbsp
+    <%= t('lesson_registered_title') %>:<strong> <%= @lessons.total_entries %></strong> &nbsp &nbsp
+    <%= t('lesson_next_title') %>: <strong><%= @proximas_admin %></strong> &nbsp &nbsp
+    <%= t('lesson_completed_title') %>: <strong><%= @completadas_admin %></strong> &nbsp &nbsp
+    <%= t('lessons_hours_title') %>: <strong><%= @horas_completadas_admin %></strong> hrs &nbsp &nbsp
   </div>
   <div class="p-3 mb-2 bg-light text-dark text-center">
-    Deuda a profesores:  <strong><%= @deuda_profesores_admin %></strong> MXN &nbsp &nbsp 
-    Total pagado a profesores: <strong><%= @monto_total_pagado_admin %> </strong> MXN &nbsp &nbsp
+    <%= t('lessons_teachers_debt_title') %>:  <strong><%= @deuda_profesores_admin %></strong> MXN &nbsp &nbsp 
+    <%= t('lessons_total_paid_teachers_title') %>: <strong><%= @monto_total_pagado_admin %> </strong> MXN &nbsp &nbsp
   </div>
   <div class="p-3 mb-2 bg-light text-dark text-center">
-    <p><strong>Política de cancelación</strong></p>
-    Clases perdidas por los profesores: <strong><%= @clases_perdidas_profesores_admin  %> </strong> / <strong><%= @monto_perdido_profesores_admin %></strong> MXN &nbsp &nbsp
-    Clases perdidas por estudiantes: <strong><%= @clases_perdidas_estudiantes_admin  %> </strong> / <strong><%= @monto_perdido_estudiantes_admin %> </strong> MXN 
+    <p><strong><%= t('lessons_cancelation_policy_title') %></strong></p>
+    <%= t('lessons_lost_by_teachers_title') %>: <strong><%= @clases_perdidas_profesores_admin  %> </strong> / <strong><%= @monto_perdido_profesores_admin %></strong> MXN &nbsp &nbsp
+    <%= t('lessons_lost_by_students_title') %>: <strong><%= @clases_perdidas_estudiantes_admin  %> </strong> / <strong><%= @monto_perdido_estudiantes_admin %> </strong> MXN 
   </div>

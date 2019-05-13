@@ -31,9 +31,9 @@
           <td><%= match.created_at.to_formatted_s(:short) %></td>
           <td><%= link_to match.id, match %></td>
           <td><%= match.user_id %></td>
-          <td><%= User.find_by(id: "#{match.user_id}").name %></td>
+          <td><%= User.find_by(id: "#{match.user_id}").name.titleize %></td>
           <td><%= match.student_id %></td>
-          <td><%= User.find_by(id: "#{match.student_id}").name %></td>
+          <td><%= User.find_by(id: "#{match.student_id}").name.titleize %></td>
           <td><%= Language.find_by(id: "#{match.language_id}").name %></td>
           <td><%= link_to '', edit_match_path(match), class:"fa fa-edit fa-x" %></td>
           <td><%= link_to '', match, method: :delete, data: { confirm: t('delete_message') }, class:"fa fa-close fa-x",style:"color:#DC3C45" %></td>

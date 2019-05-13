@@ -1,13 +1,13 @@
 <div class="p-3 mb-2 bg-light text-dark text-center">
-  Clases próximas: <strong><%= @clases_proximas_estudiantes %></strong>  &nbsp &nbsp  &nbsp
-  Clases completadas: <strong><%= @clases_completadas_estudiantes %></strong> &nbsp &nbsp &nbsp
-  Horas completadas: <strong><%= @horas_completadas_estudiantes %></strong> hrs
+  <%= t('lesson_next_title') %>: <strong><%= @clases_proximas_estudiantes %></strong>  &nbsp &nbsp  &nbsp
+  <%= t('lesson_completed_title') %>: <strong><%= @clases_completadas_estudiantes %></strong> &nbsp &nbsp &nbsp
+  <%= t('lessons_hours_title') %>: <strong><%= @horas_completadas_estudiantes %></strong> hrs
 </div>
 
 <div class="p-3 mb-2 bg-light text-dark text-center">
-  <p><strong>Política de cancelación</strong></p>
-  Créditos ganados: <a href="#" data-toggle="tooltip" title="Créditos ganados = Número de clases en las que aplique la política de cancelación de clases."><%= @clases_ganadas_estudiantes %> </a> &nbsp &nbsp
-  Créditos perdidos: <a href="#" data-toggle="tooltip" title="Creditos perdidos = Número de clases en las que me aplicaron la política de cancelación de clases."><%= @clases_perdidas_estudiantes %> </a> &nbsp &nbsp
+  <p><strong><%= t('lessons_cancelation_policy_title') %></strong></p>
+  <%= t('credits_won_students') %>: <a href="#" data-toggle="tooltip" title= "<%= t('credits_won_students_tooltip') %>"><%= @clases_ganadas_estudiantes %> </a> &nbsp &nbsp
+  <%= t('credits_lost_students') %>: <a href="#" data-toggle="tooltip" title="<%= t('credits_lost_students_tooltip') %>"><%= @clases_perdidas_estudiantes %> </a> &nbsp &nbsp
 </div>
 
 <script>

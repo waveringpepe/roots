@@ -448,6 +448,9 @@ es:
   report_body_1_teacher: "Hola soy el profesor"
   report_body_2: " y me gustaría reportar la clase con el ID:"
   report_body_3: "porque"
+  cancel_lesson_btn: "Cancelar"
+  timezone_tootltip: "Las horas se muestran en la zona horaria local."
+  cancel_lesson_tooltip: "Puedes cancelar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces la perderás."
 
   #lessons#form#edit
   regular_class_type: "Regular"
@@ -461,6 +464,36 @@ es:
   lost_lesson_student: "Perdida por el estudiante"
   yes_lesson: "Si"
   no_lesson: "No"
+  note_timezone_1: "Nota:"
+  note_timezone_2: "Recuerda que la clase se va a registrar dentro de la siguiente zona horaria:"
+  note_timezone_3: "Si esta no es tu zona horaria actual, ve y edítala a tu perfil."
+
+  #lesons#panel_admin#panel_students#panel_teachers
+  lesson_registered_title: "Clases registradas"
+  lesson_next_title: "Clases próximas"
+  lesson_completed_title: "Clases completadas"
+  lessons_hours_title: "Horas completadas"
+  lessons_teachers_debt_title: "Deuda a profesores"
+  lessons_total_paid_teachers_title: "Total pagado a profesores"
+  lessons_cancelation_policy_title: "Política de cancelación"
+  lessons_lost_by_teachers_title: "Clases perdidas por los profesores"
+  lessons_lost_by_students_title: "Clases perdidas por estudiantes"
+  credits_won_students: "Créditos ganados"
+  credits_won_students_tooltip: "Créditos ganados = Número de clases en las que aplicaste la política de cancelación de clases."
+  credits_lost_students: "Créditos perdidos"
+  credits_lost_students_tooltip: Créditos perdidos = Número de clases en las que se te aplicó la política de cancelación de clases.
+  incoming_money_teachers: "Dinero por recibir"
+  incoming_money_teachers_tooltip: "Dinero por recibir = (Horas completadas no pagadas al profesor * $200 MXN) + Dinero ganado no pagado al profesor - Dinero perdido no cobrado por 5roots"
+  total_money_earned_teacher: "Dinero total ganado"
+  total_money_earned_teacher_tooltip: "Dinero total ganado = (Horas completadas pagadas al profesor *$200MXN) + Dinero ganado pagado al profesor - Dinero perdido cobrado por 5roots"
+  lessons_won_teachers: "Clases ganadas"
+  lessons_won_teachers_tooltip: "Clases ganadas = Número de clases en las que aplique la política de cancelación de clases."
+  money_won_teacher: "Dinero ganado"
+  money_won_teacher_tooltip: "Dinero ganado = Número horas de las clases ganadas * $200 MXN"
+  lessons_lost_teachers: "Clases perdidas"
+  lessons_lost_teachers_tooltip: "Clases perdidas = Número de clases en las que me aplicaron la política de cancelación de clases."
+  money_lost_teacher: "Dinero perdido"
+  money_lost_teacher_tooltip: "Dinero perdido = Número de horas de las clases perdidas * 200 MXN"
 
 
 

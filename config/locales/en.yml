@@ -478,6 +478,9 @@ en:
   report_body_1_teacher: "Hello i'm the teacher"
   report_body_2: " and I would like to report the lesson with the ID:"
   report_body_3: "because"
+  cancel_lesson_btn: "Cancel"
+  timezone_tootltip: "The hours are displayed in the local time zone."
+  cancel_lesson_tooltip: "You can cancel a lesson at least 24 hours in advance, if you do not do it and you do not attend the lesson you will lose it."
 
   #lessons#form#edit
   regular_class_type: "Regular"
@@ -491,7 +494,37 @@ en:
   lost_lesson_student: "Lost by the student"
   yes_lesson: "Yes"
   no_lesson: "No"
-  
+  note_timezone_1: "Note:"
+  note_timezone_2: "Remember that the class will be registered within the following time zone:"
+  note_timezone_3: "If this is not your current time zone, go and change it in your profile."
+
+  #lesons#panel_admin#panel_students#panel_teachers
+  lesson_registered_title: "Registered lessons"
+  lesson_next_title: "Next lessons"
+  lesson_completed_title: "Completed lessons"
+  lessons_hours_title: "Completed hours"
+  lessons_teachers_debt_title: "Debt to teachers"
+  lessons_total_paid_teachers_title: "Total paid to teachers"
+  lessons_cancelation_policy_title: "Cancellation policy"
+  lessons_lost_by_teachers_title: "Lessons lost by teachers"
+  lessons_lost_by_students_title: "Lessons lost by students"
+  credits_won_students: "Credits won"
+  credits_won_students_tooltip: "Credits won = Number of lessons where you applied the cancellation policy."
+  credits_lost_students: "Credits lost"
+  credits_lost_students_tooltip: "Credits lost = Number of lessons where the cancellation policy was applied to you."
+  incoming_money_teachers: "Money to receive"
+  incoming_money_teachers_tooltip: "Money to receive = (Completed hours not paid to the teacher * $200 MXN) + Money earned not yet paid to the teacher - Money lost not yet charged by 5roots."
+  total_money_earned_teacher: "Total money won"
+  total_money_earned_teacher_tooltip: "Total money won = (Completed hours not paid to the teacher * $200 MXN) + Money earned paid to the teacher - Money lost charged by 5roots."
+  lessons_won_teachers: "Lessons won"
+  lessons_won_teachers_tooltip: "Lessons won = Number of lessons where you applied the cancellation policy."
+  money_won_teacher: "Money won"
+  money_won_teacher_tooltip: "Money won = (Total of hours of the lessons won * $200 MXN) "
+  lessons_lost_teachers: "Lessons lost"
+  lessons_lost_teachers_tooltip: "Lessons lost = Number of lessons where the cancellation policy was applied to you."
+  money_lost_teacher: "Money lost"
+  money_lost_teacher_tooltip: "Money lost = (Total of hours of the lessons lost * $200 MXN)"
+
 
 
 

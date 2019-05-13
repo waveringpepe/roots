@@ -32,7 +32,7 @@
             <tr>
               <th><%= t('type_of_class') %></th>
               <th><%= t('student_name_class') %></th>
-              <th><%= t('incoming_date_class') %> <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="Las fechas mostradas en este panel son basadas en la zona horaria que te encuentras en este momento." ></a></th>
+              <th><%= t('incoming_date_class') %> <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="<%= t('timezone_tootltip') %>" ></a></th>
               <th><%= t('class_duration') %></th>
               <th><%= t('class_language') %></th>
               <th><%= t('status_class') %></th>
@@ -44,7 +44,7 @@
             <% for user in @lessons_teachers %>
               <tr>
                 <td><%= link_to user.class_type_id, user %></td>
-                <td><%= link_to User.find_by(id: "#{user.student_id}").name, "users/#{user.student_id}" %></td>          
+                <td><%= link_to User.find_by(id: "#{user.student_id}").name.titleize, "users/#{user.student_id}" %></td>
                 <td><%= local_time(user.date_id) %></td>
                 <td><%= user.time_duration_id/60 %><p> <%= t('hours') %> </p></td>
                 <td> <%= Language.find_by(id: "#{user.language_id}").name %></td>

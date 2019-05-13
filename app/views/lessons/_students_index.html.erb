@@ -16,11 +16,11 @@
     <tr>
       <th><%= t('type_of_class') %></th>
       <th><%= t('teacher_name_class') %></th>
-      <th><%= t('incoming_date_class') %> <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="Las fechas mostradas en este panel son basadas en la zona horaria que te encuentras en este momento." ></a></th>
+      <th><%= t('incoming_date_class') %> <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="<%= t('timezone_tootltip') %>" ></a></th>
       <th><%= t('class_duration') %></th>
       <th><%= t('class_language') %></th>
       <th><%= t('status_class') %> </th>
-      <th>Política de cancelación <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="Puedes cancelar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces la perderás." ></a></th>
+      <th><%= t('lessons_cancelation_policy_title') %> <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="<%= t('cancel_lesson_tooltip') %>" ></a></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,7 +28,7 @@
     <% for user in @lessons_students %>
       <tr>
         <td><%= user.class_type_id %></td>
-        <td><%= link_to User.find_by(id: "#{user.user_id}").name, "users/#{user.user_id}" %></td>
+        <td><%= link_to User.find_by(id: "#{user.user_id}").name.titleize, "users/#{user.user_id}" %></td>
         <td><%= local_time(user.date_id) %></td>
         <td><%= user.time_duration_id/60 %><p><%= t('hours') %></p></td>
         <td><%= Language.find_by(id: "#{user.language_id}").name %></td>
@@ -37,7 +37,7 @@
         <td><%= mail_to "hello@5roots.co", t('report_class'), subject: t('report_subject') + " #{user.id} ", body: t('report_body_1_student') + " #{User.find_by(id: "#{user.student_id}").name}" + t('report_body_2') + " #{user.id} " + t('report_body_3'), class: "btn btn-outline-danger" %></td>
       <% elsif local_time(user.date_id) > local_time(Time.now + 86400)  %>
 
-      <td><%= link_to 'Cancelar', user, method: :delete, data: { confirm: t('delete_message') }, class: "btn btn-danger" %></td>
+      <td><%= link_to t('cancel_lesson_btn'), user, method: :delete, data: { confirm: t('delete_message') }, class: "btn btn-danger" %></td>
 
       <% else %>
         <td></td>

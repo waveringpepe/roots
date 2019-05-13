@@ -149,7 +149,7 @@
         </div>
         <div class="form-group col-md-4">
             <%= f.label :time_zone, t("timezone_title_form"), :class => "col-xs-3" %>
-            <%= f.time_zone_select(:time_zone, nil, {}, {class: "form-control"})%>
+            <%= f.time_zone_select(:time_zone, nil, {default: "Mexico City"}, {class: "form-control"})%>
         </div>
       </div>
     </div>

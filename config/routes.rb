@@ -51,7 +51,7 @@ scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 	end
 
 	authenticated :user, ->(u) { u.has_role?(:user) } do
-	  root to: "pages#students_home", as: :students_root
+	  root to: "lessons#index" , as: :students_root
 	end
 
 end

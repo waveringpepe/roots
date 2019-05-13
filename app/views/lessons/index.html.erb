@@ -1,4 +1,4 @@
-  
+
 <div class="container">
   <% if current_user.role == :teacher %>
 
@@ -11,6 +11,24 @@
     </div>
 
   <% elsif current_user.role == :user %>
+
+  <% if current_user.subscribed? %>
+    <% if current_user.expires_at? %>
+        <div class="container">
+          <%=link_to t('subscribe_again'), memberships_path, class:"btn btn-warning btn-lg btn-block" %>
+        </div>
+
+        <br>
+    <% end %>
+  <% else %>
+
+    <div class="container">
+      <%=link_to t('choose_membership'), memberships_path, class:"btn btn-warning btn-lg btn-block" %>
+    </div>
+
+    <br>
+    
+  <% end %>  
 
     <%= render 'students_index' %>
 

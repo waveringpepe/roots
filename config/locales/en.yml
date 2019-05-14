@@ -249,7 +249,7 @@ en:
   sign_up_teacher: "Apply to teach"
   description_teacher: "Hi, I'm Pepe, I was born in Florence, but now I live in Mexico City. I've been teaching Italian for 10 years. I love being able to transmit my culture through the language and I also love Italian cuisine."
   description_teacher1: "Add a brief description about yourself"
-  languages_teacher_speak: "List all the languages that you speak fluently"
+  languages_teacher_speak: "List all the languages that you speak fluently*"
   languages_teacher_speak1: "English, Spanish, Chinese"
   
   #pages/students_homepage

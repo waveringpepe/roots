@@ -214,7 +214,7 @@ es:
   sign_up_teacher: "Aplicar como profesor"
   description_teacher: "Hola soy Pepe, nací en Florencia aunque ahora vivo en CDMX. Llevo 10 años dando clases de italiano tanto en instituciones como particulares. Me encanta poder transmitir mi cultura a través del idioma y además me encanta la gastronomía Italiana"
   description_teacher1: "Agrega una breve descripción para que las personas sepan más sobre ti"
-  languages_teacher_speak: "Lista todos los idiomas que hablas de manera fluida"
+  languages_teacher_speak: "Lista todos los idiomas que hablas de manera fluida*"
   languages_teacher_speak1: "Español, Inglés, Chino"
 
 
@@ -291,8 +291,8 @@ es:
 
 
   #devise/mails
-  welcome_mail: "Bienvenido(a) a 5roots"
-  confirm_account_text1: 'Puedes confirmar tu cuenta dando click en el siguiente link:'
+  welcome_mail: "Hola bienvenido(a) a 5roots"
+  confirm_account_text1: 'Es necesario confirmar tu cuenta para poder acceder al sitio, da click en el siguiente link:'
   confirm_my_account: "Confirmar mi cuenta"
 
   #memberships/edit

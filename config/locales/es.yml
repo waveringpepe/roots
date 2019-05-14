@@ -496,6 +496,22 @@ es:
   money_lost_teacher: "Dinero perdido"
   money_lost_teacher_tooltip: "Dinero perdido = Número de horas de las clases perdidas * 200 MXN"
 
+  #mailer#lessons
+  mail_lessons_info_title: "Información de la clase"
+  mail_lessons_teacher_name: "Nombre del profesor"
+  mail_lessons_student_name: "Nombre del estudiante"
+  mail_lessons_date: "Fecha de la clase"
+  mail_lessons_date_timezone: "en la zona horaria"
+  mail_lessons_duration: "Duración de la clase"
+  mail_lessons_lesson_of: "Clase de"
+  mail_lessons_note: "Nota"
+  mail_lessons_note_1: "Si no reconoces esta clase o quieres cancelar, da click aquí."
+  mail_lessons_note_2: "Ir a mis clases"
+  mail_cancel_lesson_of: "canceló la clase de"
+  mail_cancel_lesson_date: "con fecha de"
+
+
+
 
 
 

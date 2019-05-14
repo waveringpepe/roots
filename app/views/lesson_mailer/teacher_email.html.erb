@@ -1,10 +1,10 @@
 <div class="container">
-	<h2>Información de la clase</h2>
+	<h2><%= t('mail_lessons_info_title') %></h2>
 
 	<ul style="list-style-type:none;">
-		<li>Nombre del estudiante: <strong><%= @student_name %></strong></li>
-		<li>Fecha de la clase: <strong><%= @lesson_date %></strong> en la zona horaria <%= @teacher_timezone %></li>
-		<li>Duración de la clase: <strong><%= @lesson_duration %>Hrs</strong></li>
-		<li>Clase de: <strong><%= @lesson_language %></strong></li>
+		<li><%= t('mail_lessons_student_name') %>: <strong><%= @student_name %></strong></li>
+		<li><%= t('mail_lessons_date') %>: <strong><%= @lesson_date %></strong> <%= t('mail_lessons_date_timezone') %> <%= @teacher_timezone %></li>
+		<li><%= t('mail_lessons_duration') %>: <strong><%= @lesson_duration %>Hrs</strong></li>
+		<li><%= t('mail_lessons_lesson_of') %>: <strong><%= @lesson_language %></strong></li>
 	</ul>
 </div>

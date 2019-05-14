@@ -1,6 +1,6 @@
 <div class="container">
-	<h3 style="color:MediumSeaGreen;"><b>Información del estudiante</b></h3>
-	<b><%= t('name') %>:</b> <%= @student.name %>, da click para <%= link_to "visitar su perfil", "https://www.5roots.co/es/users/#{@student.id}"%>. <br/>
+	<h3 style="color:MediumSeaGreen;"><b><%= t('mail_match_teacher_student_info') %></b></h3>
+	<b><%= t('name') %>:</b> <%= @student.name %>, <%= t('mail_match_teacher_info_1') %> <%= link_to t('mail_match_teacher_info_2'), "https://www.5roots.co/es/users/#{@student.id}"%>. <br/>
 	<b>Whatsapp:</b> <%= @student.phone_number %><br/>
 	<b>E-mail:</b> <%= @student.email %><br/>
 	<b>Skype:</b> <%= @student.skype %><br/>
@@ -18,11 +18,11 @@
 
 	<hr>
 
-	<h4 style="color:MediumSeaGreen;">Da la bienvenida a tu estudiante</h4>
-	<p>Nos encantaría que fueras tu quien da la bienvenida al estudiante y le escribas cuanto antes para que se pongan de acuerdo para la primer clase.</p>
+	<h4 style="color:MediumSeaGreen;"><%= t('mail_match_teacher_greetings') %></h4>
+	<p><%= t('mail_match_teacher_greetings_1') %></p>
 
-	<p><b style="color:MediumSeaGreen;">Puedes copiar el siguiente mensaje:</b></p>
-	<p>Hola <%= @student.first_name %> soy <%= @teacher.first_name %> tu nuevo/a profesor/a de <b><%= @language.name %></b> en 5roots, estoy muy emocionado/a por empezar con las clases, me encantaría tener la primera cuanto antes. Me comentan que estás disponible en los siguientes horarios: <b><%= @student.schedule %></b> y que tienes una membresía con <b>	
+	<p><b style="color:MediumSeaGreen;"><%= t('mail_match_teacher_greetings_2') %></b></p>
+	<p><%= t('mail_match_teacher_greetings_3') %> <%= @student.first_name %> <%= t('mail_match_teacher_greetings_4') %> <%= @teacher.first_name %> <%= t('mail_match_teacher_greetings_5') %> <b><%= @language.name %></b> <%= t('mail_match_teacher_greetings_6') %> <b><%= @student.schedule %></b> <%= t('mail_match_teacher_greetings_7') %> <b>	
 
       <% if @student.plan_id == 5 %>
         <%= t('basic_membership_hours') %>
@@ -35,48 +35,39 @@
       <% end %></b>
   </p>
 
-	<p>Saludos y mucho gusto!</p>
+	<p><%= t('mail_match_teacher_greetings_8') %></p>
 
 	<hr>
 
-	<h3 style="color:Red;"><b>Política de cancelación o cambio de una clase</b></h3>
-	<p>Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces se te penalizará con el costo de lo equivalente a la clase que no asististe, ese monto se utilizará para reponer la clase al estudiante.</p>
+	<h3 style="color:Red;"><b><%= t('mail_match_cancelation_policy') %></b></h3>
+	<p><%= t('mail_match_teacher_cancelation_policy') %></p>
 
 	<hr>
 
-	<b><p style="color:MediumSeaGreen;">Aquí te dejamos algunas recomendaciones para que ya lo tengas listo para cuando vayas a tener tu primer clase.</p></b>
+	<b><p style="color:MediumSeaGreen;"><%= t('mail_match_teacher_recomendations') %></p></b>
 
 	<ul>
-		<li>Conoce a tu estudiante.</li>
+		<li><%= t('mail_match_teacher_recomendations_1') %></li>
 			<ul>
-				<li style="color:#3c3c3c;">Hazle preguntas sobre sus intereses para que agregues contenido sobre él mismo en tus clases y despiertes más su interés por aprender.</li>
+				<li style="color:#3c3c3c;"><%= t('mail_match_teacher_recomendations_2') %></li>
 			</ul>
 
-		<li>Definan sus horarios del mes</li>
+		<li><%= t('mail_match_teacher_recomendations_3') %></li>
 			<ul>
-				<li style="color:#3c3c3c;">Ponte de acuerdo con el estudiante y definan los horarios que van a tener semana con semana.</li>
-				<li style="color:#3c3c3c;">De este te pediremos una copia al terminar la primer clase.</li>
+				<li style="color:#3c3c3c;"><%= t('mail_match_teacher_recomendations_4') %></li>
 			</ul>
 
-		<li>Presenta al estudiante un plan de trabajo</li>
+		<li><%= t('mail_match_teacher_recomendations_5') %></li>
 			<ul>
-				<li style="color:#3c3c3c;">Es importante que le presentes un plan general de trabajo en la primer clase para que el estudiante vea como va a ir creciendo en el tiempo y que vea la seriedad de la clase.</li>
-				<li style="color:#3c3c3c;">Sabemos que este plan va a ir cambiando para enfocarlo cada vez más en el perfil del estudiante, sin embargo es importante que le muestres algo en concreto desde el inicio.</li>
-				<li style="color:#3c3c3c">De este te pediremos una copia al terminar la primer clase.</li>
+				<li style="color:#3c3c3c;"><%= t('mail_match_teacher_recomendations_6') %></li>
+				<li style="color:#3c3c3c"><%= t('mail_match_teacher_recomendations_7') %></li>
 			</ul>
 	</ul>
 
 
-	<b>Esperamos que tengas una experiencia increíble con 5roots.</b>
-
-
-	<p>Cualquier duda que surja por favor no dejes de escribirnos por mail a <a href> hello@5roots.co</a></p>
-
-	<p>Por Whats app a +52 1 (81) 2075 151 o +52 1 (81) 2110 1145 o <a href="https://www.5roots.co/es/faq"> visita nuestras preguntas frecuentes.</a> </p>
-
-
-
-	<p><b>Atentamente:
-	El equipo de 5roots.</b></p>
+	<p><%= t('mail_match_extra_info_1') %> <a href> hello@5roots.co</a></p>
+	<p><%= t('mail_match_extra_info_2') %> <a href="https://www.5roots.co/es/faq"> <%= t('mail_match_extra_info_3') %></a> </p>
+	<p><strong><%= t('mail_match_extra_info_4') %></strong></p>
+	<p><strong><%= t('mail_match_extra_info_5') %></strong> <%= t('mail_match_extra_info_6') %></p>
 
 </div>

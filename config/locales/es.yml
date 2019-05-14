@@ -510,6 +510,59 @@ es:
   mail_cancel_lesson_of: "canceló la clase de"
   mail_cancel_lesson_date: "con fecha de"
 
+  #mailer#matches
+  mail_match_greetings_1: "Hola"
+  mail_match_greetings_2: "bienvenido a la comunidad de 5roots!"
+  mail_match_greetings_3: "Aprovechamos para darte una buena noticia, ya tenemos listo a tu profesor! Aquí te dejamos una breve información de él para que lo conozcas previo a tu clase:"
+  mail_match_teacher_info: "Información del profesor"
+  mail_match_teacher_info_1: "da click para"
+  mail_match_teacher_info_2: "visitar su perfil"
+  mail_match_teacher_info_3: "Descripción"
+  mail_match_teacher_info_4: "Horarios preferidos del profesor para dar clases"
+  mail_match_cancelation_policy: "Política de cancelación o cambio de una clase"
+  mail_match_cancelation_policy_1: "Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, 
+                                    si no lo haces así y no asistes a las clase entonces la perderás. Para 5 Roots 
+                                    es muy importante el tiempo que el profesor dedica a preparar una clase por lo 
+                                    que te pedimos que si vas a hacer una cambio le avises con el tiempo debido."
+  mail_match_cancelation_policy_2: "Política de cancelación para una clase de muestra"
+  mail_match_cancelation_policy_3: "Una vez pactada la clase de muestra, tienes 24 horas previas a dicha clase para 
+                                    solicitar un cambio de horario o cancelar. En caso de infringir la política, se 
+                                    te hará un cargo a tu método de pago de $100 MXN."
+  mail_match_extra_info: "En breve tiempo el profesor se pondrá en contacto contigo para que definan el horario de la primer clase."
+  mail_match_extra_info_1: "Cualquier duda escríbenos por mail a"
+  mail_match_extra_info_2: "Por Whats app a +52 1 (81) 2075 151 o +52 1 (81) 2110 1145 o"
+  mail_match_extra_info_3: "visita nuestras preguntas frecuentes."
+  mail_match_extra_info_4: "Esperamos que tengas una experiencia increíble con 5roots."
+  mail_match_extra_info_5: "Atentamente:"
+  mail_match_extra_info_6: "5roots"
+  mail_match_teacher_student_info: "Información del estudiante"
+  mail_match_teacher_cancelation_policy: "Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, si no lo haces así 
+                                          y no asistes a las clase, entonces se te penalizará con el costo de lo equivalente a la clase que no asististe, ese monto se utilizará 
+                                          para reponer la clase al estudiante."
+  mail_match_teacher_greetings: "Da la bienvenida a tu estudiante"
+  mail_match_teacher_greetings_1: "Nos encantaría que seas tú quien dé la bienvenida al estudiante y le escribas cuanto antes para que se pongan de acuerdo para la primer clase."
+  mail_match_teacher_greetings_2: "Puedes utilizar el siguiente mensaje:"
+  mail_match_teacher_greetings_3: "Hola"
+  mail_match_teacher_greetings_4: "soy"
+  mail_match_teacher_greetings_5: "tu nuevo/a profesor/a de"
+  mail_match_teacher_greetings_6: "en 5roots, estoy muy emocionado/a por empezar con las clases, me encantaría tener la primera cuanto antes. Sé que estás disponible en los siguientes horarios:"
+  mail_match_teacher_greetings_7: "y que tienes una membresía con"
+  mail_match_teacher_greetings_8: "Saludos y mucho gusto!"
+  mail_match_teacher_recomendations: "Aquí te dejamos algunas recomendaciones para que estes listo para tu primer clase."
+  mail_match_teacher_recomendations_1: "Conoce a tu estudiante."
+  mail_match_teacher_recomendations_2: "Hazle preguntas sobre sus intereses para que agregues contenido sobre él mismo en tus clases y despiertes más su interés por aprender."
+  mail_match_teacher_recomendations_3: "Definan sus horarios del mes"
+  mail_match_teacher_recomendations_4: "Definan los horarios que van a tener semana con semana."
+  mail_match_teacher_recomendations_5: "Presenta al estudiante un plan de trabajo"
+  mail_match_teacher_recomendations_6: "Es importante que le presentes un plan general de trabajo en la primer clase para que el estudiante vea como va a ir creciendo en el tiempo y vea seriedad en la clase."
+  mail_match_teacher_recomendations_7: "Te pediremos una copia de este plan de trabajo."
+
+
+
+
+                                          
+    
+
 
 
 

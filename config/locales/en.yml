@@ -540,6 +540,55 @@ en:
   mail_cancel_lesson_of: "canceled the lesson of"
   mail_cancel_lesson_date: "with date"
 
+  #mailer#matches
+  mail_match_greetings_1: "Hello"
+  mail_match_greetings_2: "welcome to 5 roots community!"
+  mail_match_greetings_3: "We take advantage to give you good news, 
+                            we have your teacher ready! and we leave you brief information about him so 
+                            you know him before your first lesson:"
+  mail_match_teacher_info: "Teacher information"
+  mail_match_teacher_info_1: "click here to"
+  mail_match_teacher_info_2: "visit his/her profile"
+  mail_match_teacher_info_3: "Description"
+  mail_match_teacher_info_4: "Preferred schedules to teach"
+  mail_match_cancelation_policy: "Cancelation or change policy"
+  mail_match_cancelation_policy_1: "You can cancel or change a class at least 24 hours in advance, 
+                                    if you do not do it and you do not attend the class then you will lose it. 
+                                    For 5 Roots is very important the time that the teacher devotes to prepare a class, 
+                                    so we ask that if you are going to make a change you notify him with the due time."
+  mail_match_cancelation_policy_2: "Cancelation policy for a trial class"
+  mail_match_cancelation_policy_3: "Once the trial class has been agreed, you have 24 hours prior to the class to request a 
+                                    change of schedule or cancel. In case of violating the policy, you will be charged to your 
+                                    payment method of $ 100 MXN."
+  mail_match_extra_info: "In a short time the teacher will contact you to define the schedule of the first class."
+  mail_match_extra_info_1: "If you have any questions write to us by mail to"
+  mail_match_extra_info_2: "Whatsapp to +52 1 (81) 2075 151 or +52 1 (81) 2110 1145 or"
+  mail_match_extra_info_3: "visit our FAQ."
+  mail_match_extra_info_4: "Have an incredible experience with us!"
+  mail_match_extra_info_5: "Sincerely"
+  mail_match_extra_info_6: "5roots"
+  mail_match_teacher_student_info: "Student information"
+  mail_match_teacher_cancelation_policy: "You can cancel or change a lesson at least 24 hours in advance, if you do not do it 
+                                          and you do not attend the lesson, then you will be penalized with 
+                                          the cost of the equivalent to the class you did not attend, that amount 
+                                          will be used to replace the lesson to the student."
+  mail_match_teacher_greetings: "Welcome your student"
+  mail_match_teacher_greetings_1: "Write to the student as soon as possible so you can define the schedule of the first lesson."
+  mail_match_teacher_greetings_2: "You can use this message:"
+  mail_match_teacher_greetings_3: "Hello"
+  mail_match_teacher_greetings_4: "i'm"
+  mail_match_teacher_greetings_5: "your new teacher of"
+  mail_match_teacher_greetings_6: "in 5roots, I am very excited to start with the classes, I would love to have the first lesson as soon as possible. I know you are available at the following times:"
+  mail_match_teacher_greetings_7: "and that you have a membreship with"
+  mail_match_teacher_greetings_8: "Best regards!"
+  mail_match_teacher_recomendations: "Here are some recommendations for you to be ready for your first lesson."
+  mail_match_teacher_recomendations_1: "Know your student."
+  mail_match_teacher_recomendations_2: "Ask him questions about his interests so yo can add content about himself in your classes and awaken more interest in learning."
+  mail_match_teacher_recomendations_3: "Define the schedule for the month"
+  mail_match_teacher_recomendations_4: "Define the schedules that you are going to have week to week."
+  mail_match_teacher_recomendations_5: "Give the student a study plan"
+  mail_match_teacher_recomendations_6: "It is important that you present a general plan of study in the first lesson so that the student sees how it will grow over time and see seriousness in the lessons."
+  mail_match_teacher_recomendations_7: "We will ask you for a copy of this study plan."
 
 
 

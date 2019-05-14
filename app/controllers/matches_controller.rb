@@ -31,9 +31,9 @@ class MatchesController < ApplicationController
     @match = Match.new(match_params)
 
     if @match.save
-      MatchMailer.teacher_email.deliver
-      MatchMailer.student_email.deliver
       redirect_to @match, notice: 'Match was successfully created.'
+      MatchMailer.teacher_email(@match).deliver
+      MatchMailer.student_email(@match).deliver
     else
       render :new
     end

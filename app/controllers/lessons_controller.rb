@@ -70,8 +70,10 @@ class LessonsController < ApplicationController
 
     if @lesson.save
       redirect_to @lesson, notice: 'Lesson was successfully created.'
-      LessonMailer.teacher_email(current_user).deliver
-      LessonMailer.student_email(current_user).deliver
+      if current_user.has_roles?(:teacher)
+        LessonMailer.teacher_email(current_user).deliver
+        LessonMailer.student_email(current_user).deliver
+      end
     else
       render :new
     end
@@ -93,6 +95,8 @@ class LessonsController < ApplicationController
     if current_user.has_roles?(:teacher)
       LessonMailer.cancel_lesson_teacher(@lesson).deliver
     elsif current_user.has_roles?(:user)
+      LessonMailer.cancel_lesson_student(@lesson).deliver
+    elsif current_user.has_roles?(:admin)
       LessonMailer.cancel_lesson_student(@lesson).deliver
     end
   end

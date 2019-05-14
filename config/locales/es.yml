@@ -442,6 +442,7 @@ es:
   lessons_title_1: "Clase"
   hours: "Horas"
   no_students_message: "Aún no tienes estudiantes, espera a que se te asignen para que puedas añadir clases."
+  no_lessons_message: "Aún no tienes un profesor asignado, espera a que te lo asignemos para que puedas ver tus clases."
   report_class: "Reportar"
   report_subject: "Reporte de la clase con número de ID:"
   report_body_1_student: "Hola soy el estudiante"

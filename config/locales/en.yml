@@ -472,6 +472,7 @@ en:
   lessons_title_1: "Lesson"
   hours: "Hours"
   no_students_message: "You currently have no students assigned, wait to be assigned a student in order to be able to add lessons."
+  no_lessons_message: "You do not have an assigned teacher yet, wait until we assign it to you so you can see your classes."
   report_class: "Report"
   report_subject: "Report of the lesson with the ID:"
   report_body_1_student: "Hello i'm the student"

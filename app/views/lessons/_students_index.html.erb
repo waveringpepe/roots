@@ -1,10 +1,39 @@
-<div class="container">
-  <%= render 'lessons/panel_lessons/panel_students' %>
+  <% if current_user.subscribed? %>
+    <% if current_user.expires_at? %>
+        <div class="container">
+          <%=link_to t('subscribe_again'), memberships_path, class:"btn btn-warning btn-lg btn-block" %>
+        </div>
 
-  <br>
-  
+        <br>
+    <% end %>
+  <% else %>
+
+    <div class="container">
+      <%=link_to t('choose_membership'), memberships_path, class:"btn btn-warning btn-lg btn-block" %>
+    </div>
+
+    <br>
+    
+  <% end %>
+
+
+  <% if current_user.inverse_students.ids.empty? %>
+    <div class="container">
+      <h2 class= "p-3 mb-2 bg-light text-dark"><%= t('no_lessons_message') %></h2>
+    </div>
+
+    <br>
+
+  <% else %>
+      <div class="container">
+        <%= render 'lessons/panel_lessons/panel_students' %>
+      </div>
+
+  <% end %>  
+
+
+<div class="container">  
   <h1><%= t('lessons_title') %></h1>
-
   <br>
 </div>
 

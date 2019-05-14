@@ -71,8 +71,8 @@ class LessonsController < ApplicationController
     if @lesson.save
       redirect_to @lesson, notice: 'Lesson was successfully created.'
       if current_user.has_roles?(:teacher)
-        LessonMailer.teacher_email(current_user).deliver
-        LessonMailer.student_email(current_user).deliver
+        LessonMailer.teacher_email(@lesson).deliver
+        LessonMailer.student_email(@lesson).deliver
       end
     else
       render :new

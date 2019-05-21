@@ -509,6 +509,9 @@ es:
   mail_lessons_note_2: "Ir a mis clases"
   mail_cancel_lesson_of: "canceló la clase de"
   mail_cancel_lesson_date: "con fecha de"
+  mailer_subject_1: "Clase de"
+  mailer_subject_1_a: "con"
+  mailer_subject_2: "canceló la clase de"
 
   #mailer#matches
   mail_match_greetings_1: "Hola"
@@ -556,6 +559,7 @@ es:
   mail_match_teacher_recomendations_5: "Presenta al estudiante un plan de trabajo"
   mail_match_teacher_recomendations_6: "Es importante que le presentes un plan general de trabajo en la primer clase para que el estudiante vea como va a ir creciendo en el tiempo y vea seriedad en la clase."
   mail_match_teacher_recomendations_7: "Te pediremos una copia de este plan de trabajo."
+  match_mailer_subject_1: "te hemos asignado a un estudiante!"
 
 
 

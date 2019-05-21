@@ -16,7 +16,7 @@ class MatchMailer < ApplicationMailer
 
 		email_with_name = %("#{@teacher_name}" < #{@teacher_email} >)
 
-		mail to: email_with_name, subject: "¡#{@teacher_name} te hemos asignado a un estudiante!"
+		mail to: email_with_name, subject: "¡#{@teacher_name} #{t('match_mailer_subject_1')}"
 	end
 
 	def student_email(match)
@@ -32,7 +32,7 @@ class MatchMailer < ApplicationMailer
 		email_with_name = %("#{@student_name}" <#{@student_email}>)
 
 
-		mail to: email_with_name, subject: "¡#{@student_name} te hemos asignado a un profesor!"
+		mail to: email_with_name, subject: "¡#{@student_name} #{t('match_mailer_subject_1')}"
 	end
 
 

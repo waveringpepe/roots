@@ -539,6 +539,10 @@ en:
   mail_lessons_note_2: "Go to my lessons"
   mail_cancel_lesson_of: "canceled the lesson of"
   mail_cancel_lesson_date: "with date"
+  mailer_subject_1: "Lesson of"
+  mailer_subject_1_a: "with"
+  mailer_subject_2: "cancel the lesson of"
+
 
   #mailer#matches
   mail_match_greetings_1: "Hello"
@@ -589,7 +593,7 @@ en:
   mail_match_teacher_recomendations_5: "Give the student a study plan"
   mail_match_teacher_recomendations_6: "It is important that you present a general plan of study in the first lesson so that the student sees how it will grow over time and see seriousness in the lessons."
   mail_match_teacher_recomendations_7: "We will ask you for a copy of this study plan."
-
+  match_mailer_subject_1: "we have assigned you an student!"
 
 
 

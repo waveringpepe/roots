@@ -16,7 +16,7 @@ class LessonMailer < ApplicationMailer
 		@student_email = User.find_by(id: "#{@lesson.student_id}").email
 
 
-		mail to: @teacher_email , subject: "Clase de #{@lesson_language} con #{@student_name}"
+		mail to: @teacher_email , subject: "#{t('mailer_subject_1')} #{@lesson_language} #{t('mailer_subject_1_a')} #{@student_name}"
 
 	end
 
@@ -33,7 +33,7 @@ class LessonMailer < ApplicationMailer
 		@student_email = User.find_by(id: "#{@lesson.student_id}").email
 		
 
-		mail to: @student_email, subject: "Clase de #{@lesson_language} con #{@teacher_name}"
+		mail to: @student_email, subject: "#{t('mailer_subject_1')} #{@lesson_language} #{t('mailer_subject_1_a')} #{@teacher_name}"
 
 	end
 
@@ -46,7 +46,7 @@ class LessonMailer < ApplicationMailer
 		@teacher_timezone = User.find_by(id: "#{@lesson.user_id}").time_zone
 		@lesson_date = @lesson.date_id.in_time_zone(@teacher_timezone).to_formatted_s(:long_ordinal)
 
-		mail to: @teacher_email, subject: "#{User.find_by(id: "#{@lesson.student_id}").name} canceló la clase de #{Language.find_by(id: "#{@lesson.language_id}").name}"
+		mail to: @teacher_email, subject: "#{User.find_by(id: "#{@lesson.student_id}").name} #{t('mailer_subject_2')} #{Language.find_by(id: "#{@lesson.language_id}").name}"
 
 	end
 
@@ -59,7 +59,7 @@ class LessonMailer < ApplicationMailer
 		@student_timezone = User.find_by(id: "#{@lesson.student_id}").time_zone
 		@lesson_date = @lesson.date_id.in_time_zone(@student_timezone).to_formatted_s(:long_ordinal)
 
-		mail to: @student_email, subject: "#{User.find_by(id: "#{@lesson.user_id}").name} canceló la clase de #{Language.find_by(id: "#{@lesson.language_id}").name}"
+		mail to: @student_email, subject: "#{User.find_by(id: "#{@lesson.user_id}").name} #{t('mailer_subject_2')} #{Language.find_by(id: "#{@lesson.language_id}").name}"
 
 	end
 

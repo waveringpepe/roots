@@ -14,7 +14,7 @@
       <% @users.where(roles: :teacher).each do |user| %>
         <tr>
           <th scope="col"><%= link_to user.name, user  %></th>
-          <th><%= user.lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - user.lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200 %></th>
+          <th><%= user.lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - user.lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200 %> MXN</th>
         </tr>
         </tr>
       <% end %>

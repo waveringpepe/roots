@@ -73,6 +73,10 @@ class LessonsController < ApplicationController
       if current_user.has_roles?(:teacher)
         LessonMailer.teacher_email(@lesson).deliver
         LessonMailer.student_email(@lesson).deliver
+        LessonMailer.reminder_lesson_teacher_1(@lesson).deliver_later(wait_until: (@lesson.date_id - 1.hour))
+        LessonMailer.reminder_lesson_student_1(@lesson).deliver_later(wait_until: (@lesson.date_id - 1.hour))
+        LessonMailer.reminder_lesson_teacher_2(@lesson).deliver_later(wait_until: (@lesson.date_id - 25.hours))
+        LessonMailer.reminder_lesson_student_2(@lesson).deliver_later(wait_until: (@lesson.date_id - 25.hours))
       end
     else
       render :new

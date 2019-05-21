@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @users = User.all
     @users = User.paginate(:page => params[:page], :per_page => 100).order('created_at DESC')
     @renderer = custom_paginate_renderer
+    @lessons = Lesson.all
   end
  
   # GET /User

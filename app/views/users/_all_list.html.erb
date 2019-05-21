@@ -1,6 +1,6 @@
   <div class="container" >
     <h1>All users</h1>
-    <p><strong>Total:</strong><%= @users.total_entries %></p>
+    <p><strong>Total: </strong><%= @users.total_entries %></p>
 
     <br>
 
@@ -11,13 +11,15 @@
 
   <div class="container">
     <div class="table-responsive-sm">
-      <table class="table">
+      <table class="table" >
         <thead>
           <tr>
             <th>Created at</th>
             <th>Name</th>
             <th>Country</th>
             <th>Rol</th>
+            <th>Dinero que se les debe</th>
+
             <th colspan="3"></th>
           </tr>
         </thead>
@@ -29,6 +31,7 @@
               <th><%= link_to user.name, user  %></th>
               <th><%= user.country  %></th>
               <th><%= user.role %></th>
+              <th><%= user.lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - user.lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200 %></th>
             </tr>
           <% end %>
         </tbody>

@@ -252,52 +252,6 @@ en:
   languages_teacher_speak: "List all the languages that you speak fluently*"
   languages_teacher_speak1: "English, Spanish, Chinese"
   
-  #pages/students_homepage
-  welcome: "Welcome"
-  student_hompage_title: "We are building a cool website for you!"
-  student_hompage_subtitle: "To claim your free class follow these steps:"
-  step_1: "Step 1."
-  step_1a_student_homepage: "Wait until we contact you, we will do it as soon as possible."
-  step_2: "Step 2."
-  step_2a_student_homepage: "Once we contact you and review your profile, we will find the best teacher for you."
-  step_3: "Step 3."
-  step_3a_student_homepage: "When we find your teacher, we will send you an e-mail and a WhatsApp with all the necessary information about your teacher."
-  step_4: "Step 4."
-  step_4a_student_homepage: "The teacher will contact you through WhatsApp, so you can agree on the schedule of your first class."
-  step_5: "Step 5."
-  step_5a_student_homepage: "If you would like to continue with the classes, subscribe to one of our"
-  step_5b_student_homepage: "memberships."
-  note_student_homepage: "Note:"
-  note1_student_homepage: "All this happens on average in 1 day."
-  note2_student_homepage: "Doubts? Write us by Whatsapp to the number + 521-812-110-1145"
-  subscribe_again: "Subscribe again"
-  choose_membership: "Click here to check out our memberships"
-
-  #pages/teachers_homepage
-  teachers_hompage_title:  "We are bulding a cool website for you!"
-  teacher_button1_homepage: "I've just applied to teach"
-  teacher_button2_homepage: "I am a 5 Roots teacher"
-  teacher_applied_subtitle_homepage: "Have you just applied to teach?"
-  teacher_subtitle_homepage: "I'm part of the 5 roots community, what's next?"
-
-
- 
-  step_1a_teacher_applied_homepage: "If you have just signed up wait for us to review your profile within 1 week."
-  step_2a_teacher_applied_homepage: "Once we have reviewed your profile we'll get in touch with you."
-  step_3a_teacher_applied_homepage: "If your profile has the requirements we are looking for, then we'll invite you to have a 30minutes online interview to get to know you better."
-  step_4a_teacher_applied_homepage: " If we like you in the interview then we'll tell you via Whatsapp that you are now part of our teachers community."
-
-  step_1a_teacher_homepage: "Now you are in our list of teachers, we'll try to get you a student asap."
-  step_2a_teacher_homepage: "Once we find a student that fits your profile we'll let you know and ask you if you are willing to teach the student. For this you'll receive a description of the student with information about why he/she would like to learn the language, which is his/her level and so on."
-  step_3a_teacher_homepage: "If you accept the student, then we'll give you his/her contact information so you can get in touch."
-  step_4a_teacher_homepage: "You can copypaste the following template to get in touch via Whatsapp: message."
-  step_5a_teacher_homepage: "Set the schedule with your students and let us know about it."
-  step_6: "Step 6."
-  step_6a_teacher_homepage: "Start teaching, we'll take care of the rest."
-
-  note_teacher_homepage: "Note:"
-  note1_teacher_homepage: "If you have any question write us via Whatsapp +521-812-110-1145 or send us an e-mail to hello@5roots.co"
-
   #devise/registrations/passwords
   send_password_instructions: "Send me reset password instructions"
   resend_confirmation_instructions: "Resend confirmation instructions"
@@ -482,6 +436,7 @@ en:
   cancel_lesson_btn: "Cancel"
   timezone_tootltip: "The hours are displayed in the local time zone."
   cancel_lesson_tooltip: "You can cancel a lesson at least 24 hours in advance, if you do not do it and you do not attend the lesson you will lose it."
+  subscribe_again: "Subscribe again"
 
   #lessons#form#edit
   regular_class_type: "Regular"

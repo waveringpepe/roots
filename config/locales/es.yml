@@ -217,55 +217,6 @@ es:
   languages_teacher_speak: "Lista todos los idiomas que hablas de manera fluida*"
   languages_teacher_speak1: "Español, Inglés, Chino"
 
-
-  #pages/students_homepage
-
-  welcome: "Bienvenido"
-  student_hompage_title: "¡Estamos construyendo un increíble sitio para ti!"
-  student_hompage_subtitle: "Para reclamar tu membresía básica gratuita sigue estos pasos:"
-  step_1: "Paso 1."
-  step_1a_student_homepage: "Suscríbete a la membresía básica gratuita dando click "                       
-  step_2: "Paso 2."
-  step_2a_student_homepage: "Espera a que te contactemos, lo haremos lo más pronto posible."
-  step_3: "Paso 3."
-  step_3a_student_homepage: "Una vez que te contactemos y revisemos tu perfil, buscaremos al mejor profesor para ti."
-  step_4: "Paso 4."
-  step_4a_student_homepage: "Cuando encontremos a tu profesor, te enviaremos un e-mail y un Whatsapp con toda la información necesaria sobre tu profesor."
-  step_5: "Paso 5."
-  step_5a_student_homepage: "El profesor se pondrá en contacto contigo por medio de Whatsapp, para que puedan acordar el horario de su primer clase."
-  step_5b_student_homepage: "aquí."
-  note_student_homepage: "Nota:"
-  note1_student_homepage: "Todo esto sucede en promedio en 1 día." 
-  note2_student_homepage: "¿Dudas? Escríbenos por Whatsapp al número +521-812-110-1145"
-  subscribe_again: "Suscríbete nuevamente"
-  choose_membership: "Da click aquí para ver nuestras membresías"
-
-  #pages/teachers_homepage
-  teachers_hompage_title:  "¡Estamos construyendo un increíble sitio para ti!"
-  teacher_button1_homepage: "Acabo de aplicar para ser un profesor"
-  teacher_button2_homepage: "Ya soy un profesor de 5 Roots"
-  teacher_applied_subtitle_homepage: "¿Acabas de aplicar para ser un profesor? Sigue estos pasos:"
-  teacher_subtitle_homepage: "Soy parte de la comunidad de profesores de 5 Roots, ¿qué sigue?"
-  
-
-  step_1a_teacher_applied_homepage: "Si te acabas de aplicar, espera a que revisemos tu perfil."
-  step_2a_teacher_applied_homepage: "Una vez que revisemos tu perfil, si nos gusta y esta dentro de los perfiles que buscamos nos pondremos en contacto contigo."
-  step_3a_teacher_applied_homepage: "Si tu perfil cuenta con los requerimentos que buscamos, entonces te invitaremos a tomar una entrevista de 30min para conocerte mejor."
-  step_4_teacher_applied_homepage: "Paso 4."
-  step_4a_teacher_applied_homepage: "Una vez terminada la entrevisa revisaremos nuevamente tu perfil y se te avisará por medio de email y WhatsApp si te aceptamos para seas parte de la comunidad."
-
-
-  step_1a_teacher_homepage: "Ahora ya eres parte de nuestra comunidad, trataremos de conseguir estudiantes para ti lo más pronto posible."
-  step_2a_teacher_homepage: "Una vez que encontremos el estudiante ideal para ti, te lo haremos saber para que nos digas si estas dispuesto a dar clases a este estudiante; para esto recibirás información descriptiva del estudiante y la razón de por qué quiere aprender el idioma."
-  step_3a_teacher_homepage: "Si aceptas al estudiante, entonces te pasaremos su información de contacto para que te puedas comunicar con él."
-  step_4a_teacher_homepage: "Puedes utilizar el siguiente template para que te pongas en contacto con él por medio de WhatsApp"
-  step_5a_teacher_homepage: "Ponte de acuerdo del horario de la primer clase con tu estudiante y avísanos para llevar el control de esto."
-  step_6: "Paso 6."
-  step_6a_teacher_homepage: "Comienza a dar clases, nosotros nos encargamos del resto."
-
-  note_teacher_homepage: "Nota:"
-  note1_teacher_homepage: "Si tienes alguna duda o pregunta escríbenos vía WhatsApp al 521-812-110-1145 o envíanos un email a hello@5roots.co"
-
   #devise/registrations/passwords
   send_password_instructions: "Enviar instrucciones para cambiar mi contraseña"
   resend_confirmation_instructions: "Reenviar instrucciones de confirmación"
@@ -452,6 +403,7 @@ es:
   cancel_lesson_btn: "Cancelar"
   timezone_tootltip: "Las horas se muestran en la zona horaria local."
   cancel_lesson_tooltip: "Puedes cancelar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces la perderás."
+  subscribe_again: "Suscríbete nuevamente"
 
   #lessons#form#edit
   regular_class_type: "Regular"

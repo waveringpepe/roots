@@ -47,7 +47,7 @@ Rails.application.routes.draw do
   	end
 
   	authenticated :user, ->(u) { u.has_role?(:teacher) } do
-  	  root to: "pages#teachers_home", as: :teacher_root
+  	  root to: "lessons#index", as: :teacher_root
   	end
 
   	authenticated :user, ->(u) { u.has_role?(:user) } do

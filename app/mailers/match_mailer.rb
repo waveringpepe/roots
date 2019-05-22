@@ -7,10 +7,10 @@ class MatchMailer < ApplicationMailer
 
 		@match = match
 		@teacher = User.find_by(id: "#{@match.user_id}")
-		@teacher_name = User.find_by(id: "#{@match.user_id}").name
+		@teacher_name = User.find_by(id: "#{@match.user_id}").name.capitalize
 		@teacher_email = User.find_by(id: "#{@match.user_id}").email
 		@student = User.find_by(id: "#{@match.student_id}")
-		@student_name = User.find_by(id: "#{@match.student_id}").name
+		@student_name = User.find_by(id: "#{@match.student_id}").name.capitalize
 		@student_email = User.find_by(id: "#{@match.student_id}").email
 		@language = Language.find_by(id: "#{@match.language_id}")
 
@@ -22,10 +22,10 @@ class MatchMailer < ApplicationMailer
 	def student_email(match)
 		@match = match
 		@teacher = User.find_by(id: "#{@match.user_id}")
-		@teacher_name = User.find_by(id: "#{@match.user_id}").name
+		@teacher_name = User.find_by(id: "#{@match.user_id}").name.capitalize
 		@teacher_email = User.find_by(id: "#{@match.user_id}").email
 		@student = User.find_by(id: "#{@match.student_id}")
-		@student_name = User.find_by(id: "#{@match.student_id}").name
+		@student_name = User.find_by(id: "#{@match.student_id}").name.capitalize
 		@student_email = User.find_by(id: "#{@match.student_id}").email
 		@language = Language.find_by(id: "#{@match.language_id}")
 

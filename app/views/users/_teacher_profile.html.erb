@@ -1,7 +1,8 @@
 	<div class="container">
 		<div class="row justify-content-md-center">
 			<div class="mb-2 text-dark col-8 rounded">
-				<h4> <%= t('information_title') %> </h4>
+				<h4> <%= t('information_title') %> </h4> 
+				<p>Horas de clases:  <b><%= @user.lessons.where( status_id: "Completada").sum(:time_duration_id)/60 %></b> hrs.</p> 
 			</div>
 		</div>
 		<div class="row justify-content-md-center">

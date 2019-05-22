@@ -361,7 +361,7 @@ en:
   learn: "Learn"
 
   #languages#new
-  create_language: "Creaate language"
+  create_language: "Create language"
 
   #users#show#and#students_profile#and#teachersprofile
   city_id_title: "Lives in"

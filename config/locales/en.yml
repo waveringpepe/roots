@@ -437,6 +437,7 @@ en:
   timezone_tootltip: "The hours are displayed in the local time zone."
   cancel_lesson_tooltip: "You can cancel a lesson at least 24 hours in advance, if you do not do it and you do not attend the lesson you will lose it."
   subscribe_again: "Subscribe again"
+  just_applied_as_teacher_message: "If you just applied to teach, wait for us to review your profile, once we review your profile if you meet the requirements, we'll get in touch with you to invite you to a 20-minutes Skype interview."
 
   #lessons#form#edit
   regular_class_type: "Regular"

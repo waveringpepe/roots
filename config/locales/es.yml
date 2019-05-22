@@ -404,6 +404,7 @@ es:
   timezone_tootltip: "Las horas se muestran en la zona horaria local."
   cancel_lesson_tooltip: "Puedes cancelar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces la perderás."
   subscribe_again: "Suscríbete nuevamente"
+  just_applied_as_teacher_message: "Si acabas de aplicar como profesor, espera a que revisemos tu perfil. Una vez que revisemos tu perfil si cumples con los requisitos, nos pondremos en contacto contigo para invitarte a una entrevista por Skype de 20 minutos."
 
   #lessons#form#edit
   regular_class_type: "Regular"

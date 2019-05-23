@@ -314,6 +314,7 @@ en:
   subscribe_t_medium: "medium membership"
   subscribe_t_intensive: "intensive membership"
   subscribe_t_promo: "free trial basic membership "
+  note_subscribe_promo: "After the first month, $ 1,120 MXN will be charged, corresponding to the price of the basic membership."
   btn_pay: "Submit payment"
   btn_subscribe1: "Subscribe"
   add_card: "Add a card"
@@ -334,6 +335,7 @@ en:
   amount_card_basic_form: "Basic $1120 MXN"
   amount_card_medium_form: "Medium $2080 MXN"
   amount_card_intensive_form: "Intensive $3060 MXN"
+  amount_card_promo_form: "Basic free (1 month) $0 MXN"
   btn_subscribe: "Subscribe"
   title_memberships: "Memberships"
   basic_m_title: "The basic membership"
@@ -342,6 +344,8 @@ en:
   medium_m_description: "includes 8 hours of one to one lessons."
   intensive_m_title: "The intensive membership"
   intensive_m_description: "includes 12 hours of one to one lessons."
+  promo_m_title: "The basic free membership"
+  promo_m_description: "includes 4 hours of one to one lessons."
   extra_subscription: "Do you want a subscription with more hours? Send us an e-mail to hello@5roots.co"
 
   #pages#reviews

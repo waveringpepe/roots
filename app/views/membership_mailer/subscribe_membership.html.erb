@@ -1,21 +1,24 @@
 
-				<div>
-					<span class="align-middle">
-						<%= @user.name.capitalize %> se suscribió a
-					</span>
-				</div> 
+<div>
+	<span class="align-middle">
+		<%= @user.name.capitalize %> se suscribió a
+	</span>
+</div> 
 
-				<div>
-					<span class="align-middle">
-						<p class="font-weight-light"><i class="fa fa-address-card fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b><%= t('membership_title') %> </b> 
-				          <% if @user.plan_id == 5 %>
-				            <%= t('basic_membership_name') %>
-				          <% elsif @user.plan_id == 6 %>
-				            <%= t('medium_membership_name') %>
-				          <% elsif @user.plan_id == 7 %>
-				            <%= t('intensive_membership_name') %>
-				          <% elsif @user.plan_id == 8 %>
-				            <%= t('membership_name') %>
-				          <% end %>
-						</p></span>
-				</div>
+<div>
+	<span class="align-middle">
+		<p class="font-weight-light">
+			<i class="fa fa-address-card fa-x" style="color:#63C1F3;" ></i> &nbsp;&nbsp;&nbsp;
+			<b><%= t('membership_title') %></b> 
+          <% if @user.plan_id == 5 %>
+            <%= t('basic_membership_name') %>
+          <% elsif @user.plan_id == 6 %>
+            <%= t('medium_membership_name') %>
+          <% elsif @user.plan_id == 7 %>
+            <%= t('intensive_membership_name') %>
+          <% elsif @user.plan_id == 8 %>
+            <%= t('membership_free_name') %>
+          <% end %>
+		</p>
+	</span>
+</div>

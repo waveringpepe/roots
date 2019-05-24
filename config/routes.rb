@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :index]
 
     get 'home', to: 'pages#home'
+    get 'promo', to: 'pages#home_promo'
+    get 'business', to: 'pages#home_business'
     get 'ingles', to: 'pages#home_ingles'
     get 'frances', to: 'pages#home_frances'
     get 'italiano', to: 'pages#home_italiano'

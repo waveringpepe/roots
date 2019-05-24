@@ -44,7 +44,8 @@ en:
   slogan_1_chinese: "Learn chinese"
   slogan_2: "from the comfort of your home"
   button_free_class: "Take a 30min free trial class"
-  button_register: "Sign up"
+  button_register: "Sign up here and receive a 30min free trial class"
+  button_register_promo: "Sign up here and receive a free basic membership"
   warranty_title: "100% Satisfaction Guaranteed"
   warranty_description: "If you don’t like the class, we’ll give you another one for free."
   available_languages: "Available languages"
@@ -158,8 +159,10 @@ en:
   Resend_unlock_instructions: "Resend unlock instructions"
 
   #devise/registrations/new
-  title_teacher_form: "Apply to teach with 5 roots"
-  title_free_form: "Sign up and receive a 30minutes free trial class"
+  title_teacher_form: "Apply to teach with 5 roots."
+  title_free_form: "Sign up and receive a 30minutes free trial class."
+  title_free_promo_form: "Sign up and receive a free basic membership."
+  title_free_business_form: "Sign up in 5roots for business."
 
   #devise/registrations/students/forms
   subtitle_1_form: "Information"
@@ -212,10 +215,16 @@ en:
   note_card_regular_2_form: "stripe"
   note_card_free_1_form: "The trial class is" 
   note_card_free_2_form: "FREE"
-  note_card_free_3_form: "for which NO charge will be made. It is important to take into account our"
+  note_card_free_3_form: "for which no charge will be made. It is important to take into account our"
   note_card_free_4_form: " cancellation or change policy of a trial class."
-  sign_up: "Sign up"
+  note_card_free_promotion_1_form: "The basic membership is" 
+  note_card_free_promotion_2_form: "FREE"
+  note_card_free_promotion_3_form: "for which no charge will be made."
   payment_method: "Payment method"
+  business_free_from_title: "Business"
+  business_free_from_name: "Name of the business"
+  business_free_from_description: "Business"
+
 
   #devise/registrations/teacher/forms
 

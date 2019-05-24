@@ -5,7 +5,11 @@ class ConfirmationsController < Devise::ConfirmationsController
     if logged_in?(:teacher)
     	lessons_path
     elsif logged_in?(:user)
-    	memberships_path
+    	if current_user.plan_id == 10
+    		root_path
+    	else
+    		memberships_path
+    	end
     end
   end
 end

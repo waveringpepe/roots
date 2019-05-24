@@ -4,6 +4,12 @@
 		<% if params[:plan] == '8' %>
 			<h2> <%= t("title_free_form") %> </h2>
 			<%= render "free_form" %>
+		<% elsif params[:plan] == '9' %>
+			<h2> <%= t("title_free_promo_form") %> </h2>
+			<%= render "free_promotion_form" %>
+		<% elsif params[:plan] == '10' %>
+			<h2> <%= t("title_free_business_form") %> </h2>
+			<%= render "free_business_form" %>
 		<% else %>
 			<h2> <%= t("title_teacher_form") %></h2>
 			<%= render "teacher_form" %>

@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_action :set_locale
-  before_action :authenticate_user!, except: [:faq, :home, :home_ingles, :home_frances, :home_italiano, :home_aleman, :home_español, :home_portugues, :home_ruso, :home_chino]
+  before_action :authenticate_user!, except: [:faq, :home,:home_promo, :home_business, :home_ingles, :home_frances, :home_italiano, :home_aleman, :home_español, :home_portugues, :home_ruso, :home_chino]
 	# GET request for / which is our home page
   access all: [:home, :faq], teacher: {except: [:students_home]}, user: {except: [:teacher_home]}, admin: :all, message: "you shall not pass"
   
@@ -14,6 +14,28 @@ class PagesController < ApplicationController
     @intensive_plan = Plan.find(7)
     @free_plan = Plan.find(8)
     
+  end
+
+  def home_promo
+    @plan = Plan.all
+    @teacher_plan = Plan.find(1)
+    @basic_plan = Plan.find(5)
+    @medium_plan = Plan.find(6)
+    @intensive_plan = Plan.find(7)
+    @free_plan = Plan.find(8)
+    @promo_plan = Plan.find(9)
+    @business_plan = Plan.find(10)
+  end
+
+  def home_business
+    @plan = Plan.all
+    @teacher_plan = Plan.find(1)
+    @basic_plan = Plan.find(5)
+    @medium_plan = Plan.find(6)
+    @intensive_plan = Plan.find(7)
+    @free_plan = Plan.find(8)
+    @promo_plan = Plan.find(9)
+    @business_plan = Plan.find(10)
   end
 
   def subscriptions

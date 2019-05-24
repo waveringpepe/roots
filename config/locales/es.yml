@@ -13,7 +13,8 @@ es:
   slogan_1_chinese: "Aprende chino"
   slogan_2: "desde la comodidad de tu casa"
   button_free_class: "Toma una clase de 30min gratuita"
-  button_register: "Regístrate y recibe una membresía básica gratuita"
+  button_register: "Regístrate aquí y recibe una clase de 30min gratuita"
+  button_register_promo: "Regístrate aquí y recibe una membresía básica gratuita"
   available_languages: "Idiomas disponibles"
   warranty_title: "100% Garantía de satisfacción"
   warranty_description: "Si no te gusta la clase, te damos otra con un profesor nuevo"
@@ -123,8 +124,10 @@ es:
   resend_unlock_instructions: "Reenviar instrucciones para desbloquear"
 
   #devise/registrations/new
-  title_teacher_form: "Aplica como profesor en 5 Roots"
-  title_free_form: "Regístrate y recibe una membresía básica gratuita."
+  title_teacher_form: "Aplica como profesor en 5 Roots."
+  title_free_form: "Regístrate y recibe una clase de 30minutos gratuita."
+  title_free_promo_form: "Regístrate y recibe una membresía básica gratuita."
+  title_free_business_form: "Regístrate en 5roots para empresas."
 
   #devise/registrations/students/forms
   subtitle_1_form: "Información"
@@ -174,13 +177,17 @@ es:
   notetext_card_form: "Nota:"
   note_card_regular_1_form: "Todos los pagos son procesados por"
   note_card_regular_2_form: "stripe"
-  note_card_free_1_form: "La membresía básica es" 
+  note_card_free_1_form: "La clase de 30 minutos de prueba es" 
   note_card_free_2_form: "GRATUITA"
-  note_card_free_3_form: "por lo cual NO se te hará ningún cargo."
-  note_card_free_4_form: "política de cancelación/cambio de clase de muestra."
-  sign_up: "Registrarme"
+  note_card_free_3_form: "por lo cual no se te hará ningún cargo. Es importante tomar en cuenta nuestra"
+  note_card_free_4_form: "política de cancelación/cambio de clase de muestra."  
+  note_card_free_promotion_1_form: "La membresía básica es" 
+  note_card_free_promotion_2_form: "GRATUITA"
+  note_card_free_promotion_3_form: "por lo cual no se te hará ningún cargo."
   payment_method: "Método de pago"
-
+  business_free_from_title: "Empresa"
+  business_free_from_name: "Nombre de la empresa"
+  business_free_from_description: "Empresa"
 
   #devise/registrations/teacher/forms
 

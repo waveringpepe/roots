@@ -296,7 +296,7 @@ DEPENDENCIES
   country_select (~> 4.0)
   devise (~> 4.5)
   figaro (= 1.1.1)
-  filterrific
+  filterrific (~> 5.1)
   flag-icons-rails (~> 3.1)
   font-awesome-rails (~> 4.7, >= 4.7.0.4)
   hirb (~> 0.7.3)

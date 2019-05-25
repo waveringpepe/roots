@@ -8,11 +8,18 @@
 </div>
 
 <br>
-
-<div class="container">
-  <input class="form-control" id="myInput" type="text" placeholder="Filtra..">
-</div>
-
+  <div class="container">
+    <%= form_for lessons_path, :method => 'get' do %>
+      <div class="row">
+        <div class="form_group col-4">
+           <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Filtra por el ID del profesor" %>
+        </div>
+        <div class="form_group col-1">
+          <%= submit_tag "Search", :name => nil , class: "btn btn-primary" %>
+      </div>
+      <br>
+    <% end %>
+  </div>
 <br>
 
 <div class="table-responsive-sm">
@@ -20,16 +27,16 @@
     <thead>
       <tr>
         <th>Teachers Time Zone</th>
-        <th><%= t('class_id') %></th>
-        <th><%= t('createad_date') %></th>
-        <th><%= t('type_of_class') %></th>
-        <th><%= t('student_name_class') %></th>
-        <th><%= t('teacher_name_class') %></th>
-        <th><%= t('incoming_date_class') %> <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="Las horas se muestran en la zona horaria local." ></a></th>
-        <th><%= t('class_duration') %></th>
-        <th><%= t('class_language') %></th>
-        <th><%= t('status_class') %></th>
-        <th><%= t('paid_class') %></th>
+        <th><%= sortable "id", t('class_id') %></th>
+        <th><%= sortable "created_at", t('createad_date') %></th>
+        <th><%= sortable "class_type_id", t('type_of_class') %></th>
+        <th><%= sortable "student_id", t('student_name_class')  %></th>
+        <th><%= sortable "user_id", t('teacher_name_class')  %></th>
+        <th><%= sortable "date_id", t('incoming_date_class') %> <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="Las horas se muestran en la zona horaria local." ></a></th>
+        <th><%= sortable "time_duration_id", t('class_duration') %></th>
+        <th><%= sortable "language_id", t('class_language') %></th>
+        <th><%= sortable "status_id", t('status_class')%></th>
+        <th><%= sortable "payment_id", t('paid_class') %></th>
         <th colspan="3"></th>
       </tr>
     </thead>

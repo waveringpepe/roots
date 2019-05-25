@@ -2,11 +2,13 @@ class LessonsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
   access all: [:index], user: {except: [:new, :edit, :create, :update, :show]}, teacher: [:new, :destroy, :edit, :create, :update, :show], admin: :all
+  
+  helper_method :sort_column, :sort_direction
 
   # GET /lessons
   def index
-    @lessons = Lesson.all
-    @lessons = Lesson.paginate(:page => params[:page], :per_page => 100).order('date_id DESC')
+
+    @lessons = Lesson.paginate(:page => params[:page], :per_page => 100).order(sort_column + " " + sort_direction).where("user_id LIKE ?", "%#{params[:search]}%")
     @lessons_students = current_user.inverse_lessons.paginate(:page => params[:page], :per_page => 20).order('date_id DESC')
     @lessons_teachers = current_user.lessons.paginate(:page => params[:page], :per_page => 20).order('date_id DESC')
     @user = current_user
@@ -46,6 +48,12 @@ class LessonsController < ApplicationController
 
     @clases_ganadas_estudiantes = @user.inverse_lessons.where( status_id: "Perdida por el profesor").count(:time_duration_id)
     @clases_perdidas_estudiantes = @user.inverse_lessons.where( status_id: "Perdida por el estudiante").count(:time_duration_id)
+
+    
+
+
+
+
   end
 
   # GET /lessons/1
@@ -115,6 +123,15 @@ class LessonsController < ApplicationController
     def lesson_params
       params[:lesson]
       params.require(:lesson).permit(:user_id, :student_id, :language_id, :class_type_id, :date_id, :time_duration_id, :status_id, :payment_id)
+    end
+
+    def sort_column
+      Lesson.column_names.include?(params[:sort]) ? params[:sort] : "id"
+    end
+    
+    def sort_direction
+      params[:direction] || "asc"
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end
 

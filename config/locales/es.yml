@@ -394,6 +394,7 @@ es:
   class_language: "Idioma"
   status_class: "Estatus"
   paid_class: "¿Clase pagada?"
+  update_class_panel: "Actualizar clase"
   delete_message: "¿Estás seguro?"
   new_class: "Añadir clase"
   lessons_title: "Clases"
@@ -410,6 +411,7 @@ es:
   cancel_lesson_btn: "Cancelar"
   timezone_tootltip: "Las horas se muestran en la zona horaria local."
   cancel_lesson_tooltip: "Puedes cancelar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces la perderás."
+  cancel_lesson_tooltip_teacher: "Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase, entonces se te penalizará con el costo de lo equivalente a la clase que no asististe, ese monto se utilizará para reponer la clase al estudiante."
   subscribe_again: "Suscríbete nuevamente"
   just_applied_as_teacher_message: "Si acabas de aplicar como profesor, espera a que revisemos tu perfil. Una vez que revisemos tu perfil si cumples con los requisitos, nos pondremos en contacto contigo para invitarte a una entrevista por Skype de 20 minutos."
 

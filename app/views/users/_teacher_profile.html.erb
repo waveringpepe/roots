@@ -21,7 +21,7 @@
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('languages_i_speak') %> </b><%= @user.speak_language_2 %> </p></span> 
 				</div>
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-flag fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('country_born_title') %> </b><%= @user.country %> </p></span> 
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-flag fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('country_born_title') %> </b><%= @user.country_name %> </p></span> 
 				</div>
 				<div>
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-birthday-cake fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;<b> <%= t('age_title') %> </b> <%= @user.age %> <%= t('age_description') %></p></span>
@@ -31,7 +31,7 @@
 		<div class="row justify-content-md-center ">
 			<div class="p-3 mb-2 bg-light text-dark col-8 rounded">
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-location-arrow fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;&nbsp;<b><%= t('city_id_title') %> </b> <%= @user.country %></p></span>
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-location-arrow fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;&nbsp;<b><%= t('city_id_title') %> </b> <%= @user.country_name %></p></span>
 				</div>
 				<div>
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('languages_teach_title') %> </b><%= @user.teach_language %> </p></span> 

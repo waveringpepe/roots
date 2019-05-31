@@ -10,7 +10,7 @@
       <div class="row">
         <div class="form-group col-md-4">
           <%= f.label :email %>*<br />
-          <%= f.email_field :email, autofocus: true, autocomplete: t("email_title_form"),class:"form-control", placeholder:t("email_description_form") %>
+          <%= f.email_field :email, autofocus: true, autocomplete: t("email_title_form"),class: "form-control", placeholder:t("email_description_form") %>
           <small id="emailHelp" class="form-text text-muted"> <%= t("email_extratext_form") %> </small>
         </div>
 
@@ -24,7 +24,7 @@
 
         <div class="form-group col-md-4">
           <%= f.label :password_confirmation, t("password_confirmation_title_form") %>*<br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", id:"exampleInputPassword1", placeholder:t("password_confirmation_title_form") %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "form-control", id:"exampleInputPassword1", placeholder:t("password_confirmation_title_form") %>
         </div>  
       </div>
 
@@ -48,11 +48,11 @@
       <div class="row">
         <div class="form-group col-md-4">
             <%= f.label :speak_language, t("native_language_title_teacher") %>
-            <%= f.select(:speak_language, options_for_select([[t("english"), t("english")], [t("spanish"),t("spanish")],[t("russian"), t("russian")],[t("german"), t("german")],[t("portuguese"),t("portuguese") ],[t("chinese"), t("chinese")],[t("italian"), t("italian")],[t("french"), t("french")]]), {}, {class: "form-control"}) %>
+            <%= f.select(:speak_language, options_for_select([[t("english"), t("english")], [t("spanish"),t("spanish")],[t("russian"), t("russian")],[t("german"), t("german")],[t("portuguese"),t("portuguese") ],[t("chinese"), t("chinese")],[t("italian"), t("italian")],[t("french"), t("french")]]), { include_blank: true }, {class: "form-control"}) %>
         </div>
         <div class="form-group col-md-4">
             <%= f.label :language_id, t("language_title_form") %>
-            <%= f.select(:language_id, options_for_select([[t("english"), t("english")], [t("spanish"),t("spanish")],[t("russian"), t("russian")],[t("german"), t("german")],[t("portuguese"),t("portuguese") ],[t("chinese"), t("chinese")],[t("italian"), t("italian")],[t("french"), t("french")]]), {}, {class: "form-control"}) %>
+            <%= f.select(:language_id, options_for_select([[t("english"), t("english")], [t("spanish"),t("spanish")],[t("russian"), t("russian")],[t("german"), t("german")],[t("portuguese"),t("portuguese") ],[t("chinese"), t("chinese")],[t("italian"), t("italian")],[t("french"), t("french")]]), {include_blank: true }, {class: "form-control"}) %>
         </div>
 
         <div class="form-group col-md-4">

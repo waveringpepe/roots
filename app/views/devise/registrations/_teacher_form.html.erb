@@ -59,11 +59,11 @@
         </div>
         <div class="form-group col-md-4">
             <%= f.label :speak_language, t("native_language_title_teacher") %>
-            <%= f.select(:speak_language, options_for_select([[t("english"), t("english")], [t("spanish"),t("spanish")],[t("russian"), t("russian")],[t("german"), t("german")],[t("portuguese"),t("portuguese") ],[t("chinese"), t("chinese")],[t("italian"), t("italian")],[t("french"), t("french")]]), {}, {class: "form-control"}) %>
+            <%= f.collection_select :speak_language, Language.all.order(:name),:name,:name, {}, {:class => "form-control"} %>
         </div>
         <div class="form-group col-md-4">
             <%= f.label :teach_language, t("teach_language_teacher") %>
-            <%= f.select(:teach_language, options_for_select([[t("english"), t("english")], [t("spanish"),t("spanish")],[t("russian"), t("russian")],[t("german"), t("german")],[t("portuguese"),t("portuguese") ],[t("chinese"), t("chinese")],[t("italian"), t("italian")],[t("french"), t("french")]]), {}, {class: "form-control"}) %>
+            <%= f.collection_select :teach_language, Language.all.order(:name),:name,:name, {}, {:class => "form-control"} %>
         </div>
         <div class="form-group col-md-4">
           <%= f.label :speak_language_2, t("languages_teacher_speak") %>*<br />

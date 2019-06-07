@@ -15,7 +15,6 @@
     <%= form.hidden_field :user_id, value: @user.id %>
     <%= form.hidden_field :status_id, value: "Próxima" %>
     <%= form.hidden_field :payment_id, value: "No" %>
-    <%= form.hidden_field :language_id, value: @user.teach_language %>
 
 <div class="form-group">
       <div class="form-group col-md-4">
@@ -34,7 +33,8 @@
         <%= form.label :student_id, t('student') %>
 
       <% if logged_in?(:teacher) %>
-
+      
+        <%= form.hidden_field :language_id, value: @user.teach_language %>
         <%= form.collection_select :student_id, @user.students.order(:name),:id,:name %>
     
       <% elsif logged_in?(:admin) %>

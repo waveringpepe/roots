@@ -48,11 +48,11 @@
       <div class="row">
         <div class="form-group col-md-4">
             <%= f.label :speak_language, t("native_language_title_teacher") %>
-            <%= f.collection_select :speak_language, Language.all.order(:name),:name,:name, {}, {:class => "form-control"} %>
+            <%= f.collection_select :speak_language, Language.all.order(:name),:id,:name, {}, {:class => "form-control"} %>
         </div>
         <div class="form-group col-md-4">
             <%= f.label :language_id, t("language_title_form") %>
-            <%= f.collection_select :language_id, Language.all.order(:name),:name,:name, {}, {:class => "form-control"} %>
+            <%= f.collection_select :language_id, Language.all.order(:name),:id,:name, {}, {:class => "form-control"} %>
         </div>
 
         <div class="form-group col-md-4">

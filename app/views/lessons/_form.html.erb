@@ -15,6 +15,7 @@
     <%= form.hidden_field :user_id, value: @user.id %>
     <%= form.hidden_field :status_id, value: "Próxima" %>
     <%= form.hidden_field :payment_id, value: "No" %>
+    <%= form.hidden_field :language_id, value: @user.teach_language %>
 
 <div class="form-group">
       <div class="form-group col-md-4">
@@ -44,10 +45,6 @@
 
       </div>
 
-      <div class="field">
-        <%= form.label :language_id, t('class_language') %>
-        <%= form.collection_select :language_id, Language.all.order(:name),:id,:name %>
-      </div>
       <div class="form-group col-md-4">
         <%= form.label :time_duration_id, t('class_duration') %>
         <%= form.select(:time_duration_id, options_for_select([["30 min", "30"], ["45 min", "45"],["1 hr", "60"],["1 hr 15 min" ,"75"],["1 hr 30 min" , "90"],["1 hr 45 min" ,"105"], ["2 hrs" ,"120"], ["2 hrs 15 min", "135"],["2 hrs 30 min","150"],["2 hrs 45 min" , "165"],["3 hrs","180"]]),{required: 'true', autofocus: 'true'},{class: "form-control"}) %>

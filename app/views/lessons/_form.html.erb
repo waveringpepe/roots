@@ -41,6 +41,11 @@
 
         <%= form.collection_select :student_id, User.where(roles:"user").order(:name),:id,:name, include_blank: true %>
 
+      <div class="field">
+        <%= form.label :language_id, t('class_language') %>
+        <%= form.collection_select :language_id, Language.all.order(:name),:id,:name %>
+      </div>
+
       <% end %>
 
       </div>

@@ -15,7 +15,8 @@
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-skype fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b>Skype id:</b> <%= @user.skype %></p></span>
 				</div>
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('native_language_title') %> </b><%= @user.teach_language %> </p></span> 
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('native_language_title') %> </b>
+						<%= Language.find_by(id: "#{@user.teach_language}").name  %> </p></span> 
 				</div>
 				<div>
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('languages_i_speak') %> </b><%= @user.speak_language_2 %> </p></span> 
@@ -34,7 +35,7 @@
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-location-arrow fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp;&nbsp;<b><%= t('city_id_title') %> </b> <%= @user.country_name %></p></span>
 				</div>
 				<div>
-					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('languages_teach_title') %> </b><%= @user.teach_language %> </p></span> 
+					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-language fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp;&nbsp; <b><%= t('languages_teach_title') %> </b><%= Language.find_by(id: "#{@user.teach_language}").name  %> </p></span> 
 				</div>
 				<div>
 					<span class="align-middle"><p class="font-weight-light"><i class="fa fa-graduation-cap fa-x" style="color:#63C1F3;" ></i>&nbsp;&nbsp; <b><%= t('carrear_title') %> </b><%= @user.carrear_id %> </p></span> 

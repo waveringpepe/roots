@@ -434,6 +434,8 @@ es:
   note_timezone_2: "Recuerda que la clase se va a registrar dentro de la siguiente zona horaria:"
   note_timezone_3: "Si esta no es tu zona horaria actual, ve y edítala a tu perfil."
   update_lesson_btn: "Actualizar"
+  update_lesson_user_profile: "Haz válida"
+  update_lesson_user_profile_1: "la política de cancelación cambiando el estatus a perdida por el profesor."
 
   #lesons#panel_admin#panel_students#panel_teachers
   lesson_registered_title: "Clases registradas"

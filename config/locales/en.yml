@@ -447,16 +447,18 @@ en:
   report_body_1_teacher: "Hello i'm the teacher"
   report_body_2: " and I would like to report the lesson with the ID:"
   report_body_3: "because"
-  cancel_lesson_btn: "Cancel"
+  cancel_lesson_btn: "Cancel lesson"
   timezone_tootltip: "The hours are displayed in the local time zone."
   cancel_lesson_tooltip: "You can cancel a lesson at least 24 hours in advance, if you do not do it and you do not attend the lesson you will lose it."
   cancel_lesson_tooltip_teacher: "You can cancel or change a lesson at least 24 hours in advance, if you do not do it 
                                           and you do not attend the lesson, then you will be penalized with 
                                           the cost of the equivalent to the class you did not attend, that amount 
                                           will be used to replace the lesson to the student."
+  update_lesson_tooltip_title_teacher: "Update lesson"
+  update_lesson_tooltip_description_teacher: "Once the class is marked as completed or lost by the student, you will not be able to update it."
   subscribe_again: "Subscribe again"
   just_applied_as_teacher_message: "If you just applied to teach, wait for us to review your profile, once we review your profile if you meet the requirements, we'll get in touch with you to invite you to a 20-minutes Skype interview."
-  policiy_validation_title: "Make the cancellation policy valid"
+  policiy_validation_title: "Apply the cancellation policy"
 
   #lessons#form#edit
   regular_class_type: "Regular"
@@ -474,6 +476,8 @@ en:
   note_timezone_2: "Remember that the class will be registered within the following time zone:"
   note_timezone_3: "If this is not your current time zone, go and change it in your profile."
   update_lesson_btn: "Update"
+  update_lesson_user_profile: "Apply"
+  update_lesson_user_profile_1: "the cancellation policy changing the status of the lesson to lost by the teacher."
 
   #lesons#panel_admin#panel_students#panel_teachers
   lesson_registered_title: "Registered lessons"

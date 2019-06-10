@@ -408,12 +408,15 @@ es:
   report_body_1_teacher: "Hola soy el profesor"
   report_body_2: " y me gustaría reportar la clase con el ID:"
   report_body_3: "porque"
-  cancel_lesson_btn: "Cancelar"
+  cancel_lesson_btn: "Cancelar clase"
   timezone_tootltip: "Las horas se muestran en la zona horaria local."
-  cancel_lesson_tooltip: "Puedes cancelar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase entonces la perderás."
-  cancel_lesson_tooltip_teacher: "Puedes cancelar o cambiar una clase con al menos 24 horas de anticipación, si no lo haces así y no asistes a las clase, entonces se te penalizará con el costo de lo equivalente a la clase que no asististe, ese monto se utilizará para reponer la clase al estudiante."
+  cancel_lesson_tooltip: "Puedes cancelar una clase hasta 24 horas previas, si no lo haces así y no asistes a las clase entonces la perderás."
+  cancel_lesson_tooltip_teacher: "Puedes cancelar o cambiar una clase hasta 24 horas previas, si no lo haces así y no asistes a las clase, entonces se te penalizará con el costo de lo equivalente a la clase que no asististe, ese monto se utilizará para reponer la clase al estudiante."
+  update_lesson_tooltip_title_teacher: "Actualizar clase"
+  update_lesson_tooltip_description_teacher: "Una vez que la clase sea marcada como completada o perdida por el estudiante ya no la podrás actualizar"
   subscribe_again: "Suscríbete nuevamente"
   just_applied_as_teacher_message: "Si acabas de aplicar como profesor, espera a que revisemos tu perfil. Una vez que revisemos tu perfil si cumples con los requisitos, nos pondremos en contacto contigo para invitarte a una entrevista por Skype de 20 minutos."
+  policiy_validation_title: "Haz valida la política de cancelación"
 
   #lessons#form#edit
   regular_class_type: "Regular"
@@ -430,6 +433,7 @@ es:
   note_timezone_1: "Nota:"
   note_timezone_2: "Recuerda que la clase se va a registrar dentro de la siguiente zona horaria:"
   note_timezone_3: "Si esta no es tu zona horaria actual, ve y edítala a tu perfil."
+  update_lesson_btn: "Actualizar"
 
   #lesons#panel_admin#panel_students#panel_teachers
   lesson_registered_title: "Clases registradas"
@@ -476,6 +480,7 @@ es:
   mailer_subject_2: "canceló la clase de"
   mailer_lessons_reminder_1: "hoy tienes"
   mailer_lessons_reminder_2: "mañana tienes"
+
 
   #mailer#matches
   mail_match_greetings_1: "Hola"

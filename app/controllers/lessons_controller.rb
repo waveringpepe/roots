@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
-  access all: [:index], user: {except: [:new, :edit, :create, :update, :show]}, teacher: [:new, :destroy, :edit, :create, :update, :show], admin: :all
+  access all: [:index], user: [:edit , :update, :show, {except: [:new, :create]}], teacher: [:new, :destroy, :edit, :create, :update, :show], admin: :all
   
   helper_method :sort_column, :sort_direction
 
@@ -103,6 +103,7 @@ class LessonsController < ApplicationController
     else
       render :edit
     end
+
   end
 
   # DELETE /lessons/1

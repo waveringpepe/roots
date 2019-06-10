@@ -26,6 +26,15 @@
       <input class="form-control" id="myInput" type="text" placeholder="Filtra..">
     </div>
 
+    <br> 
+
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-6"><%= t('lessons_cancelation_policy_title') %> <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="<%= t('cancel_lesson_tooltip_teacher') %>"></a></div>
+        <div class="col-6"><%= t('update_lesson_tooltip_title_teacher') %> <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="<%= t('update_lesson_tooltip_description_teacher') %>"></a></div>
+      </div>
+    </div>
+
     <br>
 
     <div class="container">
@@ -40,29 +49,31 @@
               <th><%= t('class_language') %></th>
               <th><%= t('status_class') %></th>
               <th><%= t('paid_class') %></th>
-              <th><%= t('update_class_panel') %></th>
-              <th><%= t('lessons_cancelation_policy_title') %> <a href="#" data-toggle="tooltip" class="fa fa-info-circle fa-x" title="<%= t('cancel_lesson_tooltip_teacher') %>"></a></th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody id="filterTable">
-            <% for user in @lessons_teachers %>
+            <% for lesson in @lessons_teachers %>
               <tr>
-                <td><%= link_to user.class_type_id, user %></td>
-                <td><%= link_to User.find_by(id: "#{user.student_id}").name.titleize, "users/#{user.student_id}" %></td>
-                <td><%= local_time(user.date_id) %></td>
-                <td><%= user.time_duration_id/60 %><p> <%= t('hours') %> </p></td>
-                <td> <%= Language.find_by(id: "#{user.language_id}").name %></td>
-                <td><%= user.status_id %></td>
-                <td><%= user.payment_id %></td>
-              <% if user.payment_id == "No" %>
-                <td><%= link_to '', edit_lesson_path(user),class:"fa fa-edit fa-x" %></td>
+                <td><%= link_to lesson.class_type_id, lesson %></td>
+                <td><%= link_to User.find_by(id: "#{lesson.student_id}").name.titleize, "users/#{lesson.student_id}" %></td>
+                <td><%= local_time(lesson.date_id) %></td>
+                <td><%= lesson.time_duration_id/60 %><p> <%= t('hours') %> </p></td>
+                <td> <%= Language.find_by(id: "#{lesson.language_id}").name %></td>
+                <td><%= lesson.status_id %></td>
+                <td><%= lesson.payment_id %></td>
+              <% if lesson.payment_id == "No" %>
+                <% if lesson.status_id == "Próxima" %>
+                  <td><%= link_to t('update_class_panel'), edit_lesson_path(lesson), class: "btn btn-outline-info" %></td>
+                <% end %>
 
-                    <% if local_time(user.date_id) > local_time(Time.now + 86400)  %>
-                      <td><%= link_to '', user, method: :delete, data: { confirm: t('delete_message') }, class:"fa fa-close fa-x",style:"color:#DC3C45" %></td>
-                    <% end %>
+                <% if local_time(lesson.date_id) > local_time(Time.now + 86400)  %>
+                <td><%= link_to t('cancel_lesson_btn'), lesson, method: :delete, data: { confirm: t('delete_message') }, class: "btn btn-danger" %></td>
+                <% end %>
               <% else %>
               <td></td>
-                <td><%= mail_to "hello@5roots.co", t('report_class'), subject: t('report_subject') + " #{user.id} ", body: t('report_body_1_teacher') + " #{User.find_by(id: "#{user.user_id}").name}" + t('report_body_2') + " #{user.id} " + t('report_body_3'), class: "btn btn-outline-danger" %></td>
+                <td><%= mail_to "hello@5roots.co", t('report_class'), subject: t('report_subject') + " #{lesson.id} ", body: t('report_body_1_teacher') + " #{User.find_by(id: "#{lesson.user_id}").name}" + t('report_body_2') + " #{lesson.id} " + t('report_body_3'), class: "btn btn-outline-danger" %></td>
               <% end %>
               </tr>
             <% end %>

@@ -456,6 +456,7 @@ en:
                                           will be used to replace the lesson to the student."
   subscribe_again: "Subscribe again"
   just_applied_as_teacher_message: "If you just applied to teach, wait for us to review your profile, once we review your profile if you meet the requirements, we'll get in touch with you to invite you to a 20-minutes Skype interview."
+  policiy_validation_title: "Make the cancellation policy valid"
 
   #lessons#form#edit
   regular_class_type: "Regular"
@@ -472,6 +473,7 @@ en:
   note_timezone_1: "Note:"
   note_timezone_2: "Remember that the class will be registered within the following time zone:"
   note_timezone_3: "If this is not your current time zone, go and change it in your profile."
+  update_lesson_btn: "Update"
 
   #lesons#panel_admin#panel_students#panel_teachers
   lesson_registered_title: "Registered lessons"

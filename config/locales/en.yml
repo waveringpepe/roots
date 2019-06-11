@@ -465,7 +465,7 @@ en:
   trial_class_type: "Trial class"
   edit_lesson: "Edit lesson"
   edit_lesson_btn: "Edit lesson"
-  next_lesson: "Next"
+  next_lesson: "Upcoming"
   completed_lesson: "Completed"
   canceled_lesson: "Canceled"
   lost_lesson_teacher: "Lost by the teacher"
@@ -481,7 +481,7 @@ en:
 
   #lesons#panel_admin#panel_students#panel_teachers
   lesson_registered_title: "Registered lessons"
-  lesson_next_title: "Next lessons"
+  lesson_next_title: "Upcoming lessons"
   lesson_completed_title: "Completed lessons"
   lessons_hours_title: "Completed hours"
   lessons_teachers_debt_title: "Debt to teachers"

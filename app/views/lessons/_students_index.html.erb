@@ -70,18 +70,17 @@
         <td><%= lesson.status_id %></td>
       <% if lesson.status_id == "Completada" %>
         <td><%= mail_to "hello@5roots.co", t('report_class'), subject: t('report_subject') + " #{lesson.id} ", body: t('report_body_1_student') + " #{User.find_by(id: "#{lesson.student_id}").name}" + t('report_body_2') + " #{lesson.id} " + t('report_body_3'), class: "btn btn-outline-danger" %></td>
-      <% elsif local_time(lesson.date_id) > local_time(Time.now + 86400)  %>
-        <td><%= link_to t('policiy_validation_title'), edit_lesson_path(lesson), class: "btn btn-outline-info" %>  
+      <% elsif local_time(lesson.date_id) > local_time(Time.now + 86400)  %> 
         <td><%= link_to t('cancel_lesson_btn'), lesson, method: :delete, data: { confirm: t('delete_message') }, class: "btn btn-outline-danger" %></td>
-
-      <% else %>
-        <td></td>
+      <% elsif lesson.status_id == "Próxima" %>
+        <% if local_time(Time.now) > local_time(lesson.date_id - 86400) %>
+          <td><%= link_to t('policiy_validation_title'), edit_lesson_path(lesson), class: "btn btn-outline-info" %> 
+        <% end %>
       <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 
 <script src="assets/javascripts/filer_table.js"></script>
 

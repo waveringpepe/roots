@@ -132,12 +132,12 @@ class LessonsController < ApplicationController
     end
 
     def sort_column
-      Lesson.column_names.include?(params[:sort]) ? params[:sort] : "id"
+      Lesson.column_names.include?(params[:sort]) ? params[:sort] : "date_id"
     end
     
     def sort_direction
-      params[:direction] || "asc"
-      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+      params[:direction] || "desc"
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
     end
 end
 

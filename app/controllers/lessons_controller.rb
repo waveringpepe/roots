@@ -9,8 +9,8 @@ class LessonsController < ApplicationController
   def index
 
     @lessons = Lesson.paginate(:page => params[:page], :per_page => 100).order(sort_column + " " + sort_direction).where("user_id LIKE ?", "%#{params[:search]}%")
-    @lessons_students = current_user.inverse_lessons.paginate(:page => params[:page], :per_page => 20).order('date_id DESC')
-    @lessons_teachers = current_user.lessons.paginate(:page => params[:page], :per_page => 20).order('date_id DESC')
+    @lessons_students = current_user.inverse_lessons.paginate(:page => params[:page], :per_page => 15).order(sort_column + " " + sort_direction).where("user_id LIKE ?", "%#{params[:search]}%")
+    @lessons_teachers = current_user.lessons.paginate(:page => params[:page], :per_page => 30).order(sort_column + " " + sort_direction).where("student_id LIKE ?", "%#{params[:search]}%")
     @user = current_user
     @renderer = custom_paginate_renderer
 

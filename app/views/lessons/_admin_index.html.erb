@@ -9,7 +9,9 @@
 
 <br>
   <div class="container">
-    <%= form_for lessons_path, :method => 'get' do %>
+    <%= form_tag lessons_path, :method => 'get' do %>
+    <%= hidden_field_tag :direction, params[:direction] %>
+    <%= hidden_field_tag :sort, params[:sort] %>
       <div class="row">
         <div class="form_group col-4">
            <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Filtra por el ID del profesor" %>
@@ -49,7 +51,7 @@
           <td><%= local_time(lesson.created_at) %></td>
           <td><%= lesson.class_type_id %></td>
           <td><%= link_to User.find_by(id: "#{lesson.student_id}").name.titleize, "users/#{lesson.student_id}" %></td>
-          <td><%= link_to User.find_by(id: "#{lesson.user_id}").name.titleize, "users/#{lesson.user_id}" %></td>
+          <td><%= link_to User.find_by(id: "#{lesson.user_id}").name.titleize, "users/#{lesson.user_id}" %> (<%= lesson.user_id %>)</td>
           <td><%= local_time(lesson.date_id) %></td>
           <td><%= lesson.time_duration_id/60 %><p> <%= t('hours') %> </p></td>
           <td> <%= Language.find_by(id: "#{lesson.language_id}").name %></td>

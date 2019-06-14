@@ -23,7 +23,7 @@
       <th>Estatus</th>
       <th>Deuda</th>
       <th>Monto pagado</th>
-      <th>Descripción</th>
+      <th>Horario</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -40,7 +40,7 @@
         <td><%= expert_profile.status_id %></td></td>
         <td><%= User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200 %> MXN</td>
         <td><%= User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Completada", payment_id: "Si").sum(:time_duration_id)/60*200 + User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el estudiante", payment_id: "Si").sum(:time_duration_id)/60*200 - User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el profesor", payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN</td>
-        <td><%= User.find_by(id: "#{expert_profile.user_id}").teacher_description %>
+        <td><%= User.find_by(id: "#{expert_profile.user_id}").schedule %>
         <td><%= link_to '', edit_expert_profile_path(expert_profile),class:"fa fa-edit fa-x"  %></td>
         <td><%= link_to '', expert_profile, method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-close fa-x", style:"color:#DC3C45" %></td>
       </tr>

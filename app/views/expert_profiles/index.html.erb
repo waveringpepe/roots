@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1>Profesores</h1>
+</div>
+
+<br>
+
+<div class="container">
+  <%= link_to 'New Expert Profile', new_expert_profile_path, class: "float-right btn btn-primary " %>
+</div>
+
+<br><br><br>
+
+<div class="container text-left">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Idioma</th>
+      <th>País</th>
+      <th>Cuenta</th>
+      <th>Estatus</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expert_profiles.each do |expert_profile| %>
+      <tr>
+        
+        <td><%= User.find_by(id: "#{expert_profile.user_id}").name %>
+        <td><%= User.find_by(id: "#{expert_profile.user_id}").teach_language %>
+        <td><%= User.find_by(id: "#{expert_profile.user_id}").country %>
+        <td><%= expert_profile.bank_account_name %> | <%= expert_profile.bank_account_number %></td>
+        <td><%= expert_profile.status_id %></td>
+        <td><%= link_to '', edit_expert_profile_path(expert_profile),class:"fa fa-edit fa-x"  %></td>
+        <td><%= link_to '', expert_profile, method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-close fa-x", style:"color:#DC3C45" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+

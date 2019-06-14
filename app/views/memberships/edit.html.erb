@@ -1,7 +1,6 @@
 <div class="container">
   <% if current_user.subscribed? %>
     <h1><%= t('billing') %></h1>
-
     <% if current_user.expires_at? %>
       <p><%= t('access_subscription_user_1') %> <%= distance_of_time_in_words current_user.expires_at - Time.zone.now %>.</p>
       <h3> <%= t('access_subscription_user_2') %> </h3>
@@ -19,8 +18,8 @@
           <% elsif current_user.plan_id == 8 %>
             <%= t('membership_free_name') %>.
           <% end %>
-
           <%= link_to t('btn_cancel_subscription'), membership_path, method: :delete, data: {confirm: t('confirmation_cancel_subscription')}, class:"text-danger" %>
+
         </p>
           <div>
             <strong><%= t('card_on_file') %> </strong> <%= current_user.card_brand %> (**** **** **** <%= current_user.card_last4 %>)

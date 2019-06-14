@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+	<h3> Información del profesor</h3>
+	<br>
+	<p>
+	  <strong>Nombre:</strong>
+	 <%= User.find_by(id: "#{@expert_profile.user_id}").name %>
+	</p>
+	<p>
+	  <strong>Estatus</strong>
+	  <%= @expert_profile.status_id %>
+	</p>
+
+	<p>
+	  <strong>Banco:</strong>
+	  <%= @expert_profile.bank_account_number %> |
+	  <%= @expert_profile.bank_account_name %>
+	</p>
+
+	<%= link_to 'Edit', edit_expert_profile_path(@expert_profile) %> |
+	<%= link_to 'Back', expert_profiles_path %>
+</div>

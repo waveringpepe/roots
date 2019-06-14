@@ -1,0 +1,74 @@
+
+  <%= form_with(model: expert_profile, local: true) do |form| %>
+    <% if expert_profile.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(expert_profile.errors.count, "error") %> prohibited this expert_profile from being saved:</h2>
+
+        <ul>
+        <% expert_profile.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <!-- Admin form -->
+      <% if logged_in?(:admin) %>
+        <div class="container">
+          <div class="row justify-content-md-center">
+             <div class="col-4 field">
+              <%= form.label :bank_account_name, "Escribe el nombre de tu banco" %>
+              <%= form.text_field :bank_account_name, class: "form-control"  %>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-4 field">
+              <%= form.label :bank_account_number, "Escribe tu cuenta CLABE o clabe interbancaria" %>
+              <%= form.text_field :bank_account_number, class: "form-control"  %>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-4 field">
+              <%= form.label :user_id, t('teacher') %>
+              <%= form.collection_select(:user_id, User.where(roles:"teacher").order(:name),:id,:name, {include_blank: true}, {class: "form-control"}) %>
+            </div> 
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-4 field">
+              <%= form.label :user_id, "Estatus" %>
+              <%= form.select(:status_id, options_for_select([["Activo", "Activo"],["Inactivo","Inactivo"],["Pendiente", "Pendiente"]]), {}, {class: "form-control"}) %>
+            </div> 
+          </div>
+        </div>
+      <!-- Teachers form -->
+      <% else %>
+        <%= form.hidden_field :status_id, value: "Pendiente" %>
+        <%= form.hidden_field :user_id, value: current_user.id %>
+
+        <div class="container">
+          <div class="row justify-content-md-center">
+             <div class="col-4 field">
+              <%= form.label :bank_account_name, "Escribe el nombre de tu banco" %>
+              <%= form.text_field :bank_account_name, class: "form-control"  %>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-4 field">
+              <%= form.label :bank_account_number, "Escribe tu cuenta CLABE o clabe interbancaria" %>
+              <%= form.text_field :bank_account_number, class: "form-control"  %>
+            </div>
+          </div>
+        </div>
+
+      <% end %>
+
+        <br>
+
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-4 field actions">
+              <%= form.submit "Enviar", class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+  <% end %>

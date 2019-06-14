@@ -27,11 +27,11 @@
         <tbody id="filterTable">
           <% @users.each do |user| %>
             <tr>
-              <th><%= user.created_at.to_formatted_s(:long) %></th>
-              <th><%= link_to user.name, user  %></th>
-              <th><%= user.country_name  %></th>
-              <th><%= user.role %></th>
-              <th><%= user.lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - user.lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200 %> MXN</th>
+              <td><%= user.created_at.to_formatted_s(:short) %></td>
+              <td><%= link_to user.name, user  %></td>
+              <td><%= user.country_name  %></td>
+              <td><%= user.role %></td>
+              <td><%= user.lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - user.lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200 %> MXN</td>
             </tr>
           <% end %>
         </tbody>

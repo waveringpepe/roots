@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   
-  
-  
-  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount StripeEvent::Engine, at: '/webhooks/stripe'
 
@@ -10,6 +7,7 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
+    resources :expert_profiles
     resources :lessons
     resource :membership
     resources :matches

@@ -57,6 +57,6 @@ class ExpertProfilesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def expert_profile_params
-      params.require(:expert_profile).permit(:status_id, :bank_account_number, :bank_account_name, :user_id  )
+      params.require(:expert_profile).permit(:status_id, :bank_account_number, :bank_account_name, :user_id, :bank_account_user_name)
     end
 end

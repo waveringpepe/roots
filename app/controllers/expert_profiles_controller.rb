@@ -3,10 +3,12 @@ class ExpertProfilesController < ApplicationController
   before_action :set_expert_profile, only: [:show, :edit, :update, :destroy]
   access all: [:edit, :new, :update], user: {except: [:index, :destroy, :show ]}, teacher: {except: [:index, :destroy, :show]}, admin: :all
 
+  helper_method :sort_column, :sort_direction
 
   # GET /expert_profiles
   def index
-    @expert_profiles = ExpertProfile.all
+    @expert_profiles = ExpertProfile.paginate(:page => params[:page], :per_page => 100).order(sort_column + " " + sort_direction)
+
   end
 
   # GET /expert_profiles/1
@@ -57,6 +59,15 @@ class ExpertProfilesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def expert_profile_params
-      params.require(:expert_profile).permit(:status_id, :bank_account_number, :bank_account_name, :user_id, :bank_account_user_name)
+      params.require(:expert_profile).permit(:status_id, :bank_account_number, :bank_account_name, :user_id, :bank_account_user_name, :paypal_account)
+    end
+
+    def sort_column
+      Lesson.column_names.include?(params[:sort]) ? params[:sort] : "status_id"
+    end
+    
+    def sort_direction
+      params[:direction] || "desc"
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

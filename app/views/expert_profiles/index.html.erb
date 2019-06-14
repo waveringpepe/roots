@@ -15,12 +15,12 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Nombre</th>
+      <th><%= sortable "user_id", "Nombre" %></th>
       <th>Idioma</th>
       <th>País</th>
-      <th>Banco</th>
+      <th><%= sortable "bank_account_name", "Banco" %></th>
       <th>Cuenta</th>
-      <th>Estatus</th>
+      <th><%= sortable "status_id", "Estatus" %></th>
       <th>Deuda</th>
       <th>Monto pagado</th>
       <th>Horario</th>
@@ -31,13 +31,12 @@
   <tbody>
     <% @expert_profiles.each do |expert_profile| %>
       <tr>
-        
-        <td><%= User.find_by(id: "#{expert_profile.user_id}").name %>
-        <td><%= User.find_by(id: "#{expert_profile.user_id}").teach_language %>
-        <td><%= User.find_by(id: "#{expert_profile.user_id}").country %>
+        <td><%= User.find_by(id: "#{expert_profile.user_id}").name.titleize %>
+        <td><%= Language.find_by(id:User.find_by(id: "#{expert_profile.user_id}").teach_language).name %>
+        <td><%= User.find_by(id: "#{expert_profile.user_id}").country_name %>
         <td><%= expert_profile.bank_account_name %> </td>
-        <td><%= expert_profile.bank_account_number %>
-        <td><%= expert_profile.status_id %></td></td>
+        <td><%= expert_profile.bank_account_number %> <%= expert_profile.paypal_account %></td>
+        <td><%= expert_profile.status_id %></td>
         <td><%= User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200 %> MXN</td>
         <td><%= User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Completada", payment_id: "Si").sum(:time_duration_id)/60*200 + User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el estudiante", payment_id: "Si").sum(:time_duration_id)/60*200 - User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el profesor", payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN</td>
         <td><%= User.find_by(id: "#{expert_profile.user_id}").schedule %>

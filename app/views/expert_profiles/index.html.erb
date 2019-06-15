@@ -31,15 +31,15 @@
   <tbody>
     <% @expert_profiles.each do |expert_profile| %>
       <tr>
-        <td><%= User.find_by(id: "#{expert_profile.user_id}").name.titleize %>
-        <td><%= Language.find_by(id:User.find_by(id: "#{expert_profile.user_id}").teach_language).name %>
-        <td><%= User.find_by(id: "#{expert_profile.user_id}").country_name %>
-        <td><%= expert_profile.bank_account_name %> </td>
+        <td><%= User.find_by(id: "#{expert_profile.user_id}").name.titleize %> (Id: <%= User.find_by(id: "#{expert_profile.user_id}").id %>)</td>
+        <td><%= Language.find_by(id:User.find_by(id: "#{expert_profile.user_id}").teach_language).name %></td>
+        <td><%= User.find_by(id: "#{expert_profile.user_id}").country_name %></td>
+        <td><%= expert_profile.bank_account_name %></td>
         <td><%= expert_profile.bank_account_number %> <%= expert_profile.paypal_account %></td>
         <td><%= expert_profile.status_id %></td>
         <td><%= User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200 %> MXN</td>
         <td><%= User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Completada", payment_id: "Si").sum(:time_duration_id)/60*200 + User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el estudiante", payment_id: "Si").sum(:time_duration_id)/60*200 - User.find_by(id: "#{expert_profile.user_id}").lessons.where( status_id: "Perdida por el profesor", payment_id: "Si").sum(:time_duration_id)/60*200 %> MXN</td>
-        <td><%= User.find_by(id: "#{expert_profile.user_id}").schedule %>
+        <td><%= User.find_by(id: "#{expert_profile.user_id}").schedule %></td>
         <td><%= link_to '', edit_expert_profile_path(expert_profile),class:"fa fa-edit fa-x"  %></td>
         <td><%= link_to '', expert_profile, method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-close fa-x", style:"color:#DC3C45" %></td>
       </tr>

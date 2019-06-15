@@ -8,7 +8,6 @@ class ExpertProfilesController < ApplicationController
   # GET /expert_profiles
   def index
     @expert_profiles = ExpertProfile.paginate(:page => params[:page], :per_page => 100).order(sort_column + " " + sort_direction)
-
   end
 
   # GET /expert_profiles/1

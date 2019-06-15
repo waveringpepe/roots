@@ -1,41 +1,68 @@
   <div class="container" >
-    <h1>All users</h1>
-    <p><strong>Total: </strong><%= @users.total_entries %></p>
-
+    <div>
+      <h1>All users</h1>
+      <p><strong>Total: </strong><%= @users.total_entries %></p>
+    </div>
+    
     <br>
 
-    <input class="form-control" id="myInput" type="text" placeholder="Filtra..">
+    <div class="float-left">
+      <%= link_to "Panel de profesores", expert_profiles_path, class: "btn btn-dark" %>
+    </div>
+    <br>
+    <br>
   </div>
 
   <br>
 
   <div class="container">
     <div class="table-responsive-sm">
-      <table class="table" >
-        <thead>
-          <tr>
-            <th>Created at</th>
-            <th>Name</th>
-            <th>Country</th>
-            <th>Rol</th>
-            <th>Dinero que se les debe</th>
-
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-
-        <tbody id="filterTable">
-          <% @users.each do |user| %>
+      <table class="table">
+          <thead>
             <tr>
-              <td><%= user.created_at.to_formatted_s(:short) %></td>
-              <td><%= link_to user.name, user  %></td>
-              <td><%= user.country_name  %></td>
-              <td><%= user.role %></td>
-              <td><%= user.lessons.where( status_id: "Completada", payment_id: "No").sum(:time_duration_id)/60*200 + user.lessons.where( status_id: "Perdida por el estudiante", payment_id: "No").sum(:time_duration_id)/60*200 - user.lessons.where( status_id: "Perdida por el profesor", payment_id: "No").sum(:time_duration_id)/60*200 %> MXN</td>
+              <th>Name</th>
+              <th>Teléfono</th>
+              <th>Idioma</th>
+              <th>Membresía</th>
+              <th>Horas completadas</th>
+              <th>Horas ganadas</th>
+              <th>Horas perdidas</th>
+              <th>Clases próximas</th>
+              <th>País</th>
+              <th>Horario</th>
+              <th>Profesor</th>
+              <th colspan="3">
             </tr>
-          <% end %>
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= link_to user.name.titleize, user  %></td>
+                <td><%= user.phone_number  %></td>
+                <td><% if user.language_id == "nil" %>
+                    <% else %>
+                      <%= Language.find_by(id: user.language_id).name  %>
+                    <% end %>
+                </td>
+                <td><%= Plan.find_by(id: user.plan_id).name.titleize  %></td>
+                <td><%= user.inverse_lessons.where( status_id: "Completada").sum(:time_duration_id)/60 %></td>
+                <td><%= user.inverse_lessons.where( status_id: "Perdida por el profesor").count(:time_duration_id) %></td>
+                <td><%= user.inverse_lessons.where( status_id: "Perdida por el estudiante").count(:time_duration_id) %></td>
+                <td><%= user.inverse_lessons.where( status_id: "Próxima").count(:time_duration_id) %></td>
+                <td><%= user.country_name %></td>
+                <td><%= user.schedule %></td>
+                <td><% if user.inverse_students.first == nil %> 
+
+                    <% else %>
+                      <%= user.inverse_students.first.name.titleize %>
+                    <% end %>                  
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 

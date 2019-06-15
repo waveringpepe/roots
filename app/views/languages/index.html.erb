@@ -3,21 +3,25 @@
 <div class="container">
   <h1><%= t('languages') %></h1><br/>
   <p>Total: <%= Language.count %></p>
-  <table class="table table-striped">
+  <table class="table table">
     <thead>
-      <tr>
+      <tr class="text-center">
         <th><%= t('name') %></th>
+        <th># Profesores que enseñan el idioma</th>
+        <th># Estudiantes </th>
         <th colspan="3"></th>
       </tr>
     </thead>
 
     <tbody>
       <% @languages.each do |language| %>
-        <tr>
-          <th scope="col"><%= link_to language.name, language, class:"font-weight-normal"  %></th>
+        <tr class="text-center">
+          <td><%= link_to language.name, language, class:"font-weight-normal"  %></td>
           <% if logged_in?(:admin) %>
-            <th><%= link_to '', edit_language_path(language), class:"fa fa-edit fa-x" %></th>
-            <th><%= link_to '', language, method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-close fa-x",style:"color:#DC3C45" %></th>
+            <td><%= User.where(teach_language: language, roles: "teacher" ).count  %></td>
+            <td><%= User.where(language_id: language, roles: "user" ).count  %></td>
+            <td><%= link_to '', edit_language_path(language), class:"fa fa-edit fa-x" %></td>
+            <td><%= link_to '', language, method: :delete, data: { confirm: 'Are you sure?' }, class:"fa fa-close fa-x",style:"color:#DC3C45" %></td>
           <% end %>  
         </tr>
       <% end %>

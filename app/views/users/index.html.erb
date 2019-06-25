@@ -21,3 +21,56 @@
   </div>
   <br>
   
+  <div class="container">
+      <%= form_tag users_path, :method => 'get' do %>
+      <%= hidden_field_tag :direction, params[:direction] %>
+      <%= hidden_field_tag :sort, params[:sort] %>
+    <div class="row">
+        <div class="form_group col-4">
+           <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Filtra por nombre del usuario" %>
+        </div>
+        <div class="form_group col-1">
+            <%= submit_tag "Search", :name => nil , class: "btn btn-primary" %>
+        </div>
+        <br>
+      <% end %>
+    </div>
+  </div>
+  <br><br><br>
+
+  <div class="container">
+    <div class="table-responsive-sm">
+      <table class="table">
+          <thead>
+            <tr class="text-center">
+              <th>Name</th>
+              <th>Teléfono</th>
+              <th>Idioma (aprende o enseña)</th>
+              <th>Membresía</th>
+              <th>Clases próximas</th>
+              <th>País</th>
+              <th>Horario</th>
+              <th colspan="3">
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @users.each do |user| %>
+              <tr class="text-center">
+                <td><%= link_to user.name.titleize, user  %></td>
+                <td><%= user.phone_number  %></td>
+
+                <td><%= Plan.find_by(id: user.plan_id).name.titleize  %></td>
+
+                <td><%= user.country_name %></td>
+                <td><%= user.schedule %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+

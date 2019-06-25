@@ -20,7 +20,7 @@
     </div>
   </div>
   <br>
-  
+
   <div class="container">
       <%= form_tag users_path, :method => 'get' do %>
       <%= hidden_field_tag :direction, params[:direction] %>
@@ -59,9 +59,15 @@
               <tr class="text-center">
                 <td><%= link_to user.name.titleize, user  %></td>
                 <td><%= user.phone_number  %></td>
-
+  
                 <td><%= Plan.find_by(id: user.plan_id).name.titleize  %></td>
+                <td><% if user.has_roles?(:teacher) %>
 
+                      <%= user.lessons.where( status_id: "Próxima").count(:time_duration_id) %>
+                    <% else %>
+                      <%= user.inverse_lessons.where( status_id: "Próxima").count(:time_duration_id) %>
+                    <% end %>
+                </td>
                 <td><%= user.country_name %></td>
                 <td><%= user.schedule %></td>
               </tr>

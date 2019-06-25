@@ -1,40 +1,42 @@
-<p id="notice"><%= notice %></p>
-<div class="container">
-  <div class="row">
-    <h1>Estudiantes</h1>
-  </div>
-  <br>
-  <div class="row float-left">
-    <%= link_to 'Agregar estudiante', new_crm_path, class: " btn btn-primary" %>
-  </div>
-  <br>
-</div>
-<br><br>
-<div class="container">
-  <div class="row">
-    <p>Total de estudiantes activos: <strong><%= Crm.where(public_status: "Activo").count %></strong></p>
-  </div>
-  <div class="row">
-    <p>Total de estudiantes cancelados: <strong><%= Crm.where(public_status: "Cancelado").count %></strong></p>
-  </div>
-</div>
-<br>
+  <p id="notice"><%= notice %></p>
+
   <div class="container">
-    <%= form_tag crms_path, :method => 'get' do %>
-    <%= hidden_field_tag :direction, params[:direction] %>
-    <%= hidden_field_tag :sort, params[:sort] %>
-      <div class="row">
+    <div class="row">
+      <h1>Estudiantes</h1>
+    </div>
+  </div>
+  <br><br>
+  <div class="container">
+      <%= form_tag crms_path, :method => 'get' do %>
+      <%= hidden_field_tag :direction, params[:direction] %>
+      <%= hidden_field_tag :sort, params[:sort] %>
+    <div class="row">
+        <div class="col-4">
+          <%= link_to 'Agregar estudiante', new_crm_path, class: " btn btn-success" %>
+        </div>
         <div class="form_group col-4">
            <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Filtra" %>
         </div>
         <div class="form_group col-1">
-          <%= submit_tag "Search", :name => nil , class: "btn btn-primary" %>
-      </div>
-      <br>
-    <% end %>
+            <%= submit_tag "Search", :name => nil , class: "btn btn-primary" %>
+        </div>
+        <br>
+      <% end %>
+    </div>
   </div>
-<br>
-<br><br>
+  <br><br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <p>Total de estudiantes activos: <strong><%= Crm.where(public_status: "Activo").count %></strong>
+      </div>
+      <br><br>
+      <div class="col-sm">
+        <p>Total de estudiantes cancelados: <strong><%= Crm.where(public_status: "Cancelado").count %></strong></p>
+      </div>
+    </div>
+  </div>
+
 <div class="container">
   <table class="table">
     <thead>

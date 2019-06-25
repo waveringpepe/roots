@@ -7,6 +7,7 @@ class CrmsController < ApplicationController
   # GET /crms
   def index
     @crms = Crm.all
+ 
   end
 
   # GET /crms/1

@@ -56,16 +56,7 @@
               <tr class="text-center">
                 <td><%= link_to user.name.titleize, user  %></td>
                 <td><%= user.phone_number  %></td>
-                <td><% if user.language_id == "nil" %>
-                      <% if user.teach_language == "nil" %>
 
-                      <% else %>
-                        <%= Language.find_by(id: user.teach_language).name  %>
-                      <% end %>
-                    <% else %>
-                      <%= Language.find_by(id: user.language_id).name  %>
-                    <% end %>
-                </td>
                 <td><%= Plan.find_by(id: user.plan_id).name.titleize  %></td>
                 <td><% if user.has_roles?(:teacher) %>
 

@@ -59,10 +59,17 @@
               <tr class="text-center">
                 <td><%= link_to user.name.titleize, user  %></td>
                 <td><%= user.phone_number  %></td>
-  
+                <td>
+                	<% if user.has_roles?(:teacher) %>
+                		<%= Language.find_by(id: user.teach_language).name %>
+                	<% else %>
+                  		<%= Language.find_by(id: user.language_id).name %>
+                  	<% end %>
+                  		
+
+                </td>
                 <td><%= Plan.find_by(id: user.plan_id).name.titleize  %></td>
                 <td><% if user.has_roles?(:teacher) %>
-
                       <%= user.lessons.where( status_id: "Próxima").count(:time_duration_id) %>
                     <% else %>
                       <%= user.inverse_lessons.where( status_id: "Próxima").count(:time_duration_id) %>

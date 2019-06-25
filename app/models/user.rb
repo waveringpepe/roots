@@ -1,5 +1,8 @@
 class User < ApplicationRecord
   belongs_to :plan
+  has_one :crm 
+  has_one :expert_profile
+
   has_many :charges
 
   has_many :lessons

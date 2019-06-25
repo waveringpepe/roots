@@ -1,0 +1,73 @@
+
+  <%= form_with(model: crm, local: true) do |form| %>
+    <% if crm.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(crm.errors.count, "error") %> prohibited this crm from being saved:</h2>
+
+        <ul>
+        <% crm.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row justify-content-md-center">
+      <div class="col-4 field">
+        <%= form.label :user_id, t('student') %>
+        <%= form.collection_select(:user_id, User.where(roles:"user").order(:name),:id,:name, {include_blank: true}, {class: "form-control"}) %>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-4 field">
+        <%= form.label :public_status, "Estatus público" %>
+        <%= form.select(:public_status, options_for_select([["Activo", "Cancelado"],["Cancelado","Cancelado"]]), {}, {class: "form-control"}) %>
+      </div> 
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-4 field">
+        <%= form.label :private_status, "Estatus privado" %>
+        <%= form.select(:private_status, options_for_select(["Prueba 1ra -> cancelado", "Prueba 2da -> cancelado", "Prueba 3ra -> cancelado", "Prueba 1er Clase", "Prueba 2da Clase", "Prueba 3era Clase", "Prueba 4ta Clase", "Con profesor, aún sin primera clase", "Sin profesor asignado", " Bad timing", "Contactado", "No interesado", "Clase de prueba", "Clase prueba -> No interesado", "Clase de prueba -> Bad timing", "Esperando confirmación de clase de prueba", "Clase de prueba -> No se presentó", "prueba -> Alumno Activo" ]), {}, {class: "form-control"}) %>
+      </div> 
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-4 field">
+          <%= form.label :credits_balance, "Balance de créditos" %>
+          <%= form.text_field :credits_balance , class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-4 field">
+        <%= form.label :buy_credits, "Créditos comprados" %>
+        <%= form.text_field :buy_credits , class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-4 field">
+        <%= form.label :subscription_renewal, "# veces de renovación" %>
+        <%= form.text_field :subscription_renewal, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-4 field">
+        <%= form.label :comment, "Comentarios" %>
+        <%= form.text_area :comment, class: "form-control" %>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row justify-content-md-center">
+      <div class="col-4 field actions">
+        <%= form.submit "Enviar", class: "btn btn-primary" %>
+      </div>
+    </div>
+
+  <% end %>
+

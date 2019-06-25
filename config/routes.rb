@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount StripeEvent::Engine, at: '/webhooks/stripe'
 
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
     resources :matches
     resources :charges
     resources :languages
+    resources :crms
     resources :users, only: [:show, :index]
 
     get 'home', to: 'pages#home'

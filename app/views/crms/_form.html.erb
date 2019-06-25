@@ -29,7 +29,30 @@
     <div class="row justify-content-md-center">
       <div class="col-4 field">
         <%= form.label :private_status, "Estatus privado" %>
-        <%= form.select(:private_status, options_for_select(["Prueba 1ra -> cancelado", "Prueba 2da -> cancelado", "Prueba 3ra -> cancelado", "Prueba 1er Clase", "Prueba 2da Clase", "Prueba 3era Clase", "Prueba 4ta Clase", "Con profesor, aún sin primera clase", "Sin profesor asignado", " Bad timing", "Contactado", "No interesado", "Clase de prueba", "Clase prueba -> No interesado", "Clase de prueba -> Bad timing", "Esperando confirmación de clase de prueba", "Clase de prueba -> No se presentó", "prueba -> Alumno Activo" ]), {}, {class: "form-control"}) %>
+        <%= form.select(:private_status, options_for_select([
+                                                              "Bad timing",
+                                                              "Contactado",
+                                                              "Con profesor,aún sin primera clase",         
+                                                              "Clase de prueba -> No se presentó",
+                                                              "Clase de prueba", 
+                                                              "Clase prueba -> No interesado", 
+                                                              "Clase de prueba -> Bad timing",
+                                                              "Directo",
+                                                              "Esperando confirmación de clase de prueba",
+                                                              "Prueba 1ra -> cancelado", 
+                                                              "Prueba 2da -> cancelado",
+                                                              "Prueba 3ra -> cancelado", 
+                                                              "Prueba 1er Clase", 
+                                                              "Prueba 2da Clase", 
+                                                              "Prueba 3era Clase", 
+                                                              "Prueba 4ta Clase",
+                                                              "Prueba -> Alumno Activo",
+                                                              "No interesado",
+                                                              "Suspendido",
+                                                              "Sin profesor asignado"
+                                                             ]),
+                                                             {include_blank: true}, 
+                                                             {class: "form-control"}) %>                                                              
       </div> 
     </div>
 

@@ -47,6 +47,7 @@
         <th>Membresía</th>
         <th>País</th>
         <th>Horario</th>
+        <th>Referencia</th>
         <th><%= sortable "user_id", "Profesor" %></th>
         <th><%= sortable "buy_credits", "Créditos comprados" %></th>
         <th><%= sortable "free_credits", "Créditos regalados" %></th>
@@ -66,12 +67,13 @@
     <tbody>
       <% @crms.each do |student| %>
         <tr class="text-center">
-          <td><%= link_to student.user.name.titleize, student.user %></td>
+          <td><%= link_to student.user.name.titleize, student.user %>(<%= student.id %>)</td>
           <td><%= student.user.phone_number %></td>
           <td><%= Language.find_by(id: student.user.language_id).name %></td>
           <td><%= Plan.find_by(id: student.user.plan_id).name.titleize %></td>
           <td><%= student.user.country_name %></td>
           <td><%= student.user.schedule %></td>
+          <td><%= student.user.reference %></td>
           <td><% if student.user.inverse_students.first == nil %> 
 
               <% else %>

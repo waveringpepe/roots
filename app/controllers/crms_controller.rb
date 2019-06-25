@@ -7,8 +7,7 @@ class CrmsController < ApplicationController
 
   # GET /crms
   def index
-    @crms = Crm.paginate(:page => params[:page], :per_page => 100).order(sort_column + " " + sort_direction).where("public_status LIKE ?", "%#{params[:search]}%")
- 
+    @crms = Crm.paginate(:page => params[:page], :per_page => 100).order(sort_column + " " + sort_direction).where("private_status LIKE ?", "%#{params[:search]}%")
   end
 
   # GET /crms/1

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   # GET /User
   def index
-    @users = User.paginate(:page => params[:page], :per_page => 100).order(sort_column + " " + sort_direction).where("name LIKE ?", "%#{params[:search]}%")
+    @users = User.paginate(:page => params[:page], :per_page => 100)
     @renderer = custom_paginate_renderer
     @lessons = Lesson.all
 

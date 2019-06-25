@@ -3,10 +3,11 @@ class CrmsController < ApplicationController
   before_action :set_crm, only: [:show, :edit, :update, :destroy]
   access admin: :all
 
+  helper_method :sort_column, :sort_direction
 
   # GET /crms
   def index
-    @crms = Crm.all
+    @crms = Crm.paginate(:page => params[:page], :per_page => 100).order(sort_column + " " + sort_direction).where("public_status LIKE ?", "%#{params[:search]}%")
  
   end
 
@@ -57,6 +58,16 @@ class CrmsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def crm_params
-      params.require(:crm).permit(:private_status, :public_status, :credits_balance, :comment, :subscription_renewal, :user_id, :buy_credits)
+      params.require(:crm).permit(:private_status, :public_status, :credits_balance, :comment, :subscription_renewal, :user_id, :buy_credits, :free_credits)
     end
+
+    def sort_column
+      Crm.column_names.include?(params[:sort]) ? params[:sort] : "public_status"
+    end
+    
+    def sort_direction
+      params[:direction] || "desc"
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
+    end
+
 end

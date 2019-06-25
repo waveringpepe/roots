@@ -1,30 +1,39 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Private status:</strong>
-  <%= @crm.private_status %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Nombre:</strong>
+    <%= @crm.user.name %>
+  </p>
+
+
+    <strong>Estatus público:</strong>
+    <%= @crm.public_status %>
+  </p>
+
+  <p>
+  <strong>Estatus interno:</strong>
+    <%= @crm.private_status %>
+  </p>
+  <p>
+
+  <p>
+    <strong>Créditos comprados:</strong>
+    <%= @crm.buy_credits %>
+  </p>
+
+  <p>
+    <strong># de veces de renovación de la suscripción:</strong>
+    <%= @crm.subscription_renewal %>
+  </p>
+
+  <p>
+    <strong>Comentarios:</strong>
+    <%= @crm.comment %>
+  </p>
+
+
+  <%= link_to 'Edit', edit_crm_path(@crm) %> |
+  <%= link_to 'Back', crms_path %>
 </p>
-
-<p>
-  <strong>Public status:</strong>
-  <%= @crm.public_status %>
-</p>
-
-
-<p>
-  <strong>Credits balance:</strong>
-  <%= @crm.credits_balance %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @crm.comment %>
-</p>
-
-<p>
-  <strong>Subscription renewal:</strong>
-  <%= @crm.subscription_renewal %>
-</p>
-
-<%= link_to 'Edit', edit_crm_path(@crm) %> |
-<%= link_to 'Back', crms_path %>

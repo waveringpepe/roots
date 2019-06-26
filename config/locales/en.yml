@@ -184,7 +184,7 @@ en:
   phonenumber_title_form: "Phone number"
   phonenumber_description_form: "Write your WhatsApp"
   language_title_form: "Language you want to learn"
-  start_title_form: "Select when you would like to start"
+  start_title_form: "Select when would you like to start"
   start_option1_form: "Today"
   start_option2_form: "In a few days"
   start_option3_form: "In two weeks"
@@ -192,7 +192,7 @@ en:
   timezone_title_form: "Select your Time Zone"
   country_title_form: "Select your country"
   city_title_form: "City"
-  city_description_form: "Write your city"
+  city_description_form: "E.g. San Francisco, California, Mexico city"
   level_title_form: "Select your language level"
   level_extratext_form: "Consider that 0 = I am starting; 10 = Expert"
   birthday_title_form: "Select your birthday"
@@ -258,7 +258,7 @@ en:
   sign_up_teacher: "Apply to teach"
   description_teacher: "Hi, I'm Pepe, I was born in Florence, but now I live in Mexico City. I've been teaching Italian for 10 years. I love being able to transmit my culture through the language and I also love Italian cuisine."
   description_teacher1: "Add a brief description about yourself"
-  languages_teacher_speak: "List all the languages that you speak fluently*"
+  languages_teacher_speak: "List all the languages you speak fluently*"
   languages_teacher_speak1: "English, Spanish, Chinese"
   
   #devise/registrations/passwords

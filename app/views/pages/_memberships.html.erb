@@ -7,7 +7,7 @@
 	  <div class="col-4">
 	    <div class="list-group" id="=list-tab" role="tablist">
 	    <% if current_user.plan_id == 9 %>
-  	      <a class="list-group-item list-group-item-action" id="list-promo-list" data-toggle="list" href="#list-promo" role="tab" aria-controls="promo"><%= t('amount_card_promo_form') %></a>
+  	      <a class="list-group-item list-group-item-action" id="list-promo-list" data-toggle="list" href="#list-promo" role="tab" aria-controls="promo"><%= t('amount_card_promo_form') %> <b><%= t('amount_card_promo_form_bold') %></b></a>
       	<% end %>
 	      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><%= t('amount_card_basic_form') %> </a>
 	      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><%= t('amount_card_medium_form') %></a>

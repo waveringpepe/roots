@@ -41,21 +41,22 @@
   <table class="table">
     <thead>
       <tr class="text-center">
+        <th>Referencia</th>
+        <th>Código de promoción</th>
         <th><%= sortable "user_id", "Nombre" %></th>
         <th>Teléfono</th>
         <th><%= sortable "language_id", "Idioma" %></th>
         <th>Membresía</th>
         <th>País</th>
         <th>Horario</th>
-        <th>Referencia</th>
         <th><%= sortable "user_id", "Profesor" %></th>
+        <th>Balance de créditos</th>
         <th><%= sortable "buy_credits", "Créditos comprados" %></th>
         <th><%= sortable "free_credits", "Créditos regalados" %></th>
         <th>Horas completadas</th>
         <th>Horas ganadas</th>
         <th>Horas perdidas</th>
         <th>Clases próximas</th>
-        <th>Balance de créditos</th>
         <th><%= sortable "subscription_renewal", "# de veces de renovación" %></th>
         <th><%= sortable "private_status", "Estatus privado" %></th>
         <th><%= sortable "public_status", "Estatus público" %></th>
@@ -67,29 +68,31 @@
     <tbody>
       <% @crms.each do |student| %>
         <tr class="text-center">
+          <td><%= student.user.reference %></td>
+          <td><%= student.user.promo_code %></td>
           <td><%= link_to student.user.name.titleize, student.user %>(<%= student.id %>)</td>
           <td><%= student.user.phone_number %></td>
           <td><%= Language.find_by(id: student.user.language_id).name %></td>
           <td><%= Plan.find_by(id: student.user.plan_id).name.titleize %></td>
           <td><%= student.user.country_name %></td>
           <td><%= student.user.schedule %></td>
-          <td><%= student.user.reference %></td>
+
           <td><% if student.user.inverse_students.first == nil %> 
 
               <% else %>
                 <%= student.user.inverse_students.first.name.titleize %>
               <% end %>                  
           </td>
+          <!-- Model for calculating credits balance = Hours bought + hours won by policy + hours given away by us - completed hours - hours lost by policy -->
+          <td class="text-dark bg-light font-weight"><%= student.buy_credits.to_f + student.user.inverse_lessons.where( status_id: "Perdida por el profesor").sum(:time_duration_id)/60 + student.free_credits.to_f - student.user.inverse_lessons.where( status_id: "Completada").sum(:time_duration_id)/60 - student.user.inverse_lessons.where( status_id: "Perdida por el estudiante").sum(:time_duration_id)/60  %></td>
           <td><%= student.buy_credits %></td>
           <td><%= student.free_credits %></td>
-          <td><%= student.user.inverse_lessons.where( status_id: "Completada").sum(:time_duration_id)/60 %></td>
+          <td class="font-weight-bold text-success"><%= student.user.inverse_lessons.where( status_id: "Completada").sum(:time_duration_id)/60 %></td>
           <td><%= student.user.inverse_lessons.where( status_id: "Perdida por el profesor").sum(:time_duration_id)/60 %></td>
           <td><%= student.user.inverse_lessons.where( status_id: "Perdida por el estudiante").sum(:time_duration_id)/60 %></td>
-          <td><%= student.user.inverse_lessons.where( status_id: "Próxima").count(:time_duration_id) %></td>
-          <!-- Model for calculating credits balance = Hours bought + hours won by policy + hours given away by us - completed hours - hours lost by policy -->
-          <td><%= student.buy_credits.to_f + student.user.inverse_lessons.where( status_id: "Perdida por el profesor").sum(:time_duration_id)/60 + student.free_credits.to_f - student.user.inverse_lessons.where( status_id: "Completada").sum(:time_duration_id)/60 - student.user.inverse_lessons.where( status_id: "Perdida por el estudiante").sum(:time_duration_id)/60  %></td>
+          <td class="text-dark" style="background:#FAE687"><%= student.user.inverse_lessons.where( status_id: "Próxima").count(:time_duration_id) %></td>
           <td><%= student.subscription_renewal %></td>
-          <td><%= student.private_status %></td>
+          <td class="text-dark bg-light"><%= student.private_status %></td>
           <td><%= student.public_status %></td>
           <td><%= student.comment %></td>
           <td><%= link_to '', edit_crm_path(student), class:"fa fa-edit fa-x" %></td>

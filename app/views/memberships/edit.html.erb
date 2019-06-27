@@ -15,7 +15,7 @@
             <%= t('medium_membership_name') %>.
           <% elsif current_user.plan_id == 7 %>
             <%= t('intensive_membership_name') %>.
-          <% elsif current_user.plan_id == 8 %>
+          <% elsif current_user.plan_id == 12 %>
             <%= t('membership_free_name') %>.
           <% end %>
           <%= link_to t('btn_cancel_subscription'), membership_path, method: :delete, data: {confirm: t('confirmation_cancel_subscription')}, class:"text-danger" %>

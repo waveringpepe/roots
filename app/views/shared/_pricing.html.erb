@@ -13,8 +13,11 @@
       </div>
       <div class="card-body">
         <h1 class="card-title pricing-card-title"  itemprop="price"><%= t('basic_membership_price') %>/ <small class="text-muted"><%= t('month') %></small></h1>
+        <hr>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><%= t('basic_membership_description') %></li>
+          <li class="font-weight-light"><%= t('basic_membership_description') %> <b class="text-success"><%= t('basic_membership_description_a') %></b> <%= t('basic_membership_description_b') %></li><br>
+          <li class="font-weight-light"><%= t('basic_membership_description_1') %><b class="text-info font-weight-normal"><%= t('basic_membership_description_1_a') %></b></li><br>
+          <li class="font-weight-light"><%= t('basic_membership_description_2') %><b class="font-weight-normal"> <%= t('basic_membership_description_2_a') %></b> <%= t('basic_membership_description_2_b') %></li>
         </ul>
       </div>
     </div>
@@ -24,8 +27,11 @@
       </div>
       <div class="card-body">
         <h1 class="card-title pricing-card-title"  itemprop="price"><%= t('medium_membership_price') %>/ <small class="text-muted"><%= t('month') %></small></h1>
+        <hr>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><%= t('medium_membership_description') %></li>
+          <li class="font-weight-light"><%= t('basic_membership_description') %> <b class="text-success"><%= t('basic_membership_description_a_medium') %></b> <%= t('basic_membership_description_b') %></li><br>
+          <li class="font-weight-light"><%= t('basic_membership_description_1') %><b class="text-info font-weight-normal"><%= t('basic_membership_description_1_a_medium') %></b></li><br>
+          <li class="font-weight-light"><%= t('basic_membership_description_2') %><b class="font-weight-normal"> <%= t('basic_membership_description_2_a_medium') %></b> <%= t('basic_membership_description_2_b') %></li>
         </ul>
       </div>
     </div>
@@ -35,12 +41,20 @@
       </div>
       <div class="card-body">
         <h1 class="card-title pricing-card-title"  itemprop="price"><%= t('intensive_membership_price') %>/ <small class="text-muted"><%= t('month') %></small></h1>
+        <hr>
         <ul class="list-unstyled mt-3 mb-4">
-          <li> <%= t('intensive_membership_description') %></li>
+          <li class="font-weight-light"><%= t('basic_membership_description') %> <b class="text-success"><%= t('basic_membership_description_a_intensive') %></b> <%= t('basic_membership_description_b') %></li><br>
+          <li class="font-weight-light"><%= t('basic_membership_description_1') %><b class="text-info font-weight-normal"><%= t('basic_membership_description_1_a_intensive') %></b></li><br>
+          <li class="font-weight-light"><%= t('basic_membership_description_2') %><b class="font-weight-normal"> <%= t('basic_membership_description_2_a_intesive') %></b> <%= t('basic_membership_description_2_b') %></li>
         </ul>
       </div>
     </div>
   </div>
+
+  <div class="container">
+    <p><b><%= t('note_pricing_credits') %></b> <%= t('note_pricing_credits_1') %></p>
+  </div>
+  <br>
 <div class="container">
   <h3> <%= t('information') %></h3><br/>
 
@@ -71,20 +85,6 @@
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
         <div class="card-body">
           <%= t('pricing_answer_2') %>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body" id="headingThree">
-        <h2 class="mb-0">
-          <button style="color:#5A5A5A;" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collaspseThree">
-            <%= t('pricing_question_3') %>
-          </button>
-        </h2>
-      </div>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-        <div class="card-body">
-          <%= t('pricing_answer_3') %>
         </div>
       </div>
     </div>

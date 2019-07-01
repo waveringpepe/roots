@@ -7,7 +7,7 @@ class MatchesController < ApplicationController
   # GET /matches
   def index
     @matches = Match.all
-    @matches = Match.paginate(:page => params[:page], :per_page => 10).order('created_at DESC')
+    @matches = Match.paginate(:page => params[:page], :per_page => 100).order('created_at DESC')
     @usersmatch = current_user.students.paginate(:page => params[:page], :per_page => 5).order('created_at DESC')
     @studentsmatch = current_user.inverse_students.paginate(:page => params[:page], :per_page => 5).order('created_at DESC')
     @renderer = custom_paginate_renderer

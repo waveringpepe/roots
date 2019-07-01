@@ -44,6 +44,7 @@
         <th>Referencia</th>
         <th>Código de promoción</th>
         <th><%= sortable "user_id", "Nombre" %></th>
+        <th>Email</th>
         <th>Teléfono</th>
         <th><%= sortable "language_id", "Idioma" %></th>
         <th>Membresía</th>
@@ -71,6 +72,7 @@
           <td><%= student.user.reference %></td>
           <td><%= student.user.promo_code %></td>
           <td><%= link_to student.user.name.titleize, student.user %>(<%= student.id %>)</td>
+          <td><%= link_to student.user.email %></td>
           <td><%= student.user.phone_number %></td>
           <td><%= Language.find_by(id: student.user.language_id).name %></td>
           <td><%= Plan.find_by(id: student.user.plan_id).name.titleize %></td>

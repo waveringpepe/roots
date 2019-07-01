@@ -37,7 +37,7 @@
           <div class="row justify-content-md-center">
             <div class="col-4 field">
               <%= form.label :status_id, "Estatus" %>
-              <%= form.select(:status_id, options_for_select([["Activo", "Activo"],["Inactivo","Inactivo"],["Pendiente", "Pendiente"]]), {}, {class: "form-control"}) %>
+              <%= form.select(:status_id, options_for_select([["Activo", "Activo"],["Inactivo","Inactivo"],["Pendiente", "Pendiente"]],@expert_profile.status_id), {}, {class: "form-control"}) %>
             </div> 
           </div>
         </div>

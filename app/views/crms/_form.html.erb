@@ -22,7 +22,7 @@
     <div class="row justify-content-md-center">
       <div class="col-4 field">
         <%= form.label :public_status, "Estatus público" %>
-        <%= form.select(:public_status, options_for_select(["Activo", "Cancelado"]), {}, {class: "form-control"}) %>
+        <%= form.select(:public_status, options_for_select(["Activo", "Cancelado"],@crm.public_status), {}, {class: "form-control"}) %>
       </div> 
     </div>
 
@@ -54,8 +54,8 @@
                                                               "No interesado",
                                                               "Suspendido",
                                                               "Sin profesor asignado"
-                                                             ]),
-                                                             {include_blank: true}, 
+                                                             ],@crm.private_status),
+                                                             {}, 
                                                              {class: "form-control"}) %>                                                              
       </div> 
     </div>

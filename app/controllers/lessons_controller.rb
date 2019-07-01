@@ -115,7 +115,7 @@ class LessonsController < ApplicationController
     elsif current_user.has_roles?(:user)
       LessonMailer.cancel_lesson_student(@lesson).deliver
     elsif current_user.has_roles?(:admin)
-      LessonMailer.cancel_lesson_student(@lesson).deliver
+      
     end
   end
 

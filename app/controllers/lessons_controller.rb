@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
-  access all: [:index], user: [:edit , :update, :show, {except: [:new, :create]}], teacher: [:new, :destroy, :edit, :create, :update, :show], admin: :all
+  access all: [:index], user: [:edit , :update, :show, :destroy, {except: [:new, :create]}], teacher: [:new, :destroy, :edit, :create, :update, :show], admin: :all
   
   helper_method :sort_column, :sort_direction
 
@@ -112,10 +112,8 @@ class LessonsController < ApplicationController
     redirect_to lessons_url, notice: "Lesson with id: #{@lesson.id} was successfully destroyed."
     if current_user.has_roles?(:teacher)
       LessonMailer.cancel_lesson_teacher(@lesson).deliver
-    elsif current_user.has_roles?(:user)
+    elsif current_user.role == :user
       LessonMailer.cancel_lesson_student(@lesson).deliver
-    elsif current_user.has_roles?(:admin)
-      
     end
   end
 

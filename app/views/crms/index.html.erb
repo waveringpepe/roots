@@ -6,36 +6,118 @@
     </div>
   </div>
   <br><br>
-  <div class="container">
-      <%= form_tag crms_path, :method => 'get' do %>
-      <%= hidden_field_tag :direction, params[:direction] %>
-      <%= hidden_field_tag :sort, params[:sort] %>
-    <div class="row">
-        <div class="col-4">
-          <%= link_to 'Agregar estudiante', new_crm_path, class: " btn btn-success" %>
-        </div>
-        <div class="form_group col-4">
-           <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Filtra" %>
-        </div>
-        <div class="form_group col-1">
-            <%= submit_tag "Search", :name => nil , class: "btn btn-primary" %>
-        </div>
-        <br>
-      <% end %>
-    </div>
-  </div>
-  <br><br><br>
+
   <div class="container">
     <div class="row">
-      <div class="col-sm">
+      <div class="col-sm-4">
         <p>Total de estudiantes activos: <strong><%= Crm.where(public_status: "Activo").count %></strong>
       </div>
       <br><br>
-      <div class="col-sm">
+      <div class="col-sm-4">
         <p>Total de estudiantes cancelados: <strong><%= Crm.where(public_status: "Cancelado").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Badtiming: <strong><%= Crm.where(private_status: "Bad timing").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Contactado: <strong><%= Crm.where(private_status: "Contactado").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Con profesor,aún sin primera clase: <strong><%= Crm.where(private_status: "Con profesor,aún sin primera clase").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Clase de prueba -> No se presentó: <strong><%= Crm.where(private_status: "Clase de prueba -> No se presentó").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Clase de prueba: <strong><%= Crm.where(private_status: "Clase de prueba").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Clase prueba -> No interesado: <strong><%= Crm.where(private_status: "Clase prueba -> No interesado").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Clase de prueba -> Bad timing: <strong><%= Crm.where(private_status: "Clase de prueba -> Bad timing").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Con clases(=<4) y no suscrito a membresía: <strong><%= Crm.where(private_status: "Con clases(=<4) y no suscrito a membresía").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Con clases (+4) y no suscrito a membresía: <strong><%= Crm.where(private_status: "Con clases (+4) y no suscrito a membresía").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Canceló la membresía y nos debe: <strong><%= Crm.where(private_status: "Canceló la membresía y nos debe").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Directo: <strong><%= Crm.where(private_status: "Directo").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Esperando confirmación de clase de prueba: <strong><%= Crm.where(private_status: "Esperando confirmación de clase de prueba").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Prueba 1ra -> cancelado: <strong><%= Crm.where(private_status: "Prueba 1ra -> cancelado").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Prueba 2da -> cancelado: <strong><%= Crm.where(private_status: "Prueba 2da -> cancelado").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Prueba 3ra -> cancelado: <strong><%= Crm.where(private_status: "Prueba 3ra -> cancelado").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Prueba 1er Clase: <strong><%= Crm.where(private_status: "Prueba 1er Clase").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Prueba 2da Clase: <strong><%= Crm.where(private_status: "Prueba 2da Clase").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Prueba 3era Clase: <strong><%= Crm.where(private_status: "Prueba 3era Clase").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Prueba 4ta Clase: <strong><%= Crm.where(private_status: "Prueba 4ta Clase").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Prueba 4ta -> cancelado: <strong><%= Crm.where(private_status: "Prueba 4ta -> cancelado").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Prueba -> Alumno Activo: <strong><%= Crm.where(private_status: "Prueba -> Alumno Activo").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Prueba expirada y no pasa su tarjeta: <strong><%= Crm.where(private_status: "Prueba expirada y no pasa su tarjeta").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>No interesado: <strong><%= Crm.where(private_status: "No interesado").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Suspendido: <strong><%= Crm.where(private_status: "Suspendido").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>Sin profesor asignado: <strong><%= Crm.where(private_status: "Sin profesor asignado").count %></strong></p>
+      </div>
+      <div class="col-sm-4">
+        <p>+4 horas tomadas, sin tiempo expirado: <strong><%= Crm.where(private_status: "+4 horas tomadas, sin tiempo expirado").count %></strong></p>
       </div>
     </div>
   </div>
+
+  <br><br>
+
+  <div class="container">
+    <%= form_tag crms_path, :method => 'get' do %>
+    <%= hidden_field_tag :direction, params[:direction] %>
+    <%= hidden_field_tag :sort, params[:sort] %>
+  <div class="row">
+      <div class="col-4">
+        <%= link_to 'Agregar estudiante', new_crm_path, class: " btn btn-success" %>
+      </div>
+      <div class="form_group col-4">
+         <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Filtra" %>
+      </div>
+      <div class="form_group col-1">
+          <%= submit_tag "Search", :name => nil , class: "btn btn-primary" %>
+      </div>
+      <br>
+    <% end %>
+  </div>
+</div>
+<br><br><br>
 
 <div class="container">
   <table class="table">

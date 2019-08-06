@@ -2,7 +2,7 @@
   <% if current_user.subscribed? %>
     <h1><%= t('billing') %></h1>
     <% if current_user.expires_at? %>
-      <p><%= t('access_subscription_user_1') %> <%= distance_of_time_in_words current_user.expires_at - Time.zone.now %>.</p>
+      <br>
       <h3> <%= t('access_subscription_user_2') %> </h3>
       <%= link_to t('btn_to_memberships'), memberships_path, class: "btn btn-success" %>
     <% else %>

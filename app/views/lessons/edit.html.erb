@@ -66,6 +66,10 @@
 		      <%= form.select(:status_id, options_for_select([[t('next_lesson'), "Próxima"], [t('completed_lesson'), "Completada"],[t('lost_lesson_teacher'), "Perdida por el profesor"],[t('lost_lesson_student'), "Perdida por el estudiante"],[t('canceled_lesson'), "Anulada"]],@lesson.status_id), {}, {class: "form-control"}) %>
 		    </div>
 
+		    <div class="form-group col-md-4">
+			    <%= form.file_field :picture %>
+			</div>
+
 	        <div class="form-group col-md-4">
 		      <%= form.label :payment_id, t('paid_class') %>
 		      <%= form.select(:payment_id, options_for_select([[t('yes_lesson'), "Si",{class: "bold"}], [t('no_lesson'), "No"]],@lesson.payment_id), {}, {class: "form-control"}) %>
@@ -103,6 +107,9 @@
 		      <%= form.label :status_id, t('status_class') %>		      	
 		      <%= form.select(:status_id, options_for_select([[t('next_lesson'), "Próxima"], [t('completed_lesson'), "Completada"],[t('lost_lesson_student'), "Perdida por el estudiante"],[t('canceled_lesson'), "Anulada"]],@lesson.status_id), {include_blank: true}, {class: "form-control"}) %>
 		    </div>
+		    <div class="form-group col-md-4">
+			    <%= form.file_field :picture %>
+			</div>
 		</div>
 	<% end %>
 		<br>

@@ -54,23 +54,7 @@
 
 
 
-  <% if current_user.is_a?(GuestUser) %>
-    <script src="https://get.instach.at/chat-widget-1-0-0-js"></script>
-      <script>
-        var myLandbotPopup = new LandbotPopup({
-        index: 'https://get.instach.at/5roots-form',
-        launcherOptions: {
-        image: "https://instach.at/whatsapp-icon/"
-        }
-        });
-      </script>
-      <script>
-      // Show a proactive message after 4 seconds
-      setTimeout(() => {
-      myLandbotPopup.sendProactive("¡Hola! Estoy por aquí en caso que necesites ayuda.“);
-      }, 4000);
-      </script>
-    <% end %>
+
 
 
 

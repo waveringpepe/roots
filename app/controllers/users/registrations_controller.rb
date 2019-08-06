@@ -29,7 +29,7 @@ end
 
 private
   def select_plan
-    unless (params[:plan] == '1' || params[:plan] == '8' || params[:plan] == '9' || params[:plan] == '10')
+    unless (params[:plan] == '1' || params[:plan] == '8') #|| params[:plan] == '9' || params[:plan] == '10')
       flash[:notice] = "Please select a membership plan to sign up."
       redirect_to root_url
     end

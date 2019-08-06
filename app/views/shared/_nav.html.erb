@@ -9,11 +9,14 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
     <ul class="navbar-nav ml-auto">
       <% if current_user.is_a?(GuestUser) %>
-      
+        <!-- 
         <li class="nav-item active mr-2">
-            <%=link_to t('apply_as_teacher'), new_user_registration_path(plan: 1), class: "btn btn-outline-success my-2 my-sm-0" %>
+          <%=link_to t('apply_as_teacher'), new_user_registration_path(plan: 1), class: "btn btn-outline-success my-2 my-sm-0" %> 
         </li>
         <li class="nav-item active mr-2">
             <%=link_to t('pricing'),root_path + "#pricing", class:"nav-link" %>  
@@ -21,13 +24,14 @@
         <li class="nav-item active mr-2">
             <%=link_to t('how_it_works'),root_path + "#howitworks", class:"nav-link" %>
         </li>
+        -->
         <li class="nav-item active mr-2">
             <%=link_to t('faq'), faq_path, class: "nav-link" %></li>
         <li class="nav-item active mr-2">
-            <%=link_to t('login'), new_user_session_path, class: "nav-link" %></li>
-        <li><%= link_to flag_icon(:mx, id: 'flag-icon', class: 'strong'),root_path(locale: :es),class: "nav-link"%></li>
+            <%=link_to t('login'), new_user_session_path, class: "btn btn-outline-success my-2 my-sm-0" %></li>
+        <li><%= link_to flag_icon(:es, id: 'flag-icon', class: 'strong'),root_path(locale: :es),class: "nav-link"%></li>
         <li class= "nav-link" > | </li>
-        <li><%= link_to flag_icon(:us, id: 'flag-icon', class: 'strong'),root_path(locale: :en), class: "nav-link" %></li>
+        <li><%= link_to flag_icon(:gb, id: 'flag-icon', class: 'strong'),root_path(locale: :en), class: "nav-link" %></li>
 
       <% else %>
 

@@ -50,8 +50,8 @@
           <td><%= link_to lesson.id, lesson %></td>
           <td><%= local_time(lesson.created_at) %></td>
           <td><%= lesson.class_type_id %></td>
-          <td><%= link_to User.find_by(id: "#{lesson.student_id}"), "users/#{lesson.student_id}" %></td>
-          <td><%= link_to User.find_by(id: "#{lesson.user_id}"), "users/#{lesson.user_id}" %> (<%= lesson.user_id %>)</td>
+          <td><%= link_to User.find_by(id: "#{lesson.student_id}").name.titleize, "users/#{lesson.student_id}" %></td>
+          <td><%= link_to User.find_by(id: "#{lesson.user_id}").name.titleize, "users/#{lesson.user_id}" %> (<%= lesson.user_id %>)</td>
           <td><%= local_time(lesson.date_id) %></td>
           <td><%= lesson.time_duration_id/60 %><p> <%= t('hours') %> </p></td>
           <td> <%= Language.find_by(id: "#{lesson.language_id}").name %></td>

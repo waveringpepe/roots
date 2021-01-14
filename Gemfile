@@ -74,7 +74,7 @@ gem 'routing-filter', '~> 0.6.2'
 #provides flag-icon-css a collection of all country flags in SVG
 gem 'flag-icons-rails', '~> 3.1'
 #admin panel
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 #translate admin panel
 gem 'rails_admin-i18n'
 #Stripe webhook integration
